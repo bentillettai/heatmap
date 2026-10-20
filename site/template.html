@@ -119,6 +119,7 @@ label.check { display: inline-flex; gap: 6px; align-items: center; font-size: 13
 .tag.motorsport { background: var(--ms-soft); color: var(--ms); }
 .tag.other { background: var(--ot-soft); color: var(--ot); }
 .tag.new { background: var(--accent); color: #fff; }
+.tag.upd { background: var(--accent-soft); color: var(--accent-text); }
 .tag.voted-up { background: var(--good-soft); color: var(--good); }
 .tag.voted-down { background: var(--bad-soft); color: var(--bad); }
 .card h3 { font-size: 17px; line-height: 1.35; margin: 8px 0 6px; }
@@ -199,6 +200,20 @@ details[open] summary { margin-bottom: 6px; }
 .about th { font-weight: 600; color: var(--muted); font-size: 12.5px; text-transform: uppercase; letter-spacing: .04em; }
 .about td.num { font-family: "IBM Plex Mono", monospace; }
 
+.run h3 { margin-top: 6px; }
+.review { background: var(--surface-2); border-radius: 8px; padding: 10px 12px; margin: 0 0 12px; font-size: 14px; }
+.review p { margin: 0; }
+.review ul { margin: 4px 0 0; padding-left: 18px; }
+.review .pid { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--faint); }
+.changed { margin: 0 0 10px; font-size: 13.5px; }
+.changed ul { margin: 2px 0 6px; padding-left: 18px; }
+.snap .orgrow summary { font-size: 14px; }
+.snap .orgrow .why { margin: 0 14px 8px; font-size: 14px; }
+.snap .orgrow .sources { margin-left: 14px; }
+.comments { margin: 10px 0 0; padding: 0; list-style: none; font-size: 14px; }
+.comments li { border-top: 1px solid var(--border); padding: 6px 0; }
+.comments .nmeta { font-size: 12.5px; color: var(--faint); }
+
 [hidden] { display: none !important; }
 @media (max-width: 680px) {
   .grid3 { grid-template-columns: 1fr; }
@@ -227,6 +242,7 @@ details[open] summary { margin-bottom: 6px; }
   <nav class="tabs" role="tablist">
     <button role="tab" data-tab="opps" aria-selected="true">Opportunities<span class="count" id="n-opps"></span></button>
     <button role="tab" data-tab="orgs" aria-selected="false">Organisations<span class="count" id="n-orgs"></span></button>
+    <button role="tab" data-tab="runs" aria-selected="false">Runs<span class="count" id="n-runs"></span></button>
     <button role="tab" data-tab="notes" aria-selected="false">Notes<span class="count" id="n-notes"></span></button>
     <button role="tab" data-tab="about" aria-selected="false">How it works</button>
   </nav>
@@ -255,6 +271,11 @@ details[open] summary { margin-bottom: 6px; }
       <input type="search" id="org-q" placeholder="Search organisations" aria-label="Search organisations">
     </div>
     <div class="orglist" id="orglist"></div>
+  </section>
+
+  <section id="tab-runs" hidden>
+    <p class="warn">Every run is kept here with the report it produced. Say how a run went as a whole: what was missing, what to look for next, what to stop. Before each run Claude reads this, makes small changes itself and lists them, and proposes bigger ones for you to approve here.</p>
+    <div id="runs"></div>
   </section>
 
   <section id="tab-notes" hidden>
@@ -328,27 +349,41 @@ details[open] summary { margin-bottom: 6px; }
     meId: null,
     isOwner: false,
     mine: {},           // card id -> {vote, why, updated}
+    allFb: [],          // everyone's card feedback, for the Runs tab
+    runFb: [],          // everyone's run feedback
+    myRun: {},          // run id -> this viewer's run feedback
     notes: [],
   };
 
   // ---------- header ----------
   const m = DATA.meta;
+  const RUNS = DATA.runs || [];   // newest first
+  const latest = RUNS[0];
+  const proposedOf = (r) => (r?.feedback_review?.proposed || []).map((p) => (typeof p === "string" ? { id: "", text: p } : p));
   document.getElementById("runline").textContent =
     `Updated ${fmtDate(m.updated)} · ${DATA.item_count} articles read · ${DATA.cards.length} opportunities · ${DATA.organisations.length} organisations`;
   document.getElementById("n-opps").textContent = DATA.cards.length;
   document.getElementById("n-orgs").textContent = DATA.organisations.length;
+  document.getElementById("n-runs").textContent = RUNS.length || "";
+  const nProposed = proposedOf(latest).length;
   document.getElementById("summary").innerHTML =
     `<p><b>Latest run.</b> ${esc(m.run_summary)}</p>` +
-    `<p>Rate any card with a thumb and say why in a sentence. The daily run reads your feedback and adjusts what it looks for and how it ranks.</p>`;
+    (latest ? `<p><b>Feedback.</b> ${esc(latest.feedback_review?.summary || "")}` +
+      (nProposed ? ` ${nProposed} proposed ${nProposed === 1 ? "change needs" : "changes need"} your OK on the <button class="linkbtn" data-goto="runs">Runs tab</button>.` : "") + `</p>` : "") +
+    `<p>Rate any card with a thumb and say why in a sentence, or comment on a whole run on the <button class="linkbtn" data-goto="runs">Runs tab</button>. Each run reads your feedback first and adjusts what it looks for and how it ranks.</p>`;
 
   // ---------- tabs ----------
   const tabs = document.querySelectorAll("nav.tabs button");
   function showTab(name) {
     tabs.forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === name)));
-    ["opps", "orgs", "notes", "about"].forEach((t) => (document.getElementById("tab-" + t).hidden = t !== name));
+    ["opps", "orgs", "runs", "notes", "about"].forEach((t) => (document.getElementById("tab-" + t).hidden = t !== name));
     remember("tab", name);
   }
   tabs.forEach((b) => b.addEventListener("click", () => showTab(b.dataset.tab)));
+  document.getElementById("summary").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-goto]");
+    if (b) showTab(b.dataset.goto);
+  });
 
   // ---------- opportunities ----------
   const areaCounts = DATA.cards.reduce((acc, c) => ((acc[c.area] = (acc[c.area] || 0) + 1), acc), {});
@@ -369,8 +404,12 @@ details[open] summary { margin-bottom: 6px; }
       (meta ? ` <span class="pub">${esc(meta)}</span>` : "") + `</li>`;
   }
 
+  const firstRun = !latest || latest.kind === "first run";
+  const NEW_IDS = new Set(firstRun ? [] : latest.new_cards.map((x) => x.id));
+  const UPD_IDS = new Set(latest ? latest.updated_cards.map((x) => x.id) : []);
+
   function cardHtml(c) {
-    const isNew = c.added && c.added === m.updated && m.updated !== m.started;
+    const isNew = NEW_IDS.has(c.id);
     const orgs = c.orgs.map((o) =>
       `<button class="org" data-org="${esc(o.name)}" title="${esc([o.type, o.country].filter(Boolean).join(", "))}">${esc(o.name)}` +
       (isUK(o.country) ? `<span class="uk">UK</span>` : "") +
@@ -386,6 +425,7 @@ details[open] summary { margin-bottom: 6px; }
         <span class="score" title="Overall score out of 100">${c.score}</span>
         <span class="tag ${esc(c.area)}">${esc(AREAS[c.area] || c.area)}</span>
         ${isNew ? '<span class="tag new">New</span>' : ""}
+        ${UPD_IDS.has(c.id) ? '<span class="tag upd">Updated</span>' : ""}
         <span class="myvote"></span>
       </div>
       <h3>${esc(c.headline)}</h3>
@@ -523,6 +563,159 @@ details[open] summary { margin-bottom: 6px; }
     if (row) row.open = true;
   });
 
+  // ---------- runs ----------
+  const KIND = { "first run": "First run", sweep: "Wider search", daily: "Daily run", manual: "Extra run" };
+  const fmtTime = (iso) => {
+    const d = new Date(iso);
+    return isNaN(d) ? "" : d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  };
+  const runsAsc = [...RUNS].sort((a, b) => String(a.time).localeCompare(String(b.time)));
+  const runNo = Object.fromEntries(runsAsc.map((r, i) => [r.id, i + 1]));
+  const runById = Object.fromEntries(RUNS.map((r) => [r.id, r]));
+  // Feedback belongs to the run that was live when it was given.
+  const runWindow = (r) => [r.time, runsAsc[runsAsc.indexOf(r) + 1]?.time || "~"];
+
+  const snapCache = {};
+  function loadSnapshot(r) {
+    if (r === latest) return Promise.resolve({ cards: DATA.cards });
+    if (!r.snapshot) return Promise.reject(new Error("no snapshot"));
+    snapCache[r.id] = snapCache[r.id] || fetch(r.snapshot).then((res) => {
+      if (!res.ok) throw new Error(res.status);
+      return res.json();
+    });
+    return snapCache[r.id].catch((e) => { delete snapCache[r.id]; throw e; });
+  }
+
+  const cardLink = (id, text) => cardById[id]
+    ? `<button class="linkbtn" data-card="${esc(id)}">${esc(text)}</button>` : esc(text);
+  const changedList = (label, list) => list.length
+    ? `<div><b>${label}</b><ul>${list.map((x) => `<li>${cardLink(x.id, x.headline)}</li>`).join("")}</ul></div>` : "";
+
+  function runHtml(r) {
+    const fr = r.feedback_review || {};
+    const applied = fr.applied || [];
+    const proposed = proposedOf(r);
+    const first = r.kind === "first run";
+    return `<article class="card run" id="run-${esc(r.id)}" data-run="${esc(r.id)}">
+      <div class="card-head">
+        <span class="rank">Run ${runNo[r.id]}</span>
+        <span>${esc(fmtDate(r.date))}${r.time ? ", " + esc(fmtTime(r.time)) : ""}</span>
+        <span class="tag other">${esc(KIND[r.kind] || r.kind)}</span>
+        ${r === latest ? '<span class="tag new">Latest</span>' : ""}
+        <span class="myvote"></span>
+      </div>
+      <h3>${esc(r.summary)}</h3>
+      <div class="facts">
+        <span><b>${r.items_read}</b> articles read</span>
+        <span><b>${r.passed_gate}</b> passed the thermal check</span>
+        <span><b>${r.cards}</b> cards</span>
+        <span><b>${first ? r.cards : r.new_cards.length}</b> new</span>
+        <span><b>${r.updated_cards.length}</b> updated</span>
+      </div>
+      <div class="review">
+        <p><b>Feedback review.</b> ${esc(fr.summary || "")}</p>
+        ${applied.length ? `<p style="margin-top:6px"><b>Changed because of feedback</b></p><ul>${applied.map((a) => `<li>${esc(a)}</li>`).join("")}</ul>` : ""}
+        ${proposed.length ? `<p style="margin-top:6px"><b>Proposed, waiting for your OK</b> (say so below, for example "yes to P1")</p><ul>${proposed.map((p) => `<li>${p.id ? `<span class="pid">${esc(p.id)}</span> ` : ""}${esc(p.text)}</li>`).join("")}</ul>` : ""}
+      </div>
+      ${first ? "" : `<div class="changed">${changedList("New cards", r.new_cards)}${changedList("Updated cards", r.updated_cards)}</div>`}
+      <details class="snap" data-run="${esc(r.id)}">
+        <summary>The report from this run (${r.cards} cards)</summary>
+        <div class="snapbody"><p class="fb-note">Loading…</p></div>
+      </details>
+      <ul class="comments"></ul>
+      <div class="fb">
+        <div class="fb-row">
+          <button class="vote up" data-vote="up" aria-pressed="false">${ICON_UP}Good run</button>
+          <button class="vote down" data-vote="down" aria-pressed="false">${ICON_DOWN}Poor run</button>
+          <span class="status" aria-live="polite"></span>
+        </div>
+        <textarea placeholder="How was this run overall? What's missing, what should it look for next, and do you agree with any proposals?" aria-label="Feedback on this run"></textarea>
+        <div class="fb-row" style="margin-top:6px">
+          <button class="btn ghost save">Save comment</button>
+        </div>
+      </div>
+    </article>`;
+  }
+
+  function snapHtml(snap, r) {
+    const first = r.kind === "first run";
+    const newIds = new Set(first ? [] : r.new_cards.map((x) => x.id));
+    const updIds = new Set(r.updated_cards.map((x) => x.id));
+    return [...snap.cards].sort((a, b) => a.rank - b.rank).map((c) => `<details class="orgrow">
+      <summary>
+        <span class="rank">#${c.rank}</span>
+        <span class="score">${c.score}</span>
+        <span class="tag ${esc(c.area)}">${esc(AREAS[c.area] || c.area)}</span>
+        ${newIds.has(c.id) ? '<span class="tag new">New</span>' : ""}${updIds.has(c.id) ? '<span class="tag upd">Updated</span>' : ""}
+        <span class="oname">${esc(c.headline)}</span>
+      </summary>
+      <p class="why">${esc(c.why)}</p>
+      <ul class="sources">${c.sources.map(sourceLi).join("")}</ul>
+      <p class="fb-note" style="margin:0 14px 10px">${cardById[c.id]
+        ? `<button class="linkbtn" data-card="${esc(c.id)}">Open this card in the current report</button>`
+        : "No longer in the current report."}</p>
+    </details>`).join("");
+  }
+
+  const runsEl = document.getElementById("runs");
+  runsEl.innerHTML = RUNS.length ? RUNS.map(runHtml).join("") : '<div class="empty">No runs recorded yet.</div>';
+  const runEls = Object.fromEntries([...runsEl.querySelectorAll(".run")].map((el) => [el.dataset.run, el]));
+
+  runsEl.addEventListener("toggle", async (e) => {
+    const d = e.target;
+    if (!d.matches?.("details.snap") || !d.open || d.dataset.loaded) return;
+    const r = runById[d.dataset.run];
+    const body = d.querySelector(".snapbody");
+    try {
+      body.innerHTML = snapHtml(await loadSnapshot(r), r);
+      d.dataset.loaded = "1";
+    } catch {
+      body.innerHTML = `<p class="fb-note">This run's report couldn't be loaded. Try again later.</p>`;
+    }
+  }, true);
+
+  const whoLabel = (f) => (f.who && f.who === S.who ? "You" : f.owner ? "ben" : "Editor");
+  const voteWord = (v, run) => (v === "up" ? (run ? "Good run" : "Useful") : v === "down" ? (run ? "Poor run" : "Not useful") : "Comment");
+
+  function paintRun(id) {
+    const el = runEls[id];
+    const r = runById[id];
+    const f = S.myRun[id] || {};
+    el.querySelectorAll(".vote").forEach((b) => b.setAttribute("aria-pressed", String(f.vote === b.dataset.vote)));
+    const ta = el.querySelector("textarea");
+    if (document.activeElement !== ta && !ta.dataset.dirty) ta.value = f.why || "";
+    el.querySelector(".myvote").innerHTML = f.vote === "up" ? '<span class="tag voted-up">You: good run</span>'
+      : f.vote === "down" ? '<span class="tag voted-down">You: poor run</span>' : "";
+    const [from, to] = runWindow(r);
+    const said = (x) => x.vote || (x.why || "").trim();
+    const onRun = S.runFb.filter((x) => x.run === id && said(x));
+    const onCards = S.allFb.filter((x) => said(x) && x.updated >= from && x.updated < to)
+      .sort((a, b) => String(a.updated).localeCompare(String(b.updated)));
+    const li = (x, what) => `<li><span class="nmeta">${esc(whoLabel(x))} · ${esc(fmtDate(String(x.updated).slice(0, 10)))} · ${esc(voteWord(x.vote, !what))}</span>` +
+      (what ? ` ${what}` : "") + (x.why ? `<div>${esc(x.why)}</div>` : "") + `</li>`;
+    el.querySelector(".comments").innerHTML =
+      onRun.map((x) => li(x, "")).join("") +
+      onCards.map((x) => li(x, cardLink(x.card, cardById[x.card]?.headline || x.card))).join("");
+  }
+
+  runsEl.addEventListener("click", (e) => {
+    const link = e.target.closest(".linkbtn[data-card]");
+    if (link) { jumpToCard(link.dataset.card); return; }
+    const el = e.target.closest(".run");
+    if (!el) return;
+    const id = el.dataset.run;
+    const v = e.target.closest(".vote");
+    if (v && !v.disabled) {
+      const cur = S.myRun[id]?.vote;
+      saveRunFeedback(id, { vote: cur === v.dataset.vote ? null : v.dataset.vote, why: el.querySelector("textarea").value });
+    }
+    const sv = e.target.closest(".save");
+    if (sv && !sv.disabled) saveRunFeedback(id, { why: el.querySelector("textarea").value });
+  });
+  runsEl.addEventListener("input", (e) => {
+    if (e.target.matches("textarea")) { e.target.dataset.dirty = "1"; setStatus(e.target.closest(".run"), "Unsaved comment"); }
+  });
+
   // ---------- how it works ----------
   const total = Object.values(DATA.weights).reduce((a, b) => a + b, 0);
   document.getElementById("about").innerHTML = `
@@ -536,7 +729,7 @@ details[open] summary { margin-bottom: 6px; }
     </table>
     <p>"Link to problem" says whether the source itself connects the technology to the problem (stated) or Claude made that connection (inferred). Inferred links are often the interesting ones, so they are kept and explained.</p>
     <h2>How your feedback is used</h2>
-    <p>Thumbs and comments are saved to this page. Each morning Claude reads them, adjusts the ranking rules in plain English (kept in the project's preferences file), and looks harder for the kind of thing you rated up. Notes become leads to search on.</p>
+    <p>Thumbs and comments on cards, comments on whole runs and notes are all saved to this page. Before each run Claude reads anything new and decides what to change. Small, easily undone changes it makes itself: re-scoring a card, searching for more like something you rated up, following a note, or adding a plain-English rule to the project's preferences file. Bigger changes (score weights, the thermal check, adding or dropping an area) it proposes on the Runs tab, and applies only once ben or Henry says yes there. Each run lists what it changed and why.</p>
     <h2>Limits</h2>
     <ul>
       <li>Public sources only, read through web search. Paywalled journals and LinkedIn are out of reach.</li>
@@ -562,8 +755,10 @@ details[open] summary { margin-bottom: 6px; }
     mv.innerHTML = f.vote === "up" ? '<span class="tag voted-up">You: useful</span>' : f.vote === "down" ? '<span class="tag voted-down">You: not useful</span>' : "";
   }
 
+  const fbEls = () => [...Object.values(cardEls), ...Object.values(runEls)];
+
   function setDisabled(text) {
-    for (const el of Object.values(cardEls)) {
+    for (const el of fbEls()) {
       el.querySelectorAll(".vote, .save, textarea").forEach((x) => (x.disabled = true));
       setStatus(el, text);
     }
@@ -588,6 +783,30 @@ details[open] summary { margin-bottom: 6px; }
     } catch (e) {
       S.mine[id] = prev;
       paintCard(id);
+      if (e && e.code === "invalid_argument") {
+        S.readOnly = true;
+        setDisabled("View only. Ask ben for Editor access to leave feedback.");
+      } else {
+        setStatus(el, "Couldn't save. Try again in a moment.", true);
+      }
+    }
+  }
+
+  async function saveRunFeedback(id, patch) {
+    const el = runEls[id];
+    if (!S.db || S.readOnly) return;
+    const prev = S.myRun[id] || {};
+    const next = { run: id, vote: prev.vote || null, why: prev.why || "", ...patch, updated: new Date().toISOString(), by: S.meId, owner: S.isOwner, who: S.who };
+    S.myRun[id] = next;
+    paintRun(id);
+    setStatus(el, "Saving…");
+    try {
+      await S.db.collection("runfeedback").doc(`${id}~${S.who}`).set(next);
+      setStatus(el, "Saved");
+      el.querySelector("textarea").dataset.dirty = "";
+    } catch (e) {
+      S.myRun[id] = prev;
+      paintRun(id);
       if (e && e.code === "invalid_argument") {
         S.readOnly = true;
         setDisabled("View only. Ask ben for Editor access to leave feedback.");
@@ -656,7 +875,7 @@ details[open] summary { margin-bottom: 6px; }
   showTab(recall("tab") || "opps");
 
   function enableAll() {
-    for (const el of Object.values(cardEls)) {
+    for (const el of fbEls()) {
       el.querySelectorAll(".vote, .save, textarea").forEach((x) => (x.disabled = false));
       setStatus(el, "");
     }
@@ -692,13 +911,19 @@ details[open] summary { margin-bottom: 6px; }
 
     db.collection("feedback").onSnapshot((snap) => {
       const mine = {};
-      snap.docs.forEach((d) => {
-        const v = d.data();
-        if (v && v.who === S.who) mine[v.card] = v;
-      });
+      S.allFb = snap.docs.map((d) => d.data()).filter(Boolean);
+      S.allFb.forEach((v) => { if (v.who === S.who) mine[v.card] = v; });
       S.mine = mine;
       Object.keys(cardEls).forEach(paintCard);
+      Object.keys(runEls).forEach(paintRun);
       if (S.unrated) applyFilters();
+    }, () => {});
+    db.collection("runfeedback").onSnapshot((snap) => {
+      const mine = {};
+      S.runFb = snap.docs.map((d) => d.data()).filter(Boolean);
+      S.runFb.forEach((v) => { if (v.who === S.who) mine[v.run] = v; });
+      S.myRun = mine;
+      Object.keys(runEls).forEach(paintRun);
     }, () => {});
     db.collection("notes").onSnapshot((snap) => {
       S.notes = snap.docs.map((d) => ({ id: d.id, ...d.data() })).sort((a, b) => String(b.created).localeCompare(String(a.created)));

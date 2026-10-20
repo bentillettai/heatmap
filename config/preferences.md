@@ -1,7 +1,8 @@
 # Henry's preferences
 
 Plain-English rules learned from Henry's feedback. The daily run reads this
-before scoring and adds to it at most once a week. Edit or delete any rule.
+before scoring and, when feedback shows a clear pattern, adds at most three
+rules per run. Edit or delete any rule.
 
 ## From the calibration set (20 Oct 2026)
 
