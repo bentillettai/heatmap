@@ -9,6 +9,7 @@ data files tidy and builds the page.
   python3 tools/heatmap.py build                    write site/index.html
   python3 tools/heatmap.py ingest-feedback DIR_OR_JSON   (ArtifactData out_dir)
   python3 tools/heatmap.py ingest-run-feedback DIR_OR_JSON
+  python3 tools/heatmap.py ingest-comments DIR_OR_JSON
   python3 tools/heatmap.py ingest-notes DIR_OR_JSON
   python3 tools/heatmap.py record-run RUN.json      log the run and freeze its report
   python3 tools/heatmap.py new-urls URL [URL ...]       print the ones not yet read
@@ -27,6 +28,7 @@ ITEMS = DATA / "items.jsonl"
 CARDS = DATA / "cards.json"
 FEEDBACK = DATA / "feedback.jsonl"
 RUN_FEEDBACK = DATA / "run_feedback.jsonl"
+COMMENTS = DATA / "comments.jsonl"
 NOTES = DATA / "notes.jsonl"
 RUNS = DATA / "runs.jsonl"
 SNAPSHOTS = DATA / "runs"   # one frozen report per run, published as runs/<id>.json
@@ -329,6 +331,26 @@ def ingest_feedback(dump_path, path=FEEDBACK, key="card"):
     print(f"{path.stem}: {added} new, {len(rows)} total")
 
 
+def ingest_comments(dump_path):
+    """Comment docs live at comments/<id>: {kind card|run, target, text,
+    created, by, owner, who, run}. Keep every comment, and a new row if one
+    is edited."""
+    rows = read_jsonl(COMMENTS)
+    seen = {(r["doc_id"], r.get("text")) for r in rows}
+    added = 0
+    for d in _docs(dump_path):
+        if (d["doc_id"], d.get("text")) in seen:
+            continue
+        rows.append({"doc_id": d["doc_id"], "kind": d.get("kind"), "target": d.get("target"),
+                     "text": d.get("text", ""), "run": d.get("run"), "by": d.get("by"),
+                     "owner": d.get("owner"), "created": d.get("created"),
+                     "synced": dt.date.today().isoformat(), "actioned": False})
+        seen.add((d["doc_id"], d.get("text")))
+        added += 1
+    write_jsonl(COMMENTS, rows)
+    print(f"comments: {added} new, {len(rows)} total")
+
+
 def ingest_notes(dump_path):
     rows = read_jsonl(NOTES)
     seen = {r["doc_id"] for r in rows}
@@ -363,7 +385,7 @@ def stats():
     print(f"items: {len(items)} ({passed} passed the thermal gate)")
     print(f"cards: {len(doc['cards'])} {by_area}")
     print(f"feedback rows: {len(read_jsonl(FEEDBACK))}, run feedback: {len(read_jsonl(RUN_FEEDBACK))}, "
-          f"notes: {len(read_jsonl(NOTES))}, runs: {len(read_jsonl(RUNS))}")
+          f"comments: {len(read_jsonl(COMMENTS))}, notes: {len(read_jsonl(NOTES))}, runs: {len(read_jsonl(RUNS))}")
 
 
 if __name__ == "__main__":
@@ -375,6 +397,7 @@ if __name__ == "__main__":
         "record-run": lambda: record_run(*args),
         "ingest-feedback": lambda: ingest_feedback(*args),
         "ingest-run-feedback": lambda: ingest_feedback(*args, path=RUN_FEEDBACK, key="run"),
+        "ingest-comments": lambda: ingest_comments(*args),
         "ingest-notes": lambda: ingest_notes(*args),
         "new-urls": lambda: new_urls(args),
         "stats": stats,

@@ -43,17 +43,23 @@ Use the ArtifactData tool (load it with ToolSearch) on the page URL:
 ```
 ArtifactData action=list collection=feedback    out_dir=<scratch>/db
 ArtifactData action=list collection=runfeedback out_dir=<scratch>/db
+ArtifactData action=list collection=comments    out_dir=<scratch>/db
 ArtifactData action=list collection=notes       out_dir=<scratch>/db
 python3 tools/heatmap.py ingest-feedback     <scratch>/db/feedback
 python3 tools/heatmap.py ingest-run-feedback <scratch>/db/runfeedback
+python3 tools/heatmap.py ingest-comments     <scratch>/db/comments
 python3 tools/heatmap.py ingest-notes        <scratch>/db/notes
 ```
 
 Feedback documents are `feedback/<card id>~<viewer>`, with `vote` (up, down
 or null), `why`, `updated`, and `owner` (true means ben, false means
 Henry or another invited editor). Run feedback is `runfeedback/<run id>~<viewer>`
-with the same fields and `run` in place of `card`: a comment on a whole run.
-Notes are `notes/<id>` with `text`, `area` and `created`. Page through with
+with the same fields and `run` in place of `card`: a vote on a whole run.
+Comments are `comments/<id>` with `kind` (card or run), `target` (the card or
+run id), `text`, `created` and `owner`; a person can leave several on one
+card or run. The latest comment is also copied into that person's feedback
+`why`, so read comments for the full conversation and don't count the same
+words twice. Notes are `notes/<id>` with `text`, `area` and `created`. Page through with
 `query.cursor` if a list says more remain. A collection nobody has written to
 yet comes back empty; that is fine.
 
@@ -61,7 +67,8 @@ yet comes back empty; that is fine.
 
 Every run starts with what people said since the last run, before any
 searching. Look at each row with `"actioned": false` in `data/feedback.jsonl`
-(cards), `data/run_feedback.jsonl` (whole runs) and `data/notes.jsonl`.
+(card votes), `data/run_feedback.jsonl` (run votes), `data/comments.jsonl`
+(comments on cards and runs) and `data/notes.jsonl`.
 Henry's feedback outweighs ben's where they differ (Henry is the user).
 
 Make these changes yourself, now:
@@ -201,8 +208,14 @@ report as `data/runs/<run id>.json` so the Runs tab can show it later.
 ### 9. Publish
 
 Read the page first, then publish the rebuilt file to the same URL with this
-run's frozen report alongside it. Don't pass `capabilities` or `icon`, so the
-page keeps them. Earlier runs' reports stay published; send only the new one.
+run's frozen report alongside it. Don't pass `icon`. Earlier runs' reports
+stay published; send only the new one.
+
+Don't pass `capabilities` either, so the page keeps them, with one exception:
+if `site/template.html` shows people's names (it calls `profiles(`) and the
+read in this step shows the stored declaration without `"scopes":["profile"]`
+for `user`, pass `capabilities={"db":{},"user":{"scopes":["profile"]}}` on
+this publish. After that, leave it out again.
 
 ```
 Artifact action=read url=https://claude.ai/artifact/WCo5GAu4ZQpZQ6N8rTSYVS

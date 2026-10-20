@@ -63,7 +63,7 @@ web search ──► read pages ──► thermal gate ──► items.jsonl
 | `examples/calibration.csv` | Henry's first ten rated articles |
 | `data/items.jsonl` | Every article read, with summary, orgs and gate result |
 | `data/cards.json` | The opportunity cards and run metadata |
-| `data/feedback.jsonl`, `data/run_feedback.jsonl`, `data/notes.jsonl` | Card feedback, run feedback and notes copied from the page |
+| `data/feedback.jsonl`, `data/run_feedback.jsonl`, `data/comments.jsonl`, `data/notes.jsonl` | Votes, comments and notes copied from the page |
 | `data/runs.jsonl` | One line per run, with what feedback changed |
 | `data/runs/` | Each run's frozen report, published as `runs/<id>.json` |
 | `data/inbox/` | Each run's raw batch of new items |
