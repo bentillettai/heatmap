@@ -67,3 +67,24 @@ areas:
       - Formula E battery thermal management
       - F1 brake cooling duct additive manufacturing
       - motorsport thermal management technology transfer
+
+# Technology-first searches (added 2026-10-20 at ben's request). These start
+# from the technology, not an area, to catch work whose application is
+# implicit: a method that would suit cold plates or oil coolers even though
+# the source never says so. Cards from these get whichever area fits best,
+# or "other". Mark the link "inferred" when you make it.
+technology_queries:
+  - TPMS gyroid lattice heat exchanger experimental
+  - additively manufactured heat pipe OR loop heat pipe OR pulsating heat pipe
+  - copper additive manufacturing heat exchanger green laser
+  - CT inspection additive heat exchanger internal channels powder removal
+  - cryogenic hydrogen heat exchanger additive
+  - AI generative design heat exchanger
+  - laser surface texturing boiling heat transfer
+  - diffusion bonded compact heat exchanger new application
+  - two-phase cooling power electronics electric aircraft
+  - transpiration cooling additive porous
+  - topology optimisation heat sink experimental validation
+  - jet impingement cooling additive manufactured
+  - compact heat exchanger fusion OR microreactor OR sCO2
+  - battery thermal management cold plate additive

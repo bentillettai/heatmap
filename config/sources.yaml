@@ -27,7 +27,19 @@ funding_and_programmes:
   - {name: UKRI Gateway to Research, site: gtr.ukri.org, areas: [all], status: active}
   - {name: Aerospace Technology Institute, site: ati.org.uk, areas: [aerospace], status: active}
   - {name: Clean Aviation, site: clean-aviation.eu, areas: [aerospace], status: watch}
-  - {name: CORDIS, site: cordis.europa.eu, areas: [all], status: watch}
+  - {name: CORDIS, site: cordis.europa.eu, areas: [all], status: active, note: project pages and results summaries fetch well}
+  - {name: Innovate UK and Catapult projects, site: cp.catapult.org.uk, areas: [all], status: active}
+  - {name: TRIMIS (EU transport research), site: trimis.ec.europa.eu, areas: [aerospace], status: watch}
+
+research:
+  # Added 2026-10-20 to widen the search. Papers often state results that
+  # trade press only summarises, and the application is often implicit.
+  - {name: arXiv, site: arxiv.org, areas: [all], status: active}
+  - {name: MDPI Energies and Applied Sciences, site: mdpi.com, areas: [all], status: active, note: open access, check quality}
+  - {name: University research portals (Pure), site: "researchportal.bath.ac.uk, research.chalmers.se, pure.*", areas: [all], status: watch}
+  - {name: Conference proceedings (Avestia, ICAS, ICES), areas: [all], status: watch}
+  - {name: SAE Mobilus abstracts, site: saemobilus.sae.org, areas: [motorsport, aerospace], status: watch, note: abstracts only}
+  - {name: ORNL and US national labs, site: impact.ornl.gov, areas: [all], status: watch}
 
 uk_research:
   - {name: Imperial Mechanical Engineering, site: imperial.ac.uk/mechanical-engineering/news, status: watch}

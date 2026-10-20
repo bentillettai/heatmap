@@ -63,13 +63,18 @@ Henry's feedback outweighs ben's where they differ (Henry is the user).
 
 ### 3. Search
 
-Aim for 10 to 20 new articles a day across the three areas, fewer if
-nothing good is out there.
+Aim for 15 to 25 new articles a day across the three areas and the
+technology searches, fewer if nothing good is out there.
 
 - For each area, run 3 of its `search_queries`, rotating by day of the year so
   every query is used about once a week. Add the current year to queries where
   freshness matters.
+- Run 3 of the `technology_queries` in `config/areas.yaml`, also rotating by
+  day. These start from the technology rather than an area; the link to a
+  problem is often yours to make, so mark it "inferred" and say why.
 - Run 2 or 3 extra queries from today's feedback and notes leads.
+- Search research sources (`research` in `config/sources.yaml`) at least once a
+  day, for example by adding "arxiv" or "pdf" to one area query.
 - Twice a week, also search 3 `active` sources with `site:` queries.
 - Prefer things published in the last 12 months. Older items are fine when
   they are the best source on an opportunity.
