@@ -1,0 +1,12 @@
+url,henry_verdict,label,henry_comment
+https://www.confluxtechnology.com/resources/articles/why-ai-data-centres-should-think-more-like-formula-one-teams/,top,good,"Probably the most interesting and relevant article I've read yet! Talks about datacentre cooling challenges and opportunities. Mentions AM, System modelling, CFD"
+(link to find) Danish RTO 3D-printed thermosiphon cold plate for data centres,top,good,"Kickoff example: AM cold plate, thermosiphon removes pump energy, proven energy reduction"
+https://heat-exchanger-world.com/unique-antifouling-technology-for-refinery-key-process-units-fired-heater-and-heat-exchanger-tubes/,interesting,good,"Interesting. Not sure barriers are working that well but I don't think this is that important at this stage"
+https://eepower.com/news/the-nuclear-push-fusion-and-microreactors-leap-ahead/,interesting,good,"Interesting."
+https://link.springer.com/article/10.1007/s00521-026-12438-9,interesting,good,"Interesting."
+https://eepower.com/tech-insights/this-ev-integrates-solar-cells-to-create-an-energy-positive-ev/,interesting_no_thermal,bad,"Interesting but no thermal mgmt"
+https://eepower.com/new-industry-products/abbs-new-severe-duty-motors-deliver-nema-premium-4-efficiency/,not_that_interesting,bad,"Not that interesting? Article talks about e-motor standards change in the US. Nothing thermal management related in the article that I could see."
+https://eepower.com/news/ti-unveils-multiaxial-current-sensor-for-ev-traction-inverters/,not_interesting,bad,"Not interesting and no thermal mgmt"
+https://eepower.com/industry-white-papers/why-ev-inverter-efficiency-measurements-become-unreliable-at-higher-sic-switching-frequencies/,not_interesting,bad,"Not interesting"
+https://eepower.com/industry-white-papers/switching-analysis-testing-for-reliability-in-power-converter-designs/,not_interesting,bad,"Not interesting. No thermal mgmt, no societal problems"
+https://heat-exchanger-world.com/bowman-intercoolers-save-the-day-and-thousands-of-dollars/,not_interesting,bad,"Not interesting! About a fisherman replacing intercoolers in his boat! No innovation or societal problems!"

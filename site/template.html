@@ -1,0 +1,710 @@
+<title>Heatmap</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f5f1;
+  --surface: #ffffff;
+  --surface-2: #f0ede7;
+  --text: #1d1b18;
+  --muted: #615c55;
+  --faint: #8a847b;
+  --border: #e2ddd4;
+  --accent: #c2410c;
+  --accent-soft: #fcebdd;
+  --accent-text: #9a3412;
+  --dc: #0e7490; --dc-soft: #def1f5;
+  --ae: #4338ca; --ae-soft: #e6e5fa;
+  --ms: #b91c1c; --ms-soft: #fbe4e4;
+  --ot: #57534e; --ot-soft: #ebe8e3;
+  --good: #15803d; --good-soft: #dcf3e3;
+  --bad: #b91c1c; --bad-soft: #fbe4e4;
+  --uk: #1e3a8a; --uk-soft: #e1e7f7;
+  --shadow: 0 1px 2px rgba(30, 25, 15, .06);
+  --radius: 10px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141311; --surface: #1d1b19; --surface-2: #26241f; --text: #ece8e2; --muted: #aaa49b; --faint: #857f76; --border: #35322c;
+    --accent: #fb8c4e; --accent-soft: #3a2417; --accent-text: #fdba8c;
+    --dc: #5ccbe0; --dc-soft: #12323a; --ae: #a9a5f7; --ae-soft: #25234a; --ms: #f58e8e; --ms-soft: #3d1d1d; --ot: #c6c1b9; --ot-soft: #2d2b27;
+    --good: #57d68a; --good-soft: #15321f; --bad: #f58e8e; --bad-soft: #3d1d1d; --uk: #a8bdf5; --uk-soft: #1d2847;
+    --shadow: none;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141311; --surface: #1d1b19; --surface-2: #26241f; --text: #ece8e2; --muted: #aaa49b; --faint: #857f76; --border: #35322c;
+  --accent: #fb8c4e; --accent-soft: #3a2417; --accent-text: #fdba8c;
+  --dc: #5ccbe0; --dc-soft: #12323a; --ae: #a9a5f7; --ae-soft: #25234a; --ms: #f58e8e; --ms-soft: #3d1d1d; --ot: #c6c1b9; --ot-soft: #2d2b27;
+  --good: #57d68a; --good-soft: #15321f; --bad: #f58e8e; --bad-soft: #3d1d1d; --uk: #a8bdf5; --uk-soft: #1d2847;
+  --shadow: none;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.5 "IBM Plex Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px max(16px, env(safe-area-inset-right)) 64px max(16px, env(safe-area-inset-left));
+}
+a { color: var(--accent-text); text-underline-offset: 2px; }
+button, input, select, textarea { font: inherit; color: inherit; }
+.mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+
+header.top { display: flex; gap: 14px; align-items: center; margin-bottom: 4px; }
+header.top svg { flex: none; }
+header.top h1 { font-size: 24px; line-height: 1.1; margin: 0; letter-spacing: -.01em; }
+header.top p { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
+.runline { color: var(--faint); font-size: 13px; margin: 10px 0 0; }
+
+nav.tabs {
+  display: flex; gap: 4px; margin: 18px 0 16px; border-bottom: 1px solid var(--border);
+  overflow-x: auto; scrollbar-width: none;
+}
+nav.tabs button {
+  border: 0; background: none; padding: 10px 12px; cursor: pointer; color: var(--muted);
+  border-bottom: 2px solid transparent; margin-bottom: -1px; white-space: nowrap; font-weight: 500;
+}
+nav.tabs button[aria-selected="true"] { color: var(--text); border-bottom-color: var(--accent); }
+nav.tabs .count { color: var(--faint); font-weight: 400; margin-left: 4px; }
+
+.callout {
+  background: var(--accent-soft); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 14px; font-size: 14px;
+}
+.callout b { color: var(--accent-text); }
+.callout p { margin: 0; }
+.callout p + p { margin-top: 6px; }
+
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  border: 1px solid var(--border); background: var(--surface); border-radius: 999px; padding: 5px 11px;
+  font-size: 13px; cursor: pointer; color: var(--muted);
+}
+.chip[aria-pressed="true"] { background: var(--text); border-color: var(--text); color: var(--bg); }
+.chip .n { opacity: .7; margin-left: 3px; }
+.spacer { flex: 1; }
+input[type="search"], select, textarea, input[type="text"] {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; font-size: 14px;
+}
+input[type="search"] { min-width: 0; width: 200px; }
+label.check { display: inline-flex; gap: 6px; align-items: center; font-size: 13px; color: var(--muted); cursor: pointer; }
+
+.coverage { font-size: 13px; color: var(--muted); margin: -4px 0 14px; }
+
+.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px 18px; margin-bottom: 12px; box-shadow: var(--shadow); scroll-margin-top: 16px;
+}
+.card.flash { outline: 2px solid var(--accent); outline-offset: 2px; }
+.card-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+.rank { font-family: "IBM Plex Mono", monospace; color: var(--faint); }
+.score {
+  font-family: "IBM Plex Mono", monospace; font-weight: 600; font-size: 15px; min-width: 40px; text-align: center;
+  background: var(--accent-soft); color: var(--accent-text); border-radius: 6px; padding: 1px 7px;
+}
+.tag { border-radius: 5px; padding: 1px 7px; font-size: 12px; font-weight: 500; }
+.tag.datacentre { background: var(--dc-soft); color: var(--dc); }
+.tag.aerospace { background: var(--ae-soft); color: var(--ae); }
+.tag.motorsport { background: var(--ms-soft); color: var(--ms); }
+.tag.other { background: var(--ot-soft); color: var(--ot); }
+.tag.new { background: var(--accent); color: #fff; }
+.tag.voted-up { background: var(--good-soft); color: var(--good); }
+.tag.voted-down { background: var(--bad-soft); color: var(--bad); }
+.card h3 { font-size: 17px; line-height: 1.35; margin: 8px 0 6px; }
+.card .why { margin: 0 0 12px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 16px; margin: 0 0 12px; }
+.grid3 dt { font-size: 12px; color: var(--faint); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 2px; }
+.grid3 dd { margin: 0; font-size: 14px; }
+.caps { display: flex; flex-wrap: wrap; gap: 4px; }
+.cap { background: var(--surface-2); border-radius: 5px; padding: 1px 7px; font-size: 12.5px; }
+.facts { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13.5px; color: var(--muted); margin-bottom: 10px; }
+.facts b { color: var(--text); font-weight: 500; }
+.next { font-size: 14px; border-left: 3px solid var(--accent); padding: 2px 0 2px 10px; margin: 0 0 12px; }
+.orgs { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+.org {
+  border: 1px solid var(--border); border-radius: 6px; padding: 1px 7px; font-size: 12.5px; background: none; cursor: pointer;
+}
+.org:hover { border-color: var(--faint); }
+.org .role { color: var(--faint); }
+.uk { background: var(--uk-soft); color: var(--uk); border-radius: 4px; padding: 0 4px; font-size: 11px; font-weight: 600; margin-left: 3px; }
+details { margin-top: 4px; }
+details summary { cursor: pointer; font-size: 13px; color: var(--muted); padding: 4px 0; }
+details[open] summary { margin-bottom: 6px; }
+.sources { margin: 0 0 10px; padding-left: 18px; font-size: 13.5px; }
+.sources li { margin-bottom: 3px; }
+.sources .pub { color: var(--faint); }
+.bars { display: grid; grid-template-columns: max-content 1fr max-content; gap: 4px 10px; align-items: center; font-size: 13px; max-width: 520px; }
+.bar { height: 6px; background: var(--surface-2); border-radius: 3px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--accent); border-radius: 3px; }
+.bars .w { color: var(--faint); font-family: "IBM Plex Mono", monospace; font-size: 12px; }
+
+.fb { border-top: 1px solid var(--border); margin-top: 12px; padding-top: 12px; }
+.fb-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.vote {
+  display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--border); background: var(--surface);
+  border-radius: 8px; padding: 5px 11px; cursor: pointer; font-size: 13.5px; color: var(--muted);
+}
+.vote svg { width: 16px; height: 16px; }
+.vote[aria-pressed="true"].up { background: var(--good-soft); border-color: var(--good); color: var(--good); }
+.vote[aria-pressed="true"].down { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); }
+.vote:disabled, .btn:disabled { opacity: .5; cursor: default; }
+.fb textarea { width: 100%; min-height: 56px; margin-top: 8px; resize: vertical; display: block; }
+.btn {
+  border: 1px solid var(--text); background: var(--text); color: var(--bg); border-radius: 8px; padding: 5px 12px;
+  cursor: pointer; font-size: 13.5px; font-weight: 500;
+}
+.btn.ghost { background: none; color: var(--text); border-color: var(--border); }
+.status { font-size: 12.5px; color: var(--faint); }
+.status.err { color: var(--bad); }
+.fb-note { font-size: 12.5px; color: var(--faint); margin-top: 6px; }
+
+.empty { text-align: center; color: var(--muted); padding: 36px 12px; border: 1px dashed var(--border); border-radius: var(--radius); }
+
+.orglist .orgrow {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 8px; box-shadow: var(--shadow);
+}
+.orgrow summary { list-style: none; padding: 11px 14px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; color: var(--text); font-size: 14.5px; }
+.orgrow summary::-webkit-details-marker { display: none; }
+.orgrow .oname { font-weight: 600; }
+.orgrow .ometa { color: var(--muted); font-size: 13px; }
+.orgrow .ocount { margin-left: auto; font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--faint); }
+.orgrow ul { margin: 0; padding: 0 14px 12px 32px; font-size: 14px; }
+.orgrow li { margin-bottom: 4px; }
+.linkbtn { background: none; border: 0; padding: 0; color: var(--accent-text); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; text-align: left; }
+
+.note-form { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; margin-bottom: 14px; }
+.note-form textarea { width: 100%; min-height: 90px; resize: vertical; display: block; margin-bottom: 8px; }
+.note { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 8px; }
+.note p { margin: 0 0 6px; white-space: pre-wrap; }
+.note .nmeta { font-size: 12.5px; color: var(--faint); display: flex; gap: 10px; align-items: center; }
+.warn { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+
+.about { max-width: 680px; }
+.about h2 { font-size: 17px; margin: 22px 0 6px; }
+.about h2:first-child { margin-top: 0; }
+.about p, .about li { font-size: 14.5px; }
+.about table { border-collapse: collapse; font-size: 14px; width: 100%; }
+.about td, .about th { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.about th { font-weight: 600; color: var(--muted); font-size: 12.5px; text-transform: uppercase; letter-spacing: .04em; }
+.about td.num { font-family: "IBM Plex Mono", monospace; }
+
+[hidden] { display: none !important; }
+@media (max-width: 680px) {
+  .grid3 { grid-template-columns: 1fr; }
+  input[type="search"] { width: 100%; }
+  .spacer { display: none; }
+  .card { padding: 14px; }
+  header.top h1 { font-size: 21px; }
+}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <svg width="46" height="40" viewBox="0 0 46 40" aria-hidden="true">
+      <circle cx="16" cy="14" r="12" fill="var(--dc)" fill-opacity=".28"/>
+      <circle cx="30" cy="14" r="12" fill="var(--ae)" fill-opacity=".28"/>
+      <circle cx="23" cy="26" r="12" fill="var(--accent)" fill-opacity=".34"/>
+      <circle cx="23" cy="18" r="3" fill="var(--accent)"/>
+    </svg>
+    <div>
+      <h1>Heatmap</h1>
+      <p>Where a real problem, a thermal technology and an MTC capability overlap, and who to talk to.</p>
+    </div>
+  </header>
+  <p class="runline" id="runline"></p>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="opps" aria-selected="true">Opportunities<span class="count" id="n-opps"></span></button>
+    <button role="tab" data-tab="orgs" aria-selected="false">Organisations<span class="count" id="n-orgs"></span></button>
+    <button role="tab" data-tab="notes" aria-selected="false">Notes<span class="count" id="n-notes"></span></button>
+    <button role="tab" data-tab="about" aria-selected="false">How it works</button>
+  </nav>
+
+  <section id="tab-opps">
+    <div class="callout" id="summary"></div>
+    <div class="toolbar">
+      <div class="chips" id="area-chips"></div>
+      <span class="spacer"></span>
+      <input type="search" id="q" placeholder="Search opportunities" aria-label="Search opportunities">
+      <label class="check"><input type="checkbox" id="unrated"> Not yet rated</label>
+    </div>
+    <p class="coverage" id="coverage" hidden></p>
+    <div id="cards"></div>
+  </section>
+
+  <section id="tab-orgs" hidden>
+    <div class="toolbar">
+      <div class="chips" id="org-area-chips"></div>
+      <span class="spacer"></span>
+      <select id="org-type" aria-label="Organisation type">
+        <option value="">All types</option>
+        <option>Commercial</option><option>RTO</option><option>Uni</option><option>Gov</option><option>Other</option>
+      </select>
+      <label class="check"><input type="checkbox" id="uk-only"> UK only</label>
+      <input type="search" id="org-q" placeholder="Search organisations" aria-label="Search organisations">
+    </div>
+    <div class="orglist" id="orglist"></div>
+  </section>
+
+  <section id="tab-notes" hidden>
+    <div class="note-form">
+      <p class="warn">Notes from industry conversations, leads or ideas. The daily run reads them and follows up. Public or non-confidential only: this page sits outside MTC systems.</p>
+      <textarea id="note-text" placeholder="e.g. Spoke to X at the ATI event: they're struggling to inspect printed oil-cooler cores. Worth a search on CT for thin-wall aluminium."></textarea>
+      <div class="fb-row">
+        <select id="note-area" aria-label="Area">
+          <option value="">Any area</option>
+          <option value="datacentre">Data centres</option>
+          <option value="aerospace">Aerospace</option>
+          <option value="motorsport">Motorsport</option>
+          <option value="other">Other</option>
+        </select>
+        <button class="btn" id="note-add">Add note</button>
+        <span class="status" id="note-status"></span>
+      </div>
+    </div>
+    <div id="notes"></div>
+  </section>
+
+  <section id="tab-about" hidden>
+    <div class="about" id="about"></div>
+  </section>
+</div>
+
+<script type="application/json" id="heatmap-data">__HEATMAP_DATA__</script>
+<script>
+(() => {
+  const DATA = JSON.parse(document.getElementById("heatmap-data").textContent);
+  const AREAS = DATA.meta.areas;
+  const CRITERIA = {
+    venn_fit: "Overlap of problem, thermal tech and MTC capability",
+    manufacturing_key: "Depends on how it is made or designed",
+    evidence: "Strength of evidence",
+    novelty: "Novelty, including cross-area transfer",
+    uk_relevance: "UK relevance",
+    contactable: "Someone we could talk to",
+  };
+  const ICON_UP = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v11H4V10h3zm0 0l4-8a3 3 0 0 1 3 3v4h5.5a2 2 0 0 1 2 2.3l-1.4 8A2 2 0 0 1 18.1 21H7"/></svg>';
+  const ICON_DOWN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 14V3h3v11h-3zm0 0l-4 8a3 3 0 0 1-3-3v-4H4.5a2 2 0 0 1-2-2.3l1.4-8A2 2 0 0 1 5.9 3H17"/></svg>';
+
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const safeUrl = (u) => /^https?:\/\//i.test(u || "") ? u : "#";
+  const isUK = (country) => /\bUK\b|United Kingdom/.test(country || "");
+  const fmtDate = (d) => {
+    if (!d) return "";
+    const p = String(d).split("-");
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    if (p.length === 1) return p[0];
+    const m = months[+p[1] - 1] || "";
+    return p.length === 2 ? `${m} ${p[0]}` : `${+p[2]} ${m} ${p[0]}`;
+  };
+
+  const store = (() => {
+    try { return window.localStorage; } catch { return null; }
+  })();
+  const remember = (k, v) => { try { store && store.setItem("heatmap:" + k, v); } catch {} };
+  const recall = (k) => { try { return store ? store.getItem("heatmap:" + k) : null; } catch { return null; } };
+
+  // ---------- state ----------
+  const S = {
+    area: recall("area") || "all",
+    q: "",
+    unrated: false,
+    orgArea: "all",
+    db: null,
+    canWrite: null,     // null = unknown, keep controls and let writes decide
+    readOnly: false,
+    who: null,          // suffix for this viewer's feedback doc ids
+    meId: null,
+    isOwner: false,
+    mine: {},           // card id -> {vote, why, updated}
+    notes: [],
+  };
+
+  // ---------- header ----------
+  const m = DATA.meta;
+  document.getElementById("runline").textContent =
+    `Updated ${fmtDate(m.updated)} · ${DATA.item_count} articles read · ${DATA.cards.length} opportunities · ${DATA.organisations.length} organisations`;
+  document.getElementById("n-opps").textContent = DATA.cards.length;
+  document.getElementById("n-orgs").textContent = DATA.organisations.length;
+  document.getElementById("summary").innerHTML =
+    `<p><b>Latest run.</b> ${esc(m.run_summary)}</p>` +
+    `<p>Rate any card with a thumb and say why in a sentence. The daily run reads your feedback and adjusts what it looks for and how it ranks.</p>`;
+
+  // ---------- tabs ----------
+  const tabs = document.querySelectorAll("nav.tabs button");
+  function showTab(name) {
+    tabs.forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === name)));
+    ["opps", "orgs", "notes", "about"].forEach((t) => (document.getElementById("tab-" + t).hidden = t !== name));
+    remember("tab", name);
+  }
+  tabs.forEach((b) => b.addEventListener("click", () => showTab(b.dataset.tab)));
+
+  // ---------- opportunities ----------
+  const areaCounts = DATA.cards.reduce((acc, c) => ((acc[c.area] = (acc[c.area] || 0) + 1), acc), {});
+  const areaOrder = ["datacentre", "aerospace", "motorsport", "other"].filter((a) => areaCounts[a]);
+  if (S.area !== "all" && !areaCounts[S.area]) S.area = "all";
+
+  const orgCounts = DATA.organisations.reduce((acc, o) => (o.areas.forEach((a) => (acc[a] = (acc[a] || 0) + 1)), acc), {});
+  function renderChips(el, current, onPick, counts = areaCounts, total = DATA.cards.length) {
+    const all = [["all", "All", total], ...areaOrder.map((a) => [a, AREAS[a], counts[a] || 0])];
+    el.innerHTML = all.map(([k, label, n]) =>
+      `<button class="chip" data-k="${k}" aria-pressed="${k === current}">${esc(label)}<span class="n">${n}</span></button>`).join("");
+    el.querySelectorAll(".chip").forEach((b) => b.addEventListener("click", () => onPick(b.dataset.k)));
+  }
+
+  function sourceLi(src) {
+    const meta = [src.publisher, fmtDate(src.date)].filter(Boolean).join(", ");
+    return `<li><a href="${esc(safeUrl(src.url))}" target="_blank" rel="noopener noreferrer">${esc(src.title || src.url)}</a>` +
+      (meta ? ` <span class="pub">${esc(meta)}</span>` : "") + `</li>`;
+  }
+
+  function cardHtml(c) {
+    const isNew = c.added && c.added === m.updated && m.updated !== m.started;
+    const orgs = c.orgs.map((o) =>
+      `<button class="org" data-org="${esc(o.name)}" title="${esc([o.type, o.country].filter(Boolean).join(", "))}">${esc(o.name)}` +
+      (isUK(o.country) ? `<span class="uk">UK</span>` : "") +
+      (o.role ? ` <span class="role">· ${esc(o.role)}</span>` : "") + `</button>`).join("");
+    const bars = Object.keys(CRITERIA).map((k) => {
+      const v = c.scores[k];
+      return `<span>${esc(CRITERIA[k])}</span><span class="bar"><i style="width:${(v / 5) * 100}%"></i></span><span class="w">${v}/5 ×${DATA.weights[k]}</span>`;
+    }).join("");
+    const appl = c.applicability || {};
+    return `<article class="card" id="card-${esc(c.id)}" data-id="${esc(c.id)}">
+      <div class="card-head">
+        <span class="rank">#${c.rank}</span>
+        <span class="score" title="Overall score out of 100">${c.score}</span>
+        <span class="tag ${esc(c.area)}">${esc(AREAS[c.area] || c.area)}</span>
+        ${isNew ? '<span class="tag new">New</span>' : ""}
+        <span class="myvote"></span>
+      </div>
+      <h3>${esc(c.headline)}</h3>
+      <p class="why">${esc(c.why)}</p>
+      <dl class="grid3">
+        <div><dt>Problem</dt><dd>${esc(c.problem)}</dd></div>
+        <div><dt>Technology</dt><dd>${esc(c.technology)}</dd></div>
+        <div><dt>MTC capability</dt><dd class="caps">${c.capabilities.map((x) => `<span class="cap">${esc(x)}</span>`).join("")}</dd></div>
+      </dl>
+      <div class="facts">
+        <span><b>TRL</b> ${esc(c.trl.level)}</span>
+        <span><b>Link to problem</b> ${appl.type === "inferred" ? "inferred by Claude" : "stated in source"}</span>
+        <span><b>Barrier</b> ${esc(c.barriers)}</span>
+      </div>
+      ${c.next_step ? `<p class="next"><b>Next step:</b> ${esc(c.next_step)}</p>` : ""}
+      <div class="orgs">${orgs}</div>
+      <details>
+        <summary>Sources (${c.sources.length}), score breakdown and reasoning</summary>
+        <ul class="sources">${c.sources.map(sourceLi).join("")}</ul>
+        <div class="bars">${bars}</div>
+        <p class="fb-note">TRL: ${esc(c.trl.reason)} Link to problem: ${esc(appl.reason)}</p>
+      </details>
+      <div class="fb">
+        <div class="fb-row">
+          <button class="vote up" data-vote="up" aria-pressed="false">${ICON_UP}Useful</button>
+          <button class="vote down" data-vote="down" aria-pressed="false">${ICON_DOWN}Not useful</button>
+          <span class="status" aria-live="polite"></span>
+        </div>
+        <textarea placeholder="Why? What's good or wrong about this one? (optional)" aria-label="Why"></textarea>
+        <div class="fb-row" style="margin-top:6px">
+          <button class="btn ghost save">Save comment</button>
+        </div>
+      </div>
+    </article>`;
+  }
+
+  const cardsEl = document.getElementById("cards");
+  cardsEl.innerHTML = DATA.cards.map(cardHtml).join("");
+  const cardEls = Object.fromEntries([...cardsEl.querySelectorAll(".card")].map((el) => [el.dataset.id, el]));
+
+  function applyFilters() {
+    const q = S.q.trim().toLowerCase();
+    let shown = 0;
+    for (const c of DATA.cards) {
+      const el = cardEls[c.id];
+      let ok = S.area === "all" || c.area === S.area;
+      if (ok && q) {
+        const hay = [c.headline, c.why, c.problem, c.technology, c.capabilities.join(" "), c.orgs.map((o) => o.name).join(" ")].join(" ").toLowerCase();
+        ok = hay.includes(q);
+      }
+      if (ok && S.unrated) ok = !S.mine[c.id]?.vote;
+      el.hidden = !ok;
+      if (ok) shown++;
+    }
+    let empty = document.getElementById("cards-empty");
+    if (!shown) {
+      if (!empty) {
+        empty = document.createElement("div");
+        empty.id = "cards-empty";
+        empty.className = "empty";
+        cardsEl.appendChild(empty);
+      }
+      empty.textContent = S.unrated ? "You've rated everything in this view." : "Nothing matches. Try another area or search.";
+    } else if (empty) empty.remove();
+    const cov = document.getElementById("coverage");
+    const note = S.area !== "all" && m.coverage ? m.coverage[S.area] : "";
+    cov.hidden = !note;
+    cov.textContent = note ? "Coverage: " + note : "";
+  }
+
+  function pickArea(k) {
+    S.area = k;
+    remember("area", k);
+    renderChips(document.getElementById("area-chips"), S.area, pickArea);
+    applyFilters();
+  }
+  renderChips(document.getElementById("area-chips"), S.area, pickArea);
+  document.getElementById("q").addEventListener("input", (e) => { S.q = e.target.value; applyFilters(); });
+  document.getElementById("unrated").addEventListener("change", (e) => { S.unrated = e.target.checked; applyFilters(); });
+  applyFilters();
+
+  function jumpToCard(id) {
+    showTab("opps");
+    if (S.area !== "all") pickArea("all");
+    S.q = ""; document.getElementById("q").value = ""; applyFilters();
+    const el = cardEls[id];
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    el.classList.add("flash");
+    setTimeout(() => el.classList.remove("flash"), 1600);
+  }
+
+  // ---------- organisations ----------
+  const cardById = Object.fromEntries(DATA.cards.map((c) => [c.id, c]));
+  let orgAreaPick;
+  function renderOrgs() {
+    const q = document.getElementById("org-q").value.trim().toLowerCase();
+    const type = document.getElementById("org-type").value;
+    const ukOnly = document.getElementById("uk-only").checked;
+    const rows = DATA.organisations.filter((o) =>
+      (S.orgArea === "all" || o.areas.includes(S.orgArea)) &&
+      (!type || o.type === type) &&
+      (!ukOnly || isUK(o.country)) &&
+      (!q || o.name.toLowerCase().includes(q)));
+    const el = document.getElementById("orglist");
+    if (!rows.length) { el.innerHTML = '<div class="empty">No organisations match.</div>'; return; }
+    el.innerHTML = rows.map((o) => {
+      const linked = o.cards.map((id) => cardById[id]).filter(Boolean);
+      return `<details class="orgrow" data-name="${esc(o.name)}">
+        <summary>
+          <span class="oname">${esc(o.name)}</span>${isUK(o.country) ? '<span class="uk">UK</span>' : ""}
+          <span class="ometa">${esc([o.type, o.country].filter(Boolean).join(" · "))}${o.roles.length ? " · " + esc(o.roles.join(", ")) : ""}</span>
+          <span class="ocount">${linked.length} ${linked.length === 1 ? "card" : "cards"}</span>
+        </summary>
+        <ul>${linked.map((c) => `<li><span class="tag ${esc(c.area)}">${esc(AREAS[c.area])}</span> <button class="linkbtn" data-card="${esc(c.id)}">${esc(c.headline)}</button> <span class="rank">${c.score}</span></li>`).join("")}</ul>
+      </details>`;
+    }).join("");
+    el.querySelectorAll(".linkbtn").forEach((b) => b.addEventListener("click", () => jumpToCard(b.dataset.card)));
+  }
+  orgAreaPick = (k) => { S.orgArea = k; renderChips(document.getElementById("org-area-chips"), S.orgArea, orgAreaPick, orgCounts, DATA.organisations.length); renderOrgs(); };
+  renderChips(document.getElementById("org-area-chips"), S.orgArea, orgAreaPick, orgCounts, DATA.organisations.length);
+  ["org-q", "org-type", "uk-only"].forEach((id) => document.getElementById(id).addEventListener("input", renderOrgs));
+  renderOrgs();
+
+  cardsEl.addEventListener("click", (e) => {
+    const b = e.target.closest(".org");
+    if (!b) return;
+    showTab("orgs");
+    const name = b.dataset.org;
+    document.getElementById("org-q").value = name;
+    S.orgArea = "all";
+    renderChips(document.getElementById("org-area-chips"), S.orgArea, orgAreaPick, orgCounts, DATA.organisations.length);
+    renderOrgs();
+    const row = document.querySelector(`.orgrow[data-name="${CSS.escape(name)}"]`);
+    if (row) row.open = true;
+  });
+
+  // ---------- how it works ----------
+  const total = Object.values(DATA.weights).reduce((a, b) => a + b, 0);
+  document.getElementById("about").innerHTML = `
+    <h2>What this is</h2>
+    <p>A daily horizon scan for MTC's thermal management roadmap. Each card is an opportunity: a problem, a thermal technology that addresses it, and the MTC capabilities that matter to it, backed by public sources and the organisations involved.</p>
+    <p>V1 covers ${areaOrder.map((a) => esc(AREAS[a])).join(", ")}. Thermal items outside these still get a card, tagged Other.</p>
+    <h2>How cards are ranked</h2>
+    <p>Claude reads each article, drops anything where thermal management isn't central, groups the rest into opportunities and scores each one from 0 to 5 on six criteria. The overall score is the weighted sum, out of 100.</p>
+    <table><tr><th>Criterion</th><th>Weight</th></tr>
+    ${Object.keys(CRITERIA).map((k) => `<tr><td>${esc(CRITERIA[k])}</td><td class="num">${Math.round((DATA.weights[k] / total) * 100)}%</td></tr>`).join("")}
+    </table>
+    <p>"Link to problem" says whether the source itself connects the technology to the problem (stated) or Claude made that connection (inferred). Inferred links are often the interesting ones, so they are kept and explained.</p>
+    <h2>How your feedback is used</h2>
+    <p>Thumbs and comments are saved to this page. Each morning Claude reads them, adjusts the ranking rules in plain English (kept in the project's preferences file), and looks harder for the kind of thing you rated up. Notes become leads to search on.</p>
+    <h2>Limits</h2>
+    <ul>
+      <li>Public sources only, read through web search. Paywalled journals and LinkedIn are out of reach.</li>
+      <li>Scores are Claude's judgement, not measurement. Disagreeing is the most useful feedback.</li>
+      <li>Nothing confidential should go into feedback or notes.</li>
+    </ul>`;
+
+  // ---------- feedback and notes (db) ----------
+  const statusOf = (el) => el.querySelector(".status");
+  function setStatus(el, text, err) {
+    const s = statusOf(el);
+    s.textContent = text;
+    s.classList.toggle("err", !!err);
+  }
+
+  function paintCard(id) {
+    const el = cardEls[id];
+    const f = S.mine[id] || {};
+    el.querySelectorAll(".vote").forEach((b) => b.setAttribute("aria-pressed", String(f.vote === b.dataset.vote)));
+    const ta = el.querySelector("textarea");
+    if (document.activeElement !== ta && !ta.dataset.dirty) ta.value = f.why || "";
+    const mv = el.querySelector(".myvote");
+    mv.innerHTML = f.vote === "up" ? '<span class="tag voted-up">You: useful</span>' : f.vote === "down" ? '<span class="tag voted-down">You: not useful</span>' : "";
+  }
+
+  function setDisabled(text) {
+    for (const el of Object.values(cardEls)) {
+      el.querySelectorAll(".vote, .save, textarea").forEach((x) => (x.disabled = true));
+      setStatus(el, text);
+    }
+    document.getElementById("note-add").disabled = true;
+    document.getElementById("note-text").disabled = true;
+    document.getElementById("note-status").textContent = text;
+  }
+
+  async function saveFeedback(id, patch) {
+    const el = cardEls[id];
+    if (!S.db || S.readOnly) return;
+    const prev = S.mine[id] || {};
+    const next = { card: id, vote: prev.vote || null, why: prev.why || "", ...patch, updated: new Date().toISOString(), by: S.meId, owner: S.isOwner, who: S.who };
+    S.mine[id] = next;
+    paintCard(id);
+    applyFilters();
+    setStatus(el, "Saving…");
+    try {
+      await S.db.collection("feedback").doc(`${id}~${S.who}`).set(next);
+      setStatus(el, "Saved");
+      el.querySelector("textarea").dataset.dirty = "";
+    } catch (e) {
+      S.mine[id] = prev;
+      paintCard(id);
+      if (e && e.code === "invalid_argument") {
+        S.readOnly = true;
+        setDisabled("View only. Ask ben for Editor access to leave feedback.");
+      } else {
+        setStatus(el, "Couldn't save. Try again in a moment.", true);
+      }
+    }
+  }
+
+  cardsEl.addEventListener("click", (e) => {
+    const card = e.target.closest(".card");
+    if (!card) return;
+    const id = card.dataset.id;
+    const v = e.target.closest(".vote");
+    if (v && !v.disabled) {
+      const cur = S.mine[id]?.vote;
+      const why = card.querySelector("textarea").value;
+      saveFeedback(id, { vote: cur === v.dataset.vote ? null : v.dataset.vote, why });
+    }
+    const sv = e.target.closest(".save");
+    if (sv && !sv.disabled) saveFeedback(id, { why: card.querySelector("textarea").value });
+  });
+  cardsEl.addEventListener("input", (e) => {
+    if (e.target.matches("textarea")) { e.target.dataset.dirty = "1"; setStatus(e.target.closest(".card"), "Unsaved comment"); }
+  });
+
+  function renderNotes() {
+    const el = document.getElementById("notes");
+    document.getElementById("n-notes").textContent = S.notes.length || "";
+    if (!S.notes.length) {
+      el.innerHTML = `<div class="empty">${S.db ? "No notes yet." : "Notes appear here when the page is open in Claude."}</div>`;
+      return;
+    }
+    el.innerHTML = S.notes.map((n) => `<div class="note" data-id="${esc(n.id)}">
+      <p>${esc(n.text)}</p>
+      <div class="nmeta">
+        <span>${esc(fmtDate((n.created || "").slice(0, 10)))}</span>
+        ${n.area ? `<span class="tag ${esc(n.area)}">${esc(AREAS[n.area] || n.area)}</span>` : ""}
+        ${n.who && n.who === S.who && !S.readOnly ? '<button class="linkbtn del">Delete</button>' : ""}
+      </div></div>`).join("");
+    el.querySelectorAll(".del").forEach((b) => b.addEventListener("click", async () => {
+      const id = b.closest(".note").dataset.id;
+      if (!confirm("Delete this note?")) return;
+      try { await S.db.collection("notes").doc(id).delete(); }
+      catch { document.getElementById("note-status").textContent = "Couldn't delete."; }
+    }));
+  }
+
+  document.getElementById("note-add").addEventListener("click", async () => {
+    const ta = document.getElementById("note-text");
+    const status = document.getElementById("note-status");
+    const text = ta.value.trim();
+    if (!text || !S.db || S.readOnly) return;
+    status.textContent = "Saving…";
+    try {
+      await S.db.collection("notes").add({ text, area: document.getElementById("note-area").value || null, created: new Date().toISOString(), by: S.meId, owner: S.isOwner, who: S.who });
+      ta.value = "";
+      status.textContent = "Saved";
+    } catch (e) {
+      if (e && e.code === "invalid_argument") { S.readOnly = true; setDisabled("View only. Ask ben for Editor access to add notes."); }
+      else status.textContent = "Couldn't save. Try again in a moment.";
+    }
+  });
+
+  renderNotes();
+  showTab(recall("tab") || "opps");
+
+  function enableAll() {
+    for (const el of Object.values(cardEls)) {
+      el.querySelectorAll(".vote, .save, textarea").forEach((x) => (x.disabled = false));
+      setStatus(el, "");
+    }
+    document.getElementById("note-add").disabled = false;
+    document.getElementById("note-text").disabled = false;
+    document.getElementById("note-status").textContent = "";
+  }
+
+  async function connect() {
+    setDisabled("Connecting…");
+    const cl = window.claude;
+    if (!cl || typeof cl.use !== "function") {
+      setDisabled("Open this page in Claude, signed in, to leave feedback.");
+      return;
+    }
+    let db = null, user = null;
+    try { [db, user] = await Promise.all([cl.use("db"), cl.use("user")]); } catch {}
+    if (!db) { setDisabled("Feedback isn't available in this view. Open the page in Claude, signed in."); return; }
+    S.db = db;
+    if (user) {
+      try {
+        const me = await user.me();
+        S.meId = me.id;
+        S.isOwner = !!me.isOwner;
+      } catch {}
+      try { S.canWrite = await user.can("data.write"); } catch {}
+    }
+    let anon = recall("anon");
+    if (!anon) { anon = "v" + Math.random().toString(36).slice(2, 10); remember("anon", anon); }
+    S.who = S.isOwner ? "owner" : (S.meId || anon);
+    if (S.canWrite === false) { S.readOnly = true; setDisabled("View only. Ask ben for Editor access to leave feedback."); }
+    else enableAll();
+
+    db.collection("feedback").onSnapshot((snap) => {
+      const mine = {};
+      snap.docs.forEach((d) => {
+        const v = d.data();
+        if (v && v.who === S.who) mine[v.card] = v;
+      });
+      S.mine = mine;
+      Object.keys(cardEls).forEach(paintCard);
+      if (S.unrated) applyFilters();
+    }, () => {});
+    db.collection("notes").onSnapshot((snap) => {
+      S.notes = snap.docs.map((d) => ({ id: d.id, ...d.data() })).sort((a, b) => String(b.created).localeCompare(String(a.created)));
+      renderNotes();
+    }, () => {});
+  }
+  connect();
+})();
+</script>

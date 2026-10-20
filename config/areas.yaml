@@ -1,0 +1,69 @@
+# Application areas the daily run searches. Each area gets its own
+# opportunity cards. Thermal items outside these areas can still become
+# cards, tagged with area: other.
+#
+# Edit freely: add a query, drop one that only returns noise, or add an area.
+
+areas:
+  - id: datacentre
+    name: Data-centre cooling
+    why: >
+      UK societal problem: data centres' energy and water use, grid capacity,
+      and AI chips that exceed what air and conventional cold plates can remove.
+    focus:
+      - cold plates and direct-to-chip liquid cooling
+      - two-phase, thermosiphon, vapour chamber and immersion cooling
+      - heat rejection, chillers, dry coolers, heat reuse into district heating
+      - chip-level and microfluidic cooling
+    search_queries:
+      - additive manufactured cold plate data centre cooling
+      - two-phase direct-to-chip cooling startup
+      - thermosiphon passive cooling data centre
+      - immersion cooling UK
+      - data centre waste heat reuse UK district heating
+      - microfluidic chip cooling AI
+      - generative design cold plate topology optimisation
+      - Innovate UK data centre cooling project
+
+  - id: aerospace
+    name: Aerospace heat exchangers
+    why: >
+      Henry's area of expertise. Cabin-air precoolers and oil coolers in
+      commercial turbofans; thermal loads rise with higher bypass ratio,
+      geared fans, electrification and hydrogen.
+    focus:
+      - bleed-air precoolers and environmental control system heat exchangers
+      - air-cooled, fuel-cooled and surface oil coolers
+      - additive manufactured and compact heat exchangers for aero engines
+      - thermal management for hybrid-electric and hydrogen aircraft
+    search_queries:
+      - aircraft precooler heat exchanger
+      - aero engine oil cooler additive manufacturing
+      - surface air cooled oil cooler turbofan
+      - ATI programme thermal management heat exchanger
+      - Clean Aviation thermal management heat exchanger
+      - hydrogen aircraft heat exchanger
+      - compact heat exchanger aerospace additive manufactured
+      - Liebherr Honeywell Collins Parker heat exchanger aerospace
+
+  - id: motorsport
+    name: Motorsport thermal management
+    why: >
+      Henry's area of expertise. Formula One's 2026 rules (about 50% electric
+      power, sustainable fuel, smaller cars) make heat rejection and packaging
+      a central design problem; motorsport heat-exchanger tech often transfers
+      to aerospace, automotive and data centres.
+    focus:
+      - radiators, intercoolers and oil coolers
+      - battery and power-electronics cooling (ERS, MGU-K, Formula E)
+      - brake cooling and ducting
+      - AM alloys and processes approved for racing heat exchangers
+    search_queries:
+      - Formula 1 2026 cooling radiator thermal management
+      - F1 power unit battery cooling MGU-K thermal
+      - PWR additive manufactured heat exchanger
+      - Conflux motorsport heat exchanger
+      - motorsport 3D printed heat exchanger alloy approved
+      - Formula E battery thermal management
+      - F1 brake cooling duct additive manufacturing
+      - motorsport thermal management technology transfer

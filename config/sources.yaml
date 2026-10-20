@@ -1,0 +1,80 @@
+# Where the daily run looks. V1 reads these through web search and page
+# reading (this environment blocks direct scraping), so each entry is a site
+# to search within or a page to check, not an RSS feed.
+#
+# status: active (checked every run), watch (checked weekly), later (not yet)
+# Many URLs on Henry's original list came from Copilot; check before relying.
+
+trade_press:
+  - {name: Heat Exchanger World, site: heat-exchanger-world.com, areas: [all], status: active}
+  - {name: Metal AM, site: metal-am.com, areas: [all], status: active}
+  - {name: EEPower, site: eepower.com, areas: [all], status: watch, note: noisy, most items fail the thermal gate}
+  - {name: Conflux articles, site: confluxtechnology.com/resources, areas: [all], status: active}
+  - {name: DatacenterDynamics, site: datacenterdynamics.com, areas: [datacentre], status: active}
+  - {name: Data Centre Review, site: datacentrereview.com, areas: [datacentre], status: active}
+  - {name: DataCentreNews UK, site: datacentrenews.uk, areas: [datacentre], status: watch}
+  - {name: Cooling Post, site: coolingpost.com, areas: [datacentre], status: watch}
+  - {name: Electronics Cooling, site: electronics-cooling.com, areas: [datacentre], status: watch}
+  - {name: Aerospace Testing International, site: aerospacetestinginternational.com, areas: [aerospace], status: active}
+  - {name: Aviation Week, site: aviationweek.com, areas: [aerospace], status: watch}
+  - {name: Airframer, site: airframer.com, areas: [aerospace], status: watch}
+  - {name: Racecar Engineering, site: racecar-engineering.com, areas: [motorsport], status: active}
+  - {name: Professional Motorsport World, site: pmw-magazine.com, areas: [motorsport], status: active}
+  - {name: F1Technical, site: f1technical.net/news, areas: [motorsport], status: active}
+  - {name: The Race (tech), site: the-race.com, areas: [motorsport], status: watch}
+
+funding_and_programmes:
+  - {name: UKRI Gateway to Research, site: gtr.ukri.org, areas: [all], status: active}
+  - {name: Aerospace Technology Institute, site: ati.org.uk, areas: [aerospace], status: active}
+  - {name: Clean Aviation, site: clean-aviation.eu, areas: [aerospace], status: watch}
+  - {name: CORDIS, site: cordis.europa.eu, areas: [all], status: watch}
+
+uk_research:
+  - {name: Imperial Mechanical Engineering, site: imperial.ac.uk/mechanical-engineering/news, status: watch}
+  - {name: Cambridge Whittle Lab, site: whittle.eng.cam.ac.uk, status: watch}
+  - {name: Oxford Engineering Science, site: eng.ox.ac.uk/news, status: watch}
+  - {name: Oxford Thermofluids Institute, site: oti.eng.ox.ac.uk, status: watch}
+  - {name: Manchester (materials and AM), site: manchester.ac.uk/discover/news, status: watch}
+  - {name: Cranfield, site: cranfield.ac.uk/press, status: watch}
+  - {name: WMG Warwick, site: warwick.ac.uk/fac/sci/wmg, status: watch}
+  - {name: UKAEA, site: gov.uk/government/organisations/uk-atomic-energy-authority, status: watch}
+  - {name: NPL, site: npl.co.uk/news, status: watch}
+  - {name: Brunel, site: brunel.ac.uk/news, status: watch}
+  - {name: Heriot-Watt, site: hw.ac.uk, status: watch}
+  - {name: TWI, site: twi-global.com, status: watch}
+
+eu_rtos:
+  - {name: Danish Technological Institute, site: dti.dk, status: active}
+  - {name: Fraunhofer, site: fraunhofer.de/en/press.html, status: watch}
+  - {name: TNO, site: tno.nl/en/newsroom, status: watch}
+  - {name: VTT, site: vttresearch.com/en/news-and-ideas, status: watch}
+  - {name: DLR, site: dlr.de/en/latest/news, status: watch}
+  - {name: SINTEF, site: sintef.no, status: watch}
+  - {name: Chalmers, site: chalmers.se, status: watch}
+  - {name: CEA, site: cea.fr/english, status: later}
+  - {name: EMPA, site: empa.ch, status: later}
+  - {name: ETH Zurich MAVT, site: mavt.ethz.ch, status: later}
+  - {name: TU Delft Aerospace, site: tudelft.nl/en/ae, status: later}
+
+companies:
+  # From Henry's "potential sources" list plus companies found so far.
+  - {name: Conflux Technology, site: confluxtechnology.com, status: active}
+  - {name: PWR, site: pwr.com.au, status: watch}
+  - {name: Mezzo Technologies, status: watch}
+  - {name: HiETA Technologies, status: watch}
+  - {name: Iceotope, site: iceotope.com, status: watch}
+  - {name: Liebherr Aerospace, status: watch}
+  - {name: Parker Meggitt, status: watch}
+  - {name: Honeywell Aerospace, status: watch}
+  - {name: Collins Aerospace, status: watch}
+  - {name: Sumitomo Precision Products, status: later}
+  - {name: Rolls-Royce, status: watch}
+  - {name: EOS, status: later}
+  - {name: Nikon SLM Solutions, status: later}
+
+later:
+  - US national labs and universities (NASA Glenn, NASA Ames, ORNL, Sandia, Argonne, NREL, MIT, Georgia Tech, Purdue)
+  - Asia (Tsinghua, SJTU, Zhejiang, HIT, Beihang, CAS, JAXA, AIST, KAIST, Samsung SAIT)
+  - Patents (Espacenet, Google Patents)
+  - Standards bodies (SAE, ASME, ASTM, ISO)
+  - LinkedIn is out of scope because it needs a login

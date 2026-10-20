@@ -1,0 +1,64 @@
+# Categories used to map each item onto the grid. Taken from Henry's
+# requirements spreadsheet (Categories and Keywords tab), lightly tidied.
+
+mtc_capabilities:
+  - additive manufacture
+  - laser processes (cutting, texturing)
+  - robotics and automation
+  - metrology and inspection
+  - modelling and simulation
+  - design for manufacture
+
+organisation_types: [Uni, RTO, Commercial, Gov, Other]
+
+applications:
+  - data centre cooling
+  - aerospace
+  - space
+  - electrification
+  - automotive
+  - motorsport
+  - buildings and infrastructure
+  - energy
+  - net zero
+  - defence
+
+innovation_types:
+  - system modelling
+  - cooling methods
+  - manufacture methods
+  - additive manufacture
+  - materials
+  - design methods
+  - verification, simulation and modelling methods
+  - test methods
+  - certification for safety-critical industries
+  - use of AI
+  - cryogenics
+
+keywords:
+  - transpiration cooling
+  - two-phase
+  - heat pipes
+  - additive manufacture (AM), LPBF, DED
+  - casting
+  - microtube
+  - microfluidics
+  - topology optimisation
+  - AI design
+  - cryogenics
+  - certification, qualification, reliability
+  - multiphase
+  - thermal interfaces
+  - conductivity, convection
+  - battery thermal management
+
+barrier_categories: [certification, maturity, cost, supply chain, skills, regulation]
+
+challenges:
+  - energy
+  - data centre cooling demands
+  - net-zero pressures
+  - skills shortages
+  - regulatory changes
+  - supply chain issues
