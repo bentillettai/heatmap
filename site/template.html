@@ -161,6 +161,10 @@ nav.tabs .count { font-weight: 400; color: var(--ink-2); margin-left: 5px; font-
 /* detail */
 .d-top { display: flex; gap: 12px; align-items: center; }
 .d-top .meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 13px; color: var(--ink-2); }
+.actbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 2px 0 14px; padding: 10px 12px; border-radius: 10px; background: var(--blue-soft); }
+.actbar .btn { padding: 7px 14px; font-size: 14.5px; }
+.actbar .vbtn { padding: 6px 10px; }
+.actbar .pill { background: #fff; color: var(--blue); border-radius: 999px; padding: 0 7px; font-size: 12.5px; margin-left: 2px; }
 .detail h3 { font-size: 20px; line-height: 1.3; margin: 12px 0 6px; text-wrap: balance; }
 .detail .why { font-size: 15px; line-height: 1.55; margin: 0 0 12px; }
 .detail section { margin-top: 16px; }
@@ -634,13 +638,21 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
   const critHtml = (c) => `<div class="crit">${CRIT.map(([k, l]) => `<span>${term(k, l)}</span><span class="bar"><i style="width:${c.s[k] * 20}%"></i></span><span class="w">${c.s[k]}/5 · ${pct(k)}%</span>`).join("")}</div>`;
   const cmtBadge = (n) => `<span class="cmt-badge ${n ? "" : "zero"}" title="${n} comment${n === 1 ? "" : "s"}">${ICON.cmt}${n}</span>`;
 
+  function actBar(c) {
+    const k = talkCount("card", c.id), v = myVote(c.id), dis = !S.db || S.readOnly ? "disabled" : "";
+    return `<div class="actbar">
+        <button class="btn primary" data-jump="${esc(c.id)}">${ICON.cmt}Comment on this finding${k ? `<span class="pill">${k}</span>` : ""}</button>
+        <button class="vbtn" data-vote="up" data-kind="card" data-for="${esc(c.id)}" aria-pressed="${v === "up"}" aria-label="Useful" title="Useful" ${dis}>${ICON.up}</button><button class="vbtn" data-vote="down" data-kind="card" data-for="${esc(c.id)}" aria-pressed="${v === "down"}" aria-label="Not useful" title="Not useful" ${dis}>${ICON.down}</button>
+      </div>`;
+  }
   function detailHtml(c) {
     const live = !!liveById[c.id];
     return `<div class="d-top">
         <span class="ring" style="--s:${c.score}"><b>${c.score}</b></span>
-        <div class="meta"><span>#${c.rank} of ${CARDS().length}</span>${info("score")}<span class="tag ${c.area}">${esc(AREAS[c.area] || c.area)}</span><span class="tag plain">${BANDS[band(c.score)][0]}</span>${chgTag(c)}${cmtBadge(talkCount("card", c.id))}</div>
+        <div class="meta"><span>#${c.rank} of ${CARDS().length}</span>${info("score")}<span class="tag ${c.area}">${esc(AREAS[c.area] || c.area)}</span><span class="tag plain">${BANDS[band(c.score)][0]}</span>${chgTag(c)}</div>
       </div>
       <h3>${esc(c.h)}</h3>
+      ${actBar(c)}
       <p class="why">${esc(c.why)}</p>
       <div class="pt"><div><span class="lbl">Problem</span><br>${esc(c.p)}</div><div><span class="lbl">Technology</span><br>${esc(c.t)}</div></div>
       ${c.next ? `<p class="next"><b>Next step</b>${esc(c.next)}</p>` : ""}
@@ -1226,7 +1238,7 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
     if (d.openrun) { openRun(d.openrun, d.card); return; }
     if (d.runsel) { S.runSel = d.runsel; renderRuns(); if (window.innerWidth < 1060) $("run-d").scrollIntoView({ block: "start" }); return; }
     if (d.gotoRun) { S.runSel = d.gotoRun; showTab("runs"); renderRuns(); setTimeout(() => { const ta = document.getElementById(`cm-run-${d.gotoRun}`); if (ta) { ta.scrollIntoView({ block: "center" }); ta.focus(); } }, 0); return; }
-    if (d.jump) { e.preventDefault(); const ta = document.getElementById(`cm-card-${d.jump}`); if (ta) { ta.scrollIntoView({ block: "center" }); ta.focus(); } return; }
+    if (d.jump) { e.preventDefault(); const sel = `textarea[id="cm-card-${CSS.escape(d.jump)}"]`; const ta = (t.closest("#detail") || document).querySelector(sel) || document.querySelector(sel); if (ta) { ta.scrollIntoView({ block: "center" }); ta.focus(); } return; }
     if (d.org) { showOrg(d.org); return; }
     if (d.orgarea) { orgArea = d.orgarea; renderOrgs(); return; }
     if (t.id === "prev") return step(-1);
