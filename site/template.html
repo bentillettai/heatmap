@@ -323,6 +323,11 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
 .review ul { margin: 6px 0 0; padding-left: 18px; }
 .review .pid { font-weight: 700; color: var(--blue); margin-right: 4px; }
 .changed { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; font-size: 14px; }
+.facts { list-style: none; margin: 0; padding: 0 0 8px; }
+.fact { display: flex; gap: 8px; align-items: flex-start; padding: 8px 0; border-top: 1px solid var(--faint); }
+.fact p { margin: 0 0 2px; font-size: 14px; line-height: 1.45; }
+.timeline .facts { padding: 0 18px 12px; }
+#learned { border-top: 1px solid var(--rule); margin-top: 8px; padding-top: 14px; }
 .changed ul { margin: 6px 0 0; padding-left: 0; list-style: none; }
 .changed li + li { margin-top: 5px; }
 .during { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 6px; font-size: 14px; }
@@ -433,7 +438,7 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
 
   <section id="tab-runs" class="panel" hidden>
     <div class="runs-layout">
-      <div class="timeline"><h2>Every run, newest first</h2><ol class="tl" id="tl"></ol></div>
+      <div class="timeline"><h2>Every run, newest first</h2><ol class="tl" id="tl"></ol><div id="learned"></div></div>
       <div class="run-d" id="run-d"></div>
     </div>
   </section>
@@ -484,6 +489,7 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
     trl: ["TRL", "Technology readiness level, from 1 (basic idea) to 9 (proven in service). A range means the sources put parts of it at different stages."],
     link: ["Link to problem", "Stated: the source itself ties the technology to this problem. Inferred: Claude made the link, and the reasoning is given."],
     caps: ["MTC capability", "Which MTC capabilities this would draw on: additive manufacture, laser processes, robotics, metrology and inspection, modelling and simulation, and design for manufacture."],
+    learned: ["What Claude has learned", "Lasting points Claude took from comments and feedback: rules, corrections, context and leads. Every run reads them before scoring, and they stay until someone says otherwise. Notes are not shown here."],
     changes: ["New and updated", "New cards first appeared in this run. Updated cards changed since the previous run: new sources, scores or wording."],
     comments: ["Comments", "Everyone's comments on this card, newest last. Your thumbs and comments are read before every run: Claude re-scores cards, searches for more of what you like, and proposes bigger changes on the Runs tab."],
     runfb: ["Comments on a run", "Say how a run went as a whole: what was missing, what to look for next, what to stop, and whether you agree with any proposals (for example \"yes to P1\")."],
@@ -532,10 +538,14 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
       trl: c.trl?.level || "n/a", trlr: c.trl?.reason || "", tmin: nums.length ? Math.min(...nums) : null, tmax: nums.length ? Math.max(...nums) : null,
       appl: c.applicability?.type || "stated", applr: c.applicability?.reason || "", bar: c.barriers || "", next: c.next_step || "", s: c.scores,
       orgs: (c.orgs || []).map((o) => ({ name: o.name, country: o.country || "", role: o.role || "", type: o.type || "" })),
+      kn: (c.knowledge || []).filter((k) => knowById[k]),
       src: (c.sources || []).map((s) => ({ title: s.title || s.url || s.item, pub: [s.publisher, fmtDate(s.date)].filter(Boolean).join(", "), url: s.url })),
     };
   }
   const RUNS = DATA.runs || [];
+  const KNOW = DATA.knowledge || [];
+  const knowById = Object.fromEntries(KNOW.map((f) => [f.id, f]));
+  const KKIND = { constraint: "Rule", context: "Context", correction: "Correction", lead: "Lead" };
   const LATEST = RUNS[0] || null;
   const runNo = Object.fromEntries([...RUNS].reverse().map((r, i) => [r.id, i + 1]));
   const runById = Object.fromEntries(RUNS.map((r) => [r.id, r]));
@@ -592,6 +602,11 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
   const votesOf = (kind, id) => (kind === "card" ? S.fb.filter((f) => f.card === id) : S.rfb.filter((f) => f.run === id)).filter((f) => f.vote);
   const talkCount = (kind, id) => thread(kind, id).length;
   const voteOfWho = (kind, id, who) => ((kind === "card" ? S.fb.find((f) => f.card === id && f.who === who) : S.rfb.find((f) => f.run === id && f.who === who)) || {}).vote || null;
+  function factHtml(f) {
+    const src = f.source || {}, who = { by: src.by, owner: src.owner };
+    const cards = (f.tags?.cards || []).filter((id) => liveById[id]);
+    return `<li class="fact"><span class="tag plain">${esc(KKIND[f.kind] || f.kind || "Fact")}</span><div><p>${esc(f.fact)}</p><div class="small">From ${esc(nameOf(who))}${src.date ? `, ${esc(fmtDate(src.date))}` : ""}${f.run && runNo[f.run] ? ` · learned in run ${runNo[f.run]}` : ""}${cards.length ? ` · applies to ${cards.map((id) => `<button class="linkbtn" data-openrun="${esc(LATEST.id)}" data-card="${esc(id)}">#${liveById[id].rank}</button>`).join(" ")}` : ""}</div></div></li>`;
+  }
   function nameOf(x) {
     if (x.who && x.who === S.who) return "You";
     const p = x.by && S.names[x.by];
@@ -661,6 +676,7 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
       <section><span class="lbl">MTC capability ${info("caps")}</span>${capset(c)}</section>
       <section><span class="lbl">Main barrier</span><div style="font-size:14.5px">${esc(c.bar)}</div><p class="small">${term("link", "Link to problem")}: ${c.appl === "inferred" ? "inferred by Claude" : "stated in the source"}. ${esc(c.applr)}</p></section>
       <section><span class="lbl">Who to talk to: ${c.orgs.length} organisations, ${ukCount(c)} in the UK</span><div class="orgs">${orgsHtml(c)}</div></section>
+      ${c.kn.length ? `<section><span class="lbl">What we told Claude that shaped this card ${info("learned")}</span><ul class="facts">${c.kn.map((k) => factHtml(knowById[k])).join("")}</ul></section>` : ""}
       <section><span class="lbl">Sources (${c.src.length})</span>${srcHtml(c)}</section>
       ${live ? threadHtml("card", c.id) : `<div class="thread"><p class="cm-empty">This card is no longer in the latest report, so comments are closed.</p></div>`}`;
   }
@@ -944,6 +960,7 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
   /* ---------- runs ---------- */
   function renderRuns() {
     $("n-runs").textContent = RUNS.length || "";
+    $("learned").innerHTML = `<h2>What Claude has learned (${KNOW.length}) ${info("learned")}</h2>${KNOW.length ? `<ul class="facts">${KNOW.map(factHtml).join("")}</ul>` : '<p class="small" style="padding:0 18px 14px">Nothing yet. When a comment teaches it something lasting (a rule, a correction, a lead), it is kept here and used in every later run.</p>'}`;
     if (!RUNS.length) { $("tl").innerHTML = ""; $("run-d").innerHTML = '<div class="empty">No runs recorded yet.</div>'; return; }
     if (!runById[S.runSel]) S.runSel = LATEST.id;
     $("tl").innerHTML = RUNS.map((r) => {
@@ -951,7 +968,7 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
       return `<li><button data-runsel="${esc(r.id)}" aria-current="${r.id === S.runSel}"><span class="node"></span><span>
         <span class="t1">Run ${runNo[r.id]}${r === LATEST ? '<span class="tag new">Latest</span>' : ""}${r.id === S.runId ? '<span class="tag upd">On show</span>' : ""}</span>
         <span class="t2">${esc(fmtDate(r.date))}, ${esc(fmtTime(r.time))} · ${esc(KIND[r.kind] || r.kind)}</span>
-        <span class="t3"><span>${first ? r.cards : r.new_cards.length} new</span><span>${r.updated_cards.length} updated</span>${cmtBadge(n)}${votes.length ? `<span>${votes.filter((v) => v.vote === "up").length}▲ ${votes.filter((v) => v.vote === "down").length}▼</span>` : ""}</span>
+        <span class="t3"><span>${first ? r.cards : r.new_cards.length} new</span><span>${r.updated_cards.length} updated</span>${cmtBadge(n)}${votes.length ? `<span>${votes.filter((v) => v.vote === "up").length}▲ ${votes.filter((v) => v.vote === "down").length}▼</span>` : ""}${r.ratings?.cards && (r.ratings.cards.up + r.ratings.cards.down) ? `<span title="Votes on the cards this run added or changed">cards ${r.ratings.cards.up}▲ ${r.ratings.cards.down}▼</span>` : ""}</span>
       </span></button></li>`;
     }).join("");
     const r = runById[S.runSel], first = r.kind === "first run", fr = r.feedback_review || {};
@@ -975,6 +992,8 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
       </div>
       <div class="review"><h3>What Claude did with feedback before this run</h3><p>${esc(fr.summary || "No feedback to act on.")}</p>
         ${(fr.applied || []).length ? `<p style="margin-top:8px"><b>Changed because of feedback</b></p><ul>${fr.applied.map((a) => `<li>${esc(a)}</li>`).join("")}</ul>` : ""}
+        ${(fr.learned || []).filter((l) => !l.hidden).length ? `<p style="margin-top:8px"><b>Learned from your comments</b></p><ul>${fr.learned.filter((l) => !l.hidden).map((l) => `<li><span class="pid">${esc(KKIND[l.kind] || l.kind || "Fact")}</span>${esc(l.fact)}${l.status && l.status !== "active" ? ` <span class="small">(${esc(l.status)})</span>` : ""}</li>`).join("")}</ul>` : ""}
+        ${(fr.facts_used || []).length ? `<p style="margin-top:8px"><b>Earlier lessons it applied</b></p><ul>${fr.facts_used.map((u) => `<li>${esc(knowById[u.id]?.fact || u.id)}${u.effect ? ` <span class="small">(${esc(u.effect)})</span>` : ""}</li>`).join("")}</ul>` : ""}
         ${proposed.length ? `<p style="margin-top:8px"><b>Proposed, waiting for your OK</b> (reply in the comments, for example "yes to P1")</p><ul>${proposed.map((p) => `<li>${p.id ? `<span class="pid">${esc(p.id)}</span>` : ""}${esc(p.text)}</li>`).join("")}</ul>` : ""}
       </div>
       ${first ? "" : `<div class="changed"><div><span class="lbl">New cards (${r.new_cards.length}) ${info("changes")}</span><ul>${r.new_cards.map((x) => `<li>${cardLink(x.id, x.headline)}</li>`).join("")}</ul></div><div><span class="lbl">Updated cards (${r.updated_cards.length})</span><ul>${r.updated_cards.map((x) => `<li>${cardLink(x.id, x.headline)}</li>`).join("")}</ul></div></div>`}
