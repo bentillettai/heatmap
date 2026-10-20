@@ -25,7 +25,7 @@ https://claude.ai/artifact/WCo5GAu4ZQpZQ6N8rTSYVS
 web search ──► read pages ──► thermal gate ──► items.jsonl
                                                    │
          feedback + notes from the page ──┐        ▼
-                                          ├──► opportunity cards (cards.json)
+           └──► learned facts ────────────┤──► opportunity cards (cards.json)
          rubric + preferences ────────────┘        │
                                                    ▼
                                      check (score, rank) ──► build ──► page
@@ -47,8 +47,18 @@ web search ──► read pages ──► thermal gate ──► items.jsonl
   changes itself (scores, searches, plain-English rules in
   `config/preferences.md`) and proposes bigger ones (weights, the gate, areas)
   for ben or Henry to approve on the page.
+- **Remember.** Facts people teach it in comments ("this can't be sold in the
+  UK because of an EU rule", "that company was bought last year") are distilled
+  into `data/knowledge.jsonl`, one plain sentence each, tagged by card,
+  organisation, technology, capability or area, with the comment and person it
+  came from. Every run reads them before scoring, applies them to the cards they
+  touch (and to new cards later), and says in its notes which fact changed
+  what. Facts are replaced or retired, never deleted, so git keeps the history.
+  Preferences are taste; knowledge is about the world.
 - **Keep.** Every run is logged in `data/runs.jsonl` and its report is frozen
   in `data/runs/`, so the Runs tab can show any earlier run with its feedback.
+  `tools/heatmap.py stats` counts the up and down votes each run's cards got,
+  which is the simplest check that the report is getting better.
 
 ## Files
 
@@ -64,6 +74,7 @@ web search ──► read pages ──► thermal gate ──► items.jsonl
 | `data/items.jsonl` | Every article read, with summary, orgs and gate result |
 | `data/cards.json` | The opportunity cards and run metadata |
 | `data/feedback.jsonl`, `data/run_feedback.jsonl`, `data/comments.jsonl`, `data/notes.jsonl` | Votes, comments and notes copied from the page |
+| `data/knowledge.jsonl` | Facts and constraints learned from comments, with their sources |
 | `data/runs.jsonl` | One line per run, with what feedback changed |
 | `data/runs/` | Each run's frozen report, published as `runs/<id>.json` |
 | `data/inbox/` | Each run's raw batch of new items |
@@ -92,6 +103,10 @@ python3 tools/heatmap.py stats
 - Public sources only, read through web search. Paywalled journals, LinkedIn
   and anything behind a login are out of reach.
 - Scores are Claude's judgement, steered by feedback. They aren't measurements.
+- Comments and the knowledge file live outside MTC systems, so they must stay
+  non-confidential. A run won't record a comment that looks confidential, but
+  that is a backstop, not a control; opening comments company-wide would need
+  that said clearly on the page.
 - One page version holds at most 511 files, so after about 500 runs the older
   frozen reports will need merging into fewer files.
 - This runs on ben's Claude account, outside MTC systems. Bringing it inside MTC
