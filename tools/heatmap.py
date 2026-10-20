@@ -8,7 +8,9 @@ data files tidy and builds the page.
   python3 tools/heatmap.py check                    validate cards, recompute scores
   python3 tools/heatmap.py build                    write site/index.html
   python3 tools/heatmap.py ingest-feedback DIR_OR_JSON   (ArtifactData out_dir)
+  python3 tools/heatmap.py ingest-run-feedback DIR_OR_JSON
   python3 tools/heatmap.py ingest-notes DIR_OR_JSON
+  python3 tools/heatmap.py record-run RUN.json      log the run and freeze its report
   python3 tools/heatmap.py new-urls URL [URL ...]       print the ones not yet read
   python3 tools/heatmap.py stats
 """
@@ -24,7 +26,10 @@ DATA = ROOT / "data"
 ITEMS = DATA / "items.jsonl"
 CARDS = DATA / "cards.json"
 FEEDBACK = DATA / "feedback.jsonl"
+RUN_FEEDBACK = DATA / "run_feedback.jsonl"
 NOTES = DATA / "notes.jsonl"
+RUNS = DATA / "runs.jsonl"
+SNAPSHOTS = DATA / "runs"   # one frozen report per run, published as runs/<id>.json
 TEMPLATE = ROOT / "site" / "template.html"
 PAGE = ROOT / "site" / "index.html"
 
@@ -169,10 +174,9 @@ def organisations(cards):
     return out
 
 
-def build():
-    doc = load_cards()
-    items = {i["id"]: i for i in read_jsonl(ITEMS)}
-    for c in doc["cards"]:
+def with_sources(cards, items):
+    """Fill each source's url, title, publisher and date from items.jsonl."""
+    for c in cards:
         for src in c["sources"]:
             it = items.get(src.get("item"))
             if it:
@@ -180,10 +184,103 @@ def build():
                 src.setdefault("title", it.get("title"))
                 src.setdefault("publisher", it.get("publisher"))
                 src.setdefault("date", it.get("date"))
+    return cards
+
+
+def card_signature(c):
+    """What counts as a change to a card between runs (not rank, which moves
+    whenever another card does, and not organisation country tidying)."""
+    keep = ["headline", "problem", "technology", "capabilities", "why", "applicability",
+            "trl", "barriers", "next_step", "scores"]
+    sig = {k: c.get(k) for k in keep}
+    sig["orgs"] = sorted([o["name"], o.get("role")] for o in c["orgs"])
+    sig["sources"] = sorted(s["item"] for s in c["sources"])
+    return json.dumps(sig, sort_keys=True, ensure_ascii=False)
+
+
+def snapshot_path(run_id):
+    return SNAPSHOTS / f"{run_id}.json"
+
+
+def record_run(run_path):
+    """Log a run in runs.jsonl and freeze its report as data/runs/<id>.json.
+
+    RUN.json holds what Claude knows about the run: kind (daily, sweep or
+    manual), items_read, passed_gate, feedback_synced, notes_synced,
+    run_feedback_synced, summary, and feedback_review ({summary, applied,
+    proposed}). This adds the id, time, card count and which cards are new
+    or changed since the previous run, and copies the summary into cards.json.
+    """
+    run = json.loads(Path(run_path).read_text())
+    runs = read_jsonl(RUNS)
+    now = dt.datetime.now(dt.timezone.utc).replace(microsecond=0)
+    today = now.date().isoformat()
+    seq = 1 + sum(1 for r in runs if r.get("date") == today)
+    run_id = f"{today}-{seq}"
+    doc = load_cards()
+    prev = {}
+    if runs and snapshot_path(runs[-1]["id"]).exists():
+        prev = {c["id"]: c for c in json.loads(snapshot_path(runs[-1]["id"]).read_text())["cards"]}
+    review = run.get("feedback_review") or {}
+    record = {
+        "id": run_id,
+        "date": today,
+        "time": now.isoformat().replace("+00:00", "Z"),
+        "kind": run.get("kind", "daily"),
+        "items_read": run.get("items_read", 0),
+        "passed_gate": run.get("passed_gate", 0),
+        "cards": len(doc["cards"]),
+        "new_cards": [c["id"] for c in doc["cards"] if c["id"] not in prev],
+        "updated_cards": [c["id"] for c in doc["cards"]
+                          if c["id"] in prev and card_signature(c) != card_signature(prev[c["id"]])],
+        "feedback_synced": run.get("feedback_synced", 0),
+        "notes_synced": run.get("notes_synced", 0),
+        "run_feedback_synced": run.get("run_feedback_synced", 0),
+        "summary": run.get("summary", ""),
+        "feedback_review": {
+            "summary": review.get("summary") or "No new feedback since the last run.",
+            "applied": review.get("applied", []),
+            "proposed": review.get("proposed", []),
+        },
+    }
+    doc["meta"].update(updated=today, run_id=run_id, run_summary=record["summary"])
+    CARDS.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n")
+    items = {i["id"]: i for i in read_jsonl(ITEMS)}
+    SNAPSHOTS.mkdir(exist_ok=True)
+    snap = {"run": record, "meta": doc["meta"], "cards": with_sources(doc["cards"], items)}
+    snapshot_path(run_id).write_text(json.dumps(snap, ensure_ascii=False) + "\n")
+    runs.append(record)
+    write_jsonl(RUNS, runs)
+    print(f"run {run_id}: {len(record['new_cards'])} new, {len(record['updated_cards'])} updated")
+    print(f"publish with files: runs/{run_id}.json -> {snapshot_path(run_id).relative_to(ROOT)}")
+
+
+def runs_index(cards):
+    """Runs newest first, with headlines for the cards each one added or changed."""
+    out = []
+    for r in reversed(read_jsonl(RUNS)):
+        if "id" not in r:
+            continue
+        p = snapshot_path(r["id"])
+        names = {c["id"]: c["headline"] for c in cards}
+        if p.exists():
+            names = {c["id"]: c["headline"] for c in json.loads(p.read_text())["cards"]}
+        out.append({**r,
+                    "snapshot": f"runs/{r['id']}.json" if p.exists() else None,
+                    "new_cards": [{"id": i, "headline": names.get(i, i)} for i in r.get("new_cards", [])],
+                    "updated_cards": [{"id": i, "headline": names.get(i, i)} for i in r.get("updated_cards", [])]})
+    return out
+
+
+def build():
+    doc = load_cards()
+    items = {i["id"]: i for i in read_jsonl(ITEMS)}
+    with_sources(doc["cards"], items)
     payload = {
         "meta": doc["meta"],
         "cards": doc["cards"],
         "organisations": organisations(doc["cards"]),
+        "runs": runs_index(doc["cards"]),
         "item_count": len(items),
         "passed_gate": sum(1 for i in items.values() if i.get("gate") == "pass"),
         "weights": WEIGHTS,
@@ -211,23 +308,25 @@ def _docs(dump_path):
     return out
 
 
-def ingest_feedback(dump_path):
-    """Feedback docs live at feedback/<card>~<viewer id>; keep every revision."""
-    rows = read_jsonl(FEEDBACK)
+def ingest_feedback(dump_path, path=FEEDBACK, key="card"):
+    """Feedback docs live at feedback/<card>~<viewer id> (or
+    runfeedback/<run id>~<viewer id>); keep every revision."""
+    rows = read_jsonl(path)
     seen = {(r.get("doc_id"), r.get("updated")) for r in rows}
     added = 0
     for d in _docs(dump_path):
-        card = d.get("card") or (d.get("doc_id") or "").split("~")[0]
-        key = (d.get("doc_id"), d.get("updated"))
-        if key in seen:
+        target = d.get(key) or (d.get("doc_id") or "").split("~")[0]
+        rev = (d.get("doc_id"), d.get("updated"))
+        if rev in seen:
             continue
-        rows.append({"doc_id": d.get("doc_id"), "card": card, "vote": d.get("vote"),
-                     "why": d.get("why", ""), "by": d.get("by"), "updated": d.get("updated"),
+        rows.append({"doc_id": d.get("doc_id"), key: target, "vote": d.get("vote"),
+                     "why": d.get("why", ""), "by": d.get("by"), "owner": d.get("owner"),
+                     "updated": d.get("updated"),
                      "synced": dt.date.today().isoformat(), "actioned": False})
-        seen.add(key)
+        seen.add(rev)
         added += 1
-    write_jsonl(FEEDBACK, rows)
-    print(f"feedback: {added} new, {len(rows)} total")
+    write_jsonl(path, rows)
+    print(f"{path.stem}: {added} new, {len(rows)} total")
 
 
 def ingest_notes(dump_path):
@@ -263,7 +362,8 @@ def stats():
     passed = sum(1 for i in items if i.get("gate") == "pass")
     print(f"items: {len(items)} ({passed} passed the thermal gate)")
     print(f"cards: {len(doc['cards'])} {by_area}")
-    print(f"feedback rows: {len(read_jsonl(FEEDBACK))}, notes: {len(read_jsonl(NOTES))}")
+    print(f"feedback rows: {len(read_jsonl(FEEDBACK))}, run feedback: {len(read_jsonl(RUN_FEEDBACK))}, "
+          f"notes: {len(read_jsonl(NOTES))}, runs: {len(read_jsonl(RUNS))}")
 
 
 if __name__ == "__main__":
@@ -272,7 +372,9 @@ if __name__ == "__main__":
         "merge-items": lambda: merge_items(*args),
         "check": check,
         "build": build,
+        "record-run": lambda: record_run(*args),
         "ingest-feedback": lambda: ingest_feedback(*args),
+        "ingest-run-feedback": lambda: ingest_feedback(*args, path=RUN_FEEDBACK, key="run"),
         "ingest-notes": lambda: ingest_notes(*args),
         "new-urls": lambda: new_urls(args),
         "stats": stats,
