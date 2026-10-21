@@ -2,21 +2,21 @@
   "meta": {
     "title": "Heatmap",
     "started": "2026-10-20",
-    "updated": "2026-10-20",
+    "updated": "2026-10-21",
     "areas": {
       "datacentre": "Data centres",
       "aerospace": "Aerospace",
       "motorsport": "Motorsport",
       "other": "Other"
     },
-    "run_summary": "Wider search: 65 more articles read (56 passed the thermal check), 12 new cards and 9 cards updated. New this time: Honeywell's STRATA cabin-air project, bypass-duct oil coolers, hydrogen racing, jet-impingement cold plates, and technology-first cards under Other.",
+    "run_summary": "2 new cards: BAE Systems and Leeds on printed two-phase aircraft heat exchangers, and laser-melted gyroid micro heat exchangers with 100 µm features. 6 cards updated, including graded TPMS lattices (28.7% measured gain) and printed heat pipes.",
     "coverage": {
       "datacentre": "Good coverage of cold plates, jet impingement and heat reuse. One UK chip-level start-up found so far (Infiniflux).",
-      "aerospace": "Strong on oil coolers and hydrogen. Cabin-air systems are now covered through Honeywell's STRATA project, but precooler-specific news is still rare.",
+      "aerospace": "Strong on oil coolers and hydrogen. Cabin-air systems are now covered through Honeywell's STRATA project, but precooler-specific news is still rare. Defence aircraft electronics cooling now appears through BAE Systems' work with Leeds.",
       "motorsport": "Teams publish little, so most evidence comes from suppliers (Conflux, PWR) and student teams. Henry's steer here will help most.",
       "other": "Found by searching from the technology first: heat pipes, laser texturing, modelling, TPMS tests, fusion and transpiration cooling. Links to the three areas are mostly inferred."
     },
-    "run_id": "2026-10-20-2"
+    "run_id": "2026-10-21-1"
   },
   "cards": [
     {
@@ -234,7 +234,7 @@
         "metrology and inspection",
         "modelling and simulation"
       ],
-      "why": "DTI and Heatflow printed the evaporator in one piece by laser powder bed fusion, which removes joints and leak paths, and tested it at 600 W, 50% above target, with no pumps or fans. Heat leaves at 60-80 C, warm enough for district heating, which ties it to the UK heat-network push. It is still the clearest Venn centre found: the advance exists because of how the part is made.",
+      "why": "DTI and Heatflow printed the evaporator in one piece by laser powder bed fusion, which removes joints and leak paths, and tested it at 600 W, 50% above target, with no pumps or fans. Heat leaves at 60-80 C, warm enough for district heating, which ties it to the UK heat-network push.  A Villanova University rack-scale thermosyphon gives a measured benchmark for the passive approach: stable from 2 to 7.5 kW per rack with no pump. It is still the clearest Venn centre found: the advance exists because of how the part is made.",
       "applicability": {
         "type": "stated",
         "reason": "The project itself targets data-centre and HPC cooling."
@@ -275,6 +275,12 @@
           "type": "Gov",
           "country": "Denmark",
           "role": "funder"
+        },
+        {
+          "name": "Villanova University",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
         }
       ],
       "sources": [
@@ -283,6 +289,9 @@
         },
         {
           "item": "dcd-am2pc-vapour-chamber"
+        },
+        {
+          "item": "villanova-rack-thermosyphon"
         }
       ],
       "scores": {
@@ -479,7 +488,7 @@
         "modelling and simulation",
         "metrology and inspection"
       ],
-      "why": "Three start-ups reach the same goal by different routes. Fabric8Labs prints copper electrochemically at 33 microns, Corintis designs microchannels in software and makes them at volume (in a Microsoft test, three times better heat removal), and Alloy Enterprises laser-cuts copper sheets and diffusion bonds them. MTC covers both the additive and the laser routes, so it could benchmark them fairly. The Microsoft result is the only independent number.",
+      "why": "Three start-ups reach the same goal by different routes. Fabric8Labs prints copper electrochemically at 33 microns, Corintis designs microchannels in software and makes them at volume (in a Microsoft test, three times better heat removal), and Alloy Enterprises laser-cuts copper sheets and diffusion bonds them. MTC covers both the additive and the laser routes, so it could benchmark them fairly. Green-laser printers for pure copper are also scaling: China's Addireen says it can now build 50 machines a month, aimed at cold plates (its figures). The Microsoft result is the only independent number.",
       "applicability": {
         "type": "stated",
         "reason": "All three companies sell into AI data-centre cooling."
@@ -526,6 +535,12 @@
           "type": "Commercial",
           "country": "USA",
           "role": "user"
+        },
+        {
+          "name": "Addireen",
+          "type": "Commercial",
+          "country": "China",
+          "role": "supplier"
         }
       ],
       "sources": [
@@ -537,6 +552,9 @@
         },
         {
           "item": "techcrunch-alloy-stack-forging"
+        },
+        {
+          "item": "addireen-green-laser-copper"
         }
       ],
       "scores": {
@@ -551,6 +569,102 @@
       "score": 84,
       "rank": 6,
       "area_rank": 2
+    },
+    {
+      "id": "ot-am-heat-pipes",
+      "area": "other",
+      "headline": "Printed loop and pulsating heat pipes with the wick built in",
+      "problem": "Spacecraft and dense electronics need passive cooling that moves heat with no pump, and wicks and fine channels are hard to make.",
+      "technology": "Loop heat pipes whose evaporator and wick are printed as one part, and pulsating heat pipes printed in pure copper.",
+      "capabilities": [
+        "additive manufacture",
+        "metrology and inspection",
+        "modelling and simulation"
+      ],
+      "why": "Advanced Cooling Technologies prints the stainless-steel evaporator and primary wick of its loop heat pipes as one LPBF part. A test unit on ammonia reached 5.1 W/K and ran stable at 125 W before drying out at 130-140 W, and a 15 W unit for a NASA CubeSat is built and awaiting thermal-vacuum tests, with 50 W to 1 kW designs to follow. Calyos and Beamler have printed a pure-copper pulsating heat pipe, so far without published data. Printed wicks depend on porosity control, which is MTC process and inspection work, and the same parts could serve data-centre and aircraft electronics. The University of Brighton has shown even resin-printed pulsating heat pipes work (1.7 °C/W at 30 W), and the von Karman Institute is testing printed-wick loop heat pipes under 2g for avionics boxes.",
+      "applicability": {
+        "type": "inferred",
+        "reason": "The sources target spacecraft; use in data centres and aircraft electronics is our inference."
+      },
+      "trl": {
+        "level": "4-6",
+        "reason": "Test unit measured; flight unit built but not yet tested."
+      },
+      "barriers": "Space qualification, and porosity control in printed wicks.",
+      "next_step": "Ask Brunel's Heat Pipe and Thermal Management group, the main UK academic heat-pipe team found so far, whether it has tried printed wicks.",
+      "orgs": [
+        {
+          "name": "Advanced Cooling Technologies",
+          "type": "Commercial",
+          "country": "USA",
+          "role": "developer"
+        },
+        {
+          "name": "NASA",
+          "type": "Gov",
+          "country": "USA",
+          "role": "user"
+        },
+        {
+          "name": "Calyos",
+          "type": "Commercial",
+          "country": "Belgium",
+          "role": "developer"
+        },
+        {
+          "name": "Beamler",
+          "type": "Commercial",
+          "country": null,
+          "role": "supplier"
+        },
+        {
+          "name": "Brunel University of London",
+          "type": "Uni",
+          "country": "UK",
+          "role": "researcher"
+        },
+        {
+          "name": "University of Brighton",
+          "type": "Uni",
+          "country": "UK",
+          "role": "researcher"
+        },
+        {
+          "name": "von Karman Institute",
+          "type": "RTO",
+          "country": "Belgium",
+          "role": "researcher"
+        }
+      ],
+      "sources": [
+        {
+          "item": "act-3d-printed-lhp"
+        },
+        {
+          "item": "calyos-copper-php"
+        },
+        {
+          "item": "brunel-heat-pipe-group"
+        },
+        {
+          "item": "brighton-polymer-php"
+        },
+        {
+          "item": "vki-am-lhp-acceleration"
+        }
+      ],
+      "scores": {
+        "venn_fit": 4,
+        "manufacturing_key": 5,
+        "evidence": 4,
+        "novelty": 4,
+        "uk_relevance": 3,
+        "contactable": 4
+      },
+      "added": "2026-10-20",
+      "score": 82,
+      "rank": 7,
+      "area_rank": 1
     },
     {
       "id": "ae-ati-compact-hx-programme",
@@ -652,7 +766,7 @@
       },
       "added": "2026-10-20",
       "score": 81,
-      "rank": 7,
+      "rank": 8,
       "area_rank": 4
     },
     {
@@ -707,8 +821,8 @@
       },
       "added": "2026-10-20",
       "score": 81,
-      "rank": 8,
-      "area_rank": 1
+      "rank": 9,
+      "area_rank": 2
     },
     {
       "id": "dc-system-level-pump-energy",
@@ -762,7 +876,7 @@
       },
       "added": "2026-10-20",
       "score": 80,
-      "rank": 9,
+      "rank": 10,
       "area_rank": 3
     },
     {
@@ -861,7 +975,7 @@
       },
       "added": "2026-10-20",
       "score": 80,
-      "rank": 10,
+      "rank": 11,
       "area_rank": 5
     },
     {
@@ -937,86 +1051,8 @@
       },
       "added": "2026-10-20",
       "score": 80,
-      "rank": 11,
-      "area_rank": 6
-    },
-    {
-      "id": "ot-am-heat-pipes",
-      "area": "other",
-      "headline": "Printed loop and pulsating heat pipes with the wick built in",
-      "problem": "Spacecraft and dense electronics need passive cooling that moves heat with no pump, and wicks and fine channels are hard to make.",
-      "technology": "Loop heat pipes whose evaporator and wick are printed as one part, and pulsating heat pipes printed in pure copper.",
-      "capabilities": [
-        "additive manufacture",
-        "metrology and inspection",
-        "modelling and simulation"
-      ],
-      "why": "Advanced Cooling Technologies prints the stainless-steel evaporator and primary wick of its loop heat pipes as one LPBF part. A test unit on ammonia reached 5.1 W/K and ran stable at 125 W before drying out at 130-140 W, and a 15 W unit for a NASA CubeSat is built and awaiting thermal-vacuum tests, with 50 W to 1 kW designs to follow. Calyos and Beamler have printed a pure-copper pulsating heat pipe, so far without published data. Printed wicks depend on porosity control, which is MTC process and inspection work, and the same parts could serve data-centre and aircraft electronics.",
-      "applicability": {
-        "type": "inferred",
-        "reason": "The sources target spacecraft; use in data centres and aircraft electronics is our inference."
-      },
-      "trl": {
-        "level": "4-6",
-        "reason": "Test unit measured; flight unit built but not yet tested."
-      },
-      "barriers": "Space qualification, and porosity control in printed wicks.",
-      "next_step": "Ask Brunel's Heat Pipe and Thermal Management group, the main UK academic heat-pipe team found so far, whether it has tried printed wicks.",
-      "orgs": [
-        {
-          "name": "Advanced Cooling Technologies",
-          "type": "Commercial",
-          "country": "USA",
-          "role": "developer"
-        },
-        {
-          "name": "NASA",
-          "type": "Gov",
-          "country": "USA",
-          "role": "user"
-        },
-        {
-          "name": "Calyos",
-          "type": "Commercial",
-          "country": "Belgium",
-          "role": "developer"
-        },
-        {
-          "name": "Beamler",
-          "type": "Commercial",
-          "country": null,
-          "role": "supplier"
-        },
-        {
-          "name": "Brunel University of London",
-          "type": "Uni",
-          "country": "UK",
-          "role": "researcher"
-        }
-      ],
-      "sources": [
-        {
-          "item": "act-3d-printed-lhp"
-        },
-        {
-          "item": "calyos-copper-php"
-        },
-        {
-          "item": "brunel-heat-pipe-group"
-        }
-      ],
-      "scores": {
-        "venn_fit": 4,
-        "manufacturing_key": 5,
-        "evidence": 4,
-        "novelty": 4,
-        "uk_relevance": 2,
-        "contactable": 4
-      },
-      "added": "2026-10-20",
-      "score": 80,
       "rank": 12,
-      "area_rank": 2
+      "area_rank": 6
     },
     {
       "id": "ot-fusion-am-hx",
@@ -1575,6 +1611,111 @@
       "area_rank": 4
     },
     {
+      "id": "ae-bae-am-two-phase-hx",
+      "area": "aerospace",
+      "headline": "BAE Systems and Leeds want printed two-phase heat exchangers, sized fast, for aircraft electronics heat",
+      "problem": "Military and future aircraft carry more mission electronics, whose waste heat must be removed in very little space.",
+      "technology": "Additively manufactured single- and two-phase heat exchangers (evaporators, condensers, phase-change material) with fast sizing models.",
+      "capabilities": [
+        "additive manufacture",
+        "modelling and simulation",
+        "design for manufacture"
+      ],
+      "why": "Two linked University of Leeds PhD projects with BAE Systems Warton aim to model two-phase aircraft heat exchangers, demonstrate design gains from additive layer manufacturing, and build fast sizing tools that run on a laptop instead of an HPC cluster. BAE offers its own facilities to build and test proof-of-concept parts. These are project plans with no results yet. It is a UK prime asking for exactly MTC's mix of AM, modelling and design for manufacture, and a two-phase aircraft heat exchanger is a natural partner to the oil-cooler and precooler cards.",
+      "applicability": {
+        "type": "stated",
+        "reason": "The projects name aircraft thermal management heat exchangers and AM demonstrators."
+      },
+      "trl": {
+        "level": "2-3",
+        "reason": "PhD project plans; no published results."
+      },
+      "barriers": "Defence context may limit what is published; two-phase behaviour in printed channels is poorly characterised.",
+      "next_step": "Ask Leeds (Duncan Borman) and BAE Systems Warton whether the demonstrators are built and who prints them.",
+      "orgs": [
+        {
+          "name": "University of Leeds",
+          "type": "Uni",
+          "country": "UK",
+          "role": "researcher"
+        },
+        {
+          "name": "BAE Systems",
+          "type": "Commercial",
+          "country": "UK",
+          "role": "user"
+        }
+      ],
+      "sources": [
+        {
+          "item": "leeds-bae-am-two-phase-hx"
+        },
+        {
+          "item": "leeds-bae-fast-hx-sizing"
+        }
+      ],
+      "scores": {
+        "venn_fit": 4,
+        "manufacturing_key": 4,
+        "evidence": 1,
+        "novelty": 3,
+        "uk_relevance": 5,
+        "contactable": 5
+      },
+      "added": "2026-10-21",
+      "score": 72,
+      "rank": 20,
+      "area_rank": 9
+    },
+    {
+      "id": "ot-micro-slm-tpms-hx",
+      "area": "other",
+      "headline": "Laser-melted gyroid micro heat exchangers with 100 µm features reach 12 kW/m²K",
+      "problem": "Chip and power-electronics cooling needs very high heat transfer in small volumes, beyond what conventional microchannels give.",
+      "technology": "Gyroid TPMS micro heat exchangers built by micro selective laser melting.",
+      "capabilities": [
+        "additive manufacture",
+        "laser processes (cutting, texturing)",
+        "metrology and inspection"
+      ],
+      "why": "Laserinstitut Hochschule Mittweida built three gyroid micro heat exchangers by micro selective laser melting, with features as small as 100 µm, and compared them with a microchannel unit. The abstract reports heat transfer coefficients up to 12 kW/(m²K), over 300% above conventional plate heat exchangers, and leak-free operation to 8 bar (abstract only; full paper not read). Feature sizes this small would suit printed cold plates for AI chips, though the paper does not say so. It puts laser process control, not just lattice design, at the centre.",
+      "applicability": {
+        "type": "inferred",
+        "reason": "The paper is about micro heat exchangers generally; the link to chip cold plates is ours."
+      },
+      "trl": {
+        "level": "3-4",
+        "reason": "Lab prototypes measured."
+      },
+      "barriers": "Micro-SLM build size and speed, powder removal from 100 µm channels, and fouling.",
+      "next_step": "Read the full Jena Laser Conference paper for test conditions and pressure drop.",
+      "orgs": [
+        {
+          "name": "Hochschule Mittweida",
+          "type": "Uni",
+          "country": "Germany",
+          "role": "researcher"
+        }
+      ],
+      "sources": [
+        {
+          "item": "mittweida-micro-slm-tpms"
+        }
+      ],
+      "scores": {
+        "venn_fit": 4,
+        "manufacturing_key": 5,
+        "evidence": 3,
+        "novelty": 4,
+        "uk_relevance": 0,
+        "contactable": 3
+      },
+      "added": "2026-10-21",
+      "score": 71,
+      "rank": 21,
+      "area_rank": 5
+    },
+    {
       "id": "ae-am-air-system-hx",
       "area": "aerospace",
       "headline": "Printed heat exchangers for aircraft air systems and precoolers",
@@ -1659,8 +1800,8 @@
       },
       "added": "2026-10-20",
       "score": 70,
-      "rank": 20,
-      "area_rank": 9
+      "rank": 22,
+      "area_rank": 10
     },
     {
       "id": "ms-am-battery-cold-plates-inspection",
@@ -1723,7 +1864,7 @@
       },
       "added": "2026-10-20",
       "score": 67,
-      "rank": 21,
+      "rank": 23,
       "area_rank": 5
     },
     {
@@ -1810,7 +1951,7 @@
       },
       "added": "2026-10-20",
       "score": 66,
-      "rank": 22,
+      "rank": 24,
       "area_rank": 4
     },
     {
@@ -1876,8 +2017,8 @@
       },
       "added": "2026-10-20",
       "score": 66,
-      "rank": 23,
-      "area_rank": 10
+      "rank": 25,
+      "area_rank": 11
     },
     {
       "id": "dc-generative-cold-plate-design",
@@ -1933,7 +2074,7 @@
       },
       "added": "2026-10-20",
       "score": 66,
-      "rank": 24,
+      "rank": 26,
       "area_rank": 5
     },
     {
@@ -2024,7 +2165,7 @@
       },
       "added": "2026-10-20",
       "score": 66,
-      "rank": 25,
+      "rank": 27,
       "area_rank": 6
     },
     {
@@ -2098,8 +2239,8 @@
       },
       "added": "2026-10-20",
       "score": 65,
-      "rank": 26,
-      "area_rank": 11
+      "rank": 28,
+      "area_rank": 12
     },
     {
       "id": "ae-sacoc-fin-design",
@@ -2177,8 +2318,8 @@
       },
       "added": "2026-10-20",
       "score": 65,
-      "rank": 27,
-      "area_rank": 12
+      "rank": 29,
+      "area_rank": 13
     },
     {
       "id": "ms-am-brake-ducts",
@@ -2251,7 +2392,7 @@
       },
       "added": "2026-10-20",
       "score": 63,
-      "rank": 28,
+      "rank": 30,
       "area_rank": 6
     },
     {
@@ -2265,7 +2406,7 @@
         "robotics and automation",
         "modelling and simulation"
       ],
-      "why": "Iceotope holds over 200 patents, claims up to 40% lower energy and 96% lower water use, and raised a $26m Series B in May 2026 to scale its KUL AI racks. Its next challenge is making sealed chassis at volume, which is an assembly and manufacturing problem more than a physics one. It is a UK company close to MTC's patch, though the performance figures are its own.",
+      "why": "Iceotope holds over 200 patents, claims up to 40% lower energy and 96% lower water use, and raised a $26m Series B in May 2026 to scale its KUL AI racks.  It has had UK public backing before: British Patient Capital put £5m into its 2022 round. Its next challenge is making sealed chassis at volume, which is an assembly and manufacturing problem more than a physics one. It is a UK company close to MTC's patch, though the performance figures are its own.",
       "applicability": {
         "type": "stated",
         "reason": "Iceotope sells data-centre cooling."
@@ -2294,6 +2435,12 @@
           "type": "Gov",
           "country": "UK",
           "role": "funder"
+        },
+        {
+          "name": "British Patient Capital",
+          "type": "Gov",
+          "country": "UK",
+          "role": "funder"
         }
       ],
       "sources": [
@@ -2305,6 +2452,9 @@
         },
         {
           "item": "prolific-tracxn-uk-cooling"
+        },
+        {
+          "item": "bbb-iceotope-5m"
         }
       ],
       "scores": {
@@ -2317,8 +2467,95 @@
       },
       "added": "2026-10-20",
       "score": 62,
-      "rank": 29,
+      "rank": 31,
       "area_rank": 7
+    },
+    {
+      "id": "ot-tpms-measured-performance",
+      "area": "other",
+      "headline": "Measured tests show gyroid heat exchangers mainly win on pressure drop",
+      "problem": "Printed TPMS (gyroid) heat exchangers are widely promoted, but like-for-like measured comparisons with conventional units are rare.",
+      "technology": "Gyroid TPMS cores made by metal AM, tested against a commercial brazed plate heat exchanger.",
+      "capabilities": [
+        "additive manufacture",
+        "metrology and inspection",
+        "modelling and simulation"
+      ],
+      "why": "Seoultech and the University of Akron tested a metal-printed gyroid heat exchanger against a commercial brazed plate unit: heat transfer at most 4.4% better, friction up to 30.5% lower, overall merit about 7% higher. Waseda University and AGC then showed that grading the lattice matters more than the lattice itself: varying wall position to balance hot and cold flow gave 28.7% more measured heat transfer than a uniform printed lattice. A US simulation study suggests other surface shapes can beat gyroids in turbulent air. Together they are a reality check on TPMS claims, and independent like-for-like testing of graded lattices is a service an RTO can offer.",
+      "applicability": {
+        "type": "inferred",
+        "reason": "The tests are generic; their bearing on the aerospace and data-centre TPMS cards is ours."
+      },
+      "trl": {
+        "level": "4",
+        "reason": "Lab-tested against a commercial unit."
+      },
+      "barriers": "One measured comparison; results depend on fluid, flow range and cell size.",
+      "next_step": "Use as a benchmark when judging TPMS performance claims.",
+      "orgs": [
+        {
+          "name": "Seoul National University of Science and Technology",
+          "type": "Uni",
+          "country": "South Korea",
+          "role": "researcher"
+        },
+        {
+          "name": "University of Akron",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
+        },
+        {
+          "name": "Université Gustave Eiffel",
+          "type": "Uni",
+          "country": "France",
+          "role": "researcher"
+        },
+        {
+          "name": "Waseda University",
+          "type": "Uni",
+          "country": "Japan",
+          "role": "researcher"
+        },
+        {
+          "name": "AGC",
+          "type": "Commercial",
+          "country": "Japan",
+          "role": "developer"
+        },
+        {
+          "name": "University of the District of Columbia",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
+        }
+      ],
+      "sources": [
+        {
+          "item": "seoultech-gyroid-vs-bphe"
+        },
+        {
+          "item": "avestia-eiffel-pla-gyroid"
+        },
+        {
+          "item": "arxiv-variable-tpms-hx"
+        },
+        {
+          "item": "arxiv-harmonic-tessellation-hx"
+        }
+      ],
+      "scores": {
+        "venn_fit": 3,
+        "manufacturing_key": 4,
+        "evidence": 4,
+        "novelty": 4,
+        "uk_relevance": 0,
+        "contactable": 2
+      },
+      "added": "2026-10-20",
+      "score": 62,
+      "rank": 32,
+      "area_rank": 6
     },
     {
       "id": "ae-microtube-ip",
@@ -2377,8 +2614,8 @@
       },
       "added": "2026-10-20",
       "score": 61,
-      "rank": 30,
-      "area_rank": 13
+      "rank": 33,
+      "area_rank": 14
     },
     {
       "id": "ms-student-am-motor-cooling",
@@ -2452,7 +2689,7 @@
       },
       "added": "2026-10-20",
       "score": 61,
-      "rank": 31,
+      "rank": 34,
       "area_rank": 7
     },
     {
@@ -2465,7 +2702,7 @@
         "modelling and simulation",
         "design for manufacture"
       ],
-      "why": "Policy and money are lining up. DESNZ put £90m into heat networks fed by data centres, Deep Green has approval for a 5.6 MW site in Bradford, EnergiRaven models enough heat for 3.5-6.3m homes by 2035, and Durham University's living lab is pairing immersion cooling with seasonal heat storage. MTC's angle is upstream: the hotter the coolant leaves the chip, the less heat-pump work is needed, which favours two-phase and printed cold plates that run warm. Strong on UK relevance, weaker on a direct MTC role.",
+      "why": "Policy and money are lining up. DESNZ put £90m into heat networks fed by data centres, Deep Green has approval for a 5.6 MW site in Bradford, EnergiRaven models enough heat for 3.5-6.3m homes by 2035, and a 2026 Scottish Enterprise review says one large site could yield hundreds of GWh of heat a year and should favour closed-loop cooling over evaporative. MTC's angle is upstream: the hotter the coolant leaves the chip, the less heat-pump work is needed, which favours two-phase and printed cold plates that run warm. Strong on UK relevance, weaker on a direct MTC role.",
       "applicability": {
         "type": "inferred",
         "reason": "None of these sources mention manufacturing; the link through hotter-running cold plates is ours."
@@ -2524,6 +2761,18 @@
           "type": "Commercial",
           "country": "UK",
           "role": "supplier"
+        },
+        {
+          "name": "Scottish Enterprise",
+          "type": "Gov",
+          "country": "UK",
+          "role": "funder"
+        },
+        {
+          "name": "Power On",
+          "type": "Commercial",
+          "country": "UK",
+          "role": "supplier"
         }
       ],
       "sources": [
@@ -2541,6 +2790,15 @@
         },
         {
           "item": "bebeez-durham-immersion"
+        },
+        {
+          "item": "scotent-dc-waste-heat-review"
+        },
+        {
+          "item": "idea-energiraven-35m-homes"
+        },
+        {
+          "item": "dcn-poweron-heat-housing"
         }
       ],
       "scores": {
@@ -2553,7 +2811,7 @@
       },
       "added": "2026-10-20",
       "score": 60,
-      "rank": 32,
+      "rank": 35,
       "area_rank": 8
     },
     {
@@ -2601,71 +2859,8 @@
       },
       "added": "2026-10-20",
       "score": 60,
-      "rank": 33,
-      "area_rank": 5
-    },
-    {
-      "id": "ot-tpms-measured-performance",
-      "area": "other",
-      "headline": "Measured tests show gyroid heat exchangers mainly win on pressure drop",
-      "problem": "Printed TPMS (gyroid) heat exchangers are widely promoted, but like-for-like measured comparisons with conventional units are rare.",
-      "technology": "Gyroid TPMS cores made by metal AM, tested against a commercial brazed plate heat exchanger.",
-      "capabilities": [
-        "additive manufacture",
-        "metrology and inspection",
-        "modelling and simulation"
-      ],
-      "why": "Seoultech and the University of Akron tested a metal-printed gyroid heat exchanger against a commercial brazed plate unit in liquid-liquid service. Heat transfer was at most 4.4% better, but friction was up to 30.5% lower, so the overall merit was about 7% higher. A separate wind-tunnel test of a polymer gyroid found lower Nusselt numbers than published aluminium ones. It is a useful reality check on the TPMS claims elsewhere on this page, and independent, like-for-like testing is a service an RTO can offer.",
-      "applicability": {
-        "type": "inferred",
-        "reason": "The tests are generic; their bearing on the aerospace and data-centre TPMS cards is ours."
-      },
-      "trl": {
-        "level": "4",
-        "reason": "Lab-tested against a commercial unit."
-      },
-      "barriers": "One measured comparison; results depend on fluid, flow range and cell size.",
-      "next_step": "Use as a benchmark when judging TPMS performance claims.",
-      "orgs": [
-        {
-          "name": "Seoul National University of Science and Technology",
-          "type": "Uni",
-          "country": "South Korea",
-          "role": "researcher"
-        },
-        {
-          "name": "University of Akron",
-          "type": "Uni",
-          "country": "USA",
-          "role": "researcher"
-        },
-        {
-          "name": "Université Gustave Eiffel",
-          "type": "Uni",
-          "country": "France",
-          "role": "researcher"
-        }
-      ],
-      "sources": [
-        {
-          "item": "seoultech-gyroid-vs-bphe"
-        },
-        {
-          "item": "avestia-eiffel-pla-gyroid"
-        }
-      ],
-      "scores": {
-        "venn_fit": 3,
-        "manufacturing_key": 4,
-        "evidence": 4,
-        "novelty": 3,
-        "uk_relevance": 0,
-        "contactable": 2
-      },
-      "added": "2026-10-20",
-      "score": 59,
-      "rank": 34,
-      "area_rank": 6
+      "rank": 36,
+      "area_rank": 7
     },
     {
       "id": "dc-immersion-heat-pump-coupling",
@@ -2711,7 +2906,7 @@
       },
       "added": "2026-10-20",
       "score": 54,
-      "rank": 35,
+      "rank": 37,
       "area_rank": 9
     },
     {
@@ -2775,7 +2970,7 @@
       },
       "added": "2026-10-20",
       "score": 44,
-      "rank": 36,
+      "rank": 38,
       "area_rank": 10
     },
     {
@@ -2820,7 +3015,7 @@
       },
       "added": "2026-10-20",
       "score": 40,
-      "rank": 37,
+      "rank": 39,
       "area_rank": 11
     }
   ]

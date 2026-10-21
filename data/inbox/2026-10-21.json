@@ -1,0 +1,415 @@
+[
+ {
+  "id": "munters-sycool-thermosyphon",
+  "url": "https://www.coolingpost.com/products/indirect-thermosyphon-data-cooling/",
+  "title": "Indirect thermosyphon data cooling",
+  "publisher": "Cooling Post",
+  "date": "2018-04-09",
+  "area": "datacentre",
+  "story": "munters-sycool",
+  "summary": "Munters launched SyCool ITC, a 250 kW packaged indirect thermosyphon dry-cooling unit for data centres that uses waste heat and gravity to drive the refrigeration cycle without pumps or compressors. Munters claims it is the first pump-free system to market, with zero water use; no test data are given.",
+  "orgs": [
+   {
+    "name": "Munters",
+    "type": "Commercial",
+    "country": "Sweden"
+   }
+  ],
+  "thermal": "Pump-free indirect thermosyphon heat rejection for data halls.",
+  "manufacturing": "Packaged air-handling unit; no build or test details.",
+  "evidence": "claim",
+  "gate": "pass"
+ },
+ {
+  "id": "efctc-thermosyphon-hfo",
+  "url": "https://www.fluorocarbons.org/news/hfo-refrigerant-ready-indirect-thermosyphon-cooling-for-data-centres/",
+  "title": "HFO refrigerant-ready indirect thermosyphon cooling for data centres",
+  "publisher": "EFCTC",
+  "date": "2018-04-26",
+  "area": "datacentre",
+  "story": "munters-sycool",
+  "summary": "Syndicated note on the same 250 kW indirect thermosyphon unit, described as HFO-ready, oil-free and water-free, with a compressor loop for hot days. Energy-saving statements are unquantified claims.",
+  "orgs": [
+   {
+    "name": "European Fluorocarbons Technical Committee",
+    "type": "Other",
+    "country": "Belgium"
+   }
+  ],
+  "thermal": "Two-phase thermosyphon loop with compressor assist at high ambient.",
+  "manufacturing": "none",
+  "evidence": "claim",
+  "gate": "pass"
+ },
+ {
+  "id": "villanova-rack-thermosyphon",
+  "url": "https://par.nsf.gov/servlets/purl/10537551",
+  "title": "Characterization of a Rack-Level Thermosyphon-Based Cooling System",
+  "publisher": "ASME Journal of Electronic Packaging",
+  "date": "2024-03-11",
+  "area": "datacentre",
+  "story": "villanova-rack-thermosyphon",
+  "summary": "Villanova University and Seguente characterised a pilot rack-level thermosyphon on a 42U rack using R1233zd(E), an air-cooled evaporator and water-cooled condenser. It ran stably from 2 to 7.5 kW, with minimum thermosyphon resistance 6.8 mK/W at 5.7 kW, maximum evaporator pressure drop 21.5 kPa and a 25-minute time constant. Energy balances closed within 15%.",
+  "orgs": [
+   {
+    "name": "Villanova University",
+    "type": "Uni",
+    "country": "USA"
+   },
+   {
+    "name": "Seguente",
+    "type": "Commercial",
+    "country": "USA"
+   }
+  ],
+  "thermal": "Passive refrigerant thermosyphon removing 2-7.5 kW of rack heat with no pump.",
+  "manufacturing": "Pilot rack build with finned-tube evaporator; authors say line sizes should shrink in the next prototype.",
+  "evidence": "measured",
+  "gate": "pass"
+ },
+ {
+  "id": "capacity-uk-immersion-poc",
+  "url": "https://capacitymedia.com/article/uk-data-centre-unveils-immersion-cooling-proof-of-concept-for-ai-workloads",
+  "title": null,
+  "publisher": "Capacity Media",
+  "date": null,
+  "area": "datacentre",
+  "story": "capacity-uk-immersion-poc",
+  "summary": "",
+  "orgs": [],
+  "thermal": "",
+  "manufacturing": "",
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "Page redirects to a news index; could not be read."
+ },
+ {
+  "id": "bbb-iceotope-5m",
+  "url": "https://www.british-business-bank.co.uk/news-and-events/news/british-patient-capital-invests-5m-in-immersion-cooling-technology-business-iceotope",
+  "title": "British Patient Capital invests £5 million in immersion cooling technology business Iceotope",
+  "publisher": "British Business Bank",
+  "date": "2022-07-07",
+  "area": "datacentre",
+  "story": "iceotope-series-b",
+  "summary": "British Patient Capital put £5m into Sheffield's Iceotope as part of a £30m Series B led by ABC Impact, with nVent, SDCL, Northern Gritstone, Pavilion Capital and Edinv. Performance statements are company claims with no data.",
+  "orgs": [
+   {
+    "name": "British Patient Capital",
+    "type": "Gov",
+    "country": "UK"
+   },
+   {
+    "name": "Iceotope",
+    "type": "Commercial",
+    "country": "UK"
+   },
+   {
+    "name": "ABC Impact",
+    "type": "Commercial",
+    "country": null
+   },
+   {
+    "name": "nVent",
+    "type": "Commercial",
+    "country": null
+   }
+  ],
+  "thermal": "Chassis-level precision liquid cooling for IT equipment.",
+  "manufacturing": "none",
+  "evidence": "claim",
+  "gate": "pass"
+ },
+ {
+  "id": "scotent-dc-waste-heat-review",
+  "url": "https://www.scottish-enterprise.com/insights-and-events/research-evaluation-and-insight/2026/waste-heat-from-data-centres-a-strategic-review-for-scotland",
+  "title": "Waste Heat from Data Centres: a Strategic Review for Scotland",
+  "publisher": "Scottish Enterprise",
+  "date": "2026",
+  "area": "datacentre",
+  "story": "scotent-dc-waste-heat",
+  "summary": "Scottish Enterprise commissioned AECOM and HermeticaBlack to review data-centre heat reuse in Scotland, focused on district heat networks, from desk research, interviews and case studies. It says one large data centre could yield hundreds of GWh of recoverable heat a year, and recommends favouring closed-loop over high-water-use evaporative cooling.",
+  "orgs": [
+   {
+    "name": "Scottish Enterprise",
+    "type": "Gov",
+    "country": "UK"
+   },
+   {
+    "name": "AECOM",
+    "type": "Commercial",
+    "country": null
+   },
+   {
+    "name": "HermeticaBlack",
+    "type": "Commercial",
+    "country": null
+   }
+  ],
+  "thermal": "Heat recovery into heat networks; recommends closed-loop cooling designed for reuse.",
+  "manufacturing": "none",
+  "evidence": "opinion",
+  "gate": "pass"
+ },
+ {
+  "id": "idea-energiraven-35m-homes",
+  "url": "https://www.districtenergy.org/blogs/district-energy/2026/01/28/waste-heat-from-data-centres-could-heat-over-35-mi",
+  "title": "Waste heat from data centres could heat over 3.5 million UK homes",
+  "publisher": "International District Energy Association (from Envirotec)",
+  "date": "2026-01-28",
+  "area": "datacentre",
+  "story": "energiraven-heat-map",
+  "summary": "Republished article on EnergiRaven and Viegand Maagøe research projecting enough data-centre waste heat for at least 3.5 million UK homes by 2035, if heat networks are built. No method is given.",
+  "orgs": [
+   {
+    "name": "EnergiRaven",
+    "type": "Commercial",
+    "country": "UK"
+   },
+   {
+    "name": "Viegand Maagøe",
+    "type": "Commercial",
+    "country": "Denmark"
+   }
+  ],
+  "thermal": "Data-centre waste heat into heat networks.",
+  "manufacturing": "none",
+  "evidence": "claim",
+  "gate": "pass"
+ },
+ {
+  "id": "dcn-poweron-heat-housing",
+  "url": "https://datacentrenews.uk/story/data-centres-urged-to-reuse-waste-heat-for-housing",
+  "title": "Data centres urged to reuse waste heat for housing",
+  "publisher": "DataCentreNews UK",
+  "date": "2026-06-18",
+  "area": "datacentre",
+  "story": "poweron-heat-housing",
+  "summary": "Power On, a utility connections provider, urges UK data-centre developers to supply nearby homes and offices with recovered heat, arguing it helps planning and adds revenue. It notes heat recovery is still uncommon in the UK. Advocacy, no figures.",
+  "orgs": [
+   {
+    "name": "Power On",
+    "type": "Commercial",
+    "country": "UK"
+   }
+  ],
+  "thermal": "Heat recovery into district heating with heat pumps.",
+  "manufacturing": "none",
+  "evidence": "opinion",
+  "gate": "pass"
+ },
+ {
+  "id": "leeds-bae-am-two-phase-hx",
+  "url": "https://fluid-dynamics.leeds.ac.uk/projects/advanced-aerospace-heat-exchanger-design-performance-and-manufacturing/",
+  "title": "Advanced Aerospace Heat Exchanger Design, Performance and Manufacturing",
+  "publisher": "EPSRC CDT in Future Fluid Dynamics, University of Leeds",
+  "date": null,
+  "area": "aerospace",
+  "story": "leeds-bae-am-two-phase-hx",
+  "summary": "A Leeds PhD project with BAE Systems Warton plans to model two-phase aircraft heat exchangers (evaporators and condensers), demonstrate design enhancements made by additive layer manufacturing, and generate early design options by simulation. BAE offers manufacturing facilities that may build and test proof-of-concept demonstrators. Plan only, undated.",
+  "orgs": [
+   {
+    "name": "University of Leeds",
+    "type": "Uni",
+    "country": "UK"
+   },
+   {
+    "name": "BAE Systems",
+    "type": "Commercial",
+    "country": "UK"
+   }
+  ],
+  "thermal": "Single- and two-phase heat exchangers for aircraft thermal management.",
+  "manufacturing": "Proposed AM demonstrators tested at BAE Systems.",
+  "evidence": "plan",
+  "gate": "pass"
+ },
+ {
+  "id": "leeds-bae-fast-hx-sizing",
+  "url": "https://fluid-dynamics.leeds.ac.uk/projects/novel-heat-exchanger-design-and-sizing-methods-for-future-advanced-aircraft/",
+  "title": "Novel heat exchanger design and sizing methods for Future Advanced Aircraft",
+  "publisher": "EPSRC CDT in Future Fluid Dynamics, University of Leeds",
+  "date": null,
+  "area": "aerospace",
+  "story": "leeds-bae-fast-hx-sizing",
+  "summary": "A follow-on Leeds PhD project with BAE Systems aims at fast models for sizing single-phase, two-phase and phase-change-material heat exchangers that handle mission-system waste heat, runnable on a laptop rather than an HPC cluster. Plan only, undated.",
+  "orgs": [
+   {
+    "name": "University of Leeds",
+    "type": "Uni",
+    "country": "UK"
+   },
+   {
+    "name": "BAE Systems",
+    "type": "Commercial",
+    "country": "UK"
+   }
+  ],
+  "thermal": "Fast sizing of aircraft heat exchangers including phase-change material.",
+  "manufacturing": "none",
+  "evidence": "plan",
+  "gate": "pass"
+ },
+ {
+  "id": "arxiv-variable-tpms-hx",
+  "url": "https://arxiv.org/abs/2512.10207v1",
+  "title": "Flow-priority optimization of additively manufactured variable-TPMS lattice heat exchanger based on macroscopic analysis",
+  "publisher": "arXiv (Additive Manufacturing, 2026)",
+  "date": "2025-12-11",
+  "area": "other",
+  "story": "waseda-variable-tpms",
+  "summary": "Waseda University and AGC optimised the local wall threshold of a TPMS Primitive lattice to balance hot and cold flows in a two-fluid counterflow heat exchanger, using a fast Darcy-Forchheimer model. The optimum was printed in 316L by laser powder bed fusion (0.5 mm minimum wall) and tested with water; measured heat transfer averaged 28.7% better than a uniform lattice.",
+  "orgs": [
+   {
+    "name": "Waseda University",
+    "type": "Uni",
+    "country": "Japan"
+   },
+   {
+    "name": "AGC",
+    "type": "Commercial",
+    "country": "Japan"
+   }
+  ],
+  "thermal": "Graded TPMS two-fluid heat exchanger, measured against a uniform lattice.",
+  "manufacturing": "316L LPBF, water-water tests.",
+  "evidence": "measured",
+  "gate": "pass"
+ },
+ {
+  "id": "arxiv-harmonic-tessellation-hx",
+  "url": "https://arxiv.org/abs/2602.17824",
+  "title": "Optimization of Higher-Order Harmonic Surface Tessellations for Additively Manufactured Air-to-Air Heat Exchangers",
+  "publisher": "arXiv",
+  "date": "2026-02-19",
+  "area": "other",
+  "story": "udc-harmonic-tessellation",
+  "summary": "University of the District of Columbia researchers optimised a second-order harmonic surface for air-to-air heat exchangers with a surrogate model coupled to COMSOL. They report up to 70% higher effectiveness with more pressure drop, and that the shape beats a gyroid in turbulent flow (Re above 7000). Simulation only; one reported effectiveness value above 1 needs checking. DOE-funded.",
+  "orgs": [
+   {
+    "name": "University of the District of Columbia",
+    "type": "Uni",
+    "country": "USA"
+   },
+   {
+    "name": "US Department of Energy",
+    "type": "Gov",
+    "country": "USA"
+   }
+  ],
+  "thermal": "Air-air heat-exchanger surface optimisation versus gyroid.",
+  "manufacturing": "Manufacturability bounds only; nothing built.",
+  "evidence": "simulation",
+  "gate": "pass"
+ },
+ {
+  "id": "mittweida-micro-slm-tpms",
+  "url": "https://vivo.hs-mittweida.de/vivo/display/n20899",
+  "title": "Design and fabrication of a TPMS-based micro heat exchanger via micro selective laser melting",
+  "publisher": "Hochschule Mittweida (14th Jena Laser Conference)",
+  "date": "2024",
+  "area": "other",
+  "story": "mittweida-micro-slm-tpms",
+  "summary": "Laserinstitut Hochschule Mittweida built three gyroid micro heat exchangers by micro selective laser melting with features down to 100 µm and compared them with a microchannel unit. The abstract reports heat transfer coefficients up to 12 kW/(m²K), over 300% higher than conventional plate heat exchangers, and leak-free operation to 8 bar.",
+  "orgs": [
+   {
+    "name": "Hochschule Mittweida",
+    "type": "Uni",
+    "country": "Germany"
+   }
+  ],
+  "thermal": "Gyroid micro heat exchangers up to 12 kW/(m²K).",
+  "manufacturing": "Micro-SLM with 100 µm features; leak-tested to 8 bar.",
+  "evidence": "measured",
+  "gate": "pass"
+ },
+ {
+  "id": "brighton-polymer-php",
+  "url": "https://research.brighton.ac.uk/en/publications/a-novel-fabrication-method-for-polymeric-flat-plate-pulsating-hea/",
+  "title": "A novel fabrication method for polymeric flat plate pulsating heat pipe via additive manufacturing",
+  "publisher": "Applied Thermal Engineering",
+  "date": "2024-01-08",
+  "area": "other",
+  "story": "brighton-polymer-php",
+  "summary": "University of Brighton and University of Pavia printed flat-plate pulsating heat pipes in plastic by stereolithography (185 x 85 x 2 mm, eight turns, FC-72 at 50% fill). Thermal resistance fell from 2.5 to 1.7 °C/W over 5-30 W, an effective conductivity over a thousand times that of the solid plastic.",
+  "orgs": [
+   {
+    "name": "University of Brighton",
+    "type": "Uni",
+    "country": "UK"
+   },
+   {
+    "name": "University of Pavia",
+    "type": "Uni",
+    "country": "Italy"
+   }
+  ],
+  "thermal": "Measured pulsating heat pipe performance.",
+  "manufacturing": "Stereolithography in a common resin.",
+  "evidence": "measured",
+  "gate": "pass"
+ },
+ {
+  "id": "vki-am-lhp-acceleration",
+  "url": "https://qirt2026.unina.it/event/1/contributions/160/",
+  "title": "Experimental characterization of the effect of acceleration on the performance of additively manufactured loop heat pipes using infrared thermography",
+  "publisher": "QIRT 2026",
+  "date": "2026-07-02",
+  "area": "other",
+  "story": "vki-lhp4ebox",
+  "summary": "The von Karman Institute plans to test loop heat pipes with additively manufactured porous evaporators under up to 2g acceleration with infrared thermography, in the Skywin-funded LHP4ebox project for electronics boxes. No results yet.",
+  "orgs": [
+   {
+    "name": "von Karman Institute",
+    "type": "RTO",
+    "country": "Belgium"
+   }
+  ],
+  "thermal": "AM-wick loop heat pipes under acceleration.",
+  "manufacturing": "AM porous evaporator; IR thermography test rig planned.",
+  "evidence": "plan",
+  "gate": "pass"
+ },
+ {
+  "id": "addireen-green-laser-copper",
+  "url": "https://addireen.com/en/newsInfo-1297.html",
+  "title": "Addireen scales green laser AM manufacturing for copper thermal management",
+  "publisher": "Addireen",
+  "date": "2026-08-25",
+  "area": "datacentre",
+  "story": "addireen-green-laser",
+  "summary": "Addireen opened a plant in Ganzhou able to build up to 50 green-laser metal AM systems a month. Its dual 532 nm XH-M350G-2HR prints pure copper at up to 24.24 cm³/h, with stated density up to 99.9% and conductivity up to 400 W/(m·K); these are company figures without a test report. Cold plates and heat exchangers are the target.",
+  "orgs": [
+   {
+    "name": "Addireen",
+    "type": "Commercial",
+    "country": "China"
+   }
+  ],
+  "thermal": "Pure copper cold plates and heat exchangers.",
+  "manufacturing": "Green-laser LPBF of pure copper.",
+  "evidence": "claim",
+  "gate": "pass"
+ },
+ {
+  "id": "amm-copper-2017",
+  "url": "https://www.additivemanufacturing.media/blog/post/overcoming-the-challenges-of-copper",
+  "title": "Overcoming the Challenges of Copper",
+  "publisher": "Additive Manufacturing",
+  "date": "2017-12-18",
+  "area": "other",
+  "story": "amm-copper-2017",
+  "summary": "2017 trade article on Fraunhofer ILT's green laser for copper SLM and Protiq copper induction coils. Electrical figures only.",
+  "orgs": [
+   {
+    "name": "Fraunhofer ILT",
+    "type": "RTO",
+    "country": "Germany"
+   }
+  ],
+  "thermal": "none",
+  "manufacturing": "Green-laser SLM of copper in development.",
+  "evidence": "claim",
+  "gate": "fail",
+  "gate_reason": "No thermal content; old and superseded by current green-laser copper news."
+ }
+]
