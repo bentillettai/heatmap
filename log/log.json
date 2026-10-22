@@ -171,6 +171,25 @@
         {"label": "How we keep this log", "url": "https://claude.ai/artifact/464SGvpBZCdQ2qQzFwwEJb"},
         {"label": "Thread", "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBkFYK9H3JAgzCB26uSVHdDV5"}
       ]
+    },
+    {
+      "id": "w8",
+      "kind": "work",
+      "title": "How a run works explainer",
+      "start": "2026-10-22T14:46:08Z",
+      "end": "2026-10-22T15:15:00Z",
+      "by": "ben",
+      "summary": "ben asked for a plain-English explainer of a run that he can share with Henry and non-engineers. Three approaches were drafted, and ben picked the worked-example timeline with reference panels.",
+      "items": [
+        "The run at a glance: eight steps from looking to feedback, marking which are done by Claude, the helper program or people.",
+        "A real card (DTI's 3D-printed passive chip cooler) followed from search to its score of 86.",
+        "Reference panels on sources, topics, searches, scoring, what the AI does, and ground rules.",
+        "Corrects one assumption: runs happen in Anthropic's cloud on a schedule, not on ben's desktop."
+      ],
+      "links": [
+        {"label": "How a Heatmap run works", "url": "https://claude.ai/artifact/CMRSQp5WTgG2Wjc3p3K98r"},
+        {"label": "Thread", "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk3Wf4FaNYSVticeL2NYDET3"}
+      ]
     }
   ],
   "actions": [
@@ -202,6 +221,8 @@
     {"id": "a12", "owner": "ben", "from": "w3", "raised": "2026-10-20", "status": "done", "done": "2026-10-20",
      "text": "Approve the merge prompts for PR #1 and PR #2."},
     {"id": "a13", "owner": "ben", "from": "w5", "raised": "2026-10-20", "status": "done", "done": "2026-10-20",
-     "text": "Set up a cloud environment that can reach the research APIs."}
+     "text": "Set up a cloud environment that can reach the research APIs."},
+    {"id": "a14", "owner": "ben", "from": "w8", "raised": "2026-10-22", "status": "open",
+     "text": "Review the run explainer and share it with Henry."}
   ]
 }
