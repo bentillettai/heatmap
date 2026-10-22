@@ -80,6 +80,8 @@ web search ──► read pages ──► thermal gate ──► items.jsonl
 | `data/inbox/` | Each run's raw batch of new items |
 | `site/template.html` | The page; `build` fills in the data |
 | `tools/heatmap.py` | Standard-library Python helper |
+| `log/` | The project log: meetings with Henry, work between them, action items (see `log/README.md`) |
+| `tools/projectlog.py` | Checks the project log and builds its page |
 
 ## Changing it
 

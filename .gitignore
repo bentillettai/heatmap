@@ -2,3 +2,4 @@ site/index.html
 __pycache__/
 *.pyc
 .DS_Store
+log/index.html
