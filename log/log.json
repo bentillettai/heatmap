@@ -286,13 +286,13 @@
       "kind": "meeting",
       "title": "First review with Henry",
       "start": "2026-10-22T15:59:33Z",
-      "end": "2026-10-22T16:26:30Z",
+      "end": "2026-10-22T16:48:11Z",
       "with": [
         "ben",
         "Henry"
       ],
       "summary": "Henry had reviewed the page and was very positive. Over two recorded chats, ben walked him through the work since the kickoff, and they settled how he can use it outside MTC, how to keep his comments safe, and how far to go with customisation.",
-      "time_note": "The start time wasn't noted. The time shown is when ben posted the notes. The meeting had two recordings: the main discussion, then a walk-through of the log and the page.",
+      "time_note": "The start time wasn't noted. The time shown is when ben posted the notes. The meeting had three recordings: the main discussion, a walk-through of the log and the page, and a closing chat on next steps.",
       "discussed": [
         "Henry's written feedback before the meeting: the data looks accurate, concise, pertinent and well formatted. His favourite views are the opportunity map, card list and Action Radar.",
         "Henry's asks: more next-step ideas as bullets, confirmation when a comment saves, and a time filter on the opportunity map so it stays usable over months.",
@@ -305,7 +305,13 @@
         "ben walked Henry through the log: the wider sweep, the design options, the Runs tab and knowledge base, the ideas backlog, and the research and funding APIs now in the daily run. Henry liked the \"Other\" category and all the layouts.",
         "Henry asked how it finds so much that is relevant when MTC's own URL list found little. ben's view: Claude knows where to look, and checks can be added to be sure nothing big is missed.",
         "Ideas for later: flag companies that are MTC members (the list is public), and link to MTC's past work once internal data is allowed.",
-        "Dials versus prompts: rather than a settings panel, steer runs with comments on cards, runs, sources and organisations, or with a one-off brief such as \"find opportunities for this new fund\". Henry thought comments might be enough."
+        "Dials versus prompts: rather than a settings panel, steer runs with comments on cards, runs, sources and organisations, or with a one-off brief such as \"find opportunities for this new fund\". Henry thought comments might be enough.",
+        "Henry suggested tabs that spell out what the tool takes societal problems, technologies and MTC capabilities to be. An empty tab for MTC's thermal management roadmap also came up, which ben thinks belongs in the ideas backlog for now.",
+        "MTC's earlier tool was built by a colleague. Its budget and time ran out before it delivered as much as hoped. Henry sees two ways to pitch this one: keep it outside MTC with limits, or bring it inside.",
+        "ben would take on paid work on it for a modest fee. Realistically, taking it much further needs funding, but there is no pressure either way.",
+        "Henry doesn't need to give feedback on everything: the top cards first, and a glance at the bottom ones to check the ranking.",
+        "If only a few cards arrive each day, Henry would like a short daily email of new cards, like the industry news he already reads.",
+        "Henry's worry: a burst of interest in one topic could steer the tool, so how do you zoom back out? Corrections and personal interests need treating differently, especially with more people commenting."
       ],
       "decided": [
         "Keep building it outside MTC, just ben and Henry, and focus on making it really good.",
@@ -313,7 +319,10 @@
         "Turn it into a website Henry can log into from any computer, with no AI use on his side.",
         "Keep comments in for now so Henry can give lots of feedback. Add a setting that hides comments, to switch off for a demo.",
         "ben and Henry will be open with MTC about how it was built and offer clear options at a later meeting.",
-        "Keep it simple and usable first, and add customisation only where it earns its place."
+        "Keep it simple and usable first, and add customisation only where it earns its place.",
+        "Don't pitch it to MTC this week. Henry will use it to prepare for his meeting on Monday 26 October, keep using it through the week, and raise it with his manager next week.",
+        "ben will move it from the Claude page to a live website Henry logs into, copying across all data and old runs. Both will run until Henry is happy, then the Claude page is retired.",
+        "Add tabs that define the societal problems, technologies and MTC capabilities it works from."
       ],
       "built": [],
       "links": [
@@ -336,7 +345,7 @@
       "raised": "2026-10-20",
       "status": "open",
       "text": "Share the Heatmap page with Henry by email as an Editor, so he can vote and comment.",
-      "note": "Agreed again in meeting 2: Henry should be able to open the page, see the runs and comment, using his personal account."
+      "note": "Agreed again in meeting 2. The website (a16) will replace this once it's live."
     },
     {
       "id": "a2",
@@ -460,6 +469,41 @@
       "raised": "2026-10-22",
       "status": "open",
       "text": "Think through which of your comments and specs might count as MTC knowledge, before showing the tool at work."
+    },
+    {
+      "id": "a16",
+      "owner": "ben",
+      "from": "m2",
+      "raised": "2026-10-22",
+      "status": "open",
+      "due": "2026-10-23",
+      "text": "Get the website live so Henry can log in, with all data and old runs copied across, and tell Henry when it's ready."
+    },
+    {
+      "id": "a17",
+      "owner": "Henry",
+      "from": "m2",
+      "raised": "2026-10-22",
+      "status": "open",
+      "due": "2026-10-26",
+      "text": "Log in to the website, check that comments save, and get to know the content before Monday's meeting.",
+      "note": "If you haven't heard from ben by then, give him a shout."
+    },
+    {
+      "id": "a18",
+      "owner": "Henry",
+      "from": "m2",
+      "raised": "2026-10-22",
+      "status": "open",
+      "text": "Talk to your manager next week about the tool, including which tabs should stay."
+    },
+    {
+      "id": "a19",
+      "owner": "ben",
+      "from": "m2",
+      "raised": "2026-10-22",
+      "status": "open",
+      "text": "Retire the Claude page once Henry is happy on the website."
     }
   ]
 }
