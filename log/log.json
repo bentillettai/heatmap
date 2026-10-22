@@ -301,7 +301,7 @@
         "Grey area: MTC's capabilities and the societal problems are public, but Henry's own specs and comments may count as company knowledge. If he shows it at work it will get a lot of attention, so it has to be watertight.",
         "Longer term: demo it to MTC as built without any internal knowledge, then offer options openly, from MTC owning and self-hosting it with open-source models to a wider tool for its 1,000+ staff.",
         "The daily run's timing is fine while developing (it runs at 06:59 UK; 6 pm was mentioned by mistake). Henry may not keep up with daily runs long term, and missed days of feedback don't matter.",
-        "Henry's comments on the page never saved: it held no comments or votes when checked. He most likely had view-only access.",
+        "Henry's comments on the page never saved: it held no comments or votes when checked. He most likely had view-only access. ben shared the page with him as an Editor during the meeting, and his first comment saved at 17:31.",
         "ben walked Henry through the log: the wider sweep, the design options, the Runs tab and knowledge base, the ideas backlog, and the research and funding APIs now in the daily run. Henry liked the \"Other\" category and all the layouts.",
         "Henry asked how it finds so much that is relevant when MTC's own URL list found little. ben's view: Claude knows where to look, and checks can be added to be sure nothing big is missed.",
         "Ideas for later: flag companies that are MTC members (the list is public), and link to MTC's past work once internal data is allowed.",
@@ -343,9 +343,10 @@
       "owner": "ben",
       "from": "m1",
       "raised": "2026-10-20",
-      "status": "open",
+      "status": "done",
       "text": "Share the Heatmap page with Henry by email as an Editor, so he can vote and comment.",
-      "note": "Agreed again in meeting 2. The website (a16) will replace this once it's live."
+      "note": "Shared during meeting 2. Henry's first comment saved at 17:31.",
+      "done": "2026-10-22"
     },
     {
       "id": "a2",
@@ -362,7 +363,7 @@
       "raised": "2026-10-20",
       "status": "open",
       "text": "Give first feedback on the cards (votes, comments, notes), especially aerospace and F1.",
-      "note": "Henry sent written feedback on the tool before meeting 2. Card-level votes and comments are still to come once he has access."
+      "note": "Henry sent written feedback before meeting 2, and his first comment on the page saved on 22 October. More card-level feedback to come."
     },
     {
       "id": "a4",
@@ -495,7 +496,7 @@
       "from": "m2",
       "raised": "2026-10-22",
       "status": "open",
-      "text": "Talk to your manager next week about the tool, including which tabs should stay."
+      "text": "Raise the tool with your manager at your one-to-one next week, including which tabs should stay."
     },
     {
       "id": "a19",
