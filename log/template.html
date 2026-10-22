@@ -1,0 +1,398 @@
+<title>Heatmap project log</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+/* Layout: a day strip on top, then chapters (each meeting, then the work and runs until the next one) beside a sticky panel of action items. Same clean palette as the Heatmap page so the two read as a pair. */
+:root {
+  --canvas: #f4f6f9; --paper: #ffffff; --ink: #1a2233; --ink-2: #5c6779; --rule: #d9dee6; --faint: #eceff4;
+  --blue: #2563eb; --blue-soft: #eaf1ff;
+  --meet: #b45309; --meet-soft: #fdf1e3;
+  --run: #0e8aa0; --run-soft: #e2f4f7;
+  --henry: #5b4ce0; --henry-soft: #eeecff;
+  --good: #15803d; --good-soft: #e3f6e9;
+  --shadow: 0 1px 2px rgba(15, 25, 45, .05), 0 6px 20px rgba(15, 25, 45, .06);
+  --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --canvas: #0f1217; --paper: #171b22; --ink: #e7ebf2; --ink-2: #9aa5b6; --rule: #2c333f; --faint: #232a35;
+    --blue: #6b9bff; --blue-soft: #1c2a47;
+    --meet: #f0a560; --meet-soft: #3a2614;
+    --run: #3cc3d9; --run-soft: #12313a;
+    --henry: #9d93ff; --henry-soft: #262347;
+    --good: #4ade80; --good-soft: #15301f;
+    --shadow: none; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --canvas: #0f1217; --paper: #171b22; --ink: #e7ebf2; --ink-2: #9aa5b6; --rule: #2c333f; --faint: #232a35;
+  --blue: #6b9bff; --blue-soft: #1c2a47;
+  --meet: #f0a560; --meet-soft: #3a2614;
+  --run: #3cc3d9; --run-soft: #12313a;
+  --henry: #9d93ff; --henry-soft: #262347;
+  --good: #4ade80; --good-soft: #15301f;
+  --shadow: none; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--canvas); color: var(--ink); font: 15.5px/1.5 var(--sans); font-variant-numeric: tabular-nums; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-block: 18px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: var(--blue); text-underline-offset: 2px; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+h1, h2, h3 { text-wrap: balance; }
+ul { margin: 0; padding-left: 1.1em; }
+li + li { margin-top: 4px; }
+
+/* header */
+.top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 10px 24px; margin-bottom: 18px; }
+.top h1 { margin: 0; font: 600 30px/1.1 var(--serif); letter-spacing: -.01em; }
+.top p { margin: 6px 0 0; color: var(--ink-2); max-width: 62ch; }
+.toplinks { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--rule); border-radius: 8px; background: var(--paper); color: var(--ink); text-decoration: none; font-weight: 600; font-size: 14px; }
+.btn:hover { border-color: var(--blue); color: var(--blue); }
+
+/* overview */
+.overview { background: var(--paper); border: 1px solid var(--rule); border-radius: 12px; box-shadow: var(--shadow); padding: 14px 16px 12px; margin-bottom: 22px; }
+.counts { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-bottom: 12px; font-size: 14.5px; color: var(--ink-2); }
+.counts b { color: var(--ink); font-size: 20px; margin-right: 4px; }
+.strip-scroll { overflow-x: auto; }
+.strip { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(64px, 1fr); border-top: 1px solid var(--rule); }
+.day { position: relative; padding: 8px 6px 4px; border-left: 1px solid var(--faint); min-height: 92px; display: flex; flex-direction: column; gap: 4px; }
+.day:first-child { border-left: 0; }
+.day .dl { font-size: 12px; color: var(--ink-2); white-space: nowrap; }
+.day .dl b { color: var(--ink); font-weight: 600; }
+.day.today .dl b { color: var(--blue); }
+.marks { display: flex; flex-wrap: wrap; gap: 4px; align-content: flex-start; }
+.mk { display: inline-block; flex: none; width: 14px; height: 14px; border: 0; padding: 0; cursor: pointer; border-radius: 50%; background: var(--blue); }
+.mk-meeting { width: 18px; height: 18px; border-radius: 3px; transform: rotate(45deg) scale(.82); background: var(--meet); }
+.mk-run { width: 6px; height: 16px; border-radius: 2px; background: var(--run); }
+.mk-next { width: 18px; height: 18px; border-radius: 3px; transform: rotate(45deg) scale(.82); background: transparent; border: 2px dashed var(--meet); cursor: default; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 8px; font-size: 12.5px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend .mk { cursor: default; }
+
+/* main grid */
+.main { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 24px; align-items: start; }
+.side { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); }
+@media (max-width: 920px) { .main { grid-template-columns: minmax(0, 1fr); } .side { position: static; order: -1; } }
+
+.filters { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+.chip { border: 1px solid var(--rule); background: var(--paper); border-radius: 999px; padding: 4px 12px; font-size: 14px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* chapters */
+.chapter + .chapter { margin-top: 30px; }
+.ch-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin: 0 0 10px; }
+.ch-head h2 { margin: 0; font: 600 21px/1.2 var(--serif); }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--meet); }
+
+.meeting { background: var(--paper); border: 1px solid var(--rule); border-top: 4px solid var(--meet); border-radius: 12px; box-shadow: var(--shadow); padding: 16px 18px 18px; }
+.meta { color: var(--ink-2); font-size: 14px; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.who { display: inline-flex; gap: 4px; }
+.lead { font-size: 16.5px; margin: 10px 0 6px; max-width: 70ch; }
+.note { color: var(--ink-2); font-size: 13.5px; margin: 0 0 12px; max-width: 70ch; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px 22px; margin-top: 8px; }
+.cols h3, .sub h3 { margin: 0 0 6px; font-size: 12.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-2); }
+.cols ul { font-size: 14.5px; }
+.sub { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--faint); }
+
+.between { margin-top: 18px; }
+.between > .label { font-size: 13px; font-weight: 600; color: var(--ink-2); margin: 0 0 8px; }
+.rail { position: relative; padding-left: 26px; }
+.rail::before { content: ""; position: absolute; left: 8px; top: 4px; bottom: 4px; width: 2px; background: var(--rule); }
+.dayhead { position: relative; font-size: 13px; font-weight: 700; color: var(--ink); margin: 16px 0 8px; }
+.dayhead:first-child { margin-top: 0; }
+.dayhead::before { content: ""; position: absolute; left: -23px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--canvas); border: 2px solid var(--ink-2); }
+.item { position: relative; background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; }
+.item::before { content: ""; position: absolute; left: -22px; top: 17px; width: 10px; height: 10px; border-radius: 50%; background: var(--blue); }
+.item.run { background: transparent; border-style: dashed; padding: 9px 14px; }
+.item.run::before { width: 4px; height: 14px; left: -19px; top: 13px; border-radius: 2px; background: var(--run); }
+.item h3 { margin: 0; font-size: 16.5px; line-height: 1.3; }
+.item .when { color: var(--ink-2); font-size: 13px; font-weight: 500; }
+.item .row1 { display: flex; justify-content: space-between; gap: 4px 12px; flex-wrap: wrap; align-items: baseline; }
+.item p { margin: 4px 0 0; max-width: 72ch; }
+.item ul { margin-top: 8px; font-size: 14.5px; color: var(--ink); }
+.links { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 8px; font-size: 14px; }
+.stats { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 13.5px; color: var(--ink-2); }
+.stats b { color: var(--ink); }
+.runline { font-size: 14px; margin-top: 4px; color: var(--ink); }
+.runs-in { margin-top: 10px; display: grid; gap: 6px; }
+.runs-in .r { border-left: 3px solid var(--run); padding: 2px 0 2px 10px; font-size: 14px; }
+.next { position: relative; border: 2px dashed var(--rule); border-radius: 10px; padding: 12px 14px; color: var(--ink-2); }
+.next::before { content: ""; position: absolute; left: -24px; top: 15px; width: 12px; height: 12px; transform: rotate(45deg); border: 2px dashed var(--meet); background: var(--canvas); }
+.next b { color: var(--ink); }
+.raised { margin-top: 10px; display: grid; gap: 6px; }
+
+/* actions */
+.panel { background: var(--paper); border: 1px solid var(--rule); border-radius: 12px; box-shadow: var(--shadow); padding: 14px 16px 16px; }
+.panel h2 { margin: 0; font: 600 19px/1.2 var(--serif); display: flex; align-items: baseline; gap: 8px; }
+.panel h2 .n { font: 700 14px var(--sans); color: var(--paper); background: var(--ink); border-radius: 999px; padding: 1px 9px; }
+.panel .hint { color: var(--ink-2); font-size: 13.5px; margin: 4px 0 10px; }
+.owner { margin-top: 12px; }
+.owner > h3 { margin: 0 0 6px; font-size: 12.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-2); }
+.act { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 8px; padding: 8px 0; border-top: 1px solid var(--faint); font-size: 14.5px; }
+.act:first-of-type { border-top: 0; }
+.box { width: 16px; height: 16px; margin-top: 3px; border: 2px solid var(--ink-2); border-radius: 4px; }
+.act.done .box { border-color: var(--good); background: var(--good); position: relative; }
+.act.done .box::after { content: ""; position: absolute; left: 4px; top: 0; width: 4px; height: 8px; border: solid var(--paper); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.act.done .t { color: var(--ink-2); }
+.act .am { font-size: 12.5px; color: var(--ink-2); margin-top: 2px; }
+.act .am a { color: inherit; }
+.act .nt { font-size: 13px; color: var(--ink-2); margin-top: 2px; }
+.due { display: inline-block; font-size: 12px; font-weight: 700; color: var(--meet); background: var(--meet-soft); border-radius: 4px; padding: 0 6px; margin-left: 4px; }
+.tag { display: inline-block; font-size: 12px; font-weight: 600; border-radius: 999px; padding: 0 8px; background: var(--blue-soft); color: var(--blue); }
+.tag.Henry { background: var(--henry-soft); color: var(--henry); }
+.tag.Claude { background: var(--faint); color: var(--ink-2); }
+.tag.meet { background: var(--meet-soft); color: var(--meet); }
+.tag.run { background: var(--run-soft); color: var(--run); }
+details.donelist { margin-top: 14px; border-top: 1px solid var(--rule); padding-top: 10px; }
+details.donelist summary { cursor: pointer; font-weight: 600; font-size: 14px; color: var(--ink-2); }
+.flash { animation: flash 1.4s ease-out; }
+@keyframes flash { from { box-shadow: 0 0 0 4px var(--blue-soft), var(--shadow); } to { box-shadow: var(--shadow); } }
+@media (prefers-reduced-motion: reduce) { .flash { animation: none; } html { scroll-behavior: auto; } }
+html { scroll-behavior: smooth; }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>Heatmap project log</h1>
+      <p id="sub">Meetings with Henry, the work in between, and what is still open.</p>
+    </div>
+    <nav class="toplinks" id="toplinks"></nav>
+  </header>
+
+  <section class="overview" aria-label="Overview">
+    <div class="counts" id="counts"></div>
+    <div class="strip-scroll"><div class="strip" id="strip"></div></div>
+    <div class="legend">
+      <span><i class="mk mk-meeting"></i>Meeting</span>
+      <span><i class="mk"></i>ben's work</span>
+      <span><i class="mk mk-run"></i>Daily run</span>
+      <span><i class="mk mk-next"></i>Next meeting</span>
+    </div>
+  </section>
+
+  <div class="main">
+    <section aria-label="Timeline">
+      <div class="filters" role="group" aria-label="Show">
+        <button class="chip" id="f-all" data-f="all" aria-pressed="true">Everything</button>
+        <button class="chip" id="f-meeting" data-f="meeting" aria-pressed="false">Meetings</button>
+        <button class="chip" id="f-work" data-f="work" aria-pressed="false">ben's work</button>
+        <button class="chip" id="f-run" data-f="run" aria-pressed="false">Daily runs</button>
+      </div>
+      <div id="timeline"></div>
+    </section>
+    <aside class="side" aria-label="Action items">
+      <div class="panel" id="actions"></div>
+    </aside>
+  </div>
+</div>
+
+<script>
+const DATA = __LOG_DATA__;
+const TZ = "Europe/London";
+const dayFmt = new Intl.DateTimeFormat("en-GB", { timeZone: TZ, weekday: "short", day: "numeric", month: "short" });
+const timeFmt = new Intl.DateTimeFormat("en-GB", { timeZone: TZ, hour: "2-digit", minute: "2-digit" });
+const keyFmt = new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" });
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const day = iso => dayFmt.format(new Date(iso));
+const dayKey = iso => keyFmt.format(new Date(iso));
+const time = iso => timeFmt.format(new Date(iso));
+const plainDay = ymd => dayFmt.format(new Date(ymd + "T12:00:00Z"));
+function span(a, b) {
+  if (!b || a === b) return `${day(a)}, ${time(a)}`;
+  if (dayKey(a) === dayKey(b)) return `${day(a)}, ${time(a)}–${time(b)}`;
+  return `${day(a)} ${time(a)} to ${day(b)} ${time(b)}`;
+}
+const RUN_LABEL = { "first run": "First run", sweep: "Search sweep", daily: "Daily run", manual: "Extra run" };
+
+const entries = DATA.entries.map(e => ({ ...e }));
+const byId = Object.fromEntries(entries.map(e => [e.id, e]));
+const runsById = Object.fromEntries(DATA.runs.map(r => [r.id, r]));
+const claimed = new Set(entries.flatMap(e => e.runs || []));
+const loose = DATA.runs.filter(r => !claimed.has(r.id)).map(r => ({ id: "run-" + r.id, kind: "run", start: r.time, run: r }));
+// An entry belongs to the chapter of the last meeting that started before it ended.
+const all = [...entries, ...loose].map(e => ({ ...e, key: e.kind === "meeting" ? e.start : (e.end || e.start) }));
+const meetings = all.filter(e => e.kind === "meeting").sort((a, b) => a.start.localeCompare(b.start));
+meetings.forEach((m, i) => m.n = i + 1);
+const chapters = [{ meeting: null, items: [] }, ...meetings.map(m => ({ meeting: m, items: [] }))];
+for (const e of all.filter(e => e.kind !== "meeting")) {
+  let c = 0;
+  meetings.forEach((m, i) => { if (m.start <= e.key) c = i + 1; });
+  chapters[c].items.push(e);
+}
+chapters.forEach(c => c.items.sort((a, b) => a.start.localeCompare(b.start)));
+const actions = DATA.actions;
+const openActions = actions.filter(a => a.status === "open");
+const actionsFrom = id => actions.filter(a => a.from === id);
+const entryName = id => { const e = all.find(x => x.id === id); return e ? (e.kind === "meeting" ? `Meeting ${e.n}: ${e.title}` : e.title) : id; };
+
+let filter = "all";
+try { filter = localStorage.getItem("log-filter") || "all"; } catch (e) {}
+
+function links(list) {
+  if (!list || !list.length) return "";
+  return `<div class="links">${list.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join("")}</div>`;
+}
+function actionRow(a, showFrom = true) {
+  const from = showFrom ? ` · from <a href="#${esc(a.from)}">${esc(entryName(a.from))}</a>` : "";
+  const when = a.status === "done" ? `done ${plainDay(a.done)}` : a.status === "dropped" ? "dropped" : `raised ${plainDay(a.raised)}`;
+  return `<div class="act ${esc(a.status)}"><span class="box" aria-label="${esc(a.status)}"></span><div>
+    <div class="t">${esc(a.text)}${a.due && a.status === "open" ? `<span class="due">by ${esc(plainDay(a.due))}</span>` : ""}</div>
+    <div class="am"><span class="tag ${esc(a.owner)}">${esc(a.owner)}</span> ${when}${from}</div>
+    ${a.note ? `<div class="nt">${esc(a.note)}</div>` : ""}</div></div>`;
+}
+function runLine(r) {
+  return `<div class="stats"><span><b>${r.items_read ?? "?"}</b> read</span><span><b>${r.new}</b> new cards</span><span><b>${r.updated}</b> updated</span><span><b>${r.cards ?? "?"}</b> cards in all</span><span><b>${r.feedback}</b> feedback</span></div>`;
+}
+function raisedBlock(id) {
+  const list = actionsFrom(id);
+  if (!list.length) return "";
+  return `<div class="sub"><h3>Actions from this</h3><div class="raised">${list.map(a => actionRow(a, false)).join("")}</div></div>`;
+}
+
+function meetingCard(m) {
+  const runs = (m.runs || []).map(id => runsById[id]).filter(Boolean);
+  const col = (h, list) => list && list.length ? `<div><h3>${h}</h3><ul>${list.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : "";
+  return `<article class="meeting" id="${esc(m.id)}">
+    <div class="meta"><span>${esc(span(m.start, m.end))}</span><span class="who">${(m.with || []).map(p => `<span class="tag ${esc(p)}">${esc(p)}</span>`).join("")}</span></div>
+    <p class="lead">${esc(m.summary)}</p>
+    ${m.time_note ? `<p class="note">${esc(m.time_note)}</p>` : ""}
+    <div class="cols">${col("Discussed", m.discussed)}${col("Decided", m.decided)}${col("Built in the room", m.built)}</div>
+    ${runs.length ? `<div class="sub"><h3>Runs during the meeting</h3><div class="runs-in">${runs.map(r => `<div class="r"><b>${esc(RUN_LABEL[r.kind] || "Run")}</b>, ${esc(time(r.time))}: ${esc(r.summary)}</div>`).join("")}</div></div>` : ""}
+    ${raisedBlock(m.id)}
+    ${links(m.links)}
+  </article>`;
+}
+function itemCard(e) {
+  if (e.kind === "run") {
+    const r = e.run;
+    return `<div class="item run" id="${esc(e.id)}" data-kind="run">
+      <div class="row1"><h3>${esc(RUN_LABEL[r.kind] || "Run")}</h3><span class="when">${esc(time(r.time))}</span></div>
+      ${runLine(r)}<p class="runline">${esc(r.summary)}</p></div>`;
+  }
+  const runs = (e.runs || []).map(id => runsById[id]).filter(Boolean);
+  return `<div class="item" id="${esc(e.id)}" data-kind="work">
+    <div class="row1"><h3>${esc(e.title)}</h3><span class="when">${esc(e.end && e.end !== e.start ? `${time(e.start)}–${time(e.end)}` : time(e.start))}</span></div>
+    <p>${esc(e.summary)}</p>
+    ${e.items && e.items.length ? `<ul>${e.items.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+    ${runs.map(r => `<div class="runs-in"><div class="r">${runLine(r)}</div></div>`).join("")}
+    ${actionsFrom(e.id).length ? `<div class="raised">${actionsFrom(e.id).map(a => actionRow(a, false)).join("")}</div>` : ""}
+    ${links(e.links)}
+  </div>`;
+}
+
+function renderTimeline() {
+  const out = [];
+  chapters.forEach((c, i) => {
+    const items = c.items.filter(e => filter === "all" || e.kind === filter);
+    const showMeeting = c.meeting && (filter === "all" || filter === "meeting");
+    if (!showMeeting && !items.length && !(i === chapters.length - 1 && filter !== "run" && filter !== "work")) return;
+    const head = c.meeting
+      ? `<div class="ch-head"><span class="eyebrow">Meeting ${c.meeting.n}</span><h2>${esc(c.meeting.title)}</h2></div>`
+      : (items.length ? `<div class="ch-head"><h2>Before the first meeting</h2></div>` : "");
+    let between = "";
+    if (items.length) {
+      let rail = "", last = "";
+      for (const e of items) {
+        const k = dayKey(e.start);
+        if (k !== last) { rail += `<div class="dayhead">${esc(day(e.start))}</div>`; last = k; }
+        rail += itemCard(e);
+      }
+      const label = c.meeting ? (i < chapters.length - 1 ? `Between meeting ${c.meeting.n} and meeting ${c.meeting.n + 1}` : `Since meeting ${c.meeting.n}`) : "";
+      between = `<div class="between">${label ? `<p class="label">${label}</p>` : ""}<div class="rail">${rail}${i === chapters.length - 1 && filter === "all" ? nextCard() : ""}</div></div>`;
+    } else if (i === chapters.length - 1 && filter === "all") {
+      between = `<div class="between"><div class="rail">${nextCard()}</div></div>`;
+    }
+    if (!head && !between) return;
+    out.push(`<section class="chapter">${head}${showMeeting ? meetingCard(c.meeting) : ""}${between}</section>`);
+  });
+  document.getElementById("timeline").innerHTML = out.join("") || `<p class="note">Nothing of this kind yet.</p>`;
+}
+function nextCard() {
+  const n = meetings.length + 1;
+  return `<div class="next"><b>Meeting ${n}: not booked yet.</b> ${openActions.length} open actions to go through, listed alongside.</div>`;
+}
+
+function renderActions() {
+  const owners = ["Henry", "ben", "Claude"];
+  const groups = owners.map(o => [o, openActions.filter(a => a.owner === o)]).filter(([, l]) => l.length);
+  const closed = actions.filter(a => a.status !== "open").sort((a, b) => (b.done || "").localeCompare(a.done || ""));
+  document.getElementById("actions").innerHTML = `
+    <h2>Open actions <span class="n">${openActions.length}</span></h2>
+    <p class="hint">Carried from meeting to meeting until someone closes them.</p>
+    ${groups.map(([o, l]) => `<div class="owner"><h3>${o === "ben" ? "ben" : o} · ${l.length}</h3>${l.map(a => actionRow(a)).join("")}</div>`).join("")}
+    ${closed.length ? `<details class="donelist" id="donelist"><summary>Done or dropped · ${closed.length}</summary>${closed.map(a => actionRow(a)).join("")}</details>` : ""}`;
+}
+
+function renderOverview() {
+  const nWork = entries.filter(e => e.kind === "work").length;
+  document.getElementById("counts").innerHTML = [
+    [meetings.length, meetings.length === 1 ? "meeting" : "meetings"],
+    [nWork, nWork === 1 ? "piece of work" : "pieces of work"],
+    [DATA.runs.length, "runs"],
+    [openActions.length, "open actions"],
+  ].map(([n, l]) => `<span><b>${n}</b>${l}</span>`).join("");
+  const keys = all.map(e => dayKey(e.start));
+  const today = dayKey(new Date().toISOString());
+  const first = keys.sort()[0];
+  const last = [keys[keys.length - 1], today].sort()[1];
+  const days = [];
+  for (let d = new Date(first + "T12:00:00Z"); keyFmt.format(d) <= last; d.setUTCDate(d.getUTCDate() + 1)) days.push(keyFmt.format(d));
+  const marks = Object.fromEntries(days.map(d => [d, []]));
+  for (const e of all) {
+    const k = dayKey(e.start);
+    if (!marks[k]) continue;
+    const label = e.kind === "run" ? `${RUN_LABEL[e.run.kind] || "Run"}, ${time(e.start)}` : e.kind === "meeting" ? `Meeting ${e.n}: ${e.title}` : e.title;
+    marks[k].push(`<button class="mk${e.kind === "work" ? "" : " mk-" + e.kind}" data-go="${esc(e.id)}" title="${esc(label)}" aria-label="${esc(label)}"></button>`);
+    for (const id of e.runs || []) {
+      const r = runsById[id];
+      if (r) marks[k].push(`<button class="mk mk-run" data-go="${esc(e.id)}" title="${esc((RUN_LABEL[r.kind] || "Run") + ", " + time(r.time))}" aria-label="${esc(RUN_LABEL[r.kind] || "Run")}"></button>`);
+    }
+  }
+  document.getElementById("strip").innerHTML = days.map(d => `<div class="day${d === today ? " today" : ""}">
+    <span class="dl"><b>${esc(plainDay(d).split(" ").slice(0, 2).join(" "))}</b> ${esc(plainDay(d).split(" ")[2] || "")}</span>
+    <div class="marks">${marks[d].join("")}</div></div>`).join("")
+    + `<div class="day"><span class="dl"><b>Next</b> meeting</span><div class="marks"><i class="mk mk-next" title="Not booked yet"></i></div></div>`;
+}
+
+function renderHeader() {
+  const latest = all.map(e => e.end || e.start).sort().pop();
+  document.getElementById("sub").textContent = `Meetings with Henry, the work in between, and what is still open. Last entry ${day(latest)}.`;
+  const l = [];
+  if (DATA.meta.plan) l.push(`<a class="btn" href="${esc(DATA.meta.plan)}" target="_blank" rel="noopener">How we keep this log</a>`);
+  if (DATA.meta.page) l.push(`<a class="btn" href="${esc(DATA.meta.page)}" target="_blank" rel="noopener">Heatmap page</a>`);
+  document.getElementById("toplinks").innerHTML = l.join("");
+}
+
+function setFilter(f) {
+  filter = f;
+  try { localStorage.setItem("log-filter", f); } catch (e) {}
+  document.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.f === f)));
+  renderTimeline();
+}
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => setFilter(b.dataset.f)));
+document.addEventListener("click", ev => {
+  const go = ev.target.closest("[data-go]");
+  const link = ev.target.closest('a[href^="#"]');
+  const id = go ? go.dataset.go : link ? link.getAttribute("href").slice(1) : null;
+  if (!id) return;
+  ev.preventDefault();
+  if (!document.getElementById(id)) setFilter("all");
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.scrollIntoView({ block: "center" });
+  el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash");
+});
+
+renderHeader();
+renderOverview();
+renderActions();
+setFilter(["all", "meeting", "work", "run"].includes(filter) ? filter : "all");
+</script>

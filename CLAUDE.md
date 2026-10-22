@@ -265,6 +265,15 @@ Artifact action=publish url=https://claude.ai/artifact/WCo5GAu4ZQpZQ6N8rTSYVS fi
          files={"runs/<run id>.json": "data/runs/<run id>.json"} label="Run <run id>"
 ```
 
+Then refresh the project log, which shows each run on its timeline (see
+`log/README.md`). Don't pass `icon` or `capabilities`.
+
+```
+python3 tools/projectlog.py build
+Artifact action=read url=https://claude.ai/artifact/9FPHDWSUeXCvZXuD4u4w62
+Artifact action=publish url=https://claude.ai/artifact/9FPHDWSUeXCvZXuD4u4w62 file_path=log/index.html
+```
+
 ### 10. Commit
 
 Commit everything to `main` with a message like
