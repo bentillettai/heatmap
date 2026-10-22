@@ -2,21 +2,21 @@
   "meta": {
     "title": "Heatmap",
     "started": "2026-10-20",
-    "updated": "2026-10-21",
+    "updated": "2026-10-22",
     "areas": {
       "datacentre": "Data centres",
       "aerospace": "Aerospace",
       "motorsport": "Motorsport",
       "other": "Other"
     },
-    "run_summary": "2 new cards: BAE Systems and Leeds on printed two-phase aircraft heat exchangers, and laser-melted gyroid micro heat exchangers with 100 µm features. 6 cards updated, including graded TPMS lattices (28.7% measured gain) and printed heat pipes.",
+    "run_summary": "1 new card: measured cryogenic properties of printed alloys for liquid-hydrogen heat exchangers. 10 cards updated, notably MTC's own generative cold plate with ToffeeX, MTC and Meggitt's powder-removal work, and a measured printed pre-cooler core.",
     "coverage": {
       "datacentre": "Good coverage of cold plates, jet impingement and heat reuse. One UK chip-level start-up found so far (Infiniflux).",
-      "aerospace": "Strong on oil coolers and hydrogen. Cabin-air systems are now covered through Honeywell's STRATA project, but precooler-specific news is still rare. Defence aircraft electronics cooling now appears through BAE Systems' work with Leeds.",
+      "aerospace": "Strong on oil coolers and hydrogen. Cabin-air systems are now covered through Honeywell's STRATA project, and a measured printed pre-cooler core (Maryland) now gives one data point, but precooler-specific news is still rare. Defence aircraft electronics cooling now appears through BAE Systems' work with Leeds.",
       "motorsport": "Teams publish little, so most evidence comes from suppliers (Conflux, PWR) and student teams. Henry's steer here will help most.",
       "other": "Found by searching from the technology first: heat pipes, laser texturing, modelling, TPMS tests, fusion and transpiration cooling. Links to the three areas are mostly inferred."
     },
-    "run_id": "2026-10-21-1"
+    "run_id": "2026-10-22-1"
   },
   "cards": [
     {
@@ -31,7 +31,7 @@
         "modelling and simulation",
         "metrology and inspection"
       ],
-      "why": "FlyZero names fuel-cell air radiators as the biggest thermal challenge for hydrogen aircraft, and its UK capability report calls 'novel air radiator heat exchangers with a commercially attractive manufacturing method' a high-opportunity area for the UK. Several designs compete: Reaction Engines' microtube radiator on Project FRESSON (claimed over 300 kW), DLR's printed TPMS exchangers (TRL 4) and Conflux's printed exchanger for Airbus ZEROe, now under technology readiness assessment with Airbus asking for full-scale units (though ZEROe has slipped well into the 2030s). That FlyZero phrase reads almost like an MTC mission statement.",
+      "why": "FlyZero names fuel-cell air radiators as the biggest thermal challenge for hydrogen aircraft, and its UK capability report calls 'novel air radiator heat exchangers with a commercially attractive manufacturing method' a high-opportunity area for the UK. Several designs compete: Reaction Engines' microtube radiator on Project FRESSON (claimed over 300 kW), DLR's printed TPMS exchangers (TRL 4) and Conflux's printed exchanger for Airbus ZEROe, now under technology readiness assessment with Airbus asking for full-scale units (though ZEROe has slipped well into the 2030s). A DLR review that scored heat exchanger types for fuel-cell aircraft rates microchannel, printed-circuit and extended-surface designs most promising. That FlyZero phrase reads almost like an MTC mission statement.",
       "applicability": {
         "type": "stated",
         "reason": "All sources target fuel-cell aircraft thermal management."
@@ -119,6 +119,9 @@
         },
         {
           "item": "aeroxplorer-conflux-aviation"
+        },
+        {
+          "item": "h2kc-dlr-h2-air-hx-review"
         }
       ],
       "scores": {
@@ -234,7 +237,7 @@
         "metrology and inspection",
         "modelling and simulation"
       ],
-      "why": "DTI and Heatflow printed the evaporator in one piece by laser powder bed fusion, which removes joints and leak paths, and tested it at 600 W, 50% above target, with no pumps or fans. Heat leaves at 60-80 C, warm enough for district heating, which ties it to the UK heat-network push.  A Villanova University rack-scale thermosyphon gives a measured benchmark for the passive approach: stable from 2 to 7.5 kW per rack with no pump. It is still the clearest Venn centre found: the advance exists because of how the part is made.",
+      "why": "DTI and Heatflow printed the evaporator in one piece by laser powder bed fusion, which removes joints and leak paths, and tested it at 600 W, 50% above target, with no pumps or fans. Heat leaves at 60-80 C, warm enough for district heating, which ties it to the UK heat-network push. A Villanova University rack-scale thermosyphon gives a measured benchmark for the passive approach: stable from 2 to 7.5 kW per rack with no pump. It is still the clearest Venn centre found: the advance exists because of how the part is made.",
       "applicability": {
         "type": "stated",
         "reason": "The project itself targets data-centre and HPC cooling."
@@ -392,6 +395,97 @@
       "area_rank": 1
     },
     {
+      "id": "ae-am-hx-qualification",
+      "area": "aerospace",
+      "headline": "Inspecting and qualifying printed heat exchangers: the gap FlyZero names",
+      "problem": "Printed heat exchangers cannot fly until internal passages, thin walls and joints can be inspected and lifed.",
+      "technology": "NDT and qualification of AM heat-exchanger cores: CT, leak testing, thin-wall property data, repeatable joints.",
+      "capabilities": [
+        "metrology and inspection",
+        "additive manufacture",
+        "robotics and automation",
+        "modelling and simulation"
+      ],
+      "why": "FlyZero's roadmap lists the enablers for hydrogen heat exchangers and most are manufacturing problems: no thin-wall property data, bespoke assembly tooling, a need for automated NDT and repeatable joints, and qualification of AM materials from -253 C to 500 C. Its capability report says lifing printed heat exchangers is still a challenge, with HVM Catapult (MTC) and TWI studying AM and automated laser welding. The same gaps hold back printed oil coolers for today's engines, so the work pays off before hydrogen arrives. Clean internal passages are part of the same gap: MTC and Meggitt showed up to 99% of powder could be drained from sub-millimetre AlSi10Mg channels, with the last 1% still unsolved, and Birmingham found ultrasonic and vacuum-boiling methods clear deep L-PBF channels that grit-blasting can't. Birmingham's 2023 review adds that today's L-PBF systems aren't yet ready for the thin, leak-proof walls these parts need.",
+      "applicability": {
+        "type": "stated",
+        "reason": "FlyZero states these gaps for hydrogen aircraft; that they also apply to today's oil coolers is our inference."
+      },
+      "trl": {
+        "level": "3-4",
+        "reason": "Gaps identified; no qualification route yet."
+      },
+      "barriers": "Needs a programme sponsor; qualification data is slow and costly to generate.",
+      "next_step": "A strong candidate for MTC's own roadmap. Check whether the ATI has funded follow-up to these FlyZero gaps since 2022.",
+      "orgs": [
+        {
+          "name": "Aerospace Technology Institute",
+          "type": "Gov",
+          "country": "UK",
+          "role": "funder"
+        },
+        {
+          "name": "Manufacturing Technology Centre",
+          "type": "RTO",
+          "country": "UK",
+          "role": "partner"
+        },
+        {
+          "name": "TWI",
+          "type": "RTO",
+          "country": "UK",
+          "role": "partner"
+        },
+        {
+          "name": "Parker Meggitt",
+          "type": "Commercial",
+          "country": "UK",
+          "role": "user"
+        },
+        {
+          "name": "HS Marston (Collins Aerospace)",
+          "type": "Commercial",
+          "country": "UK",
+          "role": "user"
+        },
+        {
+          "name": "University of Birmingham",
+          "type": "Uni",
+          "country": "UK",
+          "role": "researcher"
+        }
+      ],
+      "sources": [
+        {
+          "item": "ati-flyzero-thermal-roadmap"
+        },
+        {
+          "item": "ati-flyzero-uk-capability"
+        },
+        {
+          "item": "mtc-meggitt-drama-depowder"
+        },
+        {
+          "item": "bham-trapped-powder-removal"
+        },
+        {
+          "item": "bham-am-hx-aero-review"
+        }
+      ],
+      "scores": {
+        "venn_fit": 5,
+        "manufacturing_key": 5,
+        "evidence": 3,
+        "novelty": 3,
+        "uk_relevance": 5,
+        "contactable": 4
+      },
+      "added": "2026-10-20",
+      "score": 86,
+      "rank": 5,
+      "area_rank": 3
+    },
+    {
       "id": "ae-ecs-strata",
       "area": "aerospace",
       "headline": "AI-designed, printed cabin-air system parts, led from Honeywell's Yeovil site",
@@ -473,8 +567,8 @@
       },
       "added": "2026-10-20",
       "score": 85,
-      "rank": 5,
-      "area_rank": 3
+      "rank": 6,
+      "area_rank": 4
     },
     {
       "id": "dc-fine-feature-copper-cold-plates",
@@ -488,7 +582,7 @@
         "modelling and simulation",
         "metrology and inspection"
       ],
-      "why": "Three start-ups reach the same goal by different routes. Fabric8Labs prints copper electrochemically at 33 microns, Corintis designs microchannels in software and makes them at volume (in a Microsoft test, three times better heat removal), and Alloy Enterprises laser-cuts copper sheets and diffusion bonds them. MTC covers both the additive and the laser routes, so it could benchmark them fairly. Green-laser printers for pure copper are also scaling: China's Addireen says it can now build 50 machines a month, aimed at cold plates (its figures). The Microsoft result is the only independent number.",
+      "why": "Three start-ups reach the same goal by different routes. Fabric8Labs prints copper electrochemically at 33 microns, Corintis designs microchannels about 70 µm wide in software and has made over 10,000 copper cold plates, aiming for a million by the end of 2026 (in a Microsoft test, three times better heat removal), and Alloy Enterprises laser-cuts copper sheets and diffusion bonds them. MTC covers both the additive and the laser routes, so it could benchmark them fairly. Green-laser printers for pure copper are also scaling: China's Addireen says it can now build 50 machines a month, aimed at cold plates (its figures). The Microsoft result is the only independent number.",
       "applicability": {
         "type": "stated",
         "reason": "All three companies sell into AI data-centre cooling."
@@ -555,6 +649,9 @@
         },
         {
           "item": "addireen-green-laser-copper"
+        },
+        {
+          "item": "ieee-corintis-microfluidics"
         }
       ],
       "scores": {
@@ -567,7 +664,7 @@
       },
       "added": "2026-10-20",
       "score": 84,
-      "rank": 6,
+      "rank": 7,
       "area_rank": 2
     },
     {
@@ -663,7 +760,7 @@
       },
       "added": "2026-10-20",
       "score": 82,
-      "rank": 7,
+      "rank": 8,
       "area_rank": 1
     },
     {
@@ -766,8 +863,8 @@
       },
       "added": "2026-10-20",
       "score": 81,
-      "rank": 8,
-      "area_rank": 4
+      "rank": 9,
+      "area_rank": 5
     },
     {
       "id": "ot-am-hx-modelling",
@@ -821,7 +918,7 @@
       },
       "added": "2026-10-20",
       "score": 81,
-      "rank": 9,
+      "rank": 10,
       "area_rank": 2
     },
     {
@@ -876,7 +973,7 @@
       },
       "added": "2026-10-20",
       "score": 80,
-      "rank": 10,
+      "rank": 11,
       "area_rank": 3
     },
     {
@@ -975,82 +1072,6 @@
       },
       "added": "2026-10-20",
       "score": 80,
-      "rank": 11,
-      "area_rank": 5
-    },
-    {
-      "id": "ae-am-hx-qualification",
-      "area": "aerospace",
-      "headline": "Inspecting and qualifying printed heat exchangers: the gap FlyZero names",
-      "problem": "Printed heat exchangers cannot fly until internal passages, thin walls and joints can be inspected and lifed.",
-      "technology": "NDT and qualification of AM heat-exchanger cores: CT, leak testing, thin-wall property data, repeatable joints.",
-      "capabilities": [
-        "metrology and inspection",
-        "additive manufacture",
-        "robotics and automation",
-        "modelling and simulation"
-      ],
-      "why": "FlyZero's roadmap lists the enablers for hydrogen heat exchangers and most are manufacturing problems: no thin-wall property data, bespoke assembly tooling, a need for automated NDT and repeatable joints, and qualification of AM materials from -253 C to 500 C. Its capability report says lifing printed heat exchangers is still a challenge, with HVM Catapult (MTC) and TWI studying AM and automated laser welding. The same gaps hold back printed oil coolers for today's engines, so the work pays off before hydrogen arrives.",
-      "applicability": {
-        "type": "stated",
-        "reason": "FlyZero states these gaps for hydrogen aircraft; that they also apply to today's oil coolers is our inference."
-      },
-      "trl": {
-        "level": "3-4",
-        "reason": "Gaps identified; no qualification route yet."
-      },
-      "barriers": "Needs a programme sponsor; qualification data is slow and costly to generate.",
-      "next_step": "A strong candidate for MTC's own roadmap. Check whether the ATI has funded follow-up to these FlyZero gaps since 2022.",
-      "orgs": [
-        {
-          "name": "Aerospace Technology Institute",
-          "type": "Gov",
-          "country": "UK",
-          "role": "funder"
-        },
-        {
-          "name": "Manufacturing Technology Centre",
-          "type": "RTO",
-          "country": "UK",
-          "role": "partner"
-        },
-        {
-          "name": "TWI",
-          "type": "RTO",
-          "country": "UK",
-          "role": "partner"
-        },
-        {
-          "name": "Parker Meggitt",
-          "type": "Commercial",
-          "country": "UK",
-          "role": "user"
-        },
-        {
-          "name": "HS Marston (Collins Aerospace)",
-          "type": "Commercial",
-          "country": "UK",
-          "role": "user"
-        }
-      ],
-      "sources": [
-        {
-          "item": "ati-flyzero-thermal-roadmap"
-        },
-        {
-          "item": "ati-flyzero-uk-capability"
-        }
-      ],
-      "scores": {
-        "venn_fit": 5,
-        "manufacturing_key": 5,
-        "evidence": 1,
-        "novelty": 3,
-        "uk_relevance": 5,
-        "contactable": 4
-      },
-      "added": "2026-10-20",
-      "score": 80,
       "rank": 12,
       "area_rank": 6
     },
@@ -1126,6 +1147,87 @@
       "score": 79,
       "rank": 13,
       "area_rank": 3
+    },
+    {
+      "id": "dc-generative-cold-plate-design",
+      "area": "datacentre",
+      "headline": "Software that grows cold-plate channels for one specific chip",
+      "problem": "Hot spots on large AI packages such as the Nvidia GB200 set the peak temperature and limit performance.",
+      "technology": "Generative (reaction-diffusion) channel design coupled to a thermal model.",
+      "capabilities": [
+        "modelling and simulation",
+        "design for manufacture",
+        "additive manufacture"
+      ],
+      "why": "University of Michigan-Dearborn's simulation cut peak temperature by over 35 C against a parallel-channel plate, and design software is already sold (Diabatix ColdStream; Ansys now shows AI geometry search for a 650 W GPU plate, simulation only). MTC has already done this end to end: with ToffeeX it generated, printed in CP1 aluminium and rig-tested an electronics cold plate stated to be 48% lighter with half the pressure drop and a 12% lower peak junction temperature than a serpentine design, though the case study doesn't say which figures were measured. That makes this a capability MTC can point to, not just a gap: the next step is applying it to AI-chip cold plates and publishing measured results against tolerances and surface finish.",
+      "applicability": {
+        "type": "stated",
+        "reason": "The paper targets the GB200 directly; the manufacturing route is our inference."
+      },
+      "trl": {
+        "level": "2-3",
+        "reason": "Simulation only, no prototype."
+      },
+      "barriers": "Simulated gains often shrink once minimum wall thickness, powder removal and roughness are applied.",
+      "next_step": "Ask MTC's own team for the measured rig data from the ToffeeX cold plate, and whether it has been tried on a GPU-class heat load.",
+      "orgs": [
+        {
+          "name": "University of Michigan-Dearborn",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
+        },
+        {
+          "name": "Diabatix",
+          "type": "Commercial",
+          "country": "Belgium",
+          "role": "developer"
+        },
+        {
+          "name": "Manufacturing Technology Centre",
+          "type": "RTO",
+          "country": "UK",
+          "role": "developer"
+        },
+        {
+          "name": "ToffeeX",
+          "type": "Commercial",
+          "country": null,
+          "role": "developer"
+        },
+        {
+          "name": "Ansys",
+          "type": "Commercial",
+          "country": "USA",
+          "role": "supplier"
+        }
+      ],
+      "sources": [
+        {
+          "item": "arxiv-generative-cold-plate"
+        },
+        {
+          "item": "de247-diabatix-funding"
+        },
+        {
+          "item": "mtc-toffeex-cold-plate"
+        },
+        {
+          "item": "ansys-geomai-cold-plate"
+        }
+      ],
+      "scores": {
+        "venn_fit": 4,
+        "manufacturing_key": 4,
+        "evidence": 3,
+        "novelty": 4,
+        "uk_relevance": 4,
+        "contactable": 5
+      },
+      "added": "2026-10-20",
+      "score": 79,
+      "rank": 14,
+      "area_rank": 4
     },
     {
       "id": "ms-racing-approved-am-alloys",
@@ -1205,7 +1307,7 @@
       },
       "added": "2026-10-20",
       "score": 77,
-      "rank": 14,
+      "rank": 15,
       "area_rank": 2
     },
     {
@@ -1219,7 +1321,7 @@
         "modelling and simulation",
         "design for manufacture"
       ],
-      "why": "Qdot Technology, a UK SME, used a £45k Connected Places Catapult TRIG grant (2023) to design and make a TPMS cryogenic hydrogen heat exchanger by metal binder jetting. It sized the unit with end users, modelled TPMS unit cells and made test pieces, reaching TRL 2 to 3, and says early small-scale tests suggest 10-20% better performance, with no data published. Most printed heat exchangers use laser powder bed fusion, so a binder-jet route needs its own work on sintering shrinkage and porosity, which is MTC territory. Qdot is also a STRATA partner, which makes it a UK company to know.",
+      "why": "Qdot Technology, a UK SME, used a £45k Connected Places Catapult TRIG grant (2023) to design and make a TPMS cryogenic hydrogen heat exchanger by metal binder jetting. It sized the unit with end users, modelled TPMS unit cells and made test pieces, reaching TRL 2 to 3, and says early small-scale tests suggest 10-20% better performance, with no data published. Most printed heat exchangers use laser powder bed fusion, so a binder-jet route needs its own work on sintering shrinkage and porosity, which is MTC territory. Qdot is also a STRATA partner, which makes it a UK company to know. A Washington State printed liquefier heat exchanger is a warning: it delivered less than modelled because of the printed alloy's thermal properties and poor contact, which is exactly the data and joining work MTC could do.",
       "applicability": {
         "type": "stated",
         "reason": "The project targets liquid-hydrogen production at airports."
@@ -1242,11 +1344,20 @@
           "type": "RTO",
           "country": "UK",
           "role": "funder"
+        },
+        {
+          "name": "Washington State University",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
         }
       ],
       "sources": [
         {
           "item": "cpc-qdot-mach-hx"
+        },
+        {
+          "item": "wsu-am-lh2-liquefier-hx"
         }
       ],
       "scores": {
@@ -1259,7 +1370,7 @@
       },
       "added": "2026-10-20",
       "score": 76,
-      "rank": 15,
+      "rank": 16,
       "area_rank": 7
     },
     {
@@ -1273,7 +1384,7 @@
         "modelling and simulation",
         "design for manufacture"
       ],
-      "why": "TheMa4HERA is a €33.5m Clean Aviation project led by Honeywell, aiming for TRL 5 in 2026 with a full-scale ground demonstrator at Fraunhofer. Conflux joined in 2025 to make printed exchangers, evaporators and condensers, and presented the printed air-cycle heat exchangers with Honeywell UK at Formnext 2025. The partner list (Liebherr, Collins, Calyos, DLR, NLR, plus UK partners Conflux UK, Honeywell UK and Element Digital Engineering) is a map of who matters in aircraft environmental control heat exchangers. NLR's earlier Clean Sky 2 project TOPMOST (2017-19) built pumped two-phase cooling loops with 3D-printed parts for Thales power electronics.",
+      "why": "TheMa4HERA is a €33.5m Clean Aviation project led by Honeywell, aiming for TRL 5 in 2026 with a full-scale ground demonstrator at Fraunhofer. Conflux joined in 2025 to make printed exchangers, evaporators and condensers, and presented the printed air-cycle heat exchangers with Honeywell UK at Formnext 2025. The partner list (Liebherr, Collins, Calyos, DLR, NLR, plus UK partners Conflux UK, Honeywell UK and Element Digital Engineering) is a map of who matters in aircraft environmental control heat exchangers. NLR's earlier Clean Sky 2 project TOPMOST (2017-19) built pumped two-phase cooling loops with 3D-printed parts for Thales power electronics. Testing at this scale is scarce: SwRI in the US now markets heat exchanger tests up to several megawatts.",
       "applicability": {
         "type": "stated",
         "reason": "The project targets aircraft thermal management."
@@ -1350,6 +1461,12 @@
           "type": "Commercial",
           "country": "France",
           "role": "user"
+        },
+        {
+          "name": "Southwest Research Institute",
+          "type": "RTO",
+          "country": "USA",
+          "role": "partner"
         }
       ],
       "sources": [
@@ -1367,6 +1484,9 @@
         },
         {
           "item": "cordis-topmost-nlr"
+        },
+        {
+          "item": "swri-mw-hx-testing"
         }
       ],
       "scores": {
@@ -1379,7 +1499,7 @@
       },
       "added": "2026-10-20",
       "score": 74,
-      "rank": 16,
+      "rank": 17,
       "area_rank": 8
     },
     {
@@ -1443,7 +1563,7 @@
       },
       "added": "2026-10-20",
       "score": 74,
-      "rank": 17,
+      "rank": 18,
       "area_rank": 3
     },
     {
@@ -1511,8 +1631,105 @@
       },
       "added": "2026-10-20",
       "score": 74,
-      "rank": 18,
+      "rank": 19,
       "area_rank": 4
+    },
+    {
+      "id": "ae-am-air-system-hx",
+      "area": "aerospace",
+      "headline": "Printed heat exchangers for aircraft air systems and precoolers",
+      "problem": "Bleed-air precoolers and environmental control heat exchangers are brazed plate-fin assemblies with many joints, shaped by the space they must fit.",
+      "technology": "AM heat-exchanger cores with fewer joints and shapes fitted to the installation; software-generated precooler surfaces.",
+      "capabilities": [
+        "additive manufacture",
+        "design for manufacture",
+        "modelling and simulation",
+        "metrology and inspection"
+      ],
+      "why": "Liebherr Aerospace, Europe's leading air-systems supplier, set the topic for NATHENA, a Clean Sky 2 project that built a scale-one printed aircraft heat exchanger with fewer welded and brazed parts and a shape fitted to the aircraft. LEAP 71 and Farsoon have since printed a 1.5 m precooler in one piece with software-generated surfaces, though it is a hypersonic concept with no data. Measured data exist too: a University of Maryland printed manifold-microchannel pre-cooler core with 165 µm fins handled 2.78 kW at 600 C, close to 10 kW/kg and up to 25% denser than plate-fin units (2018, small scale). This is the closest match yet to the precooler brief, and also the main coverage gap.",
+      "applicability": {
+        "type": "stated",
+        "reason": "NATHENA targets civil aircraft heat exchangers; LEAP 71's precooler is for hypersonic, not turbofan, use."
+      },
+      "trl": {
+        "level": "4",
+        "reason": "Lab-tested proof of concept (NATHENA) and a concept print (LEAP 71)."
+      },
+      "barriers": "Brazed plate-fin precoolers are mature and cheap, so printed ones must win on weight or installation to justify qualification.",
+      "next_step": "Ask Liebherr Toulouse what happened after NATHENA and whether printed precoolers are on its roadmap.",
+      "orgs": [
+        {
+          "name": "Liebherr Aerospace",
+          "type": "Commercial",
+          "country": "France",
+          "role": "user"
+        },
+        {
+          "name": "von Karman Institute",
+          "type": "RTO",
+          "country": "Belgium",
+          "role": "partner"
+        },
+        {
+          "name": "AddUp",
+          "type": "Commercial",
+          "country": "France",
+          "role": "partner"
+        },
+        {
+          "name": "Temisth",
+          "type": "Commercial",
+          "country": "France",
+          "role": "developer"
+        },
+        {
+          "name": "Sogeclair Aerospace",
+          "type": "Commercial",
+          "country": "France",
+          "role": "partner"
+        },
+        {
+          "name": "LEAP 71",
+          "type": "Commercial",
+          "country": "UAE",
+          "role": "developer"
+        },
+        {
+          "name": "Farsoon",
+          "type": "Commercial",
+          "country": "China",
+          "role": "supplier"
+        },
+        {
+          "name": "University of Maryland",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
+        }
+      ],
+      "sources": [
+        {
+          "item": "vki-nathena-am-hx"
+        },
+        {
+          "item": "tct-leap71-farsoon-precooler"
+        },
+        {
+          "item": "umd-am-precooler-hx"
+        }
+      ],
+      "scores": {
+        "venn_fit": 4,
+        "manufacturing_key": 5,
+        "evidence": 3,
+        "novelty": 4,
+        "uk_relevance": 0,
+        "contactable": 4
+      },
+      "added": "2026-10-20",
+      "score": 73,
+      "rank": 20,
+      "area_rank": 9
     },
     {
       "id": "ms-2026-heat-rejection-squeeze",
@@ -1607,7 +1824,7 @@
       },
       "added": "2026-10-20",
       "score": 72,
-      "rank": 19,
+      "rank": 21,
       "area_rank": 4
     },
     {
@@ -1664,8 +1881,77 @@
       },
       "added": "2026-10-21",
       "score": 72,
-      "rank": 20,
-      "area_rank": 9
+      "rank": 22,
+      "area_rank": 10
+    },
+    {
+      "id": "ae-am-cryogenic-properties",
+      "area": "aerospace",
+      "headline": "Measured cryogenic properties of printed alloys, the missing data for liquid-hydrogen heat exchangers",
+      "problem": "Designers of liquid-hydrogen heat exchangers for aircraft have little data on how printed metals conduct and expand at -253 C, so designs underperform or are over-margined.",
+      "technology": "Cryogenic thermal conductivity, expansion and heat-capacity data for additively manufactured copper, Scalmalloy, Ti-6Al-4V and Inconel 718.",
+      "capabilities": [
+        "additive manufacture",
+        "metrology and inspection",
+        "modelling and simulation"
+      ],
+      "why": "KIT measured printed copper, Scalmalloy, Ti-6Al-4V and Inconel 718 from about 4 K to 300 K for AdHyBau, a German project on liquid-hydrogen-cooled electric aircraft drives with MT Aerospace and Siemens. Optimised laser-melted copper reached a residual resistance ratio of about 170, double the as-received powder's, and Scalmalloy conducts about ten times better than Inconel or titanium; the data feed a digital twin. FlyZero lists 'no thin-wall property data from -253 C' as a hydrogen enabler, and a US printed liquefier fell short partly for this reason. UK testing of the alloys MTC prints, in thin-wall form, would fill a named gap.",
+      "applicability": {
+        "type": "stated",
+        "reason": "The project targets LH2-cooled aircraft propulsion components."
+      },
+      "trl": {
+        "level": "3-4",
+        "reason": "Material data measured; no component yet."
+      },
+      "barriers": "Cryogenic test capacity is scarce; properties depend on each machine's parameters and heat treatment.",
+      "next_step": "Check whether UK cryogenic test labs (for example at the STFC or university hydrogen centres) could measure MTC-printed thin-wall coupons.",
+      "orgs": [
+        {
+          "name": "Karlsruhe Institute of Technology",
+          "type": "Uni",
+          "country": "Germany",
+          "role": "researcher"
+        },
+        {
+          "name": "MT Aerospace",
+          "type": "Commercial",
+          "country": "Germany",
+          "role": "partner"
+        },
+        {
+          "name": "Siemens",
+          "type": "Commercial",
+          "country": "Germany",
+          "role": "partner"
+        },
+        {
+          "name": "Washington State University",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
+        }
+      ],
+      "sources": [
+        {
+          "item": "kit-am-cryogenic-properties"
+        },
+        {
+          "item": "wsu-am-lh2-liquefier-hx"
+        }
+      ],
+      "scores": {
+        "venn_fit": 4,
+        "manufacturing_key": 4,
+        "evidence": 4,
+        "novelty": 4,
+        "uk_relevance": 1,
+        "contactable": 3
+      },
+      "added": "2026-10-22",
+      "score": 72,
+      "rank": 23,
+      "area_rank": 11
     },
     {
       "id": "ot-micro-slm-tpms-hx",
@@ -1712,96 +1998,8 @@
       },
       "added": "2026-10-21",
       "score": 71,
-      "rank": 21,
+      "rank": 24,
       "area_rank": 5
-    },
-    {
-      "id": "ae-am-air-system-hx",
-      "area": "aerospace",
-      "headline": "Printed heat exchangers for aircraft air systems and precoolers",
-      "problem": "Bleed-air precoolers and environmental control heat exchangers are brazed plate-fin assemblies with many joints, shaped by the space they must fit.",
-      "technology": "AM heat-exchanger cores with fewer joints and shapes fitted to the installation; software-generated precooler surfaces.",
-      "capabilities": [
-        "additive manufacture",
-        "design for manufacture",
-        "modelling and simulation",
-        "metrology and inspection"
-      ],
-      "why": "Liebherr Aerospace, Europe's leading air-systems supplier, set the topic for NATHENA, a Clean Sky 2 project that built a scale-one printed aircraft heat exchanger with fewer welded and brazed parts and a shape fitted to the aircraft. LEAP 71 and Farsoon have since printed a 1.5 m precooler in one piece with software-generated surfaces, though it is a hypersonic concept with no data. This is the closest match yet to the precooler brief, and also the main coverage gap.",
-      "applicability": {
-        "type": "stated",
-        "reason": "NATHENA targets civil aircraft heat exchangers; LEAP 71's precooler is for hypersonic, not turbofan, use."
-      },
-      "trl": {
-        "level": "4",
-        "reason": "Lab-tested proof of concept (NATHENA) and a concept print (LEAP 71)."
-      },
-      "barriers": "Brazed plate-fin precoolers are mature and cheap, so printed ones must win on weight or installation to justify qualification.",
-      "next_step": "Ask Liebherr Toulouse what happened after NATHENA and whether printed precoolers are on its roadmap.",
-      "orgs": [
-        {
-          "name": "Liebherr Aerospace",
-          "type": "Commercial",
-          "country": "France",
-          "role": "user"
-        },
-        {
-          "name": "von Karman Institute",
-          "type": "RTO",
-          "country": "Belgium",
-          "role": "partner"
-        },
-        {
-          "name": "AddUp",
-          "type": "Commercial",
-          "country": "France",
-          "role": "partner"
-        },
-        {
-          "name": "Temisth",
-          "type": "Commercial",
-          "country": "France",
-          "role": "developer"
-        },
-        {
-          "name": "Sogeclair Aerospace",
-          "type": "Commercial",
-          "country": "France",
-          "role": "partner"
-        },
-        {
-          "name": "LEAP 71",
-          "type": "Commercial",
-          "country": "UAE",
-          "role": "developer"
-        },
-        {
-          "name": "Farsoon",
-          "type": "Commercial",
-          "country": "China",
-          "role": "supplier"
-        }
-      ],
-      "sources": [
-        {
-          "item": "vki-nathena-am-hx"
-        },
-        {
-          "item": "tct-leap71-farsoon-precooler"
-        }
-      ],
-      "scores": {
-        "venn_fit": 4,
-        "manufacturing_key": 5,
-        "evidence": 2,
-        "novelty": 4,
-        "uk_relevance": 0,
-        "contactable": 4
-      },
-      "added": "2026-10-20",
-      "score": 70,
-      "rank": 22,
-      "area_rank": 10
     },
     {
       "id": "ms-am-battery-cold-plates-inspection",
@@ -1813,7 +2011,7 @@
         "additive manufacture",
         "metrology and inspection"
       ],
-      "why": "Ford has made around 1,000 printed parts for the 2026 Red Bull Ford power unit, including battery cold plates, and each one goes through strength tests, 3D scanning, X-ray and CT before metrology. Honda says battery and motor thermal management is where manufacturers will differ. Inspection at that rate is familiar MTC ground, and these cold plates are close cousins of data-centre ones.",
+      "why": "Ford has made around 1,000 printed parts for the 2026 Red Bull Ford power unit, including battery cold plates, and each one goes through strength tests, 3D scanning, X-ray and CT before metrology. Honda says battery and motor thermal management is where manufacturers will differ. Inspection at that rate is familiar MTC ground, and these cold plates are close cousins of data-centre ones. Formula E shows the trend: a Cranfield study finds each new car generation uses less energy but makes over 60% more battery heat, and above about 57 C the battery loses power fast.",
       "applicability": {
         "type": "stated",
         "reason": "Both sources are about 2026 F1 power units."
@@ -1841,6 +2039,12 @@
           "type": "Commercial",
           "country": "Japan",
           "role": "user"
+        },
+        {
+          "name": "Cranfield University",
+          "type": "Uni",
+          "country": "UK",
+          "role": "researcher"
         }
       ],
       "sources": [
@@ -1852,6 +2056,12 @@
         },
         {
           "item": "amfg-f1-am-2025"
+        },
+        {
+          "item": "cranfield-fe-energy-thermal"
+        },
+        {
+          "item": "michelin-fe-battery-thermal"
         }
       ],
       "scores": {
@@ -1864,7 +2074,7 @@
       },
       "added": "2026-10-20",
       "score": 67,
-      "rank": 23,
+      "rank": 25,
       "area_rank": 5
     },
     {
@@ -1951,8 +2161,8 @@
       },
       "added": "2026-10-20",
       "score": 66,
-      "rank": 24,
-      "area_rank": 4
+      "rank": 26,
+      "area_rank": 5
     },
     {
       "id": "ae-gpu-cfd-fast-hx-design",
@@ -1966,7 +2176,7 @@
         "additive manufacture",
         "metrology and inspection"
       ],
-      "why": "Sintavia ran a 30-million-cell conjugate heat-transfer model in seven minutes on Nvidia GPUs, 11 times faster than on CPUs, and designed a multi-circuit heat exchanger in two weeks. It claims 30% less weight and 20% better thermal efficiency, checked by CT scanning. Faster simulation means many variants a week instead of one a month, and MTC's modelling team could test whether the workflow holds for its own work. The gains are company claims.",
+      "why": "Sintavia ran a 30-million-cell conjugate heat-transfer model in seven minutes on Nvidia GPUs, 11 times faster than on CPUs, and designed a multi-circuit heat exchanger in two weeks. It claims 30% less weight and 20% better thermal efficiency, checked by CT scanning. Faster simulation means many variants a week instead of one a month, and MTC's modelling team could test whether the workflow holds for its own work. The gains are company claims. GKN Aerospace (its Swedish arm) and Chalmers have started BAIDHEX (SEK 6m, to 2028) to have machine learning generate bioinspired aero heat exchangers that already meet manufacturing rules.",
       "applicability": {
         "type": "stated",
         "reason": "The heat exchanger is for aerospace."
@@ -2000,11 +2210,26 @@
           "type": "Commercial",
           "country": "USA",
           "role": "supplier"
+        },
+        {
+          "name": "GKN Aerospace",
+          "type": "Commercial",
+          "country": "UK",
+          "role": "developer"
+        },
+        {
+          "name": "Chalmers University of Technology",
+          "type": "Uni",
+          "country": "Sweden",
+          "role": "researcher"
         }
       ],
       "sources": [
         {
           "item": "mw-sintavia-nvidia-hx"
+        },
+        {
+          "item": "vinnova-baidhex"
         }
       ],
       "scores": {
@@ -2017,65 +2242,8 @@
       },
       "added": "2026-10-20",
       "score": 66,
-      "rank": 25,
-      "area_rank": 11
-    },
-    {
-      "id": "dc-generative-cold-plate-design",
-      "area": "datacentre",
-      "headline": "Software that grows cold-plate channels for one specific chip",
-      "problem": "Hot spots on large AI packages such as the Nvidia GB200 set the peak temperature and limit performance.",
-      "technology": "Generative (reaction-diffusion) channel design coupled to a thermal model.",
-      "capabilities": [
-        "modelling and simulation",
-        "design for manufacture",
-        "additive manufacture"
-      ],
-      "why": "University of Michigan-Dearborn's simulation cut peak temperature by over 35 C against a parallel-channel plate. The design software is already sold: Diabatix in Leuven offers generative heat-sink and cold-plate design as a service (ColdStream, €2m raised in 2022), with no published validation. That is the gap MTC can fill: design for manufacture, build, and test whether the gain survives real tolerances and surface finish. This is the kind of paper the old tool missed because the manufacturing link is implicit.",
-      "applicability": {
-        "type": "stated",
-        "reason": "The paper targets the GB200 directly; the manufacturing route is our inference."
-      },
-      "trl": {
-        "level": "2-3",
-        "reason": "Simulation only, no prototype."
-      },
-      "barriers": "Simulated gains often shrink once minimum wall thickness, powder removal and roughness are applied.",
-      "next_step": "A small MTC study: print the generated geometry and a baseline, and measure the real difference.",
-      "orgs": [
-        {
-          "name": "University of Michigan-Dearborn",
-          "type": "Uni",
-          "country": "USA",
-          "role": "researcher"
-        },
-        {
-          "name": "Diabatix",
-          "type": "Commercial",
-          "country": "Belgium",
-          "role": "developer"
-        }
-      ],
-      "sources": [
-        {
-          "item": "arxiv-generative-cold-plate"
-        },
-        {
-          "item": "de247-diabatix-funding"
-        }
-      ],
-      "scores": {
-        "venn_fit": 4,
-        "manufacturing_key": 4,
-        "evidence": 2,
-        "novelty": 4,
-        "uk_relevance": 0,
-        "contactable": 4
-      },
-      "added": "2026-10-20",
-      "score": 66,
-      "rank": 26,
-      "area_rank": 5
+      "rank": 27,
+      "area_rank": 12
     },
     {
       "id": "dc-jet-impingement-cold-plates",
@@ -2165,7 +2333,7 @@
       },
       "added": "2026-10-20",
       "score": 66,
-      "rank": 27,
+      "rank": 28,
       "area_rank": 6
     },
     {
@@ -2239,8 +2407,8 @@
       },
       "added": "2026-10-20",
       "score": 65,
-      "rank": 28,
-      "area_rank": 12
+      "rank": 29,
+      "area_rank": 13
     },
     {
       "id": "ae-sacoc-fin-design",
@@ -2318,8 +2486,8 @@
       },
       "added": "2026-10-20",
       "score": 65,
-      "rank": 29,
-      "area_rank": 13
+      "rank": 30,
+      "area_rank": 14
     },
     {
       "id": "ms-am-brake-ducts",
@@ -2392,7 +2560,7 @@
       },
       "added": "2026-10-20",
       "score": 63,
-      "rank": 30,
+      "rank": 31,
       "area_rank": 6
     },
     {
@@ -2467,7 +2635,7 @@
       },
       "added": "2026-10-20",
       "score": 62,
-      "rank": 31,
+      "rank": 32,
       "area_rank": 7
     },
     {
@@ -2554,7 +2722,7 @@
       },
       "added": "2026-10-20",
       "score": 62,
-      "rank": 32,
+      "rank": 33,
       "area_rank": 6
     },
     {
@@ -2591,6 +2759,12 @@
           "type": "Commercial",
           "country": "UK",
           "role": "user"
+        },
+        {
+          "name": "Viritech",
+          "type": "Commercial",
+          "country": "UK",
+          "role": "user"
         }
       ],
       "sources": [
@@ -2602,6 +2776,9 @@
         },
         {
           "item": "caes-fresson-microtube-radiator"
+        },
+        {
+          "item": "reaction-engines-motorsport-page"
         }
       ],
       "scores": {
@@ -2614,8 +2791,8 @@
       },
       "added": "2026-10-20",
       "score": 61,
-      "rank": 33,
-      "area_rank": 14
+      "rank": 34,
+      "area_rank": 15
     },
     {
       "id": "ms-student-am-motor-cooling",
@@ -2689,7 +2866,7 @@
       },
       "added": "2026-10-20",
       "score": 61,
-      "rank": 34,
+      "rank": 35,
       "area_rank": 7
     },
     {
@@ -2811,7 +2988,7 @@
       },
       "added": "2026-10-20",
       "score": 60,
-      "rank": 35,
+      "rank": 36,
       "area_rank": 8
     },
     {
@@ -2859,7 +3036,7 @@
       },
       "added": "2026-10-20",
       "score": 60,
-      "rank": 36,
+      "rank": 37,
       "area_rank": 7
     },
     {
@@ -2906,7 +3083,7 @@
       },
       "added": "2026-10-20",
       "score": 54,
-      "rank": 37,
+      "rank": 38,
       "area_rank": 9
     },
     {
@@ -2970,7 +3147,7 @@
       },
       "added": "2026-10-20",
       "score": 44,
-      "rank": 38,
+      "rank": 39,
       "area_rank": 10
     },
     {
@@ -3015,7 +3192,7 @@
       },
       "added": "2026-10-20",
       "score": 40,
-      "rank": 39,
+      "rank": 40,
       "area_rank": 11
     }
   ]
