@@ -286,13 +286,13 @@
       "kind": "meeting",
       "title": "First review with Henry",
       "start": "2026-10-22T15:59:33Z",
-      "end": "2026-10-22T15:59:33Z",
+      "end": "2026-10-22T16:26:30Z",
       "with": [
         "ben",
         "Henry"
       ],
-      "summary": "Henry had reviewed the page and was very positive. The meeting settled how he can use it outside MTC, how to keep his comments safe, and how a demo to MTC might lead to paid work.",
-      "time_note": "The start time wasn't noted. The time shown is when ben posted the notes and Henry's written feedback.",
+      "summary": "Henry had reviewed the page and was very positive. Over two recorded chats, ben walked him through the work since the kickoff, and they settled how he can use it outside MTC, how to keep his comments safe, and how far to go with customisation.",
+      "time_note": "The start time wasn't noted. The time shown is when ben posted the notes. The meeting had two recordings: the main discussion, then a walk-through of the log and the page.",
       "discussed": [
         "Henry's written feedback before the meeting: the data looks accurate, concise, pertinent and well formatted. His favourite views are the opportunity map, card list and Action Radar.",
         "Henry's asks: more next-step ideas as bullets, confirmation when a comment saves, and a time filter on the opportunity map so it stays usable over months.",
@@ -300,17 +300,27 @@
         "Henry can't open the Claude page at work. MTC allows the internet but no AI tools beyond Microsoft Copilot. A plain website he logs into would be like reading a news site.",
         "Grey area: MTC's capabilities and the societal problems are public, but Henry's own specs and comments may count as company knowledge. If he shows it at work it will get a lot of attention, so it has to be watertight.",
         "Longer term: demo it to MTC as built without any internal knowledge, then offer options openly, from MTC owning and self-hosting it with open-source models to a wider tool for its 1,000+ staff.",
-        "The daily run's timing is fine while developing (it runs at 06:59 UK; 6 pm was mentioned by mistake). Henry may not keep up with daily runs long term, and missed days of feedback don't matter."
+        "The daily run's timing is fine while developing (it runs at 06:59 UK; 6 pm was mentioned by mistake). Henry may not keep up with daily runs long term, and missed days of feedback don't matter.",
+        "Henry's comments on the page never saved: it held no comments or votes when checked. He most likely had view-only access.",
+        "ben walked Henry through the log: the wider sweep, the design options, the Runs tab and knowledge base, the ideas backlog, and the research and funding APIs now in the daily run. Henry liked the \"Other\" category and all the layouts.",
+        "Henry asked how it finds so much that is relevant when MTC's own URL list found little. ben's view: Claude knows where to look, and checks can be added to be sure nothing big is missed.",
+        "Ideas for later: flag companies that are MTC members (the list is public), and link to MTC's past work once internal data is allowed.",
+        "Dials versus prompts: rather than a settings panel, steer runs with comments on cards, runs, sources and organisations, or with a one-off brief such as \"find opportunities for this new fund\". Henry thought comments might be enough."
       ],
       "decided": [
         "Keep building it outside MTC, just ben and Henry, and focus on making it really good.",
         "Henry must be able to open the page, see the runs and leave comments that Claude can read, using his personal account.",
         "Turn it into a website Henry can log into from any computer, with no AI use on his side.",
         "Keep comments in for now so Henry can give lots of feedback. Add a setting that hides comments, to switch off for a demo.",
-        "ben and Henry will be open with MTC about how it was built and offer clear options at a later meeting."
+        "ben and Henry will be open with MTC about how it was built and offer clear options at a later meeting.",
+        "Keep it simple and usable first, and add customisation only where it earns its place."
       ],
       "built": [],
       "links": [
+        {
+          "label": "Next-steps plan (draft)",
+          "url": "https://claude.ai/artifact/WRxNZbhZuCgJ4BowaCs8u5"
+        },
         {
           "label": "Thread",
           "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBkFYK9H3JAgzCB26uSVHdDV5"
