@@ -16,7 +16,10 @@
       "title": "Kickoff with Henry",
       "start": "2026-10-20T16:39:09Z",
       "end": "2026-10-20T17:56:52Z",
-      "with": ["ben", "Henry"],
+      "with": [
+        "ben",
+        "Henry"
+      ],
       "summary": "ben and Henry framed the problem in a recorded conversation, then answered Claude's planning questions together and watched Heatmap V1 go live with 25 cards.",
       "time_note": "The recorded discussion came first and its start time wasn't noted. The times shown are the planning and build session that followed, up to ben's mood-board request.",
       "discussed": [
@@ -41,11 +44,22 @@
         "The private repo bentillettai/heatmap, created by ben.",
         "Heatmap V1, live at 18:39 with 25 cards from 64 articles, and the daily run scheduled for 06:59."
       ],
-      "runs": ["2026-10-20-1"],
+      "runs": [
+        "2026-10-20-1"
+      ],
       "links": [
-        {"label": "Heatmap V1 plan", "url": "https://claude.ai/code/artifact/8f1bf2f7-26ee-478a-b3fb-5ab2e7cb29b5"},
-        {"label": "Heatmap page", "url": "https://claude.ai/artifact/WCo5GAu4ZQpZQ6N8rTSYVS"},
-        {"label": "Thread", "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk5aHFD6QP6EzRFk9BhrAYmo"}
+        {
+          "label": "Heatmap V1 plan",
+          "url": "https://claude.ai/code/artifact/8f1bf2f7-26ee-478a-b3fb-5ab2e7cb29b5"
+        },
+        {
+          "label": "Heatmap page",
+          "url": "https://claude.ai/artifact/WCo5GAu4ZQpZQ6N8rTSYVS"
+        },
+        {
+          "label": "Thread",
+          "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk5aHFD6QP6EzRFk9BhrAYmo"
+        }
       ]
     },
     {
@@ -62,9 +76,14 @@
         "Six cards from searching by technology first, such as laser-textured boiling surfaces and printed heat exchangers for fusion.",
         "The daily run now also uses technology-first and research searches, still with at most 5 new cards a day."
       ],
-      "runs": ["2026-10-20-2"],
+      "runs": [
+        "2026-10-20-2"
+      ],
       "links": [
-        {"label": "Thread", "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk5aHFD6QP6EzRFk9BhrAYmo"}
+        {
+          "label": "Thread",
+          "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk5aHFD6QP6EzRFk9BhrAYmo"
+        }
       ]
     },
     {
@@ -82,10 +101,22 @@
         "Built into the real page as PR #2, with a test copy and a \"Comment on this finding\" button. Merged and live at 21:33."
       ],
       "links": [
-        {"label": "Mood board", "url": "https://claude.ai/artifact/646jRj3mLqSTRh5YWbLJdq"},
-        {"label": "Layout preview", "url": "https://claude.ai/artifact/WxkQDNT1sEcgaagchYGXCr"},
-        {"label": "PR #2", "url": "https://github.com/bentillettai/heatmap/pull/2"},
-        {"label": "Thread", "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk6ZLH2Cva6nkiD111sTPQG3"}
+        {
+          "label": "Mood board",
+          "url": "https://claude.ai/artifact/646jRj3mLqSTRh5YWbLJdq"
+        },
+        {
+          "label": "Layout preview",
+          "url": "https://claude.ai/artifact/WxkQDNT1sEcgaagchYGXCr"
+        },
+        {
+          "label": "PR #2",
+          "url": "https://github.com/bentillettai/heatmap/pull/2"
+        },
+        {
+          "label": "Thread",
+          "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk6ZLH2Cva6nkiD111sTPQG3"
+        }
       ]
     },
     {
@@ -103,8 +134,14 @@
         "ben asked Claude to merge PRs for him. The first try was blocked; after ben approved the prompt, PR #1 merged at 21:31."
       ],
       "links": [
-        {"label": "PR #1", "url": "https://github.com/bentillettai/heatmap/pull/1"},
-        {"label": "Thread", "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk5aHFD6QP6EzRFk9BhrAYmo"}
+        {
+          "label": "PR #1",
+          "url": "https://github.com/bentillettai/heatmap/pull/1"
+        },
+        {
+          "label": "Thread",
+          "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk5aHFD6QP6EzRFk9BhrAYmo"
+        }
       ]
     },
     {
@@ -134,8 +171,14 @@
         "Structured sources (research papers, UK and EU grants) are where the best information is. ben set up a cloud environment that can reach them."
       ],
       "links": [
-        {"label": "Scaling Heatmap", "url": "https://claude.ai/artifact/RKgicY4XNmjSmwP1zWSHea"},
-        {"label": "Thread", "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBkKeYV8pErXLWXEC4vhRoVtV"}
+        {
+          "label": "Scaling Heatmap",
+          "url": "https://claude.ai/artifact/RKgicY4XNmjSmwP1zWSHea"
+        },
+        {
+          "label": "Thread",
+          "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBkKeYV8pErXLWXEC4vhRoVtV"
+        }
       ]
     },
     {
@@ -152,8 +195,14 @@
         "Adding these to the daily run is waiting on a yes from ben."
       ],
       "links": [
-        {"label": "API test results", "url": "https://claude.ai/artifact/98mMyWgfa6488ycxJcYDJv"},
-        {"label": "Thread", "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk4CEkWUHnDU12mujHAM8oTK"}
+        {
+          "label": "API test results",
+          "url": "https://claude.ai/artifact/98mMyWgfa6488ycxJcYDJv"
+        },
+        {
+          "label": "Thread",
+          "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk4CEkWUHnDU12mujHAM8oTK"
+        }
       ]
     },
     {
@@ -168,8 +217,14 @@
         "The plan for keeping the log up to date is in the linked doc."
       ],
       "links": [
-        {"label": "How we keep this log", "url": "https://claude.ai/artifact/464SGvpBZCdQ2qQzFwwEJb"},
-        {"label": "Thread", "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBkFYK9H3JAgzCB26uSVHdDV5"}
+        {
+          "label": "How we keep this log",
+          "url": "https://claude.ai/artifact/464SGvpBZCdQ2qQzFwwEJb"
+        },
+        {
+          "label": "Thread",
+          "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBkFYK9H3JAgzCB26uSVHdDV5"
+        }
       ]
     },
     {
@@ -187,8 +242,14 @@
         "Corrects one assumption: runs happen in Anthropic's cloud on a schedule, not on ben's desktop."
       ],
       "links": [
-        {"label": "How a Heatmap run works", "url": "https://claude.ai/artifact/CMRSQp5WTgG2Wjc3p3K98r"},
-        {"label": "Thread", "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk3Wf4FaNYSVticeL2NYDET3"}
+        {
+          "label": "How a Heatmap run works",
+          "url": "https://claude.ai/artifact/CMRSQp5WTgG2Wjc3p3K98r"
+        },
+        {
+          "label": "Thread",
+          "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk3Wf4FaNYSVticeL2NYDET3"
+        }
       ]
     },
     {
@@ -206,43 +267,189 @@
         "The page itself is unchanged. The funding data is stored, ready to show later."
       ],
       "links": [
-        {"label": "PR #4", "url": "https://github.com/bentillettai/heatmap/pull/4"},
-        {"label": "API test results", "url": "https://claude.ai/artifact/98mMyWgfa6488ycxJcYDJv"},
-        {"label": "Thread", "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk4CEkWUHnDU12mujHAM8oTK"}
+        {
+          "label": "PR #4",
+          "url": "https://github.com/bentillettai/heatmap/pull/4"
+        },
+        {
+          "label": "API test results",
+          "url": "https://claude.ai/artifact/98mMyWgfa6488ycxJcYDJv"
+        },
+        {
+          "label": "Thread",
+          "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk4CEkWUHnDU12mujHAM8oTK"
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "kind": "meeting",
+      "title": "First review with Henry",
+      "start": "2026-10-22T15:59:33Z",
+      "end": "2026-10-22T15:59:33Z",
+      "with": [
+        "ben",
+        "Henry"
+      ],
+      "summary": "Henry had reviewed the page and was very positive. The meeting settled how he can use it outside MTC, how to keep his comments safe, and how a demo to MTC might lead to paid work.",
+      "time_note": "The start time wasn't noted. The time shown is when ben posted the notes and Henry's written feedback.",
+      "discussed": [
+        "Henry's written feedback before the meeting: the data looks accurate, concise, pertinent and well formatted. His favourite views are the opportunity map, card list and Action Radar.",
+        "Henry's asks: more next-step ideas as bullets, confirmation when a comment saves, and a time filter on the opportunity map so it stays usable over months.",
+        "Henry's bigger ideas: a short periodic review of whether societal problems are changing (BBC, DTI, ATI, APC, Innovate UK), a front end to tune what each run looks for, suggested new categories that a person approves, and an \"I want to know more\" button for digging into one card.",
+        "Henry can't open the Claude page at work. MTC allows the internet but no AI tools beyond Microsoft Copilot. A plain website he logs into would be like reading a news site.",
+        "Grey area: MTC's capabilities and the societal problems are public, but Henry's own specs and comments may count as company knowledge. If he shows it at work it will get a lot of attention, so it has to be watertight.",
+        "Longer term: demo it to MTC as built without any internal knowledge, then offer options openly, from MTC owning and self-hosting it with open-source models to a wider tool for its 1,000+ staff.",
+        "The daily run's timing is fine while developing (it runs at 06:59 UK; 6 pm was mentioned by mistake). Henry may not keep up with daily runs long term, and missed days of feedback don't matter."
+      ],
+      "decided": [
+        "Keep building it outside MTC, just ben and Henry, and focus on making it really good.",
+        "Henry must be able to open the page, see the runs and leave comments that Claude can read, using his personal account.",
+        "Turn it into a website Henry can log into from any computer, with no AI use on his side.",
+        "Keep comments in for now so Henry can give lots of feedback. Add a setting that hides comments, to switch off for a demo.",
+        "ben and Henry will be open with MTC about how it was built and offer clear options at a later meeting."
+      ],
+      "built": [],
+      "links": [
+        {
+          "label": "Thread",
+          "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBkFYK9H3JAgzCB26uSVHdDV5"
+        }
       ]
     }
   ],
   "actions": [
-    {"id": "a1", "owner": "ben", "from": "m1", "raised": "2026-10-20", "status": "open",
-     "text": "Share the Heatmap page with Henry by email as an Editor, so he can vote and comment.",
-     "note": "Still private to ben at the 21 October run. Several other actions wait on this."},
-    {"id": "a2", "owner": "ben", "from": "w2", "raised": "2026-10-20", "status": "open",
-     "text": "Leave one test comment on the live page to check your name shows, then delete it."},
-    {"id": "a3", "owner": "Henry", "from": "m1", "raised": "2026-10-20", "status": "open",
-     "text": "Give first feedback on the cards (votes, comments, notes), especially aerospace and F1.",
-     "note": "Needs the page shared first."},
-    {"id": "a4", "owner": "ben", "from": "m1", "raised": "2026-10-20", "status": "open", "due": "2026-10-27",
-     "text": "Set up the first-week review with Henry, as the V1 plan suggests."},
-    {"id": "a5", "owner": "ben", "from": "w6", "raised": "2026-10-20", "status": "done", "done": "2026-10-22",
-     "text": "Say yes or no to adding the research and funding APIs to the daily run and moving the 06:59 run onto the new environment."},
-    {"id": "a6", "owner": "ben", "from": "w6", "raised": "2026-10-20", "status": "done", "done": "2026-10-22",
-     "text": "Get an OpenAlex key, or tell Claude to request one with your email."},
-    {"id": "a7", "owner": "ben", "from": "w5", "raised": "2026-10-20", "status": "open",
-     "text": "Pick which scaling recommendations to pursue: quality measures, a weekly shortlist, sources by yield, an exploration slot."},
-    {"id": "a8", "owner": "ben", "from": "w2", "raised": "2026-10-20", "status": "open",
-     "text": "Confirm what \"I want to count\" meant. Claude assumed comment and vote counts and built those."},
-    {"id": "a9", "owner": "ben", "from": "w3", "raised": "2026-10-20", "status": "open",
-     "text": "Delete the merged PR branches on GitHub. Claude can't delete branches from here."},
-    {"id": "a10", "owner": "Henry", "from": "m1", "raised": "2026-10-20", "status": "done", "done": "2026-10-20",
-     "text": "Send a photo of more good and bad examples.",
-     "note": "10 examples, now the calibration set."},
-    {"id": "a11", "owner": "ben", "from": "m1", "raised": "2026-10-20", "status": "done", "done": "2026-10-20",
-     "text": "Create the private heatmap repo on GitHub."},
-    {"id": "a12", "owner": "ben", "from": "w3", "raised": "2026-10-20", "status": "done", "done": "2026-10-20",
-     "text": "Approve the merge prompts for PR #1 and PR #2."},
-    {"id": "a13", "owner": "ben", "from": "w5", "raised": "2026-10-20", "status": "done", "done": "2026-10-20",
-     "text": "Set up a cloud environment that can reach the research APIs."},
-    {"id": "a14", "owner": "ben", "from": "w8", "raised": "2026-10-22", "status": "open",
-     "text": "Review the run explainer and share it with Henry."}
+    {
+      "id": "a1",
+      "owner": "ben",
+      "from": "m1",
+      "raised": "2026-10-20",
+      "status": "open",
+      "text": "Share the Heatmap page with Henry by email as an Editor, so he can vote and comment.",
+      "note": "Agreed again in meeting 2: Henry should be able to open the page, see the runs and comment, using his personal account."
+    },
+    {
+      "id": "a2",
+      "owner": "ben",
+      "from": "w2",
+      "raised": "2026-10-20",
+      "status": "open",
+      "text": "Leave one test comment on the live page to check your name shows, then delete it."
+    },
+    {
+      "id": "a3",
+      "owner": "Henry",
+      "from": "m1",
+      "raised": "2026-10-20",
+      "status": "open",
+      "text": "Give first feedback on the cards (votes, comments, notes), especially aerospace and F1.",
+      "note": "Henry sent written feedback on the tool before meeting 2. Card-level votes and comments are still to come once he has access."
+    },
+    {
+      "id": "a4",
+      "owner": "ben",
+      "from": "m1",
+      "raised": "2026-10-20",
+      "status": "done",
+      "due": "2026-10-27",
+      "text": "Set up the first-week review with Henry, as the V1 plan suggests.",
+      "done": "2026-10-22",
+      "note": "Held as meeting 2."
+    },
+    {
+      "id": "a5",
+      "owner": "ben",
+      "from": "w6",
+      "raised": "2026-10-20",
+      "status": "done",
+      "done": "2026-10-22",
+      "text": "Say yes or no to adding the research and funding APIs to the daily run and moving the 06:59 run onto the new environment."
+    },
+    {
+      "id": "a6",
+      "owner": "ben",
+      "from": "w6",
+      "raised": "2026-10-20",
+      "status": "done",
+      "done": "2026-10-22",
+      "text": "Get an OpenAlex key, or tell Claude to request one with your email."
+    },
+    {
+      "id": "a7",
+      "owner": "ben",
+      "from": "w5",
+      "raised": "2026-10-20",
+      "status": "open",
+      "text": "Pick which scaling recommendations to pursue: quality measures, a weekly shortlist, sources by yield, an exploration slot."
+    },
+    {
+      "id": "a8",
+      "owner": "ben",
+      "from": "w2",
+      "raised": "2026-10-20",
+      "status": "open",
+      "text": "Confirm what \"I want to count\" meant. Claude assumed comment and vote counts and built those."
+    },
+    {
+      "id": "a9",
+      "owner": "ben",
+      "from": "w3",
+      "raised": "2026-10-20",
+      "status": "open",
+      "text": "Delete the merged PR branches on GitHub. Claude can't delete branches from here."
+    },
+    {
+      "id": "a10",
+      "owner": "Henry",
+      "from": "m1",
+      "raised": "2026-10-20",
+      "status": "done",
+      "done": "2026-10-20",
+      "text": "Send a photo of more good and bad examples.",
+      "note": "10 examples, now the calibration set."
+    },
+    {
+      "id": "a11",
+      "owner": "ben",
+      "from": "m1",
+      "raised": "2026-10-20",
+      "status": "done",
+      "done": "2026-10-20",
+      "text": "Create the private heatmap repo on GitHub."
+    },
+    {
+      "id": "a12",
+      "owner": "ben",
+      "from": "w3",
+      "raised": "2026-10-20",
+      "status": "done",
+      "done": "2026-10-20",
+      "text": "Approve the merge prompts for PR #1 and PR #2."
+    },
+    {
+      "id": "a13",
+      "owner": "ben",
+      "from": "w5",
+      "raised": "2026-10-20",
+      "status": "done",
+      "done": "2026-10-20",
+      "text": "Set up a cloud environment that can reach the research APIs."
+    },
+    {
+      "id": "a14",
+      "owner": "ben",
+      "from": "w8",
+      "raised": "2026-10-22",
+      "status": "open",
+      "text": "Review the run explainer and share it with Henry."
+    },
+    {
+      "id": "a15",
+      "owner": "Henry",
+      "from": "m2",
+      "raised": "2026-10-22",
+      "status": "open",
+      "text": "Think through which of your comments and specs might count as MTC knowledge, before showing the tool at work."
+    }
   ]
 }
