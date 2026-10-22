@@ -190,6 +190,26 @@
         {"label": "How a Heatmap run works", "url": "https://claude.ai/artifact/CMRSQp5WTgG2Wjc3p3K98r"},
         {"label": "Thread", "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk3Wf4FaNYSVticeL2NYDET3"}
       ]
+    },
+    {
+      "id": "w9",
+      "kind": "work",
+      "title": "Research and funding APIs added to the daily run",
+      "start": "2026-10-22T14:27:50Z",
+      "end": "2026-10-22T15:20:00Z",
+      "by": "ben",
+      "summary": "ben added a free OpenAlex key to the environment and said yes to the wiring. Every daily run now also searches five research and funding databases, and the 06:59 run moved to a session that can reach them.",
+      "items": [
+        "Searches UKRI Gateway to Research, CORDIS, OpenAlex, arXiv and Crossref each day. It brings back UK and EU grants with partners, awards and dates, and papers with their institutions.",
+        "Once a week it records the recent grants of each UK organisation on a card, for example five for Qdot Technology since 2022.",
+        "The 06:59 run now fires in the Research and funding APIs thread. The old scheduled task is paused, not deleted.",
+        "The page itself is unchanged. The funding data is stored, ready to show later."
+      ],
+      "links": [
+        {"label": "PR #4", "url": "https://github.com/bentillettai/heatmap/pull/4"},
+        {"label": "API test results", "url": "https://claude.ai/artifact/98mMyWgfa6488ycxJcYDJv"},
+        {"label": "Thread", "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk4CEkWUHnDU12mujHAM8oTK"}
+      ]
     }
   ],
   "actions": [
@@ -203,9 +223,9 @@
      "note": "Needs the page shared first."},
     {"id": "a4", "owner": "ben", "from": "m1", "raised": "2026-10-20", "status": "open", "due": "2026-10-27",
      "text": "Set up the first-week review with Henry, as the V1 plan suggests."},
-    {"id": "a5", "owner": "ben", "from": "w6", "raised": "2026-10-20", "status": "open",
+    {"id": "a5", "owner": "ben", "from": "w6", "raised": "2026-10-20", "status": "done", "done": "2026-10-22",
      "text": "Say yes or no to adding the research and funding APIs to the daily run and moving the 06:59 run onto the new environment."},
-    {"id": "a6", "owner": "ben", "from": "w6", "raised": "2026-10-20", "status": "open",
+    {"id": "a6", "owner": "ben", "from": "w6", "raised": "2026-10-20", "status": "done", "done": "2026-10-22",
      "text": "Get an OpenAlex key, or tell Claude to request one with your email."},
     {"id": "a7", "owner": "ben", "from": "w5", "raised": "2026-10-20", "status": "open",
      "text": "Pick which scaling recommendations to pursue: quality measures, a weekly shortlist, sources by yield, an exploration slot."},
