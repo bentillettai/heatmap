@@ -24,6 +24,20 @@ areas:
       - microfluidic chip cooling AI
       - generative design cold plate topology optimisation
       - Innovate UK data centre cooling project
+    # Short phrases for the research and funding APIs (tools/apis.py), run on
+    # all five sources. Keep them to two or three words: CORDIS and arXiv match
+    # the exact phrase.
+    api_queries:
+      - immersion cooling
+      - cold plate
+      - two-phase cooling
+      - direct-to-chip cooling
+      - data centre cooling
+      - data center cooling
+      - thermosiphon
+      - vapour chamber
+      - microchannel cooling
+      - data centre heat reuse
 
   - id: aerospace
     name: Aerospace heat exchangers
@@ -45,6 +59,15 @@ areas:
       - hydrogen aircraft heat exchanger
       - compact heat exchanger aerospace additive manufactured
       - Liebherr Honeywell Collins Parker heat exchanger aerospace
+    api_queries:
+      - aircraft heat exchanger
+      - precooler
+      - oil cooler
+      - air-oil heat exchanger
+      - aircraft thermal management
+      - hydrogen aircraft heat exchanger
+      - surface cooler
+      - compact heat exchanger
 
   - id: motorsport
     name: Motorsport thermal management
@@ -67,6 +90,12 @@ areas:
       - Formula E battery thermal management
       - F1 brake cooling duct additive manufacturing
       - motorsport thermal management technology transfer
+    api_queries:
+      - motorsport
+      - Formula 1
+      - Formula E
+      - racing car radiator
+      - high performance vehicle cooling
 
 # Technology-first searches (added 2026-10-20 at ben's request). These start
 # from the technology, not an area, to catch work whose application is
@@ -88,3 +117,14 @@ technology_queries:
   - jet impingement cooling additive manufactured
   - compact heat exchanger fusion OR microreactor OR sCO2
   - battery thermal management cold plate additive
+
+# Technology-first phrases for the research and funding APIs, as above.
+api_technology_queries:
+  - additively manufactured heat exchanger
+  - gyroid heat exchanger
+  - TPMS heat exchanger
+  - additive heat pipe
+  - pulsating heat pipe
+  - topology optimisation heat exchanger
+  - copper laser powder bed fusion
+  - heat exchanger inspection

@@ -15,6 +15,8 @@ data files tidy and builds the page.
   python3 tools/heatmap.py knowledge [CARD|k-ID ...]  facts that apply to cards, or cards a fact applies to
   python3 tools/heatmap.py record-run RUN.json      log the run and freeze its report
   python3 tools/heatmap.py new-urls URL [URL ...]       print the ones not yet read
+  python3 tools/heatmap.py api-search PLAN.json OUT.json  search research and funding APIs (tools/apis.py)
+  python3 tools/heatmap.py api-orgs [--since DATE] [ORG ...]  recent grants for card organisations
   python3 tools/heatmap.py stats
 """
 import datetime as dt
@@ -23,6 +25,8 @@ import re
 import sys
 from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit
+
+import apis
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -34,6 +38,7 @@ COMMENTS = DATA / "comments.jsonl"
 NOTES = DATA / "notes.jsonl"
 RUNS = DATA / "runs.jsonl"
 KNOWLEDGE = DATA / "knowledge.jsonl"   # facts and constraints people taught it
+FUNDING = DATA / "funding.json"   # recent grants per organisation, from api-orgs
 SNAPSHOTS = DATA / "runs"   # one frozen report per run, published as runs/<id>.json
 TEMPLATE = ROOT / "site" / "template.html"
 PAGE = ROOT / "site" / "index.html"
@@ -97,6 +102,7 @@ def merge_items(new_path):
             skipped += 1
             continue
         item.setdefault("found", dt.date.today().isoformat())
+        item.pop("abstract", None)   # api-search candidates carry it; the summary replaces it
         base = item.get("id") or slug(item.get("title") or key)
         uid, n = base, 2
         while uid in ids:
@@ -569,6 +575,73 @@ def new_urls(urls):
             print(u)
 
 
+def api_search(plan_path, out_path):
+    """Run the day's API searches and write new candidate items for Claude to gate.
+
+    PLAN.json: {"since": "2025-01-01", "per_source": 3,
+                "searches": [{"area": "datacentre", "query": "\"immersion cooling\"",
+                              "sources": ["gtr", "cordis"], "country": "gb"}]}
+    sources defaults to all five; country only affects OpenAlex.
+    """
+    plan = json.loads(Path(plan_path).read_text())
+    since = plan.get("since") or (dt.date.today() - dt.timedelta(days=365)).isoformat()
+    per_source = plan.get("per_source", 3)
+    known = {canonical_url(i["url"]) for i in read_jsonl(ITEMS)}
+    card_orgs = {apis.org_key(o["name"]): o["name"] for c in load_cards()["cards"] for o in c["orgs"]}
+    out, tally = [], {}
+    for s in plan["searches"]:
+        for src in s.get("sources") or apis.SOURCES:
+            t = tally.setdefault(src, {"new": 0, "known": 0, "errors": []})
+            try:
+                kwargs = {"country": s["country"]} if src == "openalex" and s.get("country") else {}
+                found = apis.SEARCH[src](s["query"], s["area"], since, per_source, **kwargs)
+            except Exception as e:   # one source failing must not stop the others
+                t["errors"].append(f"{s['query']}: {type(e).__name__}: {e}"[:200])
+                continue
+            for item in found:
+                key = canonical_url(item["url"])
+                if key in known:
+                    t["known"] += 1
+                    continue
+                known.add(key)
+                for o in item["orgs"]:
+                    name = card_orgs.get(apis.org_key(o["name"]))
+                    if name:
+                        o["name"], o["on_cards"] = name, True
+                item["id"] = slug(f"{src}-{item['title']}")
+                out.append(item)
+                t["new"] += 1
+    Path(out_path).write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n")
+    for src, t in tally.items():
+        print(f"{src}: {t['new']} new, {t['known']} already read" + (f", {len(t['errors'])} errors" if t["errors"] else ""))
+        for e in t["errors"]:
+            print(f"  error: {e}")
+    print(f"wrote {len(out)} candidates to {out_path}")
+
+
+def api_orgs(args):
+    """Record recent GtR and CORDIS projects for organisations on cards (UK ones by default)."""
+    since = "2022-01-01"
+    if args[:1] == ["--since"]:
+        since, args = args[1], args[2:]
+    cards = load_cards()["cards"]
+    names = args or sorted({o["name"] for c in cards for o in c["orgs"] if o.get("country") == "UK"})
+    doc = json.loads(FUNDING.read_text()) if FUNDING.exists() else {"orgs": {}}
+    for name in names:
+        entry = {"checked": dt.date.today().isoformat(), "since": since}
+        for src, fn in (("gtr", apis.gtr_org_projects), ("cordis", apis.cordis_org_projects)):
+            try:
+                entry[src] = fn(name, since)
+            except Exception as e:
+                entry[src] = {"error": f"{type(e).__name__}: {e}"[:200]}
+        doc["orgs"][name] = entry
+        found = sum(len(entry[s].get("projects", [])) for s in ("gtr", "cordis"))
+        skipped = entry["gtr"].get("skipped")
+        print(f"{name}: {found} projects since {since}" + (f" (GtR: {skipped})" if skipped else ""))
+    doc["updated"] = dt.date.today().isoformat()
+    FUNDING.write_text(json.dumps(doc, indent=1, ensure_ascii=False) + "\n")
+
+
 def stats():
     items = read_jsonl(ITEMS)
     doc = load_cards()
@@ -603,5 +676,7 @@ if __name__ == "__main__":
         "ingest-comments": lambda: ingest_comments(*args),
         "ingest-notes": lambda: ingest_notes(*args),
         "new-urls": lambda: new_urls(args),
+        "api-search": lambda: api_search(*args),
+        "api-orgs": lambda: api_orgs(args),
         "stats": stats,
     }[cmd]()

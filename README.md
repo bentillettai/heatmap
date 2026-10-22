@@ -33,7 +33,11 @@ web search ──► read pages ──► thermal gate ──► items.jsonl
 
 - **Collect.** Each morning a scheduled Claude session runs the steps in
   `CLAUDE.md`. It searches with the queries in `config/areas.yaml`, plus leads
-  from Henry's feedback and notes, and reads new pages.
+  from Henry's feedback and notes, and reads new pages. It also searches five
+  research and funding APIs (UKRI Gateway to Research, CORDIS, OpenAlex,
+  arXiv, Crossref) through `tools/apis.py`, which bring back grants with their
+  partners and awards, and papers with their institutions. Once a week it
+  records each UK organisation's recent grants in `data/funding.json`.
 - **Gate.** Anything where thermal management isn't central is dropped but
   remembered, so it isn't read again.
 - **Judge.** Claude groups items into opportunities (one problem and technology
