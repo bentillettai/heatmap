@@ -56,6 +56,7 @@ export async function upsertPerson(
     const all = await ctx.db.query("people").collect();
     prev = all.find((p) => !p.userId && p.name.toLowerCase() === name.toLowerCase() && p.email.endsWith(".pending")) ?? null;
   }
+  if (prev?.owner && !args.owner) throw new ConvexError("That's the owner's login already.");
   const by = args.owner ? "owner" : args.by || prev?.by || `p_${crypto.randomUUID().slice(0, 12)}`;
   const row = { email, name, owner: args.owner, by, who: args.owner ? "owner" : by };
   if (prev) await ctx.db.patch(prev._id, row);
