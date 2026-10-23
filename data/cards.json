@@ -2,21 +2,21 @@
   "meta": {
     "title": "Heatmap",
     "started": "2026-10-20",
-    "updated": "2026-10-22",
+    "updated": "2026-10-23",
     "areas": {
       "datacentre": "Data centres",
       "aerospace": "Aerospace",
       "motorsport": "Motorsport",
       "other": "Other"
     },
-    "run_summary": "1 new card: measured cryogenic properties of printed alloys for liquid-hydrogen heat exchangers. 10 cards updated, notably MTC's own generative cold plate with ToffeeX, MTC and Meggitt's powder-removal work, and a measured printed pre-cooler core.",
+    "run_summary": "1 new card: UK ATC's printed liquid-nitrogen heat exchangers. 11 cards updated, led by fuel-cell aircraft radiators after Henry's up vote and a much stronger two-phase direct-to-chip card; first run using the research and funding APIs (26 records, 10 kept).",
     "coverage": {
       "datacentre": "Good coverage of cold plates, jet impingement and heat reuse. One UK chip-level start-up found so far (Infiniflux).",
       "aerospace": "Strong on oil coolers and hydrogen. Cabin-air systems are now covered through Honeywell's STRATA project, and a measured printed pre-cooler core (Maryland) now gives one data point, but precooler-specific news is still rare. Defence aircraft electronics cooling now appears through BAE Systems' work with Leeds.",
       "motorsport": "Teams publish little, so most evidence comes from suppliers (Conflux, PWR) and student teams. Henry's steer here will help most.",
       "other": "Found by searching from the technology first: heat pipes, laser texturing, modelling, TPMS tests, fusion and transpiration cooling. Links to the three areas are mostly inferred."
     },
-    "run_id": "2026-10-22-1"
+    "run_id": "2026-10-23-1"
   },
   "cards": [
     {
@@ -31,7 +31,7 @@
         "modelling and simulation",
         "metrology and inspection"
       ],
-      "why": "FlyZero names fuel-cell air radiators as the biggest thermal challenge for hydrogen aircraft, and its UK capability report calls 'novel air radiator heat exchangers with a commercially attractive manufacturing method' a high-opportunity area for the UK. Several designs compete: Reaction Engines' microtube radiator on Project FRESSON (claimed over 300 kW), DLR's printed TPMS exchangers (TRL 4) and Conflux's printed exchanger for Airbus ZEROe, now under technology readiness assessment with Airbus asking for full-scale units (though ZEROe has slipped well into the 2030s). A DLR review that scored heat exchanger types for fuel-cell aircraft rates microchannel, printed-circuit and extended-surface designs most promising. That FlyZero phrase reads almost like an MTC mission statement.",
+      "why": "FlyZero names fuel-cell air radiators as the biggest thermal challenge for hydrogen aircraft, and its UK capability report calls 'novel air radiator heat exchangers with a commercially attractive manufacturing method' a high-opportunity area for the UK. Several designs compete: Reaction Engines' microtube radiator on Project FRESSON (claimed over 300 kW), DLR's printed TPMS exchangers (TRL 4) and Conflux's printed exchanger for Airbus ZEROe, now under technology readiness assessment (though ZEROe has slipped well into the 2030s). Where the radiator sits matters as much as the core: a Buffalo, Georgia Tech and Florida State model found a ducted radiator copes in most flight phases but not at takeoff, TU Wien is designing exchangers into a fan nacelle to win back some drag as thrust, and FEV with RWTH Aachen warns that bigger radiators add both mass and drag for eVTOL fuel cells. That FlyZero phrase, a compact core plus a way to make it, reads almost like an MTC mission statement.",
       "applicability": {
         "type": "stated",
         "reason": "All sources target fuel-cell aircraft thermal management."
@@ -40,7 +40,7 @@
         "level": "3-5",
         "reason": "DLR at TRL 4; FlyZero puts the global best at TRL 5 on a rig."
       },
-      "barriers": "Target kW/kg is far above today's radiators, and hydrogen aircraft timelines keep slipping.",
+      "barriers": "Target kW/kg is far above today's radiators, takeoff on a hot day sets the size, and hydrogen aircraft timelines keep slipping.",
       "next_step": "Talk to Cranfield Aerospace Solutions about what FRESSON's radiator relies on now that Reaction Engines is in administration.",
       "orgs": [
         {
@@ -96,6 +96,36 @@
           "type": "Commercial",
           "country": "Australia",
           "role": "user"
+        },
+        {
+          "name": "TU Wien",
+          "type": "Uni",
+          "country": "Austria",
+          "role": "researcher"
+        },
+        {
+          "name": "University at Buffalo",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
+        },
+        {
+          "name": "Georgia Institute of Technology",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
+        },
+        {
+          "name": "FEV",
+          "type": "Commercial",
+          "country": "Germany",
+          "role": "developer"
+        },
+        {
+          "name": "RWTH Aachen University",
+          "type": "Uni",
+          "country": "Germany",
+          "role": "researcher"
         }
       ],
       "sources": [
@@ -122,6 +152,18 @@
         },
         {
           "item": "h2kc-dlr-h2-air-hx-review"
+        },
+        {
+          "item": "ceas-tuwien-fuel-cell-hx-nacelle"
+        },
+        {
+          "item": "buffalo-ducted-hx-pemfc"
+        },
+        {
+          "item": "buffalo-fc-aviation-cooling-challenges"
+        },
+        {
+          "item": "fev-fuel-cell-vtol-cooling"
         }
       ],
       "scores": {
@@ -149,7 +191,7 @@
         "metrology and inspection",
         "modelling and simulation"
       ],
-      "why": "This is the oil-cooler brief exactly, and the UK is strong in it. Meggitt (now Parker Meggitt) and TWI ran C-ALM AOHE to build an 80 kW, under-10 kg printed air-oil cooler for geared UHBR engines, aiming at TRL 6 and MRL 6, and published a review of L-PBF aluminium heat exchangers with Birmingham. Safran's HIPEX shows the payoff: a printed curved cooler, claimed to halve drag and save up to 1% fuel, already ground-tested on an engine.",
+      "why": "This is the oil-cooler brief exactly, and the UK is strong in it. Meggitt (now Parker Meggitt) and TWI ran C-ALM AOHE to build an 80 kW, under-10 kg printed air-oil cooler for geared UHBR engines, aiming at TRL 6 and MRL 6, and published a review of L-PBF aluminium heat exchangers with Birmingham. Safran's HIPEX shows the payoff: a printed curved cooler, claimed to halve drag and save up to 1% fuel, already ground-tested on an engine. The one published like-for-like test is a caution: Penn State's printed AlSi10Mg copy of an aircraft oil cooler moved about 10-14% more heat but doubled the air-side pressure drop, and showed rough surfaces and edge cracks at fin joints.",
       "applicability": {
         "type": "stated",
         "reason": "Both projects target turbofan oil cooling."
@@ -196,6 +238,12 @@
           "type": "Gov",
           "country": "Belgium",
           "role": "funder"
+        },
+        {
+          "name": "Pennsylvania State University",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
         }
       ],
       "sources": [
@@ -210,6 +258,9 @@
         },
         {
           "item": "airframer-safran-hipex"
+        },
+        {
+          "item": "psu-am-aircraft-oil-cooler"
         }
       ],
       "scores": {
@@ -582,7 +633,7 @@
         "modelling and simulation",
         "metrology and inspection"
       ],
-      "why": "Three start-ups reach the same goal by different routes. Fabric8Labs prints copper electrochemically at 33 microns, Corintis designs microchannels about 70 µm wide in software and has made over 10,000 copper cold plates, aiming for a million by the end of 2026 (in a Microsoft test, three times better heat removal), and Alloy Enterprises laser-cuts copper sheets and diffusion bonds them. MTC covers both the additive and the laser routes, so it could benchmark them fairly. Green-laser printers for pure copper are also scaling: China's Addireen says it can now build 50 machines a month, aimed at cold plates (its figures). The Microsoft result is the only independent number.",
+      "why": "Three start-ups reach the same goal by different routes. Fabric8Labs prints copper electrochemically at 33 microns, Corintis designs microchannels about 70 µm wide in software and has made over 10,000 copper cold plates, aiming for a million by the end of 2026 (in a Microsoft test, three times better heat removal), and Alloy Enterprises laser-cuts copper sheets and diffusion bonds them. MTC covers both the additive and the laser routes, so it could benchmark them fairly. Green-laser printers for pure copper are also scaling: China's Addireen says it can now build 50 machines a month, aimed at cold plates (its figures). Independent numbers are starting to appear: Microsoft's test of Corintis plates, and a University of Illinois study in which a topology-optimised plate printed by Fabric8Labs gave up to 32% better cooling, or 68% lower pressure drop, than rectangular fins.",
       "applicability": {
         "type": "stated",
         "reason": "All three companies sell into AI data-centre cooling."
@@ -635,6 +686,12 @@
           "type": "Commercial",
           "country": "China",
           "role": "supplier"
+        },
+        {
+          "name": "University of Illinois Urbana-Champaign",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
         }
       ],
       "sources": [
@@ -651,7 +708,7 @@
           "item": "addireen-green-laser-copper"
         },
         {
-          "item": "ieee-corintis-microfluidics"
+          "item": "uiuc-topopt-ecam-cold-plate"
         }
       ],
       "scores": {
@@ -878,7 +935,7 @@
         "metrology and inspection",
         "design for manufacture"
       ],
-      "why": "The University of Bath and Politecnico di Torino built a cheap thermo-hydraulic model of printed compact heat exchangers and checked it against published experiments. Temperature change was within 3.7%, but standard models underestimated pressure drop by up to 26.4%; correcting channel diameter for melt dross cut that to 11.4%, and a calibrated penalty factor to 4.3%. It applies to every printed heat exchanger on this page, and MTC could supply what the model needs most: measured channel geometry and roughness from CT.",
+      "why": "The University of Bath and Politecnico di Torino built a cheap thermo-hydraulic model of printed compact heat exchangers and checked it against published experiments. Temperature change was within 3.7%, but standard models underestimated pressure drop by up to 26.4%; correcting channel diameter for melt dross cut that to 11.4%, and a calibrated penalty factor to 4.3%. It applies to every printed heat exchanger on this page, and MTC could supply what the model needs most: measured channel geometry and roughness from CT. Related work on design rules is growing: an August 2026 Applied Thermal Engineering paper proposes quasi-fractal headers to share flow evenly in parameterised printed heat exchangers.",
       "applicability": {
         "type": "inferred",
         "reason": "The paper names fuel-cell and battery cooling in transport; its use for aero and data-centre parts is ours."
@@ -906,6 +963,9 @@
       "sources": [
         {
           "item": "bath-polito-am-hx-model"
+        },
+        {
+          "item": "ate-quasi-fractal-distributor-am-hx"
         }
       ],
       "scores": {
@@ -933,7 +993,7 @@
         "metrology and inspection",
         "design for manufacture"
       ],
-      "why": "Conflux, led by a former F1 engineer, argues the right measure is thermal resistance per unit of pump power, and quotes 0.0076 C/W at 6 L/min for its printed plates. Henry rated this the best example in the calibration set. It is an opinion piece with one vendor number, which holds the evidence score back, but the motorsport-to-data-centre transfer is exactly the cross-area link the tool should surface. Conflux is opening a UK hub.",
+      "why": "Conflux, led by a former F1 engineer, argues the right measure is thermal resistance per unit of pump power, and quotes 0.0076 C/W at 6 L/min for its printed plates. Henry rated this the best example in the calibration set. It is an opinion piece with one vendor number, which holds the evidence score back, but the motorsport-to-data-centre transfer is exactly the cross-area link the tool should surface. Conflux is opening a UK hub, and its chairman Michael Fuller is still making the F1-to-data-centre case in the trade press (July 2026, no new figures).",
       "applicability": {
         "type": "stated",
         "reason": "The article is written for data-centre cooling buyers."
@@ -961,6 +1021,9 @@
         },
         {
           "item": "mm-conflux-uk-hub"
+        },
+        {
+          "item": "techcapital-f1-to-ai-conflux"
         }
       ],
       "scores": {
@@ -1311,6 +1374,70 @@
       "area_rank": 2
     },
     {
+      "id": "ot-am-ln2-precooler",
+      "area": "other",
+      "headline": "Printed liquid-nitrogen heat exchangers cool telescope instruments faster, a UK test of printed cryogenic parts",
+      "problem": "Cryogenic instruments and systems take a long time and a lot of liquid nitrogen to cool down, because conventional pre-cooling exchangers use only the boiling and waste the cold gas.",
+      "technology": "Additively manufactured liquid-nitrogen pre-cooling heat exchangers with extra evaporation area and internal structures that also take heat into the cold exhaust gas.",
+      "capabilities": [
+        "additive manufacture",
+        "design for manufacture",
+        "metrology and inspection",
+        "modelling and simulation"
+      ],
+      "why": "The UK Astronomy Technology Centre and Royal Observatory Edinburgh built a small liquid-nitrogen pre-cooling rig for Extremely Large Telescope instruments and compared conventional and printed heat exchangers by how fast each cooled an instrumented mass. They report a clear cost and performance advantage for the printed units (UKRI-funded, July 2026, measured on a rig, figures in the paper). It is one of very few UK measured tests of printed cryogenic heat exchangers, and the same questions (thin walls at low temperature, using the cold gas as well as the boiling) come up in liquid-hydrogen fuel systems and airport liquefaction on the aerospace cards.",
+      "applicability": {
+        "type": "inferred",
+        "reason": "The paper is about telescope instruments; the link to liquid-hydrogen aircraft and liquefaction is ours."
+      },
+      "trl": {
+        "level": "4",
+        "reason": "Measured on a lab-scale rig against conventional units."
+      },
+      "barriers": "A niche first user, and nitrogen at 77 K is far milder than hydrogen at 20 K, so results won't carry over directly.",
+      "next_step": "Ask UK ATC which printing route and alloy they used and whether they would test parts at lower temperatures with MTC.",
+      "orgs": [
+        {
+          "name": "UK Astronomy Technology Centre",
+          "type": "RTO",
+          "country": "UK",
+          "role": "developer"
+        },
+        {
+          "name": "Royal Observatory Edinburgh",
+          "type": "RTO",
+          "country": "UK",
+          "role": "user"
+        },
+        {
+          "name": "UK Research and Innovation",
+          "type": "Gov",
+          "country": "UK",
+          "role": "funder"
+        }
+      ],
+      "sources": [
+        {
+          "item": "oa-ukatc-am-ln2-precooler"
+        },
+        {
+          "item": "arxiv-ukatc-am-ln2-precooler"
+        }
+      ],
+      "scores": {
+        "venn_fit": 3,
+        "manufacturing_key": 5,
+        "evidence": 3,
+        "novelty": 4,
+        "uk_relevance": 5,
+        "contactable": 4
+      },
+      "added": "2026-10-23",
+      "score": 77,
+      "rank": 16,
+      "area_rank": 4
+    },
+    {
       "id": "ae-airport-lh2-tpms-hx",
       "area": "aerospace",
       "headline": "Binder-jetted lattice heat exchangers for making liquid hydrogen at airports",
@@ -1370,8 +1497,151 @@
       },
       "added": "2026-10-20",
       "score": 76,
-      "rank": 16,
+      "rank": 17,
       "area_rank": 7
+    },
+    {
+      "id": "ot-laser-textured-boiling",
+      "area": "other",
+      "headline": "Laser-textured copper that boils far better, for two-phase cooling",
+      "problem": "Two-phase coolers (immersion tanks, evaporators, cold plates) are limited by how much heat a surface can boil off before it dries out.",
+      "technology": "Nanosecond laser texturing of copper in cross-hatch and checkerboard patterns.",
+      "capabilities": [
+        "laser processes (cutting, texturing)",
+        "metrology and inspection"
+      ],
+      "why": "Researchers at Oak Ridge, Illinois and Kyushu laser-textured pure copper and measured pool boiling of water: critical heat flux rose about 56% and the boiling heat transfer coefficient about 730% against smooth copper. A second group now reports the same kind of gain in a device: the University of Ljubljana's laser-engineered copper raised critical heat flux by up to 118% in confined boiling and ran a 1 mm wick-free vapour chamber at 1.18 K/W at 40 W (FFHMT 2026). The obvious use is the boiling surfaces inside two-phase data-centre cold plates, vapour chambers and printed evaporators, and laser texturing is one of MTC's named capabilities. IRT Jules Verne's 3DCALOR project is also looking at textured surfaces for printed heat exchangers.",
+      "applicability": {
+        "type": "inferred",
+        "reason": "The paper is about two-phase cooling in general; the data-centre link is ours."
+      },
+      "trl": {
+        "level": "3-4",
+        "reason": "Lab coupons, plus a working thin vapour chamber in Ljubljana."
+      },
+      "barriers": "Mostly tested with water, not the dielectric fluids data centres use; long-term durability of the texture not reported.",
+      "next_step": "A small MTC texturing trial could check whether the gain holds with a dielectric fluid.",
+      "orgs": [
+        {
+          "name": "Oak Ridge National Laboratory",
+          "type": "RTO",
+          "country": "USA",
+          "role": "researcher"
+        },
+        {
+          "name": "University of Illinois Urbana-Champaign",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
+        },
+        {
+          "name": "Kyushu University",
+          "type": "Uni",
+          "country": "Japan",
+          "role": "researcher"
+        },
+        {
+          "name": "IRT Jules Verne",
+          "type": "RTO",
+          "country": "France",
+          "role": "researcher"
+        },
+        {
+          "name": "University of Ljubljana",
+          "type": "Uni",
+          "country": "Slovenia",
+          "role": "researcher"
+        }
+      ],
+      "sources": [
+        {
+          "item": "ornl-laser-textured-boiling"
+        },
+        {
+          "item": "irtjv-3dcalor"
+        },
+        {
+          "item": "ljubljana-laser-copper-vapour-chamber"
+        }
+      ],
+      "scores": {
+        "venn_fit": 4,
+        "manufacturing_key": 5,
+        "evidence": 4,
+        "novelty": 4,
+        "uk_relevance": 0,
+        "contactable": 4
+      },
+      "added": "2026-10-20",
+      "score": 76,
+      "rank": 18,
+      "area_rank": 5
+    },
+    {
+      "id": "ae-bae-am-two-phase-hx",
+      "area": "aerospace",
+      "headline": "BAE Systems and Leeds want printed two-phase heat exchangers, sized fast, for aircraft electronics heat",
+      "problem": "Military and future aircraft carry more mission electronics, whose waste heat must be removed in very little space.",
+      "technology": "Additively manufactured single- and two-phase heat exchangers (evaporators, condensers, phase-change material) with fast sizing models.",
+      "capabilities": [
+        "additive manufacture",
+        "modelling and simulation",
+        "design for manufacture"
+      ],
+      "why": "Two linked University of Leeds PhD projects with BAE Systems Warton aim to model two-phase aircraft heat exchangers, demonstrate design gains from additive layer manufacturing, and build fast sizing tools that run on a laptop instead of an HPC cluster. BAE offers its own facilities to build and test proof-of-concept parts. These are project plans with no results yet, but the idea has been shown to work: NLR's Clean Sky 2 TOPMOST loop, mostly printed in aluminium, cooled 2,400 W at 2.5 kg and held hotspots within 2 °C after vibration and salt-spray tests. It is a UK prime asking for exactly MTC's mix of AM, modelling and design for manufacture, and a two-phase aircraft heat exchanger is a natural partner to the oil-cooler and precooler cards.",
+      "applicability": {
+        "type": "stated",
+        "reason": "The projects name aircraft thermal management heat exchangers and AM demonstrators."
+      },
+      "trl": {
+        "level": "2-5",
+        "reason": "Leeds and BAE are at plan stage; NLR's printed loop reached a tested demonstrator in 2019."
+      },
+      "barriers": "Defence context may limit what is published; two-phase behaviour in printed channels is poorly characterised.",
+      "next_step": "Ask Leeds (Duncan Borman) and BAE Systems Warton whether the demonstrators are built and who prints them.",
+      "orgs": [
+        {
+          "name": "University of Leeds",
+          "type": "Uni",
+          "country": "UK",
+          "role": "researcher"
+        },
+        {
+          "name": "BAE Systems",
+          "type": "Commercial",
+          "country": "UK",
+          "role": "user"
+        },
+        {
+          "name": "NLR",
+          "type": "RTO",
+          "country": "Netherlands",
+          "role": "developer"
+        }
+      ],
+      "sources": [
+        {
+          "item": "leeds-bae-am-two-phase-hx"
+        },
+        {
+          "item": "leeds-bae-fast-hx-sizing"
+        },
+        {
+          "item": "cordis-topmost-results"
+        }
+      ],
+      "scores": {
+        "venn_fit": 4,
+        "manufacturing_key": 4,
+        "evidence": 2,
+        "novelty": 3,
+        "uk_relevance": 5,
+        "contactable": 5
+      },
+      "added": "2026-10-21",
+      "score": 75,
+      "rank": 19,
+      "area_rank": 8
     },
     {
       "id": "ae-hybrid-electric-mw-thermal",
@@ -1499,8 +1769,8 @@
       },
       "added": "2026-10-20",
       "score": 74,
-      "rank": 17,
-      "area_rank": 8
+      "rank": 20,
+      "area_rank": 9
     },
     {
       "id": "ms-lh2-endurance-racing",
@@ -1563,76 +1833,8 @@
       },
       "added": "2026-10-20",
       "score": 74,
-      "rank": 18,
+      "rank": 21,
       "area_rank": 3
-    },
-    {
-      "id": "ot-laser-textured-boiling",
-      "area": "other",
-      "headline": "Laser-textured copper that boils far better, for two-phase cooling",
-      "problem": "Two-phase coolers (immersion tanks, evaporators, cold plates) are limited by how much heat a surface can boil off before it dries out.",
-      "technology": "Nanosecond laser texturing of copper in cross-hatch and checkerboard patterns.",
-      "capabilities": [
-        "laser processes (cutting, texturing)",
-        "metrology and inspection"
-      ],
-      "why": "Researchers at Oak Ridge, Illinois and Kyushu laser-textured pure copper and measured pool boiling of water: critical heat flux rose about 56% and the boiling heat transfer coefficient about 730% against smooth copper, with pattern spacing varied to show why. It is a lab study with no product in view. The obvious use is the boiling surfaces inside two-phase data-centre coolers and printed evaporators, and laser texturing is one of MTC's named capabilities. IRT Jules Verne's 3DCALOR project is also looking at textured surfaces for printed heat exchangers.",
-      "applicability": {
-        "type": "inferred",
-        "reason": "The paper is about two-phase cooling in general; the data-centre link is ours."
-      },
-      "trl": {
-        "level": "3",
-        "reason": "Lab measurements on flat coupons."
-      },
-      "barriers": "Tested with water at atmospheric pressure, not the dielectric fluids data centres use; durability not reported.",
-      "next_step": "A small MTC texturing trial could check whether the gain holds with a dielectric fluid.",
-      "orgs": [
-        {
-          "name": "Oak Ridge National Laboratory",
-          "type": "RTO",
-          "country": "USA",
-          "role": "researcher"
-        },
-        {
-          "name": "University of Illinois Urbana-Champaign",
-          "type": "Uni",
-          "country": "USA",
-          "role": "researcher"
-        },
-        {
-          "name": "Kyushu University",
-          "type": "Uni",
-          "country": "Japan",
-          "role": "researcher"
-        },
-        {
-          "name": "IRT Jules Verne",
-          "type": "RTO",
-          "country": "France",
-          "role": "researcher"
-        }
-      ],
-      "sources": [
-        {
-          "item": "ornl-laser-textured-boiling"
-        },
-        {
-          "item": "irtjv-3dcalor"
-        }
-      ],
-      "scores": {
-        "venn_fit": 4,
-        "manufacturing_key": 5,
-        "evidence": 4,
-        "novelty": 4,
-        "uk_relevance": 0,
-        "contactable": 3
-      },
-      "added": "2026-10-20",
-      "score": 74,
-      "rank": 19,
-      "area_rank": 4
     },
     {
       "id": "ae-am-air-system-hx",
@@ -1728,8 +1930,8 @@
       },
       "added": "2026-10-20",
       "score": 73,
-      "rank": 20,
-      "area_rank": 9
+      "rank": 22,
+      "area_rank": 10
     },
     {
       "id": "ms-2026-heat-rejection-squeeze",
@@ -1812,6 +2014,9 @@
         },
         {
           "item": "motorsport-mexico-cooling"
+        },
+        {
+          "item": "sae-brookes-mguk-2026"
         }
       ],
       "scores": {
@@ -1824,65 +2029,8 @@
       },
       "added": "2026-10-20",
       "score": 72,
-      "rank": 21,
+      "rank": 23,
       "area_rank": 4
-    },
-    {
-      "id": "ae-bae-am-two-phase-hx",
-      "area": "aerospace",
-      "headline": "BAE Systems and Leeds want printed two-phase heat exchangers, sized fast, for aircraft electronics heat",
-      "problem": "Military and future aircraft carry more mission electronics, whose waste heat must be removed in very little space.",
-      "technology": "Additively manufactured single- and two-phase heat exchangers (evaporators, condensers, phase-change material) with fast sizing models.",
-      "capabilities": [
-        "additive manufacture",
-        "modelling and simulation",
-        "design for manufacture"
-      ],
-      "why": "Two linked University of Leeds PhD projects with BAE Systems Warton aim to model two-phase aircraft heat exchangers, demonstrate design gains from additive layer manufacturing, and build fast sizing tools that run on a laptop instead of an HPC cluster. BAE offers its own facilities to build and test proof-of-concept parts. These are project plans with no results yet. It is a UK prime asking for exactly MTC's mix of AM, modelling and design for manufacture, and a two-phase aircraft heat exchanger is a natural partner to the oil-cooler and precooler cards.",
-      "applicability": {
-        "type": "stated",
-        "reason": "The projects name aircraft thermal management heat exchangers and AM demonstrators."
-      },
-      "trl": {
-        "level": "2-3",
-        "reason": "PhD project plans; no published results."
-      },
-      "barriers": "Defence context may limit what is published; two-phase behaviour in printed channels is poorly characterised.",
-      "next_step": "Ask Leeds (Duncan Borman) and BAE Systems Warton whether the demonstrators are built and who prints them.",
-      "orgs": [
-        {
-          "name": "University of Leeds",
-          "type": "Uni",
-          "country": "UK",
-          "role": "researcher"
-        },
-        {
-          "name": "BAE Systems",
-          "type": "Commercial",
-          "country": "UK",
-          "role": "user"
-        }
-      ],
-      "sources": [
-        {
-          "item": "leeds-bae-am-two-phase-hx"
-        },
-        {
-          "item": "leeds-bae-fast-hx-sizing"
-        }
-      ],
-      "scores": {
-        "venn_fit": 4,
-        "manufacturing_key": 4,
-        "evidence": 1,
-        "novelty": 3,
-        "uk_relevance": 5,
-        "contactable": 5
-      },
-      "added": "2026-10-21",
-      "score": 72,
-      "rank": 22,
-      "area_rank": 10
     },
     {
       "id": "ae-am-cryogenic-properties",
@@ -1950,7 +2098,7 @@
       },
       "added": "2026-10-22",
       "score": 72,
-      "rank": 23,
+      "rank": 24,
       "area_rank": 11
     },
     {
@@ -1998,8 +2146,8 @@
       },
       "added": "2026-10-21",
       "score": 71,
-      "rank": 24,
-      "area_rank": 5
+      "rank": 25,
+      "area_rank": 6
     },
     {
       "id": "ms-am-battery-cold-plates-inspection",
@@ -2074,7 +2222,7 @@
       },
       "added": "2026-10-20",
       "score": 67,
-      "rank": 25,
+      "rank": 26,
       "area_rank": 5
     },
     {
@@ -2161,7 +2309,7 @@
       },
       "added": "2026-10-20",
       "score": 66,
-      "rank": 26,
+      "rank": 27,
       "area_rank": 5
     },
     {
@@ -2242,7 +2390,7 @@
       },
       "added": "2026-10-20",
       "score": 66,
-      "rank": 27,
+      "rank": 28,
       "area_rank": 12
     },
     {
@@ -2333,7 +2481,7 @@
       },
       "added": "2026-10-20",
       "score": 66,
-      "rank": 28,
+      "rank": 29,
       "area_rank": 6
     },
     {
@@ -2407,7 +2555,7 @@
       },
       "added": "2026-10-20",
       "score": 65,
-      "rank": 29,
+      "rank": 30,
       "area_rank": 13
     },
     {
@@ -2486,7 +2634,7 @@
       },
       "added": "2026-10-20",
       "score": 65,
-      "rank": 30,
+      "rank": 31,
       "area_rank": 14
     },
     {
@@ -2560,7 +2708,7 @@
       },
       "added": "2026-10-20",
       "score": 63,
-      "rank": 31,
+      "rank": 32,
       "area_rank": 6
     },
     {
@@ -2635,7 +2783,7 @@
       },
       "added": "2026-10-20",
       "score": 62,
-      "rank": 32,
+      "rank": 33,
       "area_rank": 7
     },
     {
@@ -2722,8 +2870,120 @@
       },
       "added": "2026-10-20",
       "score": 62,
-      "rank": 33,
-      "area_rank": 6
+      "rank": 34,
+      "area_rank": 7
+    },
+    {
+      "id": "dc-two-phase-direct-to-chip",
+      "area": "datacentre",
+      "headline": "Pumped two-phase direct-to-chip cooling for racks heading to 200 kW and beyond",
+      "problem": "Racks have gone from about 50 kW (2022) to 120-140 kW (2024), with 200-240 kW expected in 2026, and processors are passing 4 kW; single-phase water loops are running out of margin and water is scarce at many sites.",
+      "technology": "Two-phase evaporator cold plates on the chip, with a pumped dielectric refrigerant loop and enhanced boiling surfaces.",
+      "capabilities": [
+        "additive manufacture",
+        "laser processes (cutting, texturing)",
+        "modelling and simulation",
+        "design for manufacture"
+      ],
+      "why": "ZutaCore raised $100m from Mitsubishi Electric, Carrier and Samsung and is in over 75 sites, so the market is real. The research has moved on this year: a Journal of Electronic Packaging paper sets out how to budget temperature across a pumped two-phase loop, St. Cloud State tested a refrigerant-to-liquid system for dense racks, Maryland (with Modelon) is building reduced-order design models for micropillar evaporators, and Michigan Tech with start-up Artmetics measured piezo micro-vibration pushing boiling on microstructured copper into a controlled flash-boiling regime. The evaporator is a fine-feature copper part whose boiling surface sets the limit, which is where MTC's printing, laser texturing and modelling all meet.",
+      "applicability": {
+        "type": "stated",
+        "reason": "All sources target data-centre or AI chip cooling."
+      },
+      "trl": {
+        "level": "4-8",
+        "reason": "ZutaCore is deployed; the new evaporator and boiling-surface work is lab scale."
+      },
+      "barriers": "Refrigerant choice under PFAS rules; servicing and leak detection; most of the new results are US preprints or abstracts so far.",
+      "orgs": [
+        {
+          "name": "ZutaCore",
+          "type": "Commercial",
+          "country": "USA",
+          "role": "developer"
+        },
+        {
+          "name": "Mitsubishi Electric",
+          "type": "Commercial",
+          "country": "Japan",
+          "role": "funder"
+        },
+        {
+          "name": "Carrier",
+          "type": "Commercial",
+          "country": "USA",
+          "role": "funder"
+        },
+        {
+          "name": "Samsung",
+          "type": "Commercial",
+          "country": "South Korea",
+          "role": "funder"
+        },
+        {
+          "name": "University of Maryland, College Park",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
+        },
+        {
+          "name": "Modelon",
+          "type": "Commercial",
+          "country": "Sweden",
+          "role": "developer"
+        },
+        {
+          "name": "St. Cloud State University",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
+        },
+        {
+          "name": "Michigan Technological University",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
+        },
+        {
+          "name": "Artmetics",
+          "type": "Commercial",
+          "country": "Canada",
+          "role": "developer"
+        }
+      ],
+      "sources": [
+        {
+          "item": "dcd-zutacore-series-c"
+        },
+        {
+          "item": "asme-2p-dtc-system-analysis"
+        },
+        {
+          "item": "rs-stcloud-pumped-2p-r2l"
+        },
+        {
+          "item": "oa-umd-micropillar-evaporator"
+        },
+        {
+          "item": "asme-piezo-flash-boiling-cold-plate"
+        },
+        {
+          "item": "modelon-2p-dtc-tipping-point"
+        }
+      ],
+      "scores": {
+        "venn_fit": 4,
+        "manufacturing_key": 3,
+        "evidence": 3,
+        "novelty": 3,
+        "uk_relevance": 0,
+        "contactable": 4
+      },
+      "added": "2026-10-20",
+      "score": 62,
+      "rank": 35,
+      "area_rank": 8,
+      "next_step": "Check whether any UK group is working on two-phase evaporator surfaces; the Ljubljana and Oak Ridge laser-texturing results suggest a test MTC could run."
     },
     {
       "id": "ae-microtube-ip",
@@ -2736,7 +2996,7 @@
         "robotics and automation",
         "metrology and inspection"
       ],
-      "why": "Reaction Engines made very fine-tube heat exchangers that cooled hypersonic intake air, were used in F1 cooling and were chosen for the FRESSON fuel-cell radiator. Administrators were selling the IP in 2025 with a preferred bidder in exclusivity. FlyZero listed Reaction Engines as a UK strength, so where the IP and people went matters for UK capability. Joining and assembling thousands of microtubes is a joining and automation problem MTC knows.",
+      "why": "Reaction Engines made very fine-tube heat exchangers that cooled hypersonic intake air, were used in F1 cooling and were chosen for the FRESSON fuel-cell radiator. Administrators were selling the IP in 2025 with a preferred bidder in exclusivity. FlyZero listed Reaction Engines as a UK strength, so where the IP and people went matters for UK capability. Joining and assembling thousands of microtubes is a joining and automation problem MTC knows. Others are still working the problems the SABRE precooler faced: Beihang published in 2026 on how frost forms in microtube precoolers and an anti-frost injection method.",
       "applicability": {
         "type": "inferred",
         "reason": "The sources are business news; the link to MTC joining and automation is our inference."
@@ -2765,6 +3025,12 @@
           "type": "Commercial",
           "country": "UK",
           "role": "user"
+        },
+        {
+          "name": "Beihang University",
+          "type": "Uni",
+          "country": "China",
+          "role": "researcher"
         }
       ],
       "sources": [
@@ -2779,6 +3045,9 @@
         },
         {
           "item": "reaction-engines-motorsport-page"
+        },
+        {
+          "item": "oa-beihang-microtube-precooler-frost"
         }
       ],
       "scores": {
@@ -2791,7 +3060,7 @@
       },
       "added": "2026-10-20",
       "score": 61,
-      "rank": 34,
+      "rank": 36,
       "area_rank": 15
     },
     {
@@ -2866,7 +3135,7 @@
       },
       "added": "2026-10-20",
       "score": 61,
-      "rank": 35,
+      "rank": 37,
       "area_rank": 7
     },
     {
@@ -2988,8 +3257,8 @@
       },
       "added": "2026-10-20",
       "score": 60,
-      "rank": 36,
-      "area_rank": 8
+      "rank": 38,
+      "area_rank": 9
     },
     {
       "id": "ot-am-transpiration-cooling",
@@ -3036,8 +3305,8 @@
       },
       "added": "2026-10-20",
       "score": 60,
-      "rank": 37,
-      "area_rank": 7
+      "rank": 39,
+      "area_rank": 8
     },
     {
       "id": "dc-immersion-heat-pump-coupling",
@@ -3050,7 +3319,7 @@
         "design for manufacture",
         "additive manufacture"
       ],
-      "why": "SINTEF's CoolHeatDC removes the intermediate water loop by condensing the immersion fluid in the heat pump's evaporator, raising the temperature available for district heating. The condenser-evaporator is a compact two-phase heat exchanger, a good fit for printed designs, though SINTEF does not say so. Lab scale only so far.",
+      "why": "SINTEF's CoolHeatDC removes the intermediate water loop by condensing the immersion fluid in the heat pump's evaporator, raising the temperature available for district heating. The condenser-evaporator is a compact two-phase heat exchanger, a good fit for printed designs, though SINTEF does not say so. Lab scale only so far. Imperial College London started an EU-funded fellowship (MicroTherM, €276k, 2025-27) to measure the thin liquid layer under bubbles in confined boiling, the physics that sets how well two-phase immersion surfaces perform.",
       "applicability": {
         "type": "stated",
         "reason": "SINTEF targets data centres; the printed heat-exchanger angle is our inference."
@@ -3066,11 +3335,20 @@
           "type": "RTO",
           "country": "Norway",
           "role": "developer"
+        },
+        {
+          "name": "Imperial College London",
+          "type": "Uni",
+          "country": "UK",
+          "role": "researcher"
         }
       ],
       "sources": [
         {
           "item": "sintef-coolheatdc"
+        },
+        {
+          "item": "cordis-microthermm-imperial"
         }
       ],
       "scores": {
@@ -3078,76 +3356,12 @@
         "manufacturing_key": 2,
         "evidence": 2,
         "novelty": 4,
-        "uk_relevance": 1,
+        "uk_relevance": 2,
         "contactable": 4
       },
       "added": "2026-10-20",
-      "score": 54,
-      "rank": 38,
-      "area_rank": 9
-    },
-    {
-      "id": "dc-two-phase-direct-to-chip",
-      "area": "datacentre",
-      "headline": "Waterless two-phase direct-to-chip cooling for 4 kW processors",
-      "problem": "Next-generation processors above 4 kW and water scarcity at data-centre sites.",
-      "technology": "Two-phase evaporators mounted directly on the chip with a dielectric refrigerant.",
-      "capabilities": [
-        "design for manufacture",
-        "additive manufacture"
-      ],
-      "why": "ZutaCore raised $100m from Mitsubishi Electric, Carrier and Samsung and is in over 75 sites. On-chip two-phase evaporators are where DTI's printed evaporator would compete, so this shows the market is real. Investment news with little technical detail.",
-      "applicability": {
-        "type": "stated",
-        "reason": "ZutaCore sells data-centre cooling."
-      },
-      "trl": {
-        "level": "8",
-        "reason": "Deployed commercially."
-      },
-      "barriers": "Refrigerant choice under PFAS rules; servicing and leak detection.",
-      "orgs": [
-        {
-          "name": "ZutaCore",
-          "type": "Commercial",
-          "country": "USA",
-          "role": "developer"
-        },
-        {
-          "name": "Mitsubishi Electric",
-          "type": "Commercial",
-          "country": "Japan",
-          "role": "funder"
-        },
-        {
-          "name": "Carrier",
-          "type": "Commercial",
-          "country": "USA",
-          "role": "funder"
-        },
-        {
-          "name": "Samsung",
-          "type": "Commercial",
-          "country": "South Korea",
-          "role": "funder"
-        }
-      ],
-      "sources": [
-        {
-          "item": "dcd-zutacore-series-c"
-        }
-      ],
-      "scores": {
-        "venn_fit": 3,
-        "manufacturing_key": 2,
-        "evidence": 2,
-        "novelty": 2,
-        "uk_relevance": 0,
-        "contactable": 3
-      },
-      "added": "2026-10-20",
-      "score": 44,
-      "rank": 39,
+      "score": 56,
+      "rank": 40,
       "area_rank": 10
     },
     {
@@ -3192,7 +3406,7 @@
       },
       "added": "2026-10-20",
       "score": 40,
-      "rank": 40,
+      "rank": 41,
       "area_rank": 11
     }
   ]
