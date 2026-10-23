@@ -335,6 +335,36 @@
           "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBkFYK9H3JAgzCB26uSVHdDV5"
         }
       ]
+    },
+    {
+      "id": "w10",
+      "kind": "work",
+      "title": "Login website live on Vercel and Convex",
+      "start": "2026-10-23T07:25:41Z",
+      "end": "2026-10-23T08:12:31Z",
+      "by": "ben",
+      "summary": "The website that replaces the Claude page is live at heatmap-three-alpha.vercel.app. It shows the same page, with an invite-only email and password login, and holds all the cards, old runs and Henry's comment. It has no AI in it, so Henry can use it at work.",
+      "items": [
+        "Built with Next.js on Vercel and a Convex database, using ben's existing accounts. The daily run stays separate: each morning it pushes its report to the site and reads back votes, comments and notes from both the site and the Claude page.",
+        "New tabs on both the site and the Claude page: Societal problems, Emerging technologies and MTC capabilities, each listing the cards that fall under it.",
+        "Votes, comments and notes now show a clear \"Saved\" confirmation, as Henry asked.",
+        "ben manages who can log in from an Invite people page on the site."
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://heatmap-three-alpha.vercel.app"
+        },
+        {
+          "label": "PR #5",
+          "url": "https://github.com/bentillettai/heatmap/pull/5"
+        },
+        {
+          "label": "Thread",
+          "url": "https://claude.ai/code/project/chan_0181WNcNggVXG8B63pxD1iBk?thread=cmsg_0181WNcNggVXG8B63pxD1iBk2bAgHDNtEjQ5BLxoJwZFnC"
+        }
+      ],
+      "runs": []
     }
   ],
   "actions": [
@@ -476,9 +506,10 @@
       "owner": "ben",
       "from": "m2",
       "raised": "2026-10-22",
-      "status": "open",
+      "status": "done",
       "due": "2026-10-23",
-      "text": "Get the website live so Henry can log in, with all data and old runs copied across, and tell Henry when it's ready."
+      "text": "Get the website live so Henry can log in, with all data and old runs copied across, and tell Henry when it's ready.",
+      "done": "2026-10-23"
     },
     {
       "id": "a17",
@@ -505,6 +536,14 @@
       "raised": "2026-10-22",
       "status": "open",
       "text": "Retire the Claude page once Henry is happy on the website."
+    },
+    {
+      "id": "a20",
+      "owner": "ben",
+      "from": "w10",
+      "raised": "2026-10-23",
+      "status": "open",
+      "text": "Create your account on the website, then invite Henry's real email under the name Henry and send him the link."
     }
   ]
 }
