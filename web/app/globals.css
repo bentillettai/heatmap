@@ -19,3 +19,11 @@ body { background: var(--canvas); color: var(--ink); font: 15.5px/1.5 "Source Sa
 .hm-auth .err { color: var(--red); }
 .hm-auth .switch button { font: inherit; color: var(--blue); background: none; border: 0; padding: 0; text-decoration: underline; cursor: pointer; }
 .hm-auth .small { font-size: 12.5px; }
+.hm-people { width: 100%; max-width: 560px; background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; padding: 24px; box-sizing: border-box; }
+.hm-people h1 { font-size: 22px; margin: 6px 0 10px; }
+.hm-people h2 { font-size: 17px; margin: 0; }
+.hm-people ul { padding-left: 18px; margin: 0 0 18px; }
+.hm-people li { margin: 6px 0; }
+.hm-people li button { margin-left: 8px; font: inherit; font-size: 13px; color: var(--red); background: none; border: 0; text-decoration: underline; cursor: pointer; }
+.hm-people form { border: 0; padding: 0; max-width: none; display: grid; gap: 10px; }
+.hm-people a { color: var(--blue); }

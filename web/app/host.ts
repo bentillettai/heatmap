@@ -48,5 +48,6 @@ export function installHost(client: ConvexReactClient, signOut: () => void) {
       return JSON.parse(json);
     },
     signOut,
+    invite: "/invite",
   };
 }

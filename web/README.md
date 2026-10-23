@@ -31,10 +31,13 @@ wrote with `pull`.
    python3 tools/convex_sync.py push --all
    python3 tools/convex_sync.py mirror <ArtifactData out_dir>
    python3 tools/convex_sync.py invite <ben's email> ben --owner
-   python3 tools/convex_sync.py invite <Henry's email> Henry --by <Henry's id on the Claude page>
+   python3 tools/convex_sync.py invite henry@invite.pending Henry --by <Henry's id on the Claude page>
    ```
-   `--by` keeps Henry's earlier comments and votes as his. Emails are stored
-   only in Convex, never in this repo.
+   `--by` keeps Henry's earlier comments and votes as his. A `.pending` email
+   is a placeholder: when ben invites Henry's real email under the same name
+   on the site's Invite people page (`/invite`, owner only), that row is
+   updated and keeps the id. Emails are stored only in Convex, never in this
+   repo.
 5. Put the same `CONVEX_DEPLOY_KEY` in the cloud environment the daily run uses.
 
 People then open the site, choose "Create your account" with their invited

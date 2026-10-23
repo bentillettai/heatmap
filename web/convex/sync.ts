@@ -3,6 +3,7 @@
 // as before and pushes it here, and pulls what people wrote.
 import { v } from "convex/values";
 import { internalMutation, internalQuery } from "./_generated/server";
+import { upsertPerson } from "./people";
 
 export const putReport = internalMutation({
   args: { runId: v.string(), json: v.string() },
@@ -66,18 +67,7 @@ export const listEntries = internalQuery({
 // Who may log in. Emails live only in Convex, never in the repo.
 export const putPerson = internalMutation({
   args: { email: v.string(), name: v.string(), owner: v.boolean(), by: v.optional(v.string()) },
-  handler: async (ctx, args) => {
-    const email = args.email.trim().toLowerCase();
-    const prev = await ctx.db
-      .query("people")
-      .withIndex("by_email", (q) => q.eq("email", email))
-      .unique();
-    const by = args.owner ? "owner" : args.by || prev?.by || `p_${crypto.randomUUID().slice(0, 12)}`;
-    const row = { email, name: args.name, owner: args.owner, by, who: args.owner ? "owner" : by };
-    if (prev) await ctx.db.patch(prev._id, row);
-    else await ctx.db.insert("people", row);
-    return row.who;
-  },
+  handler: async (ctx, args) => (await upsertPerson(ctx, args)).who,
 });
 
 export const listPeople = internalQuery({
