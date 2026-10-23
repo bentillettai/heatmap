@@ -22,7 +22,8 @@ wrote with `pull`.
    build reads `../site/template.html`, so keep "include files outside the
    root directory" on). `vercel.json` sets the build command, which deploys
    the Convex functions first. Add `CONVEX_DEPLOY_KEY` (production key) to the
-   project's environment variables.
+   project's environment variables. Only production builds (pushes to `main`)
+   run: `ignoreCommand` skips previews of other branches, which have no key.
 3. Deploy, then set the auth signing keys on the Convex deployment, using the
    site's address:
    `CONVEX_DEPLOY_KEY=... node scripts/auth-keys.mjs https://<site>.vercel.app`
