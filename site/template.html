@@ -66,6 +66,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .me { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; color: var(--ink-2); }
 .av { width: 26px; height: 26px; border-radius: 50%; flex: none; display: inline-grid; place-items: center; font-size: 11.5px; font-weight: 700; color: #fff; background: var(--ink-2); overflow: hidden; }
 .av img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.me a, .me .linkbtn { font-size: 13px; }
 
 /* tabs */
 nav.tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--rule); overflow-x: auto; scrollbar-width: none; margin-bottom: 14px; }
@@ -346,6 +347,10 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
 .orgrow ul { margin: 0; padding: 0 14px 12px 32px; font-size: 14px; }
 .orgrow li + li { margin-top: 4px; }
 
+/* the three circles: problems, technologies, capabilities */
+.venn-intro { margin: 0; padding: 14px 16px 2px; color: var(--ink-2); font-size: 14.5px; max-width: 860px; }
+.orgrow .vsum { margin: 0; padding: 0 14px 10px 14px; font-size: 14.5px; max-width: 860px; }
+
 /* notes + about */
 .pad { padding: 16px; }
 .note-form { display: grid; gap: 8px; max-width: 760px; }
@@ -408,6 +413,9 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
   <nav class="tabs" role="tablist" aria-label="Sections">
     <button role="tab" data-tab="opps">Opportunities<span class="count" id="n-opps"></span></button>
     <button role="tab" data-tab="orgs">Organisations<span class="count" id="n-orgs"></span></button>
+    <button role="tab" data-tab="problems">Societal problems<span class="count" id="n-problems"></span></button>
+    <button role="tab" data-tab="techs">Emerging technologies<span class="count" id="n-techs"></span></button>
+    <button role="tab" data-tab="caps">MTC capabilities<span class="count" id="n-caps"></span></button>
     <button role="tab" data-tab="runs">Runs<span class="count" id="n-runs"></span></button>
     <button role="tab" data-tab="notes">Notes<span class="count" id="n-notes"></span></button>
     <button role="tab" data-tab="about">How it works</button>
@@ -435,6 +443,10 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
     </div>
     <div class="orglist" id="orglist"></div>
   </section>
+
+  <section id="tab-problems" class="panel" hidden><p class="venn-intro" id="intro-problems"></p><div class="orglist" id="list-problems"></div></section>
+  <section id="tab-techs" class="panel" hidden><p class="venn-intro" id="intro-techs"></p><div class="orglist" id="list-techs"></div></section>
+  <section id="tab-caps" class="panel" hidden><p class="venn-intro" id="intro-caps"></p><div class="orglist" id="list-caps"></div></section>
 
   <section id="tab-runs" class="panel" hidden>
     <div class="runs-layout">
@@ -466,6 +478,8 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
 <script>
 (() => {
   const DATA = JSON.parse(document.getElementById("heatmap-data").textContent);
+  // The website (web/) hosts this same page outside Claude and passes in what differs there.
+  const HOST = window.heatmapHost || {};
   const AREAS = DATA.meta.areas;
   const WEIGHTS = DATA.weights;
   const W_TOTAL = Object.values(WEIGHTS).reduce((a, b) => a + b, 0);
@@ -561,6 +575,7 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
     ["sheets", "Spec sheets", "Every opportunity as a compact tile", '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="6.5" height="6.5" rx="1"/><rect x="11" y="2.5" width="6.5" height="6.5" rx="1"/><rect x="2.5" y="11" width="6.5" height="6.5" rx="1"/><rect x="11" y="11" width="6.5" height="6.5" rx="1"/></svg>'],
     ["cards", "Card list", "The full cards, one after another", '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="15" height="6.5" rx="1"/><rect x="2.5" y="11" width="15" height="6.5" rx="1"/></svg>'],
   ];
+  const TABS = ["opps", "orgs", "problems", "techs", "caps", "runs", "notes", "about"];
   const S = {
     tab: recall("tab") || "opps", view: recall("view") || "radar", mode: recall("mode") || "auto",
     area: "all", caps: [], q: "", uk: false, chg: false, unrated: false, talked: false, sort: "area",
@@ -570,7 +585,7 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
     fb: [], rfb: [], comments: [], notes: [], names: {},
   };
   if (!VIEWS.some((v) => v[0] === S.view)) S.view = "radar";
-  if (!["opps", "orgs", "runs", "notes", "about"].includes(S.tab)) S.tab = "opps";
+  if (!TABS.includes(S.tab)) S.tab = "opps";
   const CARDS = () => S.report.cards;
   const byId = () => Object.fromEntries(CARDS().map((c) => [c.id, c]));
   const liveById = Object.fromEntries(LIVE.cards.map((c) => [c.id, c]));
@@ -640,7 +655,7 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
       <div class="composer">
         <div class="row"><span class="lbl">Your view</span><button class="vbtn" data-vote="up" data-kind="${kind}" data-for="${esc(id)}" aria-pressed="${mine?.vote === "up"}" ${disabled}>${ICON.up}${words[0]}</button><button class="vbtn" data-vote="down" data-kind="${kind}" data-for="${esc(id)}" aria-pressed="${mine?.vote === "down"}" ${disabled}>${ICON.down}${words[1]}</button></div>
         <textarea id="cm-${kind}-${esc(id)}" placeholder="${kind === "card" ? "Add a comment: what's good or wrong, who to talk to, what to look for…" : "How was this run? What's missing, what to look for next, and do you agree with any proposals?"}" aria-label="Add a comment" ${disabled}></textarea>
-        <div class="row"><button class="btn primary" data-post="${kind}" data-for="${esc(id)}" ${disabled}>${ICON.cmt}Comment</button><span class="status" data-status="${kind}:${esc(id)}">${esc(status)}</span></div>
+        <div class="row"><button class="btn primary" data-post="${kind}" data-for="${esc(id)}" ${disabled}>${ICON.cmt}Comment</button><span class="status${flashOf(`${kind}:${id}`)?.err ? " err" : ""}" data-status="${kind}:${esc(id)}">${esc(flashOf(`${kind}:${id}`)?.text || status)}</span></div>
       </div>
     </div>`;
   }
@@ -1014,9 +1029,13 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
       try {
         if (!snapCache[id]) {
           if (!r.snapshot) throw new Error("no snapshot");
-          const res = await fetch(r.snapshot);
-          if (!res.ok) throw new Error(String(res.status));
-          const snap = await res.json();
+          let snap;
+          if (HOST.snapshot) snap = await HOST.snapshot(r.id);
+          else {
+            const res = await fetch(r.snapshot);
+            if (!res.ok) throw new Error(String(res.status));
+            snap = await res.json();
+          }
           snapCache[id] = { cards: snap.cards.map(norm), coverage: snap.meta?.coverage || {}, summary: snap.run?.summary || r.summary };
         }
         rep = snapCache[id];
@@ -1058,6 +1077,26 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
     if (row) row.open = true;
   }
 
+  /* ---------- the three circles ---------- */
+  const VENN = DATA.venn || { problems: [], technologies: [], capabilities: [] };
+  const VENN_TABS = {
+    problems: [VENN.problems, "The real-world problems Heatmap looks for, ideally UK ones. A card is listed under a problem when it addresses it. This list is a starting point: say on any card or run what's missing or wrong."],
+    techs: [VENN.technologies, "The thermal management technologies Heatmap tracks. Emerging means still being proven; established, newly applied means proven elsewhere and now moving into a new use. Cards are listed under every technology they involve."],
+    caps: [VENN.capabilities, "The MTC capabilities Heatmap scores against. Each card says which capabilities it would draw on, and that is how cards are listed here."],
+  };
+  function renderVenn(tab) {
+    const [list, intro] = VENN_TABS[tab];
+    $("n-" + tab).textContent = list.length || "";
+    $("intro-" + tab).textContent = intro;
+    $("list-" + tab).innerHTML = list.length ? list.map((e) => {
+      const linked = e.cards.map((id) => liveById[id]).filter(Boolean);
+      const tag = e.area ? `<span class="tag ${esc(e.area)}">${esc(AREAS[e.area] || e.area)}</span>` : e.status ? `<span class="tag plain">${esc(e.status[0].toUpperCase() + e.status.slice(1))}</span>` : "";
+      return `<details class="orgrow"><summary><span class="oname">${esc(e.name)}</span>${tag}<span class="ocount">${linked.length} ${linked.length === 1 ? "card" : "cards"}</span></summary>
+        <p class="vsum">${esc(e.summary)}</p>
+        <ul>${linked.map((c) => `<li><span class="tag ${c.area}">${esc(AREAS[c.area])}</span> <button class="linkbtn" data-openrun="${esc(LATEST ? LATEST.id : "")}" data-card="${esc(c.id)}">${esc(c.h)}</button> <span style="color:var(--ink-2)">${c.score}</span></li>`).join("")}</ul></details>`;
+    }).join("") : '<div class="empty">Nothing here yet.</div>';
+  }
+
   /* ---------- notes ---------- */
   function renderNotes() {
     $("n-notes").textContent = S.notes.length || "";
@@ -1090,7 +1129,7 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
   function showTab(name) {
     S.tab = name; remember("tab", name);
     document.querySelectorAll("nav.tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === name)));
-    ["opps", "orgs", "runs", "notes", "about"].forEach((t) => ($("tab-" + t).hidden = t !== name));
+    TABS.forEach((t) => ($("tab-" + t).hidden = t !== name));
     if (name !== "opps") $("detail").classList.remove("open");
   }
   function applyMode() {
@@ -1107,7 +1146,11 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
 
   /* ---------- saving ---------- */
   const stamp = () => ({ updated: new Date().toISOString(), by: S.meId, owner: S.isOwner, who: S.who });
+  // Remember the last status for a few seconds, so a live update that redraws the thread keeps showing it.
+  const flash = {};
+  const flashOf = (key) => (flash[key] && Date.now() - flash[key].t < 8000 ? flash[key] : null);
   function setStatus(key, text, err) {
+    flash[key] = { text, err: !!err, t: Date.now() };
     document.querySelectorAll(`[data-status="${CSS.escape(key)}"]`).forEach((s) => { s.textContent = text; s.classList.toggle("err", !!err); });
   }
   function refused(e) {
@@ -1123,7 +1166,7 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
     const next = { [kind === "card" ? "card" : "run"]: id, vote: prev?.vote === vote ? null : vote, why: prev?.why || "", ...stamp() };
     const i = list.indexOf(prev); if (i >= 0) list[i] = next; else list.push(next);
     renderAll();
-    try { await S.db.collection(kind === "card" ? "feedback" : "runfeedback").doc(`${id}~${S.who}`).set(next); }
+    try { await S.db.collection(kind === "card" ? "feedback" : "runfeedback").doc(`${id}~${S.who}`).set(next); setStatus(`${kind}:${id}`, next.vote ? "Vote saved ✓" : "Vote removed ✓"); }
     catch (e) {
       if (i >= 0) list[i] = prev; else list.splice(list.indexOf(next), 1);
       if (!refused(e)) { renderAll(); setStatus(`${kind}:${id}`, "Couldn't save your vote. Try again in a moment.", true); }
@@ -1144,7 +1187,7 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
       const fb = { [kind === "card" ? "card" : "run"]: id, vote: prev?.vote || null, why: text, ...stamp() };
       S.db.collection(kind === "card" ? "feedback" : "runfeedback").doc(`${id}~${S.who}`).set(fb).catch(() => {});
       ta.value = "";
-      setStatus(`${kind}:${id}`, "Posted");
+      setStatus(`${kind}:${id}`, "Saved ✓");
     } catch (e) {
       if (!refused(e)) setStatus(`${kind}:${id}`, "Couldn't post. Your comment is still here; try again in a moment.", true);
     }
@@ -1166,7 +1209,7 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
     $("note-status").textContent = "Saving…"; $("note-status").dataset.busy = "1";
     try {
       await S.db.collection("notes").add({ text, area: $("note-area").value || null, created: new Date().toISOString(), by: S.meId, owner: S.isOwner, who: S.who });
-      $("note-text").value = ""; $("note-status").textContent = "Saved";
+      $("note-text").value = ""; $("note-status").textContent = "Saved ✓";
     } catch (e) { if (!refused(e)) $("note-status").textContent = "Couldn't save. Try again in a moment."; }
     delete $("note-status").dataset.busy;
   }
@@ -1191,6 +1234,16 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
     el.hidden = false;
     el.innerHTML = `${avatarOf({ by: S.meId, owner: S.isOwner, who: S.who })}<span></span>`;
     el.querySelector("span:last-child").textContent = p.name ? p.name : S.isOwner ? "You (owner)" : "You";
+    if (HOST.invite && S.isOwner) {
+      const a = document.createElement("a");
+      a.href = HOST.invite; a.textContent = "Invite people";
+      el.append(a);
+    }
+    if (HOST.signOut) {
+      const b = document.createElement("button");
+      b.className = "linkbtn"; b.textContent = "Sign out"; b.addEventListener("click", () => HOST.signOut());
+      el.append(b);
+    }
   }
 
   /* ---------- connect to the shared db ---------- */
@@ -1306,6 +1359,7 @@ table.mx { border-collapse: collapse; width: 100%; min-width: 1180px; font-size:
   renderViewsBar();
   renderToolbar();
   renderOrgs();
+  ["problems", "techs", "caps"].forEach(renderVenn);
   renderAbout();
   renderAll();
   showTab(S.tab);

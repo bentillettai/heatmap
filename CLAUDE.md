@@ -59,6 +59,23 @@ python3 tools/heatmap.py ingest-comments     <scratch>/db/comments
 python3 tools/heatmap.py ingest-notes        <scratch>/db/notes
 ```
 
+The website (`web/`, Next.js on Vercel with a Convex backend) runs alongside
+the Claude page until Henry is happy with it. People can vote and comment in
+either place. When `CONVEX_DEPLOY_KEY` is set, also copy the Claude page's
+documents to the website and read back what was written there (the same
+ingest commands skip anything already seen):
+
+```
+python3 tools/convex_sync.py mirror <scratch>/db
+python3 tools/convex_sync.py pull   <scratch>/web
+python3 tools/heatmap.py ingest-feedback     <scratch>/web/feedback
+python3 tools/heatmap.py ingest-run-feedback <scratch>/web/runfeedback
+python3 tools/heatmap.py ingest-comments     <scratch>/web/comments
+python3 tools/heatmap.py ingest-notes        <scratch>/web/notes
+```
+
+If the key is missing, skip the website and say so in the run summary.
+
 Feedback documents are `feedback/<card id>~<viewer>`, with `vote` (up, down
 or null), `why`, `updated`, and `owner` (true means ben, false means
 Henry or another invited editor). Run feedback is `runfeedback/<run id>~<viewer>`
@@ -303,6 +320,13 @@ this publish. After that, leave it out again.
 Artifact action=read url=https://claude.ai/artifact/WCo5GAu4ZQpZQ6N8rTSYVS
 Artifact action=publish url=https://claude.ai/artifact/WCo5GAu4ZQpZQ6N8rTSYVS file_path=site/index.html
          files={"runs/<run id>.json": "data/runs/<run id>.json"} label="Run <run id>"
+```
+
+Then send the same report to the website (skip it if `CONVEX_DEPLOY_KEY` is
+missing). It sends the latest report and any run reports not there yet:
+
+```
+python3 tools/convex_sync.py push
 ```
 
 Then refresh the project log, which shows each run on its timeline (see

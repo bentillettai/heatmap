@@ -1,0 +1,200 @@
+{
+  "_about": "What Heatmap understands by the three circles of the Venn: societal problems, thermal technologies and MTC capabilities. Shown on the Societal problems, Emerging technologies and MTC capabilities tabs. Cards are linked to problems and technologies when any 'match' phrase appears in the card's headline, problem or technology (case-insensitive), and to capabilities by the card's capabilities list. Edit freely; the next build picks it up.",
+  "problems": [
+    {
+      "id": "dc-energy",
+      "name": "Data-centre energy and water use",
+      "area": "datacentre",
+      "summary": "Data centres use a growing share of UK electricity and, where they cool by evaporation, a lot of water. Cooling (pumps, fans, chillers) is a large part of that energy, so cutting it eases grid capacity and running costs.",
+      "match": ["energy", "pump", "water", "grid", "pue", "heatwave", "chiller", "dry cooler"]
+    },
+    {
+      "id": "dc-chip-heat",
+      "name": "AI chips that outrun today's cooling",
+      "area": "datacentre",
+      "summary": "AI processors now dissipate over 1 kW each, with hot spots of hundreds of W/cm², and racks are heading past 200 kW. Air cooling and conventional machined cold plates are running out of headroom.",
+      "match": ["ai chip", "chip", "hot spot", "gpu", "rack", "gb200", "w/cm"]
+    },
+    {
+      "id": "dc-heat-reuse",
+      "name": "Wasted data-centre heat",
+      "area": "datacentre",
+      "summary": "Almost all the electricity a data centre uses ends up as low-grade heat. Raising it to a useful temperature for district heating or industry turns a waste stream into a resource.",
+      "match": ["heat reuse", "reuse", "district heating", "heat recovery", "heat pump", "waste heat"]
+    },
+    {
+      "id": "ae-engine-heat",
+      "name": "More engine heat in less space",
+      "area": "aerospace",
+      "summary": "Geared and ultra-high-bypass turbofans burn less fuel but reject more oil heat, with less room and less cooling air for the heat exchangers that remove it.",
+      "match": ["oil", "turbofan", "uhbr", "geared", "gearbox", "sacoc", "fcoc", "engine"]
+    },
+    {
+      "id": "ae-cabin-air",
+      "name": "Cabin air and environmental control",
+      "area": "aerospace",
+      "summary": "Bleed-air precoolers and environmental control heat exchangers are still mostly brazed plate-fin parts. Lighter, more efficient ones cut fuel burn across every aircraft flying.",
+      "match": ["precooler", "pre-cooler", "bleed", "environmental control", "cabin", "ecs"]
+    },
+    {
+      "id": "ae-hydrogen-electric",
+      "name": "Heat from hydrogen and electric aircraft",
+      "area": "aerospace",
+      "summary": "Fuel cells, batteries and electric motors reject large amounts of low-grade heat, and liquid hydrogen has to be warmed from -253 C before use. Zero-emission aircraft depend on handling both within tight weight limits.",
+      "match": ["hydrogen", "fuel cell", "fuel-cell", "hybrid-electric", "electric aircraft", "cryogenic", "lh2"]
+    },
+    {
+      "id": "ae-defence-electronics",
+      "name": "Cooling mission electronics on military aircraft",
+      "area": "aerospace",
+      "summary": "Sensors and mission systems on combat and future aircraft generate more waste heat, which has to be removed without adding much weight or drag.",
+      "match": ["military", "mission electronics", "defence", "combat"]
+    },
+    {
+      "id": "ms-2026-rules",
+      "name": "Motorsport's 2026 cooling squeeze",
+      "area": "motorsport",
+      "summary": "From 2026, Formula 1 power units nearly triple electrical power while cars lose downforce and cooling airflow. Batteries, motors and electronics need more cooling from smaller, oddly shaped radiators, built quickly.",
+      "match": ["2026", "mgu-k", "formula", "f1", "race", "racing", "team", "brake"]
+    },
+    {
+      "id": "ot-extreme-heat",
+      "name": "Extreme heat in energy and space",
+      "area": "other",
+      "summary": "Fusion plants, gas-turbine hot sections and spacecraft face heat loads or conditions where conventional cooling fails. Solutions there often carry over to the main three areas later.",
+      "match": ["fusion", "divertor", "gas-turbine", "gas turbine", "spacecraft", "space", "transpiration"]
+    },
+    {
+      "id": "ot-proof-and-certification",
+      "name": "Proving printed heat exchangers work",
+      "area": "other",
+      "summary": "Printed heat exchangers promise a lot, but like-for-like test data, inspection methods and qualification routes lag behind. Without them, safety-critical industries can't adopt the parts.",
+      "match": ["qualification", "qualified", "certif", "inspection", "ndt", "measured", "like-for-like", "property data", "pressure drop"]
+    }
+  ],
+  "technologies": [
+    {
+      "id": "am-compact-hx",
+      "name": "Additively manufactured compact heat exchangers",
+      "status": "emerging",
+      "summary": "Heat-exchanger cores printed in metal, so channel shapes, thin walls and conformal outer shapes are possible that brazing and machining can't make. The main open questions are cost, surface roughness and qualification.",
+      "match": ["additively manufactured", "printed", "am heat", "am compact", "am hx", "l-pbf", "binder jet", "3d-printed", "3d printed"]
+    },
+    {
+      "id": "tpms-lattices",
+      "name": "TPMS and gyroid lattice cores",
+      "status": "emerging",
+      "summary": "Triply periodic minimal surfaces (gyroid and similar shapes) split two fluids across a continuous wall with a very large surface area. Only printable, and widely promoted, but measured comparisons are still scarce.",
+      "match": ["tpms", "gyroid", "lattice"]
+    },
+    {
+      "id": "two-phase",
+      "name": "Two-phase cooling (boiling and condensing)",
+      "status": "established, newly applied",
+      "summary": "Moving heat by boiling a fluid and condensing it again carries far more heat per kilogram of coolant than single-phase liquid. Thermosiphons, vapour chambers and two-phase cold plates are moving from niche to mainstream data-centre use.",
+      "match": ["two-phase", "thermosiphon", "vapour chamber", "evaporator", "boiling", "condens"]
+    },
+    {
+      "id": "cold-plates",
+      "name": "Direct-to-chip cold plates and jet impingement",
+      "status": "established, newly applied",
+      "summary": "Liquid-cooled plates clamped on the chip. The new work is in finer features, jets aimed at hot spots, and channel layouts designed by algorithm rather than by hand.",
+      "match": ["cold plate", "cold-plate", "jets", "impingement", "microchannel", "direct-to-chip"]
+    },
+    {
+      "id": "immersion",
+      "name": "Immersion cooling",
+      "status": "established, newly applied",
+      "summary": "Electronics sit in a dielectric liquid, single-phase or boiling. Variants range from whole tanks to sealed chassis holding a small volume of coolant.",
+      "match": ["immersion"]
+    },
+    {
+      "id": "heat-pipes",
+      "name": "Heat pipes and loop heat pipes",
+      "status": "established, newly applied",
+      "summary": "Sealed passive devices that move heat by evaporation and wicking, with no pump. Printing the wick and body as one part is the new step.",
+      "match": ["heat pipe", "loop heat"]
+    },
+    {
+      "id": "microtube",
+      "name": "Microtube heat exchangers",
+      "status": "emerging",
+      "summary": "Thousands of very thin tubes give a high surface area at low weight. Developed in the UK for SABRE's precooler and now aimed at fuel-cell aircraft radiators.",
+      "match": ["microtube"]
+    },
+    {
+      "id": "cryogenic-hx",
+      "name": "Cryogenic and hydrogen heat exchangers",
+      "status": "emerging",
+      "summary": "Heat exchangers that use or handle liquid hydrogen or nitrogen, where material behaviour at very low temperature and thermal stress are the hard parts.",
+      "match": ["cryogenic", "liquid hydrogen", "liquid-hydrogen", "liquid nitrogen", "liquid-nitrogen", "lh2"]
+    },
+    {
+      "id": "surface-engineering",
+      "name": "Laser-textured and engineered surfaces",
+      "status": "emerging",
+      "summary": "Textures cut into a surface by laser, or designed-in surface features, that make boiling or heat transfer more effective without changing the part's shape.",
+      "match": ["laser textur", "texturing", "surface features", "fin shape", "fin design"]
+    },
+    {
+      "id": "transpiration",
+      "name": "Transpiration and effusion cooling",
+      "status": "emerging",
+      "summary": "Coolant seeps through a porous or finely perforated wall, forming a protective layer. Printing makes graded porosity possible.",
+      "match": ["transpiration", "effusion", "porous"]
+    },
+    {
+      "id": "heat-recovery",
+      "name": "Heat recovery and heat pumps",
+      "status": "established, newly applied",
+      "summary": "Capturing low-grade heat and raising its temperature with heat pumps, or running liquid cooling hotter so the heat is useful as it is.",
+      "match": ["heat recovery", "heat pump", "heat reuse", "runs warmer", "runs hotter"]
+    },
+    {
+      "id": "simulation-design",
+      "name": "Simulation-led and generative design",
+      "status": "emerging",
+      "summary": "Fast CFD, reduced-order models, digital twins and generative or topology-optimised design, used to explore many more heat-exchanger designs than a test programme could.",
+      "match": ["cfd", "simulation", "generative", "reduced-order", "digital twin", "implicit model", "topology", "parametric", "configurable", "model"]
+    },
+    {
+      "id": "inspection-qualification",
+      "name": "Inspection and qualification of printed parts",
+      "status": "emerging",
+      "summary": "CT scanning, leak testing and material data that let printed heat exchangers be trusted in safety-critical use.",
+      "match": ["ct", "ndt", "qualification", "qualified", "inspection", "leak test", "property data", "thermal conductivity"]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "additive manufacture",
+      "name": "Additive manufacture",
+      "summary": "Metal and polymer 3D printing, from design for printing through build, post-processing and testing. MTC is home to the National Centre for Additive Manufacturing. The capability most heat-exchanger cards lean on, because printing allows internal shapes nothing else can make."
+    },
+    {
+      "id": "laser processes",
+      "name": "Laser processes",
+      "summary": "Laser cutting, welding, texturing and surface treatment. In thermal work this mostly means surfaces engineered for boiling or heat transfer, and joining thin-walled parts."
+    },
+    {
+      "id": "robotics and automation",
+      "name": "Robotics and automation",
+      "summary": "Automating assembly, handling and finishing. Relevant where heat exchangers or cooling hardware need to be built in volume or assembled repeatably."
+    },
+    {
+      "id": "metrology and inspection",
+      "name": "Metrology and inspection",
+      "summary": "Measuring and inspecting parts, including CT scanning of internal passages and checks of thin walls. Often the gap that stops printed heat exchangers being qualified."
+    },
+    {
+      "id": "modelling and simulation",
+      "name": "Modelling and simulation",
+      "summary": "CFD, thermal and structural modelling, digital twins and generative design. Lets a design be explored and checked before anything is built."
+    },
+    {
+      "id": "design for manufacture",
+      "name": "Design for manufacture",
+      "summary": "Designing a part so that it can actually be made, inspected and certified at sensible cost. Where the move from a lab prototype to a production part is usually won or lost."
+    }
+  ]
+}

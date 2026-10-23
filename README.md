@@ -19,6 +19,12 @@ management. Thermal items outside those still get a card, tagged Other.
 The output is a private Claude page:
 https://claude.ai/artifact/WCo5GAu4ZQpZQ6N8rTSYVS
 
+and, alongside it while Henry tries it out, a login website (`web/`, Next.js
+on Vercel with a Convex backend) that shows the same page. The website has no
+AI in it: the daily run builds the report as before and pushes it to Convex
+(`tools/convex_sync.py`), then reads back the votes, comments and notes people
+left there. See `web/README.md`.
+
 ## How it works
 
 ```
@@ -74,9 +80,12 @@ web search ──► read pages ──► thermal gate ──► items.jsonl
 | `config/areas.yaml` | The application areas and their search queries |
 | `config/sources.yaml` | Sites worth checking, by status |
 | `config/taxonomy.yaml` | Capability, application and keyword lists |
+| `config/venn.json` | What the page means by each societal problem, technology and MTC capability (the three Venn tabs) |
 | `examples/calibration.csv` | Henry's first ten rated articles |
 | `data/items.jsonl` | Every article read, with summary, orgs and gate result |
 | `data/cards.json` | The opportunity cards and run metadata |
+| `tools/convex_sync.py` | Pushes the report to the website and pulls votes, comments and notes back |
+| `web/` | The login website: Next.js page plus Convex functions |
 | `data/feedback.jsonl`, `data/run_feedback.jsonl`, `data/comments.jsonl`, `data/notes.jsonl` | Votes, comments and notes copied from the page |
 | `data/knowledge.jsonl` | Facts and constraints learned from comments, with their sources |
 | `data/runs.jsonl` | One line per run, with what feedback changed |
