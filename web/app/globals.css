@@ -1,0 +1,21 @@
+:root { --canvas: #f4f6f9; --paper: #fff; --ink: #1a2233; --ink-2: #5c6779; --rule: #d9dee6; --blue: #2563eb; --red: #c2410c; color-scheme: light dark; }
+@media (prefers-color-scheme: dark) {
+  :root { --canvas: #0f1217; --paper: #171b22; --ink: #e7ebf2; --ink-2: #9aa5b6; --rule: #2c333f; --blue: #6b9bff; --red: #ff9a6b; }
+}
+html, body { margin: 0; }
+body { background: var(--canvas); color: var(--ink); font: 15.5px/1.5 "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif; }
+.hm-wait { padding: 40px 16px; text-align: center; color: var(--ink-2); }
+.hm-wait button, .hm-banner button { font: inherit; color: var(--blue); background: none; border: 0; text-decoration: underline; cursor: pointer; }
+.hm-banner { position: sticky; top: 0; z-index: 50; background: var(--blue); color: #fff; text-align: center; padding: 8px 16px; font-size: 14.5px; }
+.hm-banner button { color: #fff; font-weight: 600; }
+.hm-auth { min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; box-sizing: border-box; }
+.hm-auth form { width: 100%; max-width: 380px; background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; padding: 28px 24px; display: grid; gap: 12px; box-sizing: border-box; }
+.hm-auth h1 { margin: 0; font-size: 24px; }
+.hm-auth p { margin: 0; color: var(--ink-2); font-size: 14.5px; }
+.hm-auth label { display: grid; gap: 4px; font-size: 13.5px; font-weight: 600; color: var(--ink-2); }
+.hm-auth input { font: inherit; color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; padding: 8px 10px; }
+.hm-auth button[type="submit"] { font: inherit; font-weight: 600; background: var(--blue); color: #fff; border: 0; border-radius: 8px; padding: 9px 12px; cursor: pointer; }
+.hm-auth button[type="submit"]:disabled { opacity: .6; }
+.hm-auth .err { color: var(--red); }
+.hm-auth .switch button { font: inherit; color: var(--blue); background: none; border: 0; padding: 0; text-decoration: underline; cursor: pointer; }
+.hm-auth .small { font-size: 12.5px; }

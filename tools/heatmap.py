@@ -40,6 +40,7 @@ RUNS = DATA / "runs.jsonl"
 KNOWLEDGE = DATA / "knowledge.jsonl"   # facts and constraints people taught it
 FUNDING = DATA / "funding.json"   # recent grants per organisation, from api-orgs
 SNAPSHOTS = DATA / "runs"   # one frozen report per run, published as runs/<id>.json
+VENN = ROOT / "config" / "venn.json"   # what the page means by problems, technologies, capabilities
 TEMPLATE = ROOT / "site" / "template.html"
 PAGE = ROOT / "site" / "index.html"
 
@@ -473,11 +474,41 @@ def runs_index(cards):
     return out
 
 
-def build():
+def venn(cards):
+    """The three circles as the page explains them (config/venn.json), each
+    entry with the ids of the cards it covers, best first."""
+    conf = json.loads(VENN.read_text())
+    ranked = sorted(cards, key=lambda c: c.get("rank", 999))
+
+    def text(c):
+        return " ".join([c.get("headline", ""), c.get("problem", ""), c.get("technology", "")])
+
+    def hits(entry, pool):
+        pats = [re.compile(r"\b" + re.escape(m), re.I) for m in entry.get("match", [])]
+        return [c["id"] for c in pool if any(p.search(text(c)) for p in pats)]
+
+    out = {"problems": [], "technologies": [], "capabilities": []}
+    for p in conf["problems"]:
+        pool = [c for c in ranked if p["area"] == "other" or c["area"] == p["area"]]
+        out["problems"].append({**p, "cards": hits(p, pool)})
+    for t in conf["technologies"]:
+        out["technologies"].append({**t, "cards": hits(t, ranked)})
+    for k in conf["capabilities"]:
+        ids = [c["id"] for c in ranked if any(x.split(" (")[0] == k["id"] for x in c.get("capabilities", []))]
+        out["capabilities"].append({**k, "cards": ids})
+    for group in out.values():
+        for e in group:
+            e.pop("match", None)
+    return out
+
+
+def payload():
+    """Everything the page shows, as one JSON object. The Claude page embeds it;
+    the website reads it from Convex (tools/convex_sync.py)."""
     doc = load_cards()
     items = {i["id"]: i for i in read_jsonl(ITEMS)}
     with_sources(doc["cards"], items)
-    payload = {
+    return {
         "meta": doc["meta"],
         "cards": doc["cards"],
         "organisations": organisations(doc["cards"]),
@@ -486,11 +517,16 @@ def build():
         "item_count": len(items),
         "passed_gate": sum(1 for i in items.values() if i.get("gate") == "pass"),
         "weights": WEIGHTS,
+        "venn": venn(doc["cards"]),
     }
+
+
+def build():
+    data = payload()
     html = TEMPLATE.read_text()
-    blob = json.dumps(payload, ensure_ascii=False).replace("</", "<\\/")
+    blob = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
     PAGE.write_text(html.replace("__HEATMAP_DATA__", blob))
-    print(f"wrote {PAGE.relative_to(ROOT)} ({PAGE.stat().st_size // 1024} KB, {len(doc['cards'])} cards)")
+    print(f"wrote {PAGE.relative_to(ROOT)} ({PAGE.stat().st_size // 1024} KB, {len(data['cards'])} cards)")
 
 
 def _docs(dump_path):
