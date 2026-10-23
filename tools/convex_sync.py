@@ -28,15 +28,33 @@ import heatmap  # noqa: E402
 COLLECTIONS = ("feedback", "runfeedback", "comments", "notes")
 
 
+REGIONS = ("", ".eu-west-1")   # a deploy key doesn't say where its deployment lives
+_found = None
+
+
 def deployment():
-    url, key = os.environ.get("CONVEX_URL"), os.environ.get("CONVEX_ADMIN_KEY")
-    if url and key:
-        return url.rstrip("/"), key
-    key = os.environ.get("CONVEX_DEPLOY_KEY")
-    if not key or "|" not in key:
+    global _found
+    if _found:
+        return _found
+    url = os.environ.get("CONVEX_URL")
+    key = os.environ.get("CONVEX_ADMIN_KEY") or os.environ.get("CONVEX_DEPLOY_KEY")
+    if not key:
         sys.exit("CONVEX_DEPLOY_KEY is not set (or CONVEX_URL and CONVEX_ADMIN_KEY).")
-    name = key.split("|", 1)[0].split(":", 1)[-1]
-    return f"https://{name}.convex.cloud", key
+    if not url:
+        if "|" not in key:
+            sys.exit("CONVEX_DEPLOY_KEY doesn't look like a deploy key.")
+        name = key.split("|", 1)[0].split(":", 1)[-1]
+        for region in REGIONS:
+            try:
+                with urllib.request.urlopen(f"https://{name}{region}.convex.cloud/version", timeout=20):
+                    url = f"https://{name}{region}.convex.cloud"
+                    break
+            except urllib.error.URLError:
+                continue
+        if not url:
+            sys.exit(f"Couldn't find deployment {name}; set CONVEX_URL to its address.")
+    _found = (url.rstrip("/"), key)
+    return _found
 
 
 def call(kind, path, args=None):
