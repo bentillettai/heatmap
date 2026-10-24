@@ -2,21 +2,21 @@
   "meta": {
     "title": "Heatmap",
     "started": "2026-10-20",
-    "updated": "2026-10-23",
+    "updated": "2026-10-24",
     "areas": {
       "datacentre": "Data centres",
       "aerospace": "Aerospace",
       "motorsport": "Motorsport",
       "other": "Other"
     },
-    "run_summary": "1 new card: UK ATC's printed liquid-nitrogen heat exchangers. 11 cards updated, led by fuel-cell aircraft radiators after Henry's up vote and a much stronger two-phase direct-to-chip card; first run using the research and funding APIs (26 records, 10 kept).",
+    "run_summary": "No new cards; 9 cards updated, notably a UK Cranfield and Rolls-Royce model of bypass-duct oil coolers, a measured printed two-phase cold plate at over 505 W/cm², and a measured printed topology-optimised heat sink. The website got today's report, but votes and comments left there were not read back this run (that step was blocked by a permission check).",
     "coverage": {
       "datacentre": "Good coverage of cold plates, jet impingement and heat reuse. One UK chip-level start-up found so far (Infiniflux).",
       "aerospace": "Strong on oil coolers and hydrogen. Cabin-air systems are now covered through Honeywell's STRATA project, and a measured printed pre-cooler core (Maryland) now gives one data point, but precooler-specific news is still rare. Defence aircraft electronics cooling now appears through BAE Systems' work with Leeds.",
       "motorsport": "Teams publish little, so most evidence comes from suppliers (Conflux, PWR) and student teams. Henry's steer here will help most.",
       "other": "Found by searching from the technology first: heat pipes, laser texturing, modelling, TPMS tests, fusion and transpiration cooling. Links to the three areas are mostly inferred."
     },
-    "run_id": "2026-10-23-1"
+    "run_id": "2026-10-24-1"
   },
   "cards": [
     {
@@ -821,6 +821,96 @@
       "area_rank": 1
     },
     {
+      "id": "dc-generative-cold-plate-design",
+      "area": "datacentre",
+      "headline": "Software that grows cold-plate channels for one specific chip",
+      "problem": "Hot spots on large AI packages such as the Nvidia GB200 set the peak temperature and limit performance.",
+      "technology": "Generative (reaction-diffusion) channel design coupled to a thermal model.",
+      "capabilities": [
+        "modelling and simulation",
+        "design for manufacture",
+        "additive manufacture"
+      ],
+      "why": "University of Michigan-Dearborn's simulation cut peak temperature by over 35 C against a parallel-channel plate, and design software is already sold (Diabatix ColdStream; Ansys now shows AI geometry search for a 650 W GPU plate, simulation only). MTC has already done this end to end: with ToffeeX it generated, printed in CP1 aluminium and rig-tested an electronics cold plate stated to be 48% lighter with half the pressure drop and a 12% lower peak junction temperature than a serpentine design, though the case study doesn't say which figures were measured. Measured results are now appearing elsewhere too: Beihang printed a topology-optimised heat sink by laser melting and, in tests against copper foam, honeycomb and lattice sinks, it held temperature 15-155% longer and cut chip-to-chip temperature spread by over 11%. That makes this a capability MTC can point to, not just a gap: the next step is applying it to AI-chip cold plates and publishing measured results against tolerances and surface finish.",
+      "applicability": {
+        "type": "stated",
+        "reason": "The paper targets the GB200 directly; the manufacturing route is our inference."
+      },
+      "trl": {
+        "level": "3-5",
+        "reason": "Measured prototypes at Beihang and MTC; AI-chip cold plates still mostly simulated."
+      },
+      "barriers": "Simulated gains often shrink once minimum wall thickness, powder removal and roughness are applied.",
+      "next_step": "Ask MTC's own team for the measured rig data from the ToffeeX cold plate, and whether it has been tried on a GPU-class heat load.",
+      "orgs": [
+        {
+          "name": "University of Michigan-Dearborn",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
+        },
+        {
+          "name": "Diabatix",
+          "type": "Commercial",
+          "country": "Belgium",
+          "role": "developer"
+        },
+        {
+          "name": "Manufacturing Technology Centre",
+          "type": "RTO",
+          "country": "UK",
+          "role": "developer"
+        },
+        {
+          "name": "ToffeeX",
+          "type": "Commercial",
+          "country": null,
+          "role": "developer"
+        },
+        {
+          "name": "Ansys",
+          "type": "Commercial",
+          "country": "USA",
+          "role": "supplier"
+        },
+        {
+          "name": "Beihang University",
+          "type": "Uni",
+          "country": "China",
+          "role": "researcher"
+        }
+      ],
+      "sources": [
+        {
+          "item": "arxiv-generative-cold-plate"
+        },
+        {
+          "item": "de247-diabatix-funding"
+        },
+        {
+          "item": "mtc-toffeex-cold-plate"
+        },
+        {
+          "item": "ansys-geomai-cold-plate"
+        },
+        {
+          "item": "buaa-hex-topopt-slm-heat-sink"
+        }
+      ],
+      "scores": {
+        "venn_fit": 4,
+        "manufacturing_key": 4,
+        "evidence": 4,
+        "novelty": 4,
+        "uk_relevance": 4,
+        "contactable": 5
+      },
+      "added": "2026-10-20",
+      "score": 82,
+      "rank": 9,
+      "area_rank": 3
+    },
+    {
       "id": "ae-ati-compact-hx-programme",
       "area": "aerospace",
       "headline": "The UK's compact aero-engine heat exchanger programme, with MTC already a partner",
@@ -920,7 +1010,7 @@
       },
       "added": "2026-10-20",
       "score": 81,
-      "rank": 9,
+      "rank": 10,
       "area_rank": 5
     },
     {
@@ -978,7 +1068,7 @@
       },
       "added": "2026-10-20",
       "score": 81,
-      "rank": 10,
+      "rank": 11,
       "area_rank": 2
     },
     {
@@ -1036,8 +1126,8 @@
       },
       "added": "2026-10-20",
       "score": 80,
-      "rank": 11,
-      "area_rank": 3
+      "rank": 12,
+      "area_rank": 4
     },
     {
       "id": "ae-hydrogen-fuel-heat-sink",
@@ -1135,7 +1225,7 @@
       },
       "added": "2026-10-20",
       "score": 80,
-      "rank": 12,
+      "rank": 13,
       "area_rank": 6
     },
     {
@@ -1208,89 +1298,8 @@
       },
       "added": "2026-10-20",
       "score": 79,
-      "rank": 13,
-      "area_rank": 3
-    },
-    {
-      "id": "dc-generative-cold-plate-design",
-      "area": "datacentre",
-      "headline": "Software that grows cold-plate channels for one specific chip",
-      "problem": "Hot spots on large AI packages such as the Nvidia GB200 set the peak temperature and limit performance.",
-      "technology": "Generative (reaction-diffusion) channel design coupled to a thermal model.",
-      "capabilities": [
-        "modelling and simulation",
-        "design for manufacture",
-        "additive manufacture"
-      ],
-      "why": "University of Michigan-Dearborn's simulation cut peak temperature by over 35 C against a parallel-channel plate, and design software is already sold (Diabatix ColdStream; Ansys now shows AI geometry search for a 650 W GPU plate, simulation only). MTC has already done this end to end: with ToffeeX it generated, printed in CP1 aluminium and rig-tested an electronics cold plate stated to be 48% lighter with half the pressure drop and a 12% lower peak junction temperature than a serpentine design, though the case study doesn't say which figures were measured. That makes this a capability MTC can point to, not just a gap: the next step is applying it to AI-chip cold plates and publishing measured results against tolerances and surface finish.",
-      "applicability": {
-        "type": "stated",
-        "reason": "The paper targets the GB200 directly; the manufacturing route is our inference."
-      },
-      "trl": {
-        "level": "2-3",
-        "reason": "Simulation only, no prototype."
-      },
-      "barriers": "Simulated gains often shrink once minimum wall thickness, powder removal and roughness are applied.",
-      "next_step": "Ask MTC's own team for the measured rig data from the ToffeeX cold plate, and whether it has been tried on a GPU-class heat load.",
-      "orgs": [
-        {
-          "name": "University of Michigan-Dearborn",
-          "type": "Uni",
-          "country": "USA",
-          "role": "researcher"
-        },
-        {
-          "name": "Diabatix",
-          "type": "Commercial",
-          "country": "Belgium",
-          "role": "developer"
-        },
-        {
-          "name": "Manufacturing Technology Centre",
-          "type": "RTO",
-          "country": "UK",
-          "role": "developer"
-        },
-        {
-          "name": "ToffeeX",
-          "type": "Commercial",
-          "country": null,
-          "role": "developer"
-        },
-        {
-          "name": "Ansys",
-          "type": "Commercial",
-          "country": "USA",
-          "role": "supplier"
-        }
-      ],
-      "sources": [
-        {
-          "item": "arxiv-generative-cold-plate"
-        },
-        {
-          "item": "de247-diabatix-funding"
-        },
-        {
-          "item": "mtc-toffeex-cold-plate"
-        },
-        {
-          "item": "ansys-geomai-cold-plate"
-        }
-      ],
-      "scores": {
-        "venn_fit": 4,
-        "manufacturing_key": 4,
-        "evidence": 3,
-        "novelty": 4,
-        "uk_relevance": 4,
-        "contactable": 5
-      },
-      "added": "2026-10-20",
-      "score": 79,
       "rank": 14,
-      "area_rank": 4
+      "area_rank": 3
     },
     {
       "id": "ms-racing-approved-am-alloys",
@@ -1644,6 +1653,109 @@
       "area_rank": 8
     },
     {
+      "id": "ae-sacoc-fin-design",
+      "area": "aerospace",
+      "headline": "Bypass-duct oil coolers: fin shapes measured against the drag they add",
+      "problem": "Geared ultra-high-bypass engines put a very high thermal load on gearbox oil, and coolers on the bypass duct wall add drag.",
+      "technology": "Optimised fin shapes for surface air-cooled oil coolers (SACOCs), designed numerically and measured in a reduced-scale wind tunnel.",
+      "capabilities": [
+        "modelling and simulation",
+        "metrology and inspection",
+        "additive manufacture",
+        "design for manufacture"
+      ],
+      "why": "The Clean Sky 2 SACOC project (Universitat Politècnica de València with Safran Aircraft Engines, 2019 to 2021) built a numerical method and a reduced-scale wind tunnel for surface oil coolers. The measurements show the trade-off plainly: a finned cooler gave 171% more heat transfer than a flat plate but 192% more friction, and the project says its optimised fins add almost 20% heat exchange and 13% better airflow permeability. A 2025 review names AM fins as the next step, and fin shapes that trade heat against drag are what printing and laser processing can make. The UK now has its own handle on the installed problem: Cranfield University and Rolls-Royce (EPSRC-funded, May 2026) modelled a naturally ventilated air-oil cooler in a geared-fan bypass duct together with the exhaust, and found it could meet the take-off heat load for a 0.7% cruise-thrust penalty in their example. That gives a UK route to test whether printed or laser-made fins shift that trade-off.",
+      "applicability": {
+        "type": "stated",
+        "reason": "All sources are about turbofan oil cooling."
+      },
+      "trl": {
+        "level": "4",
+        "reason": "Validated in a reduced-scale wind tunnel, not on an engine."
+      },
+      "barriers": "Every gain in heat transfer costs drag, and engine makers hold the installation data.",
+      "next_step": "Ask Cranfield's propulsion group (with Rolls-Royce) whether their bypass-duct model could score printed fin shapes, and read UPV's two 2022 IJHMT papers for the baseline fins.",
+      "orgs": [
+        {
+          "name": "Universitat Politècnica de València",
+          "type": "Uni",
+          "country": "Spain",
+          "role": "researcher"
+        },
+        {
+          "name": "Safran Aircraft Engines",
+          "type": "Commercial",
+          "country": "France",
+          "role": "user"
+        },
+        {
+          "name": "Clean Sky 2 Joint Undertaking",
+          "type": "Gov",
+          "country": "EU",
+          "role": "funder"
+        },
+        {
+          "name": "Poznan University of Technology",
+          "type": "Uni",
+          "country": "Poland",
+          "role": "researcher"
+        },
+        {
+          "name": "Cranfield University",
+          "type": "Uni",
+          "country": "UK",
+          "role": "researcher"
+        },
+        {
+          "name": "Rolls-Royce",
+          "type": "Commercial",
+          "country": "UK",
+          "role": "user"
+        },
+        {
+          "name": "EPSRC",
+          "type": "Gov",
+          "country": "UK",
+          "role": "funder"
+        }
+      ],
+      "sources": [
+        {
+          "item": "icas-upv-safran-sacoc"
+        },
+        {
+          "item": "cordis-sacoc-results-brief"
+        },
+        {
+          "item": "cordis-sacoc-results"
+        },
+        {
+          "item": "trimis-sacoc"
+        },
+        {
+          "item": "mdpi-sacoc-review-2025"
+        },
+        {
+          "item": "cranfield-rr-bypass-duct-aohe"
+        },
+        {
+          "item": "ast-third-stream-aohe-optimisation"
+        }
+      ],
+      "scores": {
+        "venn_fit": 4,
+        "manufacturing_key": 3,
+        "evidence": 4,
+        "novelty": 3,
+        "uk_relevance": 4,
+        "contactable": 5
+      },
+      "added": "2026-10-20",
+      "score": 75,
+      "rank": 20,
+      "area_rank": 9
+    },
+    {
       "id": "ae-hybrid-electric-mw-thermal",
       "area": "aerospace",
       "headline": "Megawatt-class thermal management for hybrid-electric regional aircraft",
@@ -1769,8 +1881,8 @@
       },
       "added": "2026-10-20",
       "score": 74,
-      "rank": 20,
-      "area_rank": 9
+      "rank": 21,
+      "area_rank": 10
     },
     {
       "id": "ms-lh2-endurance-racing",
@@ -1833,7 +1945,7 @@
       },
       "added": "2026-10-20",
       "score": 74,
-      "rank": 21,
+      "rank": 22,
       "area_rank": 3
     },
     {
@@ -1930,8 +2042,8 @@
       },
       "added": "2026-10-20",
       "score": 73,
-      "rank": 22,
-      "area_rank": 10
+      "rank": 23,
+      "area_rank": 11
     },
     {
       "id": "ms-2026-heat-rejection-squeeze",
@@ -2029,7 +2141,7 @@
       },
       "added": "2026-10-20",
       "score": 72,
-      "rank": 23,
+      "rank": 24,
       "area_rank": 4
     },
     {
@@ -2098,8 +2210,8 @@
       },
       "added": "2026-10-22",
       "score": 72,
-      "rank": 24,
-      "area_rank": 11
+      "rank": 25,
+      "area_rank": 12
     },
     {
       "id": "ot-micro-slm-tpms-hx",
@@ -2146,8 +2258,219 @@
       },
       "added": "2026-10-21",
       "score": 71,
-      "rank": 25,
+      "rank": 26,
       "area_rank": 6
+    },
+    {
+      "id": "ae-gyroid-fcoc",
+      "area": "aerospace",
+      "headline": "Gyroid-core fuel-cooled oil coolers designed for printing",
+      "problem": "Fuel-cooled oil coolers must pass more heat in less volume while keeping fuel above icing temperature.",
+      "technology": "TPMS (gyroid) heat-exchanger cores designed with implicit modelling and CFD.",
+      "capabilities": [
+        "modelling and simulation",
+        "design for manufacture",
+        "additive manufacture"
+      ],
+      "why": "nTop and Ansys show a full design workflow for a printed gyroid fuel-cooled oil cooler, based on an America Makes project, and Honeywell was testing printed fuel-oil exchangers as early as 2015. The design tools are now commodity. What is missing is test data showing gyroid cores beat plate-fin designs once pressure drop, fouling and inspection are counted, which is a build-and-test job. Printed fuel-oil exchangers are also edging towards production elsewhere: GA-ASI and Conflux signed an agreement in 2023 to take Conflux's flight-qualified printed fuel-oil heat exchangers into production on GA-ASI aircraft, though no performance figures were published.",
+      "applicability": {
+        "type": "stated",
+        "reason": "The workflow targets aero-engine fuel-oil cooling."
+      },
+      "trl": {
+        "level": "3-6",
+        "reason": "Design and simulation for gyroid cores; Conflux's printed fuel-oil exchangers are stated to be flight-qualified."
+      },
+      "barriers": "Fuel-side fouling and cleaning of TPMS passages.",
+      "orgs": [
+        {
+          "name": "nTop",
+          "type": "Commercial",
+          "country": "USA",
+          "role": "developer"
+        },
+        {
+          "name": "Ansys",
+          "type": "Commercial",
+          "country": "USA",
+          "role": "developer"
+        },
+        {
+          "name": "America Makes",
+          "type": "RTO",
+          "country": "USA",
+          "role": "funder"
+        },
+        {
+          "name": "Honeywell",
+          "type": "Commercial",
+          "country": "USA (UK and Czech sites)",
+          "role": "user"
+        },
+        {
+          "name": "3D Systems",
+          "type": "Commercial",
+          "country": "USA",
+          "role": "developer"
+        },
+        {
+          "name": "Conflux Technology",
+          "type": "Commercial",
+          "country": "Australia (UK hub)",
+          "role": "developer"
+        },
+        {
+          "name": "General Atomics Aeronautical Systems",
+          "type": "Commercial",
+          "country": "USA",
+          "role": "user"
+        }
+      ],
+      "sources": [
+        {
+          "item": "ntop-ansys-fcoc-gyroid"
+        },
+        {
+          "item": "de247-honeywell-printed-hx-2015"
+        },
+        {
+          "item": "gaasi-conflux-fohe-mou"
+        }
+      ],
+      "scores": {
+        "venn_fit": 4,
+        "manufacturing_key": 5,
+        "evidence": 2,
+        "novelty": 3,
+        "uk_relevance": 1,
+        "contactable": 4
+      },
+      "added": "2026-10-20",
+      "score": 69,
+      "rank": 27,
+      "area_rank": 13,
+      "next_step": "Conflux's UK hub is the nearest supplier with flight-qualified printed fuel-oil exchangers; ask what test evidence qualification needed."
+    },
+    {
+      "id": "dc-two-phase-direct-to-chip",
+      "area": "datacentre",
+      "headline": "Pumped two-phase direct-to-chip cooling for racks heading to 200 kW and beyond",
+      "problem": "Racks have gone from about 50 kW (2022) to 120-140 kW (2024), with 200-240 kW expected in 2026, and processors are passing 4 kW; single-phase water loops are running out of margin and water is scarce at many sites.",
+      "technology": "Two-phase evaporator cold plates on the chip, with a pumped dielectric refrigerant loop and enhanced boiling surfaces.",
+      "capabilities": [
+        "additive manufacture",
+        "laser processes (cutting, texturing)",
+        "modelling and simulation",
+        "design for manufacture"
+      ],
+      "why": "ZutaCore raised $100m from Mitsubishi Electric, Carrier and Samsung and is in over 75 sites, so the market is real. The research has moved on this year: a Journal of Electronic Packaging paper sets out how to budget temperature across a pumped two-phase loop, St. Cloud State tested a refrigerant-to-liquid system for dense racks, Maryland (with Modelon) is building reduced-order design models for micropillar evaporators, and Michigan Tech with start-up Artmetics measured piezo micro-vibration pushing boiling on microstructured copper into a controlled flash-boiling regime. Advanced Cooling Technologies has shown what printing adds: a whole two-phase cold plate in one AlSi10Mg build, with a wick over each of seven hot spots and an internal phase separator, ran above 505 W/cm² at about 0.16 K·cm²/W on under 0.14 W of pumping. The evaporator is a fine-feature part whose boiling surface sets the limit, which is where MTC's printing, laser texturing and modelling all meet.",
+      "applicability": {
+        "type": "stated",
+        "reason": "All sources target data-centre or AI chip cooling."
+      },
+      "trl": {
+        "level": "4-8",
+        "reason": "ZutaCore is deployed; the new evaporator and boiling-surface work is lab scale."
+      },
+      "barriers": "Refrigerant choice under PFAS rules; servicing and leak detection; most of the new results are US preprints or abstracts so far.",
+      "orgs": [
+        {
+          "name": "ZutaCore",
+          "type": "Commercial",
+          "country": "USA",
+          "role": "developer"
+        },
+        {
+          "name": "Mitsubishi Electric",
+          "type": "Commercial",
+          "country": "Japan",
+          "role": "funder"
+        },
+        {
+          "name": "Carrier",
+          "type": "Commercial",
+          "country": "USA",
+          "role": "funder"
+        },
+        {
+          "name": "Samsung",
+          "type": "Commercial",
+          "country": "South Korea",
+          "role": "funder"
+        },
+        {
+          "name": "University of Maryland, College Park",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
+        },
+        {
+          "name": "Modelon",
+          "type": "Commercial",
+          "country": "Sweden",
+          "role": "developer"
+        },
+        {
+          "name": "St. Cloud State University",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
+        },
+        {
+          "name": "Michigan Technological University",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
+        },
+        {
+          "name": "Artmetics",
+          "type": "Commercial",
+          "country": "Canada",
+          "role": "developer"
+        },
+        {
+          "name": "Advanced Cooling Technologies",
+          "type": "Commercial",
+          "country": "USA",
+          "role": "developer"
+        }
+      ],
+      "sources": [
+        {
+          "item": "dcd-zutacore-series-c"
+        },
+        {
+          "item": "asme-2p-dtc-system-analysis"
+        },
+        {
+          "item": "rs-stcloud-pumped-2p-r2l"
+        },
+        {
+          "item": "oa-umd-micropillar-evaporator"
+        },
+        {
+          "item": "asme-piezo-flash-boiling-cold-plate"
+        },
+        {
+          "item": "modelon-2p-dtc-tipping-point"
+        },
+        {
+          "item": "act-am-2p-cold-plate-wicks"
+        }
+      ],
+      "scores": {
+        "venn_fit": 4,
+        "manufacturing_key": 4,
+        "evidence": 4,
+        "novelty": 3,
+        "uk_relevance": 0,
+        "contactable": 4
+      },
+      "added": "2026-10-20",
+      "score": 69,
+      "rank": 28,
+      "area_rank": 5,
+      "next_step": "Check whether any UK group is working on two-phase evaporator surfaces; the Ljubljana and Oak Ridge laser-texturing results suggest a test MTC could run."
     },
     {
       "id": "ms-am-battery-cold-plates-inspection",
@@ -2222,7 +2545,7 @@
       },
       "added": "2026-10-20",
       "score": 67,
-      "rank": 26,
+      "rank": 29,
       "area_rank": 5
     },
     {
@@ -2309,8 +2632,8 @@
       },
       "added": "2026-10-20",
       "score": 66,
-      "rank": 27,
-      "area_rank": 5
+      "rank": 30,
+      "area_rank": 6
     },
     {
       "id": "ae-gpu-cfd-fast-hx-design",
@@ -2390,8 +2713,8 @@
       },
       "added": "2026-10-20",
       "score": 66,
-      "rank": 28,
-      "area_rank": 12
+      "rank": 31,
+      "area_rank": 14
     },
     {
       "id": "dc-jet-impingement-cold-plates",
@@ -2405,7 +2728,7 @@
         "modelling and simulation",
         "metrology and inspection"
       ],
-      "why": "Purdue and UCLA measured a heat transfer coefficient of 80 kW/m²K at 2.5 L/min with a 5 mm high jet manifold, and 3D printed a GPU-sized version in 316 stainless steel. Companies claim more: Frore says its LiquidJet plate runs Nvidia Rubin 6-12°C cooler on about a third less flow, JetCool (an MIT Lincoln Laboratory spin-out, $17m raised in 2023) claims 3-5x lower thermal resistance than microchannel plates, and Wiwynn reports 20-48% gains. Jet manifolds are full of small nozzles and internal plenums, which suits printing and needs careful inspection.",
+      "why": "Purdue and UCLA measured a heat transfer coefficient of 80 kW/m²K at 2.5 L/min with a 5 mm high jet manifold, and 3D printed a GPU-sized version in 316 stainless steel. Companies claim more: Frore says its LiquidJet plate runs Nvidia Rubin 6-12°C cooler on about a third less flow, JetCool (an MIT Lincoln Laboratory spin-out, $17m raised in 2023) claims 3-5x lower thermal resistance than microchannel plates, and Wiwynn reports 20-48% gains. Jet manifolds are full of small nozzles and internal plenums, which suits printing and needs careful inspection. Two more signs the manufacturing route is the point: the US DOE has extended Purdue's COOLERCHIPS project on two-phase jet impingement with printed, topology-optimised surfaces into durability testing, and Alloy Enterprises has filed a patent (May 2026) on jet manifolds made by stacking and bonding patterned metal sheets in one build.",
       "applicability": {
         "type": "stated",
         "reason": "All sources target data-centre and AI chip cooling."
@@ -2452,6 +2775,18 @@
           "type": "Commercial",
           "country": "USA",
           "role": "user"
+        },
+        {
+          "name": "Alloy Enterprises",
+          "type": "Commercial",
+          "country": "USA",
+          "role": "developer"
+        },
+        {
+          "name": "U.S. Department of Energy",
+          "type": "Gov",
+          "country": "USA",
+          "role": "funder"
         }
       ],
       "sources": [
@@ -2469,6 +2804,12 @@
         },
         {
           "item": "purdue-ai-microjet"
+        },
+        {
+          "item": "doe-purdue-coolerchips-2p-jet"
+        },
+        {
+          "item": "alloy-jet-impingement-patent"
         }
       ],
       "scores": {
@@ -2481,161 +2822,107 @@
       },
       "added": "2026-10-20",
       "score": 66,
-      "rank": 29,
-      "area_rank": 6
+      "rank": 32,
+      "area_rank": 7
     },
     {
-      "id": "ae-gyroid-fcoc",
-      "area": "aerospace",
-      "headline": "Gyroid-core fuel-cooled oil coolers designed for printing",
-      "problem": "Fuel-cooled oil coolers must pass more heat in less volume while keeping fuel above icing temperature.",
-      "technology": "TPMS (gyroid) heat-exchanger cores designed with implicit modelling and CFD.",
+      "id": "ot-tpms-measured-performance",
+      "area": "other",
+      "headline": "Measured tests show gyroid heat exchangers mainly win on pressure drop",
+      "problem": "Printed TPMS (gyroid) heat exchangers are widely promoted, but like-for-like measured comparisons with conventional units are rare.",
+      "technology": "Gyroid TPMS cores made by metal AM, tested against a commercial brazed plate heat exchanger.",
       "capabilities": [
-        "modelling and simulation",
-        "design for manufacture",
-        "additive manufacture"
+        "additive manufacture",
+        "metrology and inspection",
+        "modelling and simulation"
       ],
-      "why": "nTop and Ansys show a full design workflow for a printed gyroid fuel-cooled oil cooler, based on an America Makes project, and Honeywell was testing printed fuel-oil exchangers as early as 2015. The design tools are now commodity. What is missing is test data showing gyroid cores beat plate-fin designs once pressure drop, fouling and inspection are counted, which is a build-and-test job.",
+      "why": "Seoultech and the University of Akron tested a metal-printed gyroid heat exchanger against a commercial brazed plate unit: heat transfer at most 4.4% better, friction up to 30.5% lower, overall merit about 7% higher. Waseda University and AGC then showed that grading the lattice matters more than the lattice itself: varying wall position to balance hot and cold flow gave 28.7% more measured heat transfer than a uniform printed lattice. A US simulation study suggests other surface shapes can beat gyroids in turbulent air. Together they are a reality check on TPMS claims, and independent like-for-like testing of graded lattices is a service an RTO can offer. NYU Abu Dhabi and Toronto Metropolitan have since tested printed gyroid heat sinks at three porosities and split one gyroid into two separate fluid domains at different flow rates, matching COMSOL models.",
       "applicability": {
-        "type": "stated",
-        "reason": "The workflow targets aero-engine fuel-oil cooling."
+        "type": "inferred",
+        "reason": "The tests are generic; their bearing on the aerospace and data-centre TPMS cards is ours."
       },
       "trl": {
-        "level": "3-4",
-        "reason": "Design and simulation; no published test data."
+        "level": "4",
+        "reason": "Lab-tested against a commercial unit."
       },
-      "barriers": "Fuel-side fouling and cleaning of TPMS passages.",
+      "barriers": "One measured comparison; results depend on fluid, flow range and cell size.",
+      "next_step": "Use as a benchmark when judging TPMS performance claims.",
       "orgs": [
         {
-          "name": "nTop",
-          "type": "Commercial",
+          "name": "Seoul National University of Science and Technology",
+          "type": "Uni",
+          "country": "South Korea",
+          "role": "researcher"
+        },
+        {
+          "name": "University of Akron",
+          "type": "Uni",
           "country": "USA",
+          "role": "researcher"
+        },
+        {
+          "name": "Université Gustave Eiffel",
+          "type": "Uni",
+          "country": "France",
+          "role": "researcher"
+        },
+        {
+          "name": "Waseda University",
+          "type": "Uni",
+          "country": "Japan",
+          "role": "researcher"
+        },
+        {
+          "name": "AGC",
+          "type": "Commercial",
+          "country": "Japan",
           "role": "developer"
         },
         {
-          "name": "Ansys",
-          "type": "Commercial",
+          "name": "University of the District of Columbia",
+          "type": "Uni",
           "country": "USA",
-          "role": "developer"
+          "role": "researcher"
         },
         {
-          "name": "America Makes",
-          "type": "RTO",
-          "country": "USA",
-          "role": "funder"
-        },
-        {
-          "name": "Honeywell",
-          "type": "Commercial",
-          "country": "USA (UK and Czech sites)",
-          "role": "user"
-        },
-        {
-          "name": "3D Systems",
-          "type": "Commercial",
-          "country": "USA",
-          "role": "developer"
+          "name": "New York University Abu Dhabi",
+          "type": "Uni",
+          "country": "UAE",
+          "role": "researcher"
         }
       ],
       "sources": [
         {
-          "item": "ntop-ansys-fcoc-gyroid"
+          "item": "seoultech-gyroid-vs-bphe"
         },
         {
-          "item": "de247-honeywell-printed-hx-2015"
+          "item": "avestia-eiffel-pla-gyroid"
+        },
+        {
+          "item": "arxiv-variable-tpms-hx"
+        },
+        {
+          "item": "arxiv-harmonic-tessellation-hx"
+        },
+        {
+          "item": "processes-tpms-gyroid-heat-sink"
+        },
+        {
+          "item": "ijhff-hybrid-periodicity-gyroid"
         }
       ],
       "scores": {
-        "venn_fit": 4,
-        "manufacturing_key": 5,
-        "evidence": 2,
-        "novelty": 3,
+        "venn_fit": 3,
+        "manufacturing_key": 4,
+        "evidence": 4,
+        "novelty": 4,
         "uk_relevance": 0,
         "contactable": 3
       },
       "added": "2026-10-20",
-      "score": 65,
-      "rank": 30,
-      "area_rank": 13
-    },
-    {
-      "id": "ae-sacoc-fin-design",
-      "area": "aerospace",
-      "headline": "Bypass-duct oil coolers: fin shapes measured against the drag they add",
-      "problem": "Geared ultra-high-bypass engines put a very high thermal load on gearbox oil, and coolers on the bypass duct wall add drag.",
-      "technology": "Optimised fin shapes for surface air-cooled oil coolers (SACOCs), designed numerically and measured in a reduced-scale wind tunnel.",
-      "capabilities": [
-        "modelling and simulation",
-        "metrology and inspection",
-        "additive manufacture",
-        "design for manufacture"
-      ],
-      "why": "The Clean Sky 2 SACOC project (Universitat Politècnica de València with Safran Aircraft Engines, 2019 to 2021) built a numerical method and a reduced-scale wind tunnel for surface oil coolers. The measurements show the trade-off plainly: a finned cooler gave 171% more heat transfer than a flat plate but 192% more friction, and the project says its optimised fins add almost 20% heat exchange and 13% better airflow permeability. A 2025 review names AM fins as the next step, and fin shapes that trade heat against drag are what printing and laser processing can make.",
-      "applicability": {
-        "type": "stated",
-        "reason": "All sources are about turbofan oil cooling."
-      },
-      "trl": {
-        "level": "4",
-        "reason": "Validated in a reduced-scale wind tunnel, not on an engine."
-      },
-      "barriers": "Every gain in heat transfer costs drag, and engine makers hold the installation data.",
-      "next_step": "Read UPV's two 2022 IJHMT papers for the fin shapes, then judge whether printed or laser-made fins could beat them.",
-      "orgs": [
-        {
-          "name": "Universitat Politècnica de València",
-          "type": "Uni",
-          "country": "Spain",
-          "role": "researcher"
-        },
-        {
-          "name": "Safran Aircraft Engines",
-          "type": "Commercial",
-          "country": "France",
-          "role": "user"
-        },
-        {
-          "name": "Clean Sky 2 Joint Undertaking",
-          "type": "Gov",
-          "country": "EU",
-          "role": "funder"
-        },
-        {
-          "name": "Poznan University of Technology",
-          "type": "Uni",
-          "country": "Poland",
-          "role": "researcher"
-        }
-      ],
-      "sources": [
-        {
-          "item": "icas-upv-safran-sacoc"
-        },
-        {
-          "item": "cordis-sacoc-results-brief"
-        },
-        {
-          "item": "cordis-sacoc-results"
-        },
-        {
-          "item": "trimis-sacoc"
-        },
-        {
-          "item": "mdpi-sacoc-review-2025"
-        }
-      ],
-      "scores": {
-        "venn_fit": 4,
-        "manufacturing_key": 3,
-        "evidence": 4,
-        "novelty": 3,
-        "uk_relevance": 0,
-        "contactable": 4
-      },
-      "added": "2026-10-20",
-      "score": 65,
-      "rank": 31,
-      "area_rank": 14
+      "score": 64,
+      "rank": 33,
+      "area_rank": 7
     },
     {
       "id": "ms-am-brake-ducts",
@@ -2708,7 +2995,7 @@
       },
       "added": "2026-10-20",
       "score": 63,
-      "rank": 32,
+      "rank": 34,
       "area_rank": 6
     },
     {
@@ -2783,207 +3070,8 @@
       },
       "added": "2026-10-20",
       "score": 62,
-      "rank": 33,
-      "area_rank": 7
-    },
-    {
-      "id": "ot-tpms-measured-performance",
-      "area": "other",
-      "headline": "Measured tests show gyroid heat exchangers mainly win on pressure drop",
-      "problem": "Printed TPMS (gyroid) heat exchangers are widely promoted, but like-for-like measured comparisons with conventional units are rare.",
-      "technology": "Gyroid TPMS cores made by metal AM, tested against a commercial brazed plate heat exchanger.",
-      "capabilities": [
-        "additive manufacture",
-        "metrology and inspection",
-        "modelling and simulation"
-      ],
-      "why": "Seoultech and the University of Akron tested a metal-printed gyroid heat exchanger against a commercial brazed plate unit: heat transfer at most 4.4% better, friction up to 30.5% lower, overall merit about 7% higher. Waseda University and AGC then showed that grading the lattice matters more than the lattice itself: varying wall position to balance hot and cold flow gave 28.7% more measured heat transfer than a uniform printed lattice. A US simulation study suggests other surface shapes can beat gyroids in turbulent air. Together they are a reality check on TPMS claims, and independent like-for-like testing of graded lattices is a service an RTO can offer.",
-      "applicability": {
-        "type": "inferred",
-        "reason": "The tests are generic; their bearing on the aerospace and data-centre TPMS cards is ours."
-      },
-      "trl": {
-        "level": "4",
-        "reason": "Lab-tested against a commercial unit."
-      },
-      "barriers": "One measured comparison; results depend on fluid, flow range and cell size.",
-      "next_step": "Use as a benchmark when judging TPMS performance claims.",
-      "orgs": [
-        {
-          "name": "Seoul National University of Science and Technology",
-          "type": "Uni",
-          "country": "South Korea",
-          "role": "researcher"
-        },
-        {
-          "name": "University of Akron",
-          "type": "Uni",
-          "country": "USA",
-          "role": "researcher"
-        },
-        {
-          "name": "Université Gustave Eiffel",
-          "type": "Uni",
-          "country": "France",
-          "role": "researcher"
-        },
-        {
-          "name": "Waseda University",
-          "type": "Uni",
-          "country": "Japan",
-          "role": "researcher"
-        },
-        {
-          "name": "AGC",
-          "type": "Commercial",
-          "country": "Japan",
-          "role": "developer"
-        },
-        {
-          "name": "University of the District of Columbia",
-          "type": "Uni",
-          "country": "USA",
-          "role": "researcher"
-        }
-      ],
-      "sources": [
-        {
-          "item": "seoultech-gyroid-vs-bphe"
-        },
-        {
-          "item": "avestia-eiffel-pla-gyroid"
-        },
-        {
-          "item": "arxiv-variable-tpms-hx"
-        },
-        {
-          "item": "arxiv-harmonic-tessellation-hx"
-        }
-      ],
-      "scores": {
-        "venn_fit": 3,
-        "manufacturing_key": 4,
-        "evidence": 4,
-        "novelty": 4,
-        "uk_relevance": 0,
-        "contactable": 2
-      },
-      "added": "2026-10-20",
-      "score": 62,
-      "rank": 34,
-      "area_rank": 7
-    },
-    {
-      "id": "dc-two-phase-direct-to-chip",
-      "area": "datacentre",
-      "headline": "Pumped two-phase direct-to-chip cooling for racks heading to 200 kW and beyond",
-      "problem": "Racks have gone from about 50 kW (2022) to 120-140 kW (2024), with 200-240 kW expected in 2026, and processors are passing 4 kW; single-phase water loops are running out of margin and water is scarce at many sites.",
-      "technology": "Two-phase evaporator cold plates on the chip, with a pumped dielectric refrigerant loop and enhanced boiling surfaces.",
-      "capabilities": [
-        "additive manufacture",
-        "laser processes (cutting, texturing)",
-        "modelling and simulation",
-        "design for manufacture"
-      ],
-      "why": "ZutaCore raised $100m from Mitsubishi Electric, Carrier and Samsung and is in over 75 sites, so the market is real. The research has moved on this year: a Journal of Electronic Packaging paper sets out how to budget temperature across a pumped two-phase loop, St. Cloud State tested a refrigerant-to-liquid system for dense racks, Maryland (with Modelon) is building reduced-order design models for micropillar evaporators, and Michigan Tech with start-up Artmetics measured piezo micro-vibration pushing boiling on microstructured copper into a controlled flash-boiling regime. The evaporator is a fine-feature copper part whose boiling surface sets the limit, which is where MTC's printing, laser texturing and modelling all meet.",
-      "applicability": {
-        "type": "stated",
-        "reason": "All sources target data-centre or AI chip cooling."
-      },
-      "trl": {
-        "level": "4-8",
-        "reason": "ZutaCore is deployed; the new evaporator and boiling-surface work is lab scale."
-      },
-      "barriers": "Refrigerant choice under PFAS rules; servicing and leak detection; most of the new results are US preprints or abstracts so far.",
-      "orgs": [
-        {
-          "name": "ZutaCore",
-          "type": "Commercial",
-          "country": "USA",
-          "role": "developer"
-        },
-        {
-          "name": "Mitsubishi Electric",
-          "type": "Commercial",
-          "country": "Japan",
-          "role": "funder"
-        },
-        {
-          "name": "Carrier",
-          "type": "Commercial",
-          "country": "USA",
-          "role": "funder"
-        },
-        {
-          "name": "Samsung",
-          "type": "Commercial",
-          "country": "South Korea",
-          "role": "funder"
-        },
-        {
-          "name": "University of Maryland, College Park",
-          "type": "Uni",
-          "country": "USA",
-          "role": "researcher"
-        },
-        {
-          "name": "Modelon",
-          "type": "Commercial",
-          "country": "Sweden",
-          "role": "developer"
-        },
-        {
-          "name": "St. Cloud State University",
-          "type": "Uni",
-          "country": "USA",
-          "role": "researcher"
-        },
-        {
-          "name": "Michigan Technological University",
-          "type": "Uni",
-          "country": "USA",
-          "role": "researcher"
-        },
-        {
-          "name": "Artmetics",
-          "type": "Commercial",
-          "country": "Canada",
-          "role": "developer"
-        }
-      ],
-      "sources": [
-        {
-          "item": "dcd-zutacore-series-c"
-        },
-        {
-          "item": "asme-2p-dtc-system-analysis"
-        },
-        {
-          "item": "rs-stcloud-pumped-2p-r2l"
-        },
-        {
-          "item": "oa-umd-micropillar-evaporator"
-        },
-        {
-          "item": "asme-piezo-flash-boiling-cold-plate"
-        },
-        {
-          "item": "modelon-2p-dtc-tipping-point"
-        }
-      ],
-      "scores": {
-        "venn_fit": 4,
-        "manufacturing_key": 3,
-        "evidence": 3,
-        "novelty": 3,
-        "uk_relevance": 0,
-        "contactable": 4
-      },
-      "added": "2026-10-20",
-      "score": 62,
       "rank": 35,
-      "area_rank": 8,
-      "next_step": "Check whether any UK group is working on two-phase evaporator surfaces; the Ljubljana and Oak Ridge laser-texturing results suggest a test MTC could run."
+      "area_rank": 8
     },
     {
       "id": "ae-microtube-ip",
@@ -3148,7 +3236,7 @@
         "modelling and simulation",
         "design for manufacture"
       ],
-      "why": "Policy and money are lining up. DESNZ put £90m into heat networks fed by data centres, Deep Green has approval for a 5.6 MW site in Bradford, EnergiRaven models enough heat for 3.5-6.3m homes by 2035, and a 2026 Scottish Enterprise review says one large site could yield hundreds of GWh of heat a year and should favour closed-loop cooling over evaporative. MTC's angle is upstream: the hotter the coolant leaves the chip, the less heat-pump work is needed, which favours two-phase and printed cold plates that run warm. Strong on UK relevance, weaker on a direct MTC role.",
+      "why": "Policy and money are lining up. DESNZ put £90m into heat networks fed by data centres, Deep Green has approval for a 5.6 MW site in Bradford, EnergiRaven models enough heat for 3.5-6.3m homes by 2035, and a 2026 Scottish Enterprise review says one large site could yield hundreds of GWh of heat a year and should favour closed-loop cooling over evaporative. The DESNZ pipeline names actual schemes, such as Hemiko's Tyseley network in Birmingham taking heat from a 2.5 MW data centre for 21 buildings. MTC's angle is upstream, and a Rijeka simulation shows why: direct liquid cooling loops at 25-30 °C still need heat pumps for older networks, so the hotter the coolant leaves the chip, the less heat-pump work is needed, which favours two-phase and printed cold plates that run warm. Strong on UK relevance, weaker on a direct MTC role.",
       "applicability": {
         "type": "inferred",
         "reason": "None of these sources mention manufacturing; the link through hotter-running cold plates is ours."
@@ -3219,6 +3307,12 @@
           "type": "Commercial",
           "country": "UK",
           "role": "supplier"
+        },
+        {
+          "name": "Hemiko",
+          "type": "Commercial",
+          "country": "UK",
+          "role": "user"
         }
       ],
       "sources": [
@@ -3245,6 +3339,12 @@
         },
         {
           "item": "dcn-poweron-heat-housing"
+        },
+        {
+          "item": "bebeez-uk-heat-networks-dc"
+        },
+        {
+          "item": "rijeka-hybrid-dc-cooling-district-heat"
         }
       ],
       "scores": {
@@ -3271,7 +3371,7 @@
         "metrology and inspection",
         "modelling and simulation"
       ],
-      "why": "A 2025 Shanghai Jiao Tong University review collects the evidence: well-designed transpiration cooling reaches up to five times the cooling effectiveness of film cooling. But printing changes the part: perforated designs with 0.5-0.06 mm holes lost 4-77% of their porosity, defects cut permeability by 15% and strength by 10%. Transpiration cooling is on Henry's keyword list, and the gap between the designed and printed part is a metrology and process-control problem MTC knows well.",
+      "why": "A 2025 Shanghai Jiao Tong University review collects the evidence: well-designed transpiration cooling reaches up to five times the cooling effectiveness of film cooling. But printing changes the part: perforated designs with 0.5-0.06 mm holes lost 4-77% of their porosity, defects cut permeability by 15% and strength by 10%. Transpiration cooling is on Henry's keyword list, and the gap between the designed and printed part is a metrology and process-control problem MTC knows well. A 2026 University of Central Florida thesis adds a design rule worth testing: in its model, thermal-stress yielding in transpiration walls falls as porosity rises, while local deformation becomes the risk.",
       "applicability": {
         "type": "stated",
         "reason": "The review is about gas-turbine cooling."
@@ -3288,11 +3388,20 @@
           "type": "Uni",
           "country": "China",
           "role": "researcher"
+        },
+        {
+          "name": "University of Central Florida",
+          "type": "Uni",
+          "country": "USA",
+          "role": "researcher"
         }
       ],
       "sources": [
         {
           "item": "mdpi-am-transpiration-review"
+        },
+        {
+          "item": "ucf-transpiration-thermomech-thesis"
         }
       ],
       "scores": {
@@ -3319,7 +3428,7 @@
         "design for manufacture",
         "additive manufacture"
       ],
-      "why": "SINTEF's CoolHeatDC removes the intermediate water loop by condensing the immersion fluid in the heat pump's evaporator, raising the temperature available for district heating. The condenser-evaporator is a compact two-phase heat exchanger, a good fit for printed designs, though SINTEF does not say so. Lab scale only so far. Imperial College London started an EU-funded fellowship (MicroTherM, €276k, 2025-27) to measure the thin liquid layer under bubbles in confined boiling, the physics that sets how well two-phase immersion surfaces perform.",
+      "why": "SINTEF's CoolHeatDC removes the intermediate water loop by condensing the immersion fluid in the heat pump's evaporator, raising the temperature available for district heating. The condenser-evaporator is a compact two-phase heat exchanger, a good fit for printed designs, though SINTEF does not say so. Lab scale only so far. Imperial College London started an EU-funded fellowship (MicroTherM, €276k, 2025-27) to measure the thin liquid layer under bubbles in confined boiling, the physics that sets how well two-phase immersion surfaces perform. Aalborg University and Heatflow (the start-up behind the printed thermosiphon on the passive two-phase card) start an EU fellowship in October 2026 on injecting a second liquid to make bubbles on purpose in two-phase immersion baths.",
       "applicability": {
         "type": "stated",
         "reason": "SINTEF targets data centres; the printed heat-exchanger angle is our inference."
@@ -3341,6 +3450,18 @@
           "type": "Uni",
           "country": "UK",
           "role": "researcher"
+        },
+        {
+          "name": "Aalborg University",
+          "type": "Uni",
+          "country": "Denmark",
+          "role": "researcher"
+        },
+        {
+          "name": "Heatflow",
+          "type": "Commercial",
+          "country": "Denmark",
+          "role": "developer"
         }
       ],
       "sources": [
@@ -3349,6 +3470,9 @@
         },
         {
           "item": "cordis-microthermm-imperial"
+        },
+        {
+          "item": "cordis-bridge-aalborg-heatflow"
         }
       ],
       "scores": {

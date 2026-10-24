@@ -1,0 +1,1297 @@
+[
+ {
+  "id": "gaasi-conflux-fohe-mou",
+  "url": "https://www.australianmanufacturing.com.au/ga-asi-conflux-ink-agreement-to-advance-additive-manufacturing-capability/",
+  "title": "GA-ASI, Conflux ink agreement to advance additive manufacturing capability",
+  "publisher": "Australian Manufacturing (Digital Media News Pty Ltd)",
+  "date": "2023-03-03",
+  "area": "aerospace",
+  "story": "gaasi-conflux-fohe",
+  "summary": "General Atomics Aeronautical Systems (GA-ASI) and Conflux Technology signed an MOU at Avalon 2023 to take Conflux's additively manufactured, flight-qualified fuel-oil heat exchangers into production on GA-ASI platforms, after years of joint development. No quantities, test data or performance figures; company statements only.",
+  "orgs": [
+   {
+    "name": "General Atomics Aeronautical Systems",
+    "type": "Commercial",
+    "country": "USA"
+   },
+   {
+    "name": "Conflux Technology",
+    "type": "Commercial",
+    "country": "Australia"
+   }
+  ],
+  "thermal": "Fuel oil heat exchangers for GA-ASI aircraft, which the article says carry 'significant weight and performance benefits' with no figures given.",
+  "manufacturing": "Additive manufacture of flight-qualified FOHE, with the article giving no process details.",
+  "evidence": "claim",
+  "gate": "pass"
+ },
+ {
+  "id": "hxw-velo3d-aero-hx-am",
+  "url": "https://heat-exchanger-world.com/improving-aerospace-and-aviation-heat-exchanger-performance-with-advanced-additive-manufacturing/",
+  "title": "Improving Aerospace and Aviation Heat Exchanger Performance with Advanced Additive Manufacturing",
+  "publisher": "Heat Exchanger World (KCI Media Group)",
+  "date": "2026-08-10",
+  "area": "aerospace",
+  "story": "velo3d-aero-hx",
+  "summary": "Velo3D feature, republished by Heat Exchanger World in August 2026 but first printed in May 2021, arguing that laser powder bed fusion with non-contact recoating allows thinner walls, low-angle overhangs and smoother channels in aerospace heat exchangers. Unsourced figures: four to six heat exchangers per engine, design cycles cut from 12-18 months to weeks, about $100 per weld joint. Vendor opinion, no test data.",
+  "orgs": [
+   {
+    "name": "Velo3D",
+    "type": "Commercial",
+    "country": "USA"
+   }
+  ],
+  "thermal": "Argues AM increases surface area per unit volume and thermal efficiency for aerospace and aviation heat exchangers; no thermal test data is given.",
+  "manufacturing": "Laser powder-bed fusion metal AM with a non-contact powder recoater, sensor-based pre-build calibration and generative-design software (nTopology), as an alternative to brazing and welding.",
+  "evidence": "claim",
+  "gate": "pass"
+ },
+ {
+  "id": "buaa-hex-topopt-slm-heat-sink",
+  "url": "https://research.buaa.edu.cn/en/publications/experimental-investigation-of-hexagonal-topology-optimized-heat-s/",
+  "title": "Experimental investigation of hexagonal topology-optimized heat sinks for dual-source high-power electronics",
+  "publisher": "Elsevier Ltd (journal: Energy Conversion and Management)",
+  "date": "2026-03-01",
+  "area": "other",
+  "story": "buaa-topopt-heat-sink",
+  "summary": "Beihang University and the Beijing Institute of Space Long March Vehicle topology-optimised a hexagonal heat sink for two high-power electronic sources, printed it in one piece by selective laser melting, and tested it against copper foam, honeycomb and lattice heat sinks. It held temperature 70%, 155% and 15% longer respectively and cut the chip-to-chip temperature difference by more than 11.5%. Measured; Energy Conversion and Management, March 2026.",
+  "orgs": [
+   {
+    "name": "Beihang University",
+    "type": "Uni",
+    "country": "China"
+   },
+   {
+    "name": "Beijing Institute of Space Long March Vehicle",
+    "type": "RTO",
+    "country": "China"
+   }
+  ],
+  "thermal": "Topology-optimized heat sink for chip-level thermal management of dual-source high-power airborne electronics, with better temperature control and uniformity than copper foam, honeycomb and lattice heat sinks.",
+  "manufacturing": "Variable-density topology optimization design, integrally fabricated by selective laser melting (SLM).",
+  "evidence": "measured",
+  "gate": "pass"
+ },
+ {
+  "id": "doe-purdue-coolerchips-2p-jet",
+  "url": "https://www.energy.gov/node/4860065",
+  "title": "CX-271070: Purdue University - Confined Direct Two-phase Jet Impingement Cooling with Topology Optimized Surface Engineering and Phase Separation Using Additive Manufacturing",
+  "publisher": "U.S. Department of Energy, Office of NEPA Policy and Compliance",
+  "date": "2026-08-31",
+  "area": "datacentre",
+  "story": "purdue-coolerchips-jet",
+  "summary": "US DOE amended (August 2026) its approval of a Purdue University COOLERCHIPS project on confined direct two-phase jet impingement cooling of chips, with topology-optimised surfaces and phase separation made by additive manufacturing. The amendment adds funding, time, a team member and milestones: system validation, long-term durability tests, design optimisation, techno-economics and life-cycle assessment. Plan; no results on the page.",
+  "orgs": [
+   {
+    "name": "Purdue University",
+    "type": "Uni",
+    "country": "USA"
+   },
+   {
+    "name": "U.S. Department of Energy",
+    "type": "Gov",
+    "country": "USA"
+   }
+  ],
+  "thermal": "Chip-level direct two-phase impingement jet cooling intended to enhance overall thermal performance while reducing pumping power.",
+  "manufacturing": "Per the title only, topology-optimized surface engineering and phase separation features are made by additive manufacturing; the page gives no fabrication detail.",
+  "evidence": "plan",
+  "gate": "pass"
+ },
+ {
+  "id": "hfn-chalmers-h2-exhaust-hx",
+  "url": "https://www.hydrogenfuelnews.com/hydrogen-aviation-technology/8569610",
+  "title": "Clearing the Air with Hydrogen Aviation Technology - A Look at Airbus, ZeroAvia and More",
+  "publisher": "Hydrogen Fuel News",
+  "date": "2025-02-10",
+  "area": "aerospace",
+  "story": "chalmers-h2-hx",
+  "summary": "Hydrogen Fuel News overview (February 2025) of hydrogen aviation. Its thermal item is a Chalmers University heat exchanger that uses cold hydrogen to cool engine parts and exhaust heat to preheat the fuel, said to cut fuel use by nearly 8% and add up to 10% range. Second-hand claim with no data.",
+  "orgs": [
+   {
+    "name": "Chalmers University of Technology",
+    "type": "Uni",
+    "country": "Sweden"
+   }
+  ],
+  "thermal": "Chalmers' heat exchanger uses the cold stored hydrogen to cool engine components and recovers exhaust heat to preheat the fuel, with the claimed gains noted in the summary (no data given).",
+  "manufacturing": "Article says only that the heat exchanger is 'designed to be lightweight'; no design, fabrication or test method is given.",
+  "evidence": "claim",
+  "gate": "pass"
+ },
+ {
+  "id": "ucf-transpiration-thermomech-thesis",
+  "url": "https://stars.library.ucf.edu/gradstudies_etd_2026/183",
+  "title": "Thermomechanical Modeling of Transpiration Surfaces For Hypersonic Propulsion",
+  "publisher": "University of Central Florida, STARS (Graduate Studies Theses and Dissertations 2026)",
+  "date": "2026",
+  "area": "other",
+  "story": "ucf-transpiration",
+  "summary": "University of Central Florida MS thesis (spring 2026) with a coupled analytical model of porous transpiration-cooled surfaces for hypersonic propulsion (heat fluxes above 10 MW/m², gas at 3000-4000 K). It finds thermal-stress yielding dominates and, counterintuitively, falls as porosity rises, while local deformation grows; it also weighs high-temperature alloys against light low-temperature materials. Analytical modelling.",
+  "orgs": [
+   {
+    "name": "University of Central Florida",
+    "type": "Uni",
+    "country": "United States"
+   }
+  ],
+  "thermal": "Models transpiration cooling, where a coolant is diffused through a porous surface, for hypersonic propulsion surfaces with heat fluxes above 10 MW/m2 and gas temperatures of 3000-4000K.",
+  "manufacturing": "none (the abstract covers design trade-offs between high-temperature alloys and lightweight low-temperature materials for the porous solid, not fabrication).",
+  "evidence": "simulation",
+  "gate": "pass"
+ },
+ {
+  "id": "alloy-jet-impingement-patent",
+  "url": "https://eureka.patsnap.com/patent/WO2026102090A1",
+  "title": "Jet cooling with internally structured parts",
+  "publisher": "Patsnap Eureka (patent WO2026102090A1; applicant Alloy Enterprises Inc)",
+  "date": "2026-05-15",
+  "area": "datacentre",
+  "story": "alloy-jet-patent",
+  "summary": "Alloy Enterprises' PCT application WO2026102090A1 (published 15 May 2026) claims metal parts with internal jet-impingement channels, manifolds and orifices made in one build by patterning, stacking and bonding metal sheets, with no welding, for cooling high-power devices such as HEMTs and laser diodes, single- or two-phase. Channels of 300 µm or less are mentioned. Patent claims; no test data.",
+  "orgs": [
+   {
+    "name": "Alloy Enterprises",
+    "type": "Commercial",
+    "country": "USA"
+   }
+  ],
+  "thermal": "Jet-impingement cooling of high-power devices such as HEMTs and laser diodes through a thermally conductive window, with single-phase or two-phase (including nucleate boiling) operation described in later text.",
+  "manufacturing": "Layered sheet process: metal sheets are patterned, stacked and bonded (LOM-type, with claims to this sequence per later text) into a single-build part without welding.",
+  "evidence": "claim",
+  "gate": "pass"
+ },
+ {
+  "id": "act-am-2p-cold-plate-wicks",
+  "url": "https://www.1-act.com/wp-content/uploads/2024/12/InterPACK2024_141775_Final-Two-Phase-Cold-Plate.pdf",
+  "title": "Additively manufactured cold plate integrated with evaporator wicks and phase separators for thermal management of multiple high-heat-flux heat sources",
+  "publisher": "ASME InterPACK 2024 (Advanced Cooling Technologies)",
+  "date": "2024-10",
+  "area": "datacentre",
+  "story": "act-hybrid-2p-cold-plate",
+  "summary": "Advanced Cooling Technologies (ACT) printed a whole hybrid two-phase cold plate in one AlSi10Mg additive build, with a wick evaporator over each of seven heaters and an internal phase separator to stop evaporators flooding. It ran above 505 W/cm² with uniform thermal resistance of about 0.16 K·cm²/W and pumping power below 0.14 W. Measured on a lab cold plate; InterPACK 2024.",
+  "orgs": [
+   {
+    "name": "Advanced Cooling Technologies",
+    "type": "Commercial",
+    "country": "USA"
+   }
+  ],
+  "thermal": "Capillary wick evaporation combined with pumped two-phase flow in one cold plate for multiple hot spots.",
+  "manufacturing": "Single AM build of the full AlSi10Mg cold plate including wicks and phase separator.",
+  "evidence": "measured",
+  "gate": "pass"
+ },
+ {
+  "id": "bebeez-uk-heat-networks-dc",
+  "url": "https://bebeez.eu/2025/06/09/uk-district-heating-networks-look-to-data-centers-for-waste-heat/",
+  "title": "UK district heating networks look to data centers for waste heat",
+  "publisher": "BeBeez International (author 'dcd'; links to a Data Center Dynamics original)",
+  "date": "2025-06-09",
+  "area": "datacentre",
+  "story": "desnz-hn-pipeline",
+  "summary": "The DESNZ heat network pipeline (late 2024) lists several UK schemes planning to use data-centre heat: Hemiko's North Crawley network (Gatwick and a Manor Royal data centre, 46 GWh, possibly by 2027), Hemiko's Tyseley network in Birmingham (a 2.5 MW data centre heating 21 buildings, 16.2 GWh a year), Durham University's 1.5 MW data centre with possible storage in old mine workings, an E.ON scheme seeking heat from three data centres, and Deep Green with Liverpool's Paddington Village network. All plans, none operating (June 2025, from DCD).",
+  "orgs": [
+   {
+    "name": "Department for Energy Security and Net Zero",
+    "type": "Gov",
+    "country": "UK"
+   },
+   {
+    "name": "Hemiko",
+    "type": "Commercial",
+    "country": "UK"
+   },
+   {
+    "name": "Durham University",
+    "type": "Uni",
+    "country": "UK"
+   },
+   {
+    "name": "Deep Green",
+    "type": "Commercial",
+    "country": "UK"
+   }
+  ],
+  "thermal": "Waste heat from data centres (1.5MW, 2.5MW and unnamed facilities) would be piped into district heating networks, with Durham planning to store heat in old mining tunnels.",
+  "manufacturing": "none",
+  "evidence": "plan",
+  "gate": "pass"
+ },
+ {
+  "id": "idea-energiraven-35m-homes",
+  "url": "https://www.districtenergy.org/blogs/district-energy/2026/01/28/waste-heat-from-data-centres-could-heat-over-35-mi",
+  "title": "Waste heat from data centres could heat over 3.5 million UK homes",
+  "publisher": "International District Energy Association (IDEA), District Energy blog (posted by District Energy)",
+  "date": "2026-01-28",
+  "area": "datacentre",
+  "story": "energiraven-dc-heat",
+  "summary": "IDEA blog (January 2026) reporting research by UK firm EnergiRaven and consultancy Viegand Maagøe that data-centre growth could produce enough waste heat for at least 3.5 million UK homes by 2035, provided 'heat highways' are built to carry it. No method or capacity figures given; a projection reported second-hand.",
+  "orgs": [
+   {
+    "name": "EnergiRaven",
+    "type": "Commercial",
+    "country": "UK"
+   },
+   {
+    "name": "Viegand Maagøe",
+    "type": "Commercial",
+    "country": "Denmark"
+   }
+  ],
+  "thermal": "Waste heat from future data centres would be captured through 'heat highways' and supplied to UK homes as district heat.",
+  "manufacturing": "none",
+  "evidence": "claim",
+  "gate": "pass"
+ },
+ {
+  "id": "hebis-wavy-fin-cold-plate",
+  "url": "https://karla.hds.hebis.de/EdsRecord/edselp%252CS0017931025014735",
+  "title": null,
+  "publisher": null,
+  "date": null,
+  "area": "datacentre",
+  "story": "hebis-wavy-fin-cold-plate",
+  "summary": null,
+  "orgs": [],
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "Could not be read (bot protection)."
+ },
+ {
+  "id": "mospace-vc-cold-plate-thesis",
+  "url": "https://mospace.umsystem.edu/items/db9099db-1ec1-4e82-b5f7-b5af4b4746c0",
+  "title": null,
+  "publisher": null,
+  "date": null,
+  "area": "datacentre",
+  "story": "mospace-vc-cold-plate-thesis",
+  "summary": null,
+  "orgs": [],
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "Could not be read (HTTP 403)."
+ },
+ {
+  "url": "https://cordis.europa.eu/project/id/101272121",
+  "title": "BRIDGE: Bubble-induced heat tRansfer enhancement for Immersion-cooleD data centers: A strateGy to Enhance thermal performance",
+  "publisher": "CORDIS",
+  "date": "2026-10",
+  "area": "datacentre",
+  "kind": "grant",
+  "source_api": "cordis",
+  "abstract": "The proposed project BRIDGE aims to pioneer a transformative approach to two-phase immersion cooling by employing induced bubble injection, where a secondary immiscible liquid is introduced to actively generate bubbles and enhance heat transfer performance. This represents the first systematic investigation of controlled bubble generation via secondary liquid injection, going beyond existing studies focused on gas-injected flows or stratified multi-fluid systems. By unlocking tunable and highly efficient heat transfer mechanisms, BRIDGE targets significant advances in data centre cooling and extends to broader applications, including electric vehicle batteries and nuclear thermal management. The project will integrate experimental investigations with multi-scale modelling across four research objectives (ROs): (RO1) establish proof-of-concept by quantifying heat transfer enhancement ...",
+  "orgs": [
+   {
+    "name": "Aalborg Universitet",
+    "type": "Uni",
+    "country": "Denmark",
+    "role": "lead",
+    "eu_eur": 263393.28
+   },
+   {
+    "name": "Heatflow",
+    "type": "Commercial",
+    "country": "Denmark",
+    "role": "partner",
+    "eu_eur": null,
+    "on_cards": true
+   }
+  ],
+  "funding": {
+   "funder": "European Commission",
+   "amount": 263393.28,
+   "currency": "EUR",
+   "start": "2026-10",
+   "end": "2028-09",
+   "status": "SIGNED",
+   "ref": "101272121",
+   "partners": 2
+  },
+  "id": "cordis-bridge-aalborg-heatflow",
+  "story": "bridge-aalborg",
+  "summary": "BRIDGE is an EU Horizon (MSCA) fellowship at Aalborg University with Danish start-up Heatflow as partner, starting October 2026 (EUR 263k). It will inject a second immiscible liquid into two-phase immersion baths to generate bubbles on purpose and raise heat transfer, combining experiments with multi-scale modelling. Aimed at data-centre cooling, with EV batteries and nuclear named as other uses. Plan stage.",
+  "thermal": "Induced-bubble boiling enhancement for two-phase immersion cooling.",
+  "manufacturing": "Experiments and multi-scale modelling of bubble generation; no manufacturing angle stated.",
+  "evidence": "plan",
+  "gate": "pass"
+ },
+ {
+  "url": "https://cordis.europa.eu/project/id/101310658",
+  "title": "Next-Ion: BNXFLOW™: QUANTUM BN AEROGEL NANOFLUID ENDING THE €5B AI THERMAL CRISIS & ENABLING CARBON-NEUTRAL COMPUTING",
+  "publisher": "CORDIS",
+  "date": "2026-07",
+  "area": "datacentre",
+  "kind": "grant",
+  "source_api": "cordis",
+  "abstract": "AI processors now exceed 700 W, EV power electronics approach 800 kW, and today’s thermal interface materials (TIMs) have hit their physical limits. Greases (5–12 W/mK) pump out and age, while liquid metals, though conductive, are toxic, corrosive and prone to shorting. As a result, data-centre GPUs throttle under load and fail at >5%/year, costing hyperscalers over $100 M annually. BNxFlow, Next-Ion’s liquid boron nitride aerogel, directly overcomes this bottleneck. Built on a quantum-engineered BN aerogel architecture (validated by two Seals of Excellence), it forms a continuous, electrically insulating 3D network delivering 70–90 W/mK through-plane conductivity, a 6–18× leap over dielectric TIMs. Its patented shear-thinning and self-healing behaviour allows it to flow during application, then lock into a robust solid network that resists pump-out, vibration and thermal fatigue. The ...",
+  "orgs": [
+   {
+    "name": "Furnaquantum OY Next ION Enerji VE Yazilim Sanayi Ticaret Anonim Sirketi",
+    "type": "Commercial",
+    "country": "Turkey",
+    "role": "lead",
+    "eu_eur": 347543.0
+   }
+  ],
+  "funding": {
+   "funder": "European Commission",
+   "amount": 347543.0,
+   "currency": "EUR",
+   "start": "2026-07",
+   "end": "2028-06",
+   "status": "SIGNED",
+   "ref": "101310658",
+   "partners": 1
+  },
+  "id": "cordis-nextion-bn-aerogel-tim",
+  "story": "nextion-bnxflow",
+  "summary": "EU EIC grant (EUR 348k, from July 2026) to Turkish SME Next-Ion for BNxFlow, a liquid boron nitride aerogel thermal interface material. The company claims 70-90 W/mK through-plane conductivity, 6-18 times typical dielectric interface materials, with self-healing behaviour that resists pump-out. Company claims; no independent data.",
+  "thermal": "Thermal interface material between AI chips and cold plates.",
+  "manufacturing": "Shear-thinning paste that sets into a solid BN network after application.",
+  "evidence": "claim",
+  "gate": "pass"
+ },
+ {
+  "url": "https://doi.org/10.1016/j.sftr.2025.101533",
+  "title": "Investigating awareness and behavioural intentions from AI water footprint digital posters in higher education settings",
+  "publisher": "Sustainable Futures",
+  "date": "2025-11-21",
+  "area": "datacentre",
+  "kind": "paper",
+  "source_api": "openalex",
+  "abstract": "• First empirical study linking AI use to behavioural intentions through environmental messaging in a higher education setting. • Participants intend to reflect more critically on AI necessity after the campaign. • Participants found AI’s water consumption unclear, suggesting room for improvement in visual design. • Localised digital posters effectively captured attention in high-traffic university spaces. • Offers a low-cost, replicable model for implementing sustainability in discussions around developing technology. As artificial intelligence (AI) becomes increasingly embedded in everyday digital tools, its environmental impact, particularly the hidden water consumption from data centre cooling, remains largely unrecognised by users. This study investigates whether targeted science communication can raise awareness of the AI water footprint through a university-wide digital poster ...",
+  "orgs": [
+   {
+    "name": "University of Glasgow",
+    "type": "Uni",
+    "country": "UK",
+    "role": "researcher"
+   }
+  ],
+  "funding": null,
+  "id": "openalex-investigating-awareness-and-behavioural",
+  "story": "openalex-investigating-awareness-and-behavioural",
+  "summary": "• First empirical study linking AI use to behavioural intentions through environmental messaging in a higher education setting. • Participants intend to reflect more critically on AI necessity after the campaign. • Participants found AI’s water consumption unclear, suggesting room for improvement in",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.3390/en18143747",
+  "title": "Novel Artificial Intelligence Applications in Energy: A Systematic Review",
+  "publisher": "Energies",
+  "date": "2025-07-15",
+  "area": "datacentre",
+  "kind": "paper",
+  "source_api": "openalex",
+  "abstract": "This systematic review examines state-of-the-art artificial intelligence applications in energy systems, assessing their performance, real-world deployments and transformative potential. Guided by PRISMA 2020, we searched Web of Science, IEEE Xplore, ScienceDirect, SpringerLink, and Google Scholar for English-language studies published between January 2015 and January 2025 that reported novel AI uses in energy, empirical results, or significant theoretical advances and passed peer review. After title–abstract screening and full-text assessment, it was determined that 129 of 3000 records met the inclusion criteria. The methodological quality, reproducibility and real-world validation were appraised, and the findings were synthesised narratively around four critical themes: reinforcement learning (35 studies), multi-agent systems (28), planning under uncertainty (25), and AI for ...",
+  "orgs": [
+   {
+    "name": "Imperial College London",
+    "type": "Uni",
+    "country": "UK",
+    "role": "researcher",
+    "on_cards": true
+   }
+  ],
+  "funding": null,
+  "id": "openalex-novel-artificial-intelligence-applicati",
+  "story": "openalex-novel-artificial-intelligence-applicati",
+  "summary": "This systematic review examines state-of-the-art artificial intelligence applications in energy systems, assessing their performance, real-world deployments and transformative potential. Guided by PRISMA 2020, we searched Web of Science, IEEE Xplore, ScienceDirect, SpringerLink, and Google Scholar f",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.1016/j.ese.2026.100702",
+  "title": "Global data–water symbiosis reduces AI infrastructure's carbon and water footprint",
+  "publisher": "Environmental Science and Ecotechnology",
+  "date": "2026-04-26",
+  "area": "datacentre",
+  "kind": "paper",
+  "source_api": "openalex",
+  "abstract": "Data centres support artificial intelligence (AI) development but place rapidly increasing demands on electricity and freshwater resources, with cooling representing a significant portion of their total energy consumption. Wastewater treatment plants (WWTPs) discharge large volumes of treated effluent with substantial cooling potential; however, their integration with data centre infrastructure has not been evaluated. Here we construct a global geodatabase of over 4,775 data centres and 57,547 municipal WWTPs across 98 countries, integrating spatial analysis, engineering systems modelling, optimization, and life-cycle assessment to quantify the benefits of combining treated water reuse with bidirectional thermal recovery. The analysis reveals a strong global spatial co-occurrence between data centres and WWTPs, enabling optimized national-scale pairings in which treated effluent is used ...",
+  "orgs": [
+   {
+    "name": "Harbin Institute of Technology",
+    "type": "Uni",
+    "country": "China",
+    "role": "researcher"
+   },
+   {
+    "name": "Heilongjiang University",
+    "type": "Uni",
+    "country": "China",
+    "role": "researcher"
+   },
+   {
+    "name": "University of Exeter",
+    "type": "Uni",
+    "country": "UK",
+    "role": "researcher"
+   },
+   {
+    "name": "KWR Water Research Institute",
+    "type": "Other",
+    "country": "Netherlands",
+    "role": "researcher"
+   },
+   {
+    "name": "University of Michigan",
+    "type": "Uni",
+    "country": "USA",
+    "role": "researcher"
+   }
+  ],
+  "funding": {
+   "funders": [
+    "European Research Council",
+    "Horizon 2020 Framework Programme",
+    "National Natural Science Foundation of China",
+    "Natural Science Foundation of Shenzhen City",
+    "Science, Technology and Innovation Commission of Shenzhen Municipality",
+    "Shenzhen Science and Technology Innovation Program",
+    "Shenzhen Technical Project"
+   ]
+  },
+  "id": "openalex-global-data-water-symbiosis-reduces-ai",
+  "story": "openalex-global-data-water-symbiosis-reduces-ai",
+  "summary": "Data centres support artificial intelligence (AI) development but place rapidly increasing demands on electricity and freshwater resources, with cooling representing a significant portion of their total energy consumption. Wastewater treatment plants (WWTPs) discharge large volumes of treated efflue",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://arxiv.org/abs/2507.20018",
+  "title": "The Carbon Cost of Conversation, Sustainability in the Age of Language Models",
+  "publisher": "arXiv",
+  "date": "2025-07-26",
+  "area": "datacentre",
+  "kind": "preprint",
+  "source_api": "arxiv",
+  "abstract": "Large language models (LLMs) like GPT-3 and BERT have revolutionized natural language processing (NLP), yet their environmental costs remain dangerously overlooked. This article critiques the sustainability of LLMs, quantifying their carbon footprint, water usage, and contribution to e-waste through case studies of models such as GPT-4 and energy-efficient alternatives like Mistral 7B. Training a single LLM can emit carbon dioxide equivalent to hundreds of cars driven annually, while data centre cooling exacerbates water scarcity in vulnerable regions. Systemic challenges corporate greenwashing, redundant model development, and regulatory voids perpetuate harm, disproportionately burdening marginalized communities in the Global South. However, pathways exist for sustainable NLP: technical innovations (e.g., model pruning, quantum computing), policy reforms (carbon taxes, mandatory ...",
+  "authors": [
+   "Sayed Mahbub Hasan Amiri",
+   "Prasun Goswami",
+   "Md. Mainul Islam",
+   "Mohammad Shakhawat Hossen",
+   "Sayed Majhab Hasan Amiri",
+   "Naznin Akter"
+  ],
+  "orgs": [],
+  "id": "arxiv-the-carbon-cost-of-conversation-sustainabi",
+  "story": "arxiv-the-carbon-cost-of-conversation-sustainabi",
+  "summary": "Large language models (LLMs) like GPT-3 and BERT have revolutionized natural language processing (NLP), yet their environmental costs remain dangerously overlooked. This article critiques the sustainability of LLMs, quantifying their carbon footprint, water usage, and contribution to e-waste through",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.1016/j.applthermaleng.2026.130340",
+  "title": "A virtual model of data centre cooling",
+  "publisher": "Applied Thermal Engineering",
+  "date": "2026-04",
+  "area": "datacentre",
+  "kind": "paper",
+  "source_api": "crossref",
+  "abstract": "",
+  "orgs": [],
+  "funding": {
+   "funders": [
+    "Technological University Dublin"
+   ]
+  },
+  "id": "crossref-a-virtual-model-of-data-centre-cooling",
+  "story": "crossref-a-virtual-model-of-data-centre-cooling",
+  "summary": "A virtual model of data centre cooling",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.3390/app16010323",
+  "title": "Energy Efficiency Through Waste-Heat Recovery: Hybrid Data-Centre Cooling in District Heating Applications",
+  "publisher": "Applied Sciences",
+  "date": "2025-12-28",
+  "area": "datacentre",
+  "kind": "paper",
+  "source_api": "crossref",
+  "abstract": "Growing demand for computing resources is increasing electricity use and cooling needs in data centres (DCs). Simultaneously, it creates opportunities for decarbonisation through the integration of waste heat (WH) into district heating (DH) systems. Such integration reduces primary energy (PE) consumption and emissions, particularly in low-temperature DH networks. In this study, the possibility for utilisation of WH from DC hybrid cooling system into third generation (3G), fourth generation (4G), and fifth generation (5G) DH systems is investigated. The work is based on the dynamic simulations in TRNSYS. The model of the hybrid cooling system consists of a direct liquid cooling (DLC) loop (25–30 °C) and a chilled water rack coolers (CRCC) loop (10–15 °C). For 3G DH, a high-temperature water-to-water heat pump (HP) is applied to ensure the required water temperature in the system. ...",
+  "orgs": [
+   {
+    "name": "Faculty of Engineering, University of Rijeka, Vukovarska 58, 51000 Rijeka, Croatia",
+    "type": "Uni",
+    "country": null,
+    "role": "researcher"
+   }
+  ],
+  "funding": {
+   "funders": [
+    "Development of Research Infrastructure at the University of Rijeka Campus",
+    "University of Rijeka"
+   ]
+  },
+  "id": "rijeka-hybrid-dc-cooling-district-heat",
+  "story": "rijeka-dc-dh",
+  "summary": "University of Rijeka TRNSYS study of feeding waste heat from a hybrid data-centre cooling system (a direct liquid cooling loop at 25-30 °C plus chilled-water rack coolers at 10-15 °C) into third, fourth and fifth generation district heating. A high-temperature heat pump lifts the heat for older 3G networks. Simulation; Applied Sciences, December 2025.",
+  "thermal": "Recovering data-centre liquid-cooling heat into district heating via heat pumps.",
+  "manufacturing": "none",
+  "evidence": "simulation",
+  "gate": "pass"
+ },
+ {
+  "url": "https://doi.org/10.3390/en18102581",
+  "title": "Modelling the Temperature of a Data Centre Cooling System Using Machine Learning Methods",
+  "publisher": "Energies",
+  "date": "2025-05-16",
+  "area": "datacentre",
+  "kind": "paper",
+  "source_api": "crossref",
+  "abstract": "Reducing the energy consumption of a data centre while maintaining the requirements of the compute resources is a challenging problem that requires intelligent system design. It even becomes more challenging when dealing with an operating data centre. To achieve that goal without compromising the working conditions of the compute resources, a temperature model is needed that estimates the temperature within the hot corridor of the cooling system based on the properties of the external weather conditions and internal conditions such as server energy consumption, and cooling system state. In this paper, we discuss the dataset creation process as well as the process of evaluating a model for forecasting the temperature in the warm corridor of the data centre. The proposed solution compares two new neural network architectures, namely Time-Series Dense Encoder (TiDE) and Time-Series Mixer ...",
+  "orgs": [
+   {
+    "name": "Department of Industrial Informatics, Faculty of Materials Engineering, Silesian University of Technology, Krasińskiego ",
+    "type": "Uni",
+    "country": null,
+    "role": "researcher"
+   },
+   {
+    "name": "Joint Doctorate School, Department of Industrial Informatics, Faculty of Materials Engineering, Silesian University of T",
+    "type": "Uni",
+    "country": null,
+    "role": "researcher"
+   },
+   {
+    "name": "KAMSOFT S.A., 1 Maja 133, 40-235 Katowice, Poland",
+    "type": "Other",
+    "country": null,
+    "role": "researcher"
+   }
+  ],
+  "funding": {
+   "funders": [
+    "Silesian University of Technology"
+   ]
+  },
+  "id": "crossref-modelling-the-temperature-of-a-data-cen",
+  "story": "crossref-modelling-the-temperature-of-a-data-cen",
+  "summary": "Reducing the energy consumption of a data centre while maintaining the requirements of the compute resources is a challenging problem that requires intelligent system design. It even becomes more challenging when dealing with an operating data centre. To achieve that goal without compromising the wo",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://cordis.europa.eu/project/id/101297436",
+  "title": "SMART COOL FINS: FIRST ADAPTIVE THERMAL SOLUTION FOR NEXT-GEN CHIPS",
+  "publisher": "CORDIS",
+  "date": "2026-06",
+  "area": "datacentre",
+  "kind": "grant",
+  "source_api": "cordis",
+  "abstract": "The rise of AI, HPC, and cloud computing has pushed server GPU and CPU power consumption beyond 1 kW, making thermal management the critical bottleneck for data centers. In these installations, cooling already consumes 40% of electricity, equal to €19bn annually worldwide. By 2026, global data center consumption is expected to exceed 1,000 TWh, with up to 50% dedicated to cooling. Current methods — air, immersion, or direct-to-chip liquid — are static, inefficient, and costly. They fail to manage thermal spikes, cause overcooling, and waste energy. Without disruptive cooling solutions, overheating will jeopardize system reliability, inflate OPEX, and undermine Europe’s digital sovereignty and climate neutrality goals. UniSCool has developed Smart Cool Fins, the first “adaptive” cooling technology for high-density electronics. Our patented fins deform autonomously under temperature, ...",
+  "orgs": [
+   {
+    "name": "Universal Smart Cooling S.l.",
+    "type": "Commercial",
+    "country": "Spain",
+    "role": "lead",
+    "eu_eur": 2498426.7
+   }
+  ],
+  "funding": {
+   "funder": "European Commission",
+   "amount": 2498426.7,
+   "currency": "EUR",
+   "start": "2026-06",
+   "end": "2028-05",
+   "status": "SIGNED",
+   "ref": "101297436",
+   "partners": 1
+  },
+  "id": "cordis-smart-cool-fins-uniscool",
+  "story": "uniscool-smart-fins",
+  "summary": "Spanish start-up Universal Smart Cooling (UniSCool) won a EUR 2.5m EU EIC grant (June 2026 to May 2028) for Smart Cool Fins, patented heat-sink fins that deform by themselves with temperature to cool hot spots harder and avoid overcooling. The company says it targets AI and HPC chips above 1 kW. Company claims; no performance data in the abstract.",
+  "thermal": "Passively adaptive fins that change shape with temperature on high-power chip heat sinks.",
+  "manufacturing": "Not stated; temperature-responsive (likely shape-memory or bimetal) fins.",
+  "evidence": "claim",
+  "gate": "pass"
+ },
+ {
+  "url": "https://doi.org/10.66816/pr5067571",
+  "title": "Data Center Cooling: Challenges and Outlook",
+  "publisher": "OpenAlex",
+  "date": "2026-01-01",
+  "area": "datacentre",
+  "kind": "paper",
+  "source_api": "openalex",
+  "abstract": "",
+  "orgs": [],
+  "funding": null,
+  "id": "openalex-data-center-cooling-challenges-and-outl",
+  "story": "openalex-data-center-cooling-challenges-and-outl",
+  "summary": "Data Center Cooling: Challenges and Outlook",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.3390/electronics14214231",
+  "title": "Physics-Informed Predictive Causality in Data Center Cooling",
+  "publisher": "Electronics",
+  "date": "2025-10-29",
+  "area": "datacentre",
+  "kind": "paper",
+  "source_api": "openalex",
+  "abstract": "Understanding causal structures in data center cooling systems is essential for energy optimization and fault detection. Conventional methods based on physical connectivity ensure interpretability but often miss latent interactions, while Granger causality captures predictive dependencies yet suffers from sensitivity to data quality and ambiguous directionality. To overcome these limitations, we propose a hybrid causal discovery framework that integrates physics-informed priors with Granger-inspired predictive modeling. A key innovation is the use of a relative increment formulation, which focuses on the proportional change in observables immediately after control actions. This design filters out long-term seasonal trends and emphasizes short-term, actionable effects. Applied to a large-scale dataset from a real data center, the framework successfully recovers known control–feedback ...",
+  "orgs": [
+   {
+    "name": "Southeast University",
+    "type": "Uni",
+    "country": "China",
+    "role": "researcher"
+   },
+   {
+    "name": "ZTE (China)",
+    "type": "Commercial",
+    "country": "China",
+    "role": "researcher"
+   }
+  ],
+  "funding": {
+   "funders": [
+    "ZTE Corporation"
+   ]
+  },
+  "id": "openalex-physics-informed-predictive-causality-i",
+  "story": "openalex-physics-informed-predictive-causality-i",
+  "summary": "Understanding causal structures in data center cooling systems is essential for energy optimization and fault detection. Conventional methods based on physical connectivity ensure interpretability but often miss latent interactions, while Granger causality captures predictive dependencies yet suffer",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.17023/4t1t-mf30",
+  "title": "Reliability and Availability of Novel Data Center Cooling Systems",
+  "publisher": "IEEE RESOURCE CENTERS",
+  "date": "2026-03-03",
+  "area": "datacentre",
+  "kind": "paper",
+  "source_api": "openalex",
+  "abstract": "",
+  "orgs": [],
+  "funding": null,
+  "id": "openalex-reliability-and-availability-of-novel-d",
+  "story": "openalex-reliability-and-availability-of-novel-d",
+  "summary": "Reliability and Availability of Novel Data Center Cooling Systems",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://arxiv.org/abs/2610.04735",
+  "title": "Estimating data center water use: Best practices and critical questions",
+  "publisher": "arXiv",
+  "date": "2026-10-03",
+  "area": "datacentre",
+  "kind": "preprint",
+  "source_api": "arxiv",
+  "abstract": "Concerns are growing about the water use of data centers. To quantify the scales, drivers, and possible trajectories of this water use, analytical estimation is required. However, current estimation methods and results vary widely due, in part, to a lack of established best practices. This variance is illustrated with a U.S. case study demonstrating a roughly 24-fold difference in possible outcomes based on observed U.S. study design variations. To address these challenges, this review synthesizes 14 best practices for advancing the science and utility of data center water use estimation. These proposed best practices can also be used as critical questions for stakeholders when evaluating the quality of any study. Using a structured rubric, it further assesses the literature to date (31 studies) against these best practices. The assessment reveals important opportunities for improvement ...",
+  "authors": [
+   "Eric Masanet"
+  ],
+  "orgs": [],
+  "id": "arxiv-estimating-data-center-water-use-best-prac",
+  "story": "arxiv-estimating-data-center-water-use-best-prac",
+  "summary": "Concerns are growing about the water use of data centers. To quantify the scales, drivers, and possible trajectories of this water use, analytical estimation is required. However, current estimation methods and results vary widely due, in part, to a lack of established best practices. This variance ",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.30747",
+  "title": "Beyond the Last Truffula Tree: SustainAI - A Water-Aware, Closed-Loop Framework for Environmentally Accountable AI",
+  "publisher": "arXiv",
+  "date": "2026-09-25",
+  "area": "datacentre",
+  "kind": "preprint",
+  "source_api": "arxiv",
+  "abstract": "As artificial intelligence (AI) becomes embedded in everyday life, its environmental footprint, particularly water consumption remains largely invisible. While energy and carbon impacts are widely recognized, the substantial freshwater demands of data center cooling and electricity generation receive little attention. To address this gap, we introduce SustainAI, a water-aware, closed-loop framework incorporating environmental accountability into AI deployment. SustainAI integrates real-time water metering, a hallucination-aware penalty model, and a water-aware routing algorithm that accounts for regional water stress. Evaluated via Small Language Models (SLMs) extracting health misinformation, results reveal an 11-fold variation in water footprint across geographically distributed data centers (0.0477 mL to 0.5360 mL per inference). Across 1,335 inference runs, the system consumed ...",
+  "authors": [
+   "Farnaz Farid",
+   "Tashfia Towkee",
+   "Sania Nasreen",
+   "Sami bin Azad"
+  ],
+  "orgs": [],
+  "id": "arxiv-beyond-the-last-truffula-tree-sustainai-a",
+  "story": "arxiv-beyond-the-last-truffula-tree-sustainai-a",
+  "summary": "As artificial intelligence (AI) becomes embedded in everyday life, its environmental footprint, particularly water consumption remains largely invisible. While energy and carbon impacts are widely recognized, the substantial freshwater demands of data center cooling and electricity generation receiv",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://arxiv.org/abs/2609.00204",
+  "title": "Exploiting the Benefits of V2B Application on Peak Shaving of Data Center Loads",
+  "publisher": "arXiv",
+  "date": "2026-08-31",
+  "area": "datacentre",
+  "kind": "preprint",
+  "source_api": "arxiv",
+  "abstract": "The accelerated growth in data center projects has introduced a demand-driven bottleneck throughout power grids and contributed to a substantial increase in carbon emissions. These concerns are fueling discussions on methods to use existing energy assets to drive operational efficiency. To this end, this paper explores the benefits of Vehicle-to-Building (V2B) applications to support peak shaving of data center cooling loads. Initially, a literature review was conducted considering V2B constraints and optimization methods including SoC limitations, EV participation, tariffs, and building loads. This analysis was then used to develop a conceptual case study of a 10 MW data center in Loudoun County, VA by simulating a temperature-dependent load profile and adjusting the V2B participation of 40 commercial and passenger EVs. Simulation results indicate that, depending on seasonal variations ...",
+  "authors": [
+   "Arya Joshi",
+   "Hamed Haggi",
+   "Chinmay Morankar"
+  ],
+  "orgs": [],
+  "id": "arxiv-exploiting-the-benefits-of-v2b-application",
+  "story": "arxiv-exploiting-the-benefits-of-v2b-application",
+  "summary": "The accelerated growth in data center projects has introduced a demand-driven bottleneck throughout power grids and contributed to a substantial increase in carbon emissions. These concerns are fueling discussions on methods to use existing energy assets to drive operational efficiency. To this end,",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.2118/1025-0004-jpt",
+  "title": "Scaling Treated Produced Water for Data Center Cooling in the Permian",
+  "publisher": "Journal of Petroleum Technology",
+  "date": "2025-10-01",
+  "area": "datacentre",
+  "kind": "paper",
+  "source_api": "crossref",
+  "abstract": "Water is the liquid of life. It cycles endlessly from air, land, and sea, and makes life on planet Earth possible. The average adult human is made up of roughly 60% water and consumes around 50,000 liters of water in a lifetime. However, this miracle solution can pose its fair share of problems—dangerous currents at sea, flooding on land when too much falls from the sky too fast, and crushing pressures at depths that can hinder ocean exploration. Still, water is a commodity, and no one may know that better than the oil and gas business, where millions of gallons of water are used every day to stimulate complex shale wells into giving up their hydrocarbon resource. In some regions, oil and gas wells do not return nearly the water that is pumped into them. But in areas like the crucial Permian Basin in west Texas, a given well can return up to 12 barrels of produced water for every single ...",
+  "orgs": [
+   {
+    "name": "JPT Technology Editor",
+    "type": "Other",
+    "country": null,
+    "role": "researcher"
+   }
+  ],
+  "funding": null,
+  "id": "crossref-scaling-treated-produced-water-for-data",
+  "story": "crossref-scaling-treated-produced-water-for-data",
+  "summary": "Water is the liquid of life. It cycles endlessly from air, land, and sea, and makes life on planet Earth possible. The average adult human is made up of roughly 60% water and consumes around 50,000 liters of water in a lifetime. However, this miracle solution can pose its fair share of problems—dang",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.1016/j.softx.2026.103073",
+  "title": "DCOPTEST: A novel unified virtual testbed for data center cooling systems",
+  "publisher": "SoftwareX",
+  "date": "2026-12",
+  "area": "datacentre",
+  "kind": "paper",
+  "source_api": "crossref",
+  "abstract": "",
+  "orgs": [],
+  "funding": {
+   "funders": [
+    "National Science Foundation",
+    "National Science Foundation Division of Electrical Communications and Cyber Systems",
+    "US Department of Energy"
+   ]
+  },
+  "id": "crossref-dcoptest-a-novel-unified-virtual-testbe",
+  "story": "crossref-dcoptest-a-novel-unified-virtual-testbe",
+  "summary": "DCOPTEST: A novel unified virtual testbed for data center cooling systems",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.1007/s11630-025-2146-x",
+  "title": "Activate Radiative Cooling Technology for Data Center Cooling and Energy Efficiency Analysis",
+  "publisher": "Journal of Thermal Science",
+  "date": "2025-05",
+  "area": "datacentre",
+  "kind": "paper",
+  "source_api": "crossref",
+  "abstract": "",
+  "orgs": [],
+  "funding": null,
+  "id": "crossref-activate-radiative-cooling-technology-f",
+  "story": "crossref-activate-radiative-cooling-technology-f",
+  "summary": "Activate Radiative Cooling Technology for Data Center Cooling and Energy Efficiency Analysis",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.5293/kfma.2025.28.4.012",
+  "title": "Numerical Analysis of Internal Flow Field of a Oil Cooler",
+  "publisher": "The KSFM Journal of Fluid Machinery",
+  "date": "2025-08-18",
+  "area": "aerospace",
+  "kind": "paper",
+  "source_api": "openalex",
+  "abstract": "The studied oil cooler consists of 14 wave-patterned oil channels, resulting in a complex internal geometry. It is necessary to examine the internal flow characteristics that could directly affect the performance of the oil cooler. In this study, the internal flow characteristics such as velocity, flow distribution, pressure drop, and recirculation zones within the oil cooler were analyzed using the ANSYS FLUENT solver. Mesh convergence study was successfully conducted by comparing the results of analyses with grid sizes 2.2 times, 1.42 times, and 1 times mesh. The analysis results of two turbulence models, Realizable k-𝜀 and SST k-ω, were compared, and the SST k-ω model was found to be more suitable. Recirculation phenomena near the walls, inlet, and outlet were observed. Initially, oil was slightly concentrated in the 4th channel of the 1st pass, but it was evenly distributed into all ...",
+  "orgs": [],
+  "funding": null,
+  "id": "openalex-numerical-analysis-of-internal-flow-fie",
+  "story": "openalex-numerical-analysis-of-internal-flow-fie",
+  "summary": "The studied oil cooler consists of 14 wave-patterned oil channels, resulting in a complex internal geometry. It is necessary to examine the internal flow characteristics that could directly affect the performance of the oil cooler. In this study, the internal flow characteristics such as velocity, f",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.17654/0973576326031",
+  "title": "EXPERIMENTAL STUDY ON THE RESISTANCE CHARACTERISTICS OF AN OIL COOLER FILTER ELEMENT",
+  "publisher": "JP Journal of Heat and Mass Transfer",
+  "date": "2026-07-01",
+  "area": "aerospace",
+  "kind": "paper",
+  "source_api": "openalex",
+  "abstract": "Due to the flow path constraints of the lubrication oil cooling system on the NY6240ZJA diesel engine, the oil cooler is positioned downstream of the oil filter. This configuration poses a potential risk to the lubrication system. To prevent debris in the piping and heat exchanger from entering the main oil gallery, installing a filter element at the oil cooler outlet has been identified as an effective countermeasure. However, the addition of such filter element significantly increases the flow resistance on the oil side. It is therefore necessary to investigate the feasibility of their installation and to characterize the resistance behavior of filter element with specific mesh sizes. This paper presents an experimental investigation into the resistance characteristics of filter element with varying mesh numbers under different temperature conditions. The results indicate that, ...",
+  "orgs": [
+   {
+    "name": "Lanzhou Jiaotong University",
+    "type": "Uni",
+    "country": "China",
+    "role": "researcher"
+   }
+  ],
+  "funding": {
+   "funders": [
+    "National Natural Science Foundation of China"
+   ]
+  },
+  "id": "openalex-experimental-study-on-the-resistance-ch",
+  "story": "openalex-experimental-study-on-the-resistance-ch",
+  "summary": "Due to the flow path constraints of the lubrication oil cooling system on the NY6240ZJA diesel engine, the oil cooler is positioned downstream of the oil filter. This configuration poses a potential risk to the lubrication system. To prevent debris in the piping and heat exchanger from entering the ",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.14775/ksmpe.2026.25.6.030",
+  "title": "Flow Characteristics of an Oil Cooler for Machine Tools Using Thermoelectric Elements",
+  "publisher": "Journal of the Korean Society of Manufacturing Process Engineers",
+  "date": "2026-06-18",
+  "area": "aerospace",
+  "kind": "paper",
+  "source_api": "openalex",
+  "abstract": "",
+  "orgs": [],
+  "funding": null,
+  "id": "openalex-flow-characteristics-of-an-oil-cooler-f",
+  "story": "openalex-flow-characteristics-of-an-oil-cooler-f",
+  "summary": "Flow Characteristics of an Oil Cooler for Machine Tools Using Thermoelectric Elements",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.57235/jetish.v5i2.9198",
+  "title": "Pengaruh Oil 2197, 2380, dan MJO II terhadap Deteriorasi O-ring Oil Cooler APU GTCP331",
+  "publisher": "Journal of Education Technology Information Social Sciences and Health",
+  "date": "2026-09-12",
+  "area": "aerospace",
+  "kind": "paper",
+  "source_api": "crossref",
+  "abstract": "Kebocoran oil cooler Auxiliary Power Unit (APU) GTCP331 pada armada Airbus A330 yang dirawat PT GMF AeroAsia Tbk tercatat 41 kejadian sepanjang 2022–2025 dengan tren meningkat dari 5 menjadi 15 kejadian per tahun, sementara penanganannya masih bersifat korektif tanpa analisis akar penyebab. Pemeriksaan teknis menunjukkan sumber kebocoran berada pada deteriorasi O-ring P/N AS43013-118 berbahan Fluorocarbon (FKM) 76 IRHD, sedangkan armada tersebut dirawat menggunakan tiga oli turbin berspesifikasi sama, yaitu MIL-PRF-23699. Penelitian ini bertujuan menganalisis pengaruh Oil 2197, Oil 2380, dan Mobil Jet Oil II (MJO II) terhadap deteriorasi O-ring tersebut serta menentukan oli yang berdampak paling signifikan. Metode yang digunakan adalah kualitatif deskriptif dengan pendekatan eksperimental melalui immersion test mengacu ASTM D471; metode ini dipilih karena memungkinkan pengamatan ...",
+  "orgs": [],
+  "funding": null,
+  "id": "crossref-pengaruh-oil-2197-2380-dan-mjo-ii-terha",
+  "story": "crossref-pengaruh-oil-2197-2380-dan-mjo-ii-terha",
+  "summary": "Kebocoran oil cooler Auxiliary Power Unit (APU) GTCP331 pada armada Airbus A330 yang dirawat PT GMF AeroAsia Tbk tercatat 41 kejadian sepanjang 2022–2025 dengan tren meningkat dari 5 menjadi 15 kejadian per tahun, sementara penanganannya masih bersifat korektif tanpa analisis akar penyebab. Pemeriks",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.17223/00213411/69/1/4",
+  "title": "Verification of RANS turbulence models for external flow around an oil cooler",
+  "publisher": "Izvestiya vysshikh uchebnykh zavedenii. Fizika",
+  "date": "2026-01-25",
+  "area": "aerospace",
+  "kind": "paper",
+  "source_api": "crossref",
+  "abstract": "The article considers the issues of mathematical modeling of external aerodynamic flow around a single section of an industrial oil cooler with a developed external surface. The velocity of the injected gas at the inlet to the external air ducts of a single section does not exceed 10 m/s, the Reynolds number calculated by the gap height varies in the range from 20 000 to 400 000 An additional geometrically conditioned turbulization of the flow in the air duct of a single section is also observed. The influence of RANS turbulence models on the flow structure in the air ducts of a single section of an oil cooler and behind the section, is investigated, and the influence of turbulence models on the pressure losses in the air duct is estimated. The quasi-stationary spatial problem of external aerodynamics is solved by mathematical modeling methods. Its formulation is consistent with ...",
+  "orgs": [
+   {
+    "name": "Izhevsk State Technical University named after M.T. Kalashnikov",
+    "type": "Uni",
+    "country": null,
+    "role": "researcher"
+   }
+  ],
+  "funding": null,
+  "id": "crossref-verification-of-rans-turbulence-models",
+  "story": "crossref-verification-of-rans-turbulence-models",
+  "summary": "The article considers the issues of mathematical modeling of external aerodynamic flow around a single section of an industrial oil cooler with a developed external surface. The velocity of the injected gas at the inlet to the external air ducts of a single section does not exceed 10 m/s, the Reynol",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.1177/09544100261434428",
+  "title": "Heat exchanger integration with an aero-engine bypass duct",
+  "publisher": "Proceedings of the Institution of Mechanical Engineers Part G Journal of Aerospace Engineering",
+  "date": "2026-05-13",
+  "area": "aerospace",
+  "kind": "paper",
+  "source_api": "openalex",
+  "abstract": "The development of aero engines with geared fans may require the use of an air/oil heat exchanger (AOHE) embedded within the bypass duct to dissipate heat from the power gearbox of the fan. It is important that the AOHE system is designed and installed to minimise any detrimental impacts on exhaust performance while meeting the heat exchanger (HEX) heat transfer requirements. This paper introduces and demonstrates the capabilities of a coupled mixed fidelity method to model a naturally ventilated AOHE embedded within the bypass duct. The method is demonstrated in this paper by using it to explore and quantify the trade-offs between the HEX design and performance and the impact on the exhaust system. Overall, for the specific example considered, the introduction of the HEX could reduce the cruise thrust by 0.7% while meeting the required heat transfer at maximum take-off. Overall, the ...",
+  "orgs": [
+   {
+    "name": "Cranfield University",
+    "type": "Uni",
+    "country": "UK",
+    "role": "researcher",
+    "on_cards": true
+   },
+   {
+    "name": "Rolls-Royce (United Kingdom)",
+    "type": "Commercial",
+    "country": "UK",
+    "role": "researcher"
+   }
+  ],
+  "funding": {
+   "funders": [
+    "Engineering and Physical Sciences Research Council",
+    "UK Research and Innovation"
+   ]
+  },
+  "id": "cranfield-rr-bypass-duct-aohe",
+  "story": "cranfield-rr-aohe",
+  "summary": "Cranfield University and Rolls-Royce (EPSRC/UKRI funded) built a coupled mixed-fidelity method to model a naturally ventilated air-oil heat exchanger in the bypass duct of a geared-fan engine and its effect on the exhaust. In their example, the heat exchanger met the heat load at maximum take-off at a cost of 0.7% cruise thrust. Simulation; Proc IMechE Part G, May 2026.",
+  "thermal": "Air-oil heat exchanger in the bypass duct to cool the fan power gearbox.",
+  "manufacturing": "Design and installation trade-off modelling; no manufacturing detail.",
+  "evidence": "simulation",
+  "gate": "pass"
+ },
+ {
+  "url": "https://doi.org/10.1016/j.ijheatmasstransfer.2025.127704",
+  "title": "Experimental investigation and modeling of airside heat transfer characteristics based on dual-working-fluid for microchannel finned air-oil heat exchanger",
+  "publisher": "International Journal of Heat and Mass Transfer",
+  "date": "2026-01",
+  "area": "aerospace",
+  "kind": "paper",
+  "source_api": "crossref",
+  "abstract": "",
+  "orgs": [],
+  "funding": {
+   "funders": [
+    "Beihang University",
+    "China Postdoctoral Science Foundation"
+   ]
+  },
+  "id": "crossref-experimental-investigation-and-modeling",
+  "story": "crossref-experimental-investigation-and-modeling",
+  "summary": "Experimental investigation and modeling of airside heat transfer characteristics based on dual-working-fluid for microchannel finned air-oil heat exchanger",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.1016/j.ast.2026.113119",
+  "title": "Performance improvement of the air-oil heat exchanger within the third stream of an aero-engine by multi-objective optimization",
+  "publisher": "Aerospace Science and Technology",
+  "date": "2026-11",
+  "area": "aerospace",
+  "kind": "paper",
+  "source_api": "crossref",
+  "abstract": "",
+  "orgs": [],
+  "funding": {
+   "funders": [
+    "Jiangsu Province Natural Science Foundation",
+    "National Natural Science Foundation of China"
+   ]
+  },
+  "id": "ast-third-stream-aohe-optimisation",
+  "story": "ast-third-stream-aohe",
+  "summary": "Aerospace Science and Technology paper (November 2026, Chinese NSFC funding) on multi-objective optimisation of an air-oil heat exchanger placed in the third stream of an adaptive aero-engine. Title only; no abstract available.",
+  "thermal": "Air-oil heat exchanger in an engine third stream.",
+  "manufacturing": "Design optimisation.",
+  "evidence": "simulation",
+  "gate": "pass"
+ },
+ {
+  "url": "https://doi.org/10.1080/16184742.2025.2503163",
+  "title": "Climate risks in motorsport: setting boundary conditions in Formula 1",
+  "publisher": "European Sport Management Quarterly",
+  "date": "2025-07-08",
+  "area": "motorsport",
+  "kind": "paper",
+  "source_api": "openalex",
+  "abstract": "Research question The global nature of Formula 1 racing exposes the sport to diverse climate risks. We describe the process for setting evidence-based boundary conditions for climate-related hazards in motorsport, and then apply them to Formula 1.Research methods We assess risks for 25 Formula 1 racing circuits, including 24 venues in the 2024 racing schedule and one potential future site, by analysing historical weather data, air quality records, and flood risk projections to identify climate-related hazards that could impact race events.Results and findings The boundaries proposed herein are new and require further refinement; however, they allow us to draw some initial conclusions about the vulnerabilities of the F1 series in its current format. Our findings show that extreme heat is the most pervasive threat, affecting 19 of the 25 circuits. Flooding poses risks to 18 locations, ...",
+  "orgs": [
+   {
+    "name": "University of Toronto",
+    "type": "Uni",
+    "country": "Canada",
+    "role": "researcher"
+   },
+   {
+    "name": "Florida State University",
+    "type": "Uni",
+    "country": "USA",
+    "role": "researcher"
+   },
+   {
+    "name": "University of Edinburgh",
+    "type": "Uni",
+    "country": "UK",
+    "role": "researcher"
+   },
+   {
+    "name": "University of Tennessee at Knoxville",
+    "type": "Uni",
+    "country": "USA",
+    "role": "researcher"
+   },
+   {
+    "name": "Jacksonville University",
+    "type": "Uni",
+    "country": "USA",
+    "role": "researcher"
+   },
+   {
+    "name": "University of South Carolina",
+    "type": "Uni",
+    "country": "USA",
+    "role": "researcher"
+   },
+   {
+    "name": "Rowan University",
+    "type": "Uni",
+    "country": "USA",
+    "role": "researcher"
+   }
+  ],
+  "funding": null,
+  "id": "openalex-climate-risks-in-motorsport-setting-bou",
+  "story": "openalex-climate-risks-in-motorsport-setting-bou",
+  "summary": "Research question The global nature of Formula 1 racing exposes the sport to diverse climate risks. We describe the process for setting evidence-based boundary conditions for climate-related hazards in motorsport, and then apply them to Formula 1.Research methods We assess risks for 25 Formula 1 rac",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.37547/tajiir/volume07issue08-08",
+  "title": "Influence of Coatings on the Durability and Friction of Clutch Systems in Motorsport",
+  "publisher": "The American Journal of Interdisciplinary Innovations and Research",
+  "date": "2025-08-22",
+  "area": "motorsport",
+  "kind": "paper",
+  "source_api": "openalex",
+  "abstract": "The article presents a comprehensive analysis of the influence of surface coatings and microtextures on the frictional characteristics and durability of clutch components in professional motorsport applications. The study is based on an interdisciplinary approach that integrates engineering tribology, materials science, and applied mechanics of high-load transmission systems. Particular attention is given to content and comparative analysis of both domestic and international sources describing the behavior of DLC coatings, PTFE-based composites, and iron-based laser claddings under various friction modes, thermal loads, and cyclic stresses. Critical differences between coatings are identified in terms of friction coefficient, wear volume, thermal stability, and adhesion strength to the substrate. Based on empirical data, a typology of coating applicability is proposed for different ...",
+  "orgs": [],
+  "funding": null,
+  "id": "openalex-influence-of-coatings-on-the-durability",
+  "story": "openalex-influence-of-coatings-on-the-durability",
+  "summary": "The article presents a comprehensive analysis of the influence of surface coatings and microtextures on the frictional characteristics and durability of clutch components in professional motorsport applications. The study is based on an interdisciplinary approach that integrates engineering tribolog",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.1038/s41598-026-49736-0",
+  "title": "Structural optimization principles for edge AI in motorsport telemetry",
+  "publisher": "Scientific Reports",
+  "date": "2026-05-01",
+  "area": "motorsport",
+  "kind": "paper",
+  "source_api": "openalex",
+  "abstract": "In motorcycle motorsport, engineering decisions are constrained by mass, stiffness, fatigue life, and thermal margins. In a comparable way, deploying large language models (LLMs) for edge or trackside assistance is limited by memory capacity, bandwidth, latency, and power. This paper presents a systems-engineering framework that relates structural lightweighting and post-training quantization (PTQ) through second-order sensitivity. In mechanics, safe material removal is governed by the stiffness matrix [Formula: see text]; in neural networks, safe precision reduction is governed by curvature information encoded in the loss Hessian [Formula: see text]. To ground this analogy, we combine a structural case study based on topology optimization of a Formula Student upright with an edge-oriented evaluation of low-precision LLM deployment using established PTQ pipelines (GPTQ and AWQ). The ...",
+  "orgs": [
+   {
+    "name": "Universidad San Pablo CEU",
+    "type": "Uni",
+    "country": "Spain",
+    "role": "researcher"
+   },
+   {
+    "name": "UNIE Universidad",
+    "type": "Uni",
+    "country": "Spain",
+    "role": "researcher"
+   }
+  ],
+  "funding": {
+   "funders": [
+    "Comunidad de Madrid",
+    "Universidad San Pablo - CEU"
+   ]
+  },
+  "id": "openalex-structural-optimization-principles-for",
+  "story": "openalex-structural-optimization-principles-for",
+  "summary": "In motorcycle motorsport, engineering decisions are constrained by mass, stiffness, fatigue life, and thermal margins. In a comparable way, deploying large language models (LLMs) for edge or trackside assistance is limited by memory capacity, bandwidth, latency, and power. This paper presents a syst",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.37134/kupasseni.vol14.sp.13.2026",
+  "title": "Architectural Responses to Heat: Passive Cooling Strategies in Motorsport Facilities for Tropical Regions",
+  "publisher": "Kupas Seni",
+  "date": "2026-04-27",
+  "area": "motorsport",
+  "kind": "paper",
+  "source_api": "crossref",
+  "abstract": "This study explores the effectiveness of passive cooling strategies in climate-responsive motorsport facility design within tropical climates, focusing on Malaysia. Despite progress in sustainable infrastructure, there is a lack of research on passive design suited to hot and humid environments, where performance often takes precedence over environmental responsiveness. A comparative case study of six circuits Sepang, Dato Sagor, Kuala Selangor, Melaka, Mandalika (Indonesia), and Chang (Thailand) was conducted using observational data, environmental analysis, wind speed measurements, sun path studies, and thermal material evaluations. The findings show that circuits employing strategies such as strategic orientation, natural ventilation, shading, insulated materials, and integration with vegetation or water features achieved superior thermal comfort and reduced dependence on mechanical ...",
+  "orgs": [
+   {
+    "name": "Department of Built Environment Studies and Technology, Faculty of Built Environment, Universiti Teknologi MARA, Perak B",
+    "type": "Uni",
+    "country": null,
+    "role": "researcher"
+   }
+  ],
+  "funding": null,
+  "id": "crossref-architectural-responses-to-heat-passive",
+  "story": "crossref-architectural-responses-to-heat-passive",
+  "summary": "This study explores the effectiveness of passive cooling strategies in climate-responsive motorsport facility design within tropical climates, focusing on Malaysia. Despite progress in sustainable infrastructure, there is a lack of research on passive design suited to hot and humid environments, whe",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ },
+ {
+  "url": "https://doi.org/10.3390/pr13061786",
+  "title": "Optimization of the TPMS Heat Exchanger Toward Cooling the Heat Sink",
+  "publisher": "Processes",
+  "date": "2025-06-05",
+  "area": "other",
+  "kind": "paper",
+  "source_api": "crossref",
+  "abstract": "The subject of the current paper is cooling heat sinks using the TPMS structure. An experiment was conducted using water and a mixture of 10% vol. ethylene glycol in water, which was used to cool heat sinks in the presence of the TPMS structure. The gyroid was developed using 3D printing with three different porosities: 0.7, 0.8, and 0.9, respectively. The shell network is a single domain, and fluid is circulated at various flow rates. A comparison with the numerical model, as simulated using COMSOL software (version 6.2), showed good agreement. A uniform temperature distribution is a clear indication of uniform cooling. Then, the TPMS structure is changed from one domain to two unconnected domains, and a different flow rate is applied to each domain entry. This approach is unique in that it investigates the cooling of the heat sink with a two-domain structure, which has not been ...",
+  "orgs": [
+   {
+    "name": "Core Technology Platforms, New York University in Abu Dhabi, Abu Dhabi P.O. Box 129188, United Arab Emirates",
+    "type": "Uni",
+    "country": null,
+    "role": "researcher"
+   },
+   {
+    "name": "Department of Mechanical Engineering, Toronto Metropolitan University, 350 Victoria St., Toronto, ON M5B 2K3, Canada",
+    "type": "Uni",
+    "country": null,
+    "role": "researcher"
+   }
+  ],
+  "funding": {
+   "funders": [
+    "Alliance International Catalyst Grant (ALLRP) ALLRP",
+    "Natural Research Council of Canada"
+   ]
+  },
+  "id": "processes-tpms-gyroid-heat-sink",
+  "story": "nyuad-tpms-heat-sink",
+  "summary": "NYU Abu Dhabi and Toronto Metropolitan University tested 3D-printed gyroid TPMS heat sinks at porosities of 0.7, 0.8 and 0.9 with water and 10% glycol, and matched the results with COMSOL. They then split the gyroid into two unconnected fluid domains fed at different flow rates, which they say has not been studied before. Measured; Processes, June 2025.",
+  "thermal": "Gyroid lattice cooling of a heat sink, including a two-fluid-domain gyroid.",
+  "manufacturing": "3D-printed gyroid at three porosities.",
+  "evidence": "measured",
+  "gate": "pass"
+ },
+ {
+  "url": "https://doi.org/10.1016/j.ijheatfluidflow.2026.110524",
+  "title": "Hybrid-Periodicity gyroid TPMS heat exchanger for enhanced thermal performance and structural stability using Fluid-Structure interaction",
+  "publisher": "International Journal of Heat and Fluid Flow",
+  "date": "2026-09",
+  "area": "other",
+  "kind": "paper",
+  "source_api": "crossref",
+  "abstract": "",
+  "orgs": [],
+  "funding": {
+   "funders": [
+    "ASPIRE",
+    "Advanced Technology Research Council",
+    "New York University - Abu Dhabi"
+   ]
+  },
+  "id": "ijhff-hybrid-periodicity-gyroid",
+  "story": "nyuad-hybrid-gyroid",
+  "summary": "International Journal of Heat and Fluid Flow paper (September 2026) from NYU Abu Dhabi on a hybrid-periodicity gyroid TPMS heat exchanger for better heat transfer and structural stability. Title only; no abstract.",
+  "thermal": "Gyroid TPMS heat exchanger with mixed cell periodicity.",
+  "manufacturing": "Lattice design for additive manufacture.",
+  "evidence": "simulation",
+  "gate": "pass"
+ },
+ {
+  "url": "https://doi.org/10.1016/j.applthermaleng.2025.129620",
+  "title": "Numerical investigation on the fluid flow and heat transfer characteristics of a three-fluid TPMS heat exchanger",
+  "publisher": "Applied Thermal Engineering",
+  "date": "2026-03",
+  "area": "other",
+  "kind": "paper",
+  "source_api": "crossref",
+  "abstract": "",
+  "orgs": [],
+  "funding": {
+   "funders": [
+    "National Natural Science Foundation of China",
+    "Natural Science Foundation of Qingdao"
+   ]
+  },
+  "id": "crossref-numerical-investigation-on-the-fluid-fl",
+  "story": "crossref-numerical-investigation-on-the-fluid-fl",
+  "summary": "Numerical investigation on the fluid flow and heat transfer characteristics of a three-fluid TPMS heat exchanger",
+  "thermal": null,
+  "manufacturing": null,
+  "evidence": null,
+  "gate": "fail",
+  "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle)."
+ }
+]
