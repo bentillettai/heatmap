@@ -2,21 +2,21 @@
   "meta": {
     "title": "Heatmap",
     "started": "2026-10-20",
-    "updated": "2026-10-24",
+    "updated": "2026-10-25",
     "areas": {
       "datacentre": "Data centres",
       "aerospace": "Aerospace",
       "motorsport": "Motorsport",
       "other": "Other"
     },
-    "run_summary": "No new cards; 9 cards updated, notably a UK Cranfield and Rolls-Royce model of bypass-duct oil coolers, a measured printed two-phase cold plate at over 505 W/cm², and a measured printed topology-optimised heat sink. The website got today's report, but votes and comments left there were not read back this run (that step was blocked by a permission check).",
+    "run_summary": "1 new card: compact supercritical-CO2 heat exchangers for STEP's fusion power cycle, where UKIFS prefers diffusion-bonded PCHEs and a Maryland team has laser-melted a record-compact sCO2 core. 4 cards updated: OSYRYS (€40m) succeeds TheMa4HERA for megawatt aircraft thermal management; boiling tests show gyroid lattices beat diamond by up to 165%; loop and pulsating heat pipe tests under high and varying gravity; Siemens' topology-optimised brake duct. The website got today's report, but votes and comments left there were not read back this run (that step was blocked by a permission check).",
     "coverage": {
       "datacentre": "Good coverage of cold plates, jet impingement and heat reuse. One UK chip-level start-up found so far (Infiniflux).",
       "aerospace": "Strong on oil coolers and hydrogen. Cabin-air systems are now covered through Honeywell's STRATA project, and a measured printed pre-cooler core (Maryland) now gives one data point, but precooler-specific news is still rare. Defence aircraft electronics cooling now appears through BAE Systems' work with Leeds.",
       "motorsport": "Teams publish little, so most evidence comes from suppliers (Conflux, PWR) and student teams. Henry's steer here will help most.",
       "other": "Found by searching from the technology first: heat pipes, laser texturing, modelling, TPMS tests, fusion and transpiration cooling. Links to the three areas are mostly inferred."
     },
-    "run_id": "2026-10-24-1"
+    "run_id": "2026-10-25-1"
   },
   "cards": [
     {
@@ -735,7 +735,7 @@
         "metrology and inspection",
         "modelling and simulation"
       ],
-      "why": "Advanced Cooling Technologies prints the stainless-steel evaporator and primary wick of its loop heat pipes as one LPBF part. A test unit on ammonia reached 5.1 W/K and ran stable at 125 W before drying out at 130-140 W, and a 15 W unit for a NASA CubeSat is built and awaiting thermal-vacuum tests, with 50 W to 1 kW designs to follow. Calyos and Beamler have printed a pure-copper pulsating heat pipe, so far without published data. Printed wicks depend on porosity control, which is MTC process and inspection work, and the same parts could serve data-centre and aircraft electronics. The University of Brighton has shown even resin-printed pulsating heat pipes work (1.7 °C/W at 30 W), and the von Karman Institute is testing printed-wick loop heat pipes under 2g for avionics boxes.",
+      "why": "Advanced Cooling Technologies prints the stainless-steel evaporator and primary wick of its loop heat pipes as one LPBF part. A test unit on ammonia reached 5.1 W/K and ran stable at 125 W before drying out at 130-140 W, and a 15 W unit for a NASA CubeSat is built and awaiting thermal-vacuum tests, with 50 W to 1 kW designs to follow. Calyos and Beamler have printed a pure-copper pulsating heat pipe, so far without published data. Printed wicks depend on porosity control, which is MTC process and inspection work, and the same parts could serve data-centre and aircraft electronics. The University of Brighton has shown even resin-printed pulsating heat pipes work (1.7 °C/W at 30 W), and the von Karman Institute is testing printed-wick loop heat pipes under 2g for avionics boxes. Two 2025-26 papers show how such parts get tested for aircraft and space: Beihang and the University of Hertfordshire ran a see-through loop heat pipe at 30-150 W and 1-15 g and found start-up depends on the direction of the load, and an ESA-funded team including Brighton and Liverpool used infrared thermography with automatic tracking to follow flow inside pulsating heat pipes as gravity changes.",
       "applicability": {
         "type": "inferred",
         "reason": "The sources target spacecraft; use in data centres and aircraft electronics is our inference."
@@ -788,6 +788,30 @@
           "type": "RTO",
           "country": "Belgium",
           "role": "researcher"
+        },
+        {
+          "name": "University of Hertfordshire",
+          "type": "Uni",
+          "country": "UK",
+          "role": "researcher"
+        },
+        {
+          "name": "Beihang University",
+          "type": "Uni",
+          "country": "China",
+          "role": "researcher"
+        },
+        {
+          "name": "University of Liverpool",
+          "type": "Uni",
+          "country": "UK",
+          "role": "researcher"
+        },
+        {
+          "name": "European Space Agency",
+          "type": "Gov",
+          "country": null,
+          "role": "funder"
         }
       ],
       "sources": [
@@ -805,6 +829,12 @@
         },
         {
           "item": "vki-am-lhp-acceleration"
+        },
+        {
+          "item": "openalex-startup-characteristics-and-thermal-ins"
+        },
+        {
+          "item": "openalex-autonomous-multi-object-tracking-couple"
         }
       ],
       "scores": {
@@ -1756,6 +1786,79 @@
       "area_rank": 9
     },
     {
+      "id": "ot-step-sco2-compact-hx",
+      "area": "other",
+      "headline": "Compact supercritical-CO2 heat exchangers for the UK's STEP fusion power plant",
+      "problem": "STEP has to move fusion heat into a supercritical CO2 power cycle, and later change load quickly, through very large, very compact heat exchangers.",
+      "technology": "Compact sCO2 heat exchangers: today's diffusion-bonded printed circuit heat exchangers (PCHEs), and laser-melted microchannel cores as a possible challenger.",
+      "capabilities": [
+        "additive manufacture",
+        "modelling and simulation",
+        "metrology and inspection",
+        "design for manufacture"
+      ],
+      "why": "UK Industrial Fusion Solutions has chosen a transcritical CO2 cycle for STEP (100 MWe net, 2040s) and plans sCO2 cooling for some in-vessel parts; its 2026 roadmap prefers PCHEs for their maturity and plans no big scale-up, but says exchangers still need testing under rapid load changes. Printing is starting to compete: a University of Maryland team laser-melted an sCO2 microchannel exchanger rated above 800 °C and 80 bar and measured 45.4 MW/m³, which it says is the most compact reported. Wisconsin's test of a PCHE for a 5 MWth microreactor shows what benchmark data looks like (325 °C, 10 MPa, fibre-optic temperature maps). For MTC the openings are dynamic testing and modelling, and making the case for printed cores against PCHEs.",
+      "applicability": {
+        "type": "inferred",
+        "reason": "STEP's paper names compact sCO2 heat exchangers and their dynamic testing as needs; the link to printed cores is ours, from the Maryland result."
+      },
+      "trl": {
+        "level": "3-5",
+        "reason": "PCHEs are mature at up to 50 MWth; printed sCO2 cores are lab-tested prototypes."
+      },
+      "barriers": "PCHEs are the incumbent and STEP prefers them for maturity; printed cores have no high-pressure qualification record.",
+      "next_step": "Ask UKIFS what its proof-of-concept sCO2 rig will test and whether printed exchanger modules are in scope.",
+      "orgs": [
+        {
+          "name": "UK Industrial Fusion Solutions",
+          "type": "Gov",
+          "country": "UK",
+          "role": "user"
+        },
+        {
+          "name": "UK Atomic Energy Authority",
+          "type": "Gov",
+          "country": "UK",
+          "role": "user"
+        },
+        {
+          "name": "University of Maryland",
+          "type": "Uni",
+          "country": "US",
+          "role": "researcher"
+        },
+        {
+          "name": "University of Wisconsin-Madison",
+          "type": "Uni",
+          "country": "US",
+          "role": "researcher"
+        }
+      ],
+      "sources": [
+        {
+          "item": "sco2-step-roadmap-ukifs"
+        },
+        {
+          "item": "umd-slm-sco2-microchannel-hx"
+        },
+        {
+          "item": "sco2-uw-pche-microreactor"
+        }
+      ],
+      "scores": {
+        "venn_fit": 3,
+        "manufacturing_key": 4,
+        "evidence": 3,
+        "novelty": 4,
+        "uk_relevance": 5,
+        "contactable": 5
+      },
+      "added": "2026-10-25",
+      "score": 75,
+      "rank": 21,
+      "area_rank": 6
+    },
+    {
       "id": "ae-hybrid-electric-mw-thermal",
       "area": "aerospace",
       "headline": "Megawatt-class thermal management for hybrid-electric regional aircraft",
@@ -1766,14 +1869,14 @@
         "modelling and simulation",
         "design for manufacture"
       ],
-      "why": "TheMa4HERA is a €33.5m Clean Aviation project led by Honeywell, aiming for TRL 5 in 2026 with a full-scale ground demonstrator at Fraunhofer. Conflux joined in 2025 to make printed exchangers, evaporators and condensers, and presented the printed air-cycle heat exchangers with Honeywell UK at Formnext 2025. The partner list (Liebherr, Collins, Calyos, DLR, NLR, plus UK partners Conflux UK, Honeywell UK and Element Digital Engineering) is a map of who matters in aircraft environmental control heat exchangers. NLR's earlier Clean Sky 2 project TOPMOST (2017-19) built pumped two-phase cooling loops with 3D-printed parts for Thales power electronics. Testing at this scale is scarce: SwRI in the US now markets heat exchanger tests up to several megawatts.",
+      "why": "TheMa4HERA is a €33.5m Clean Aviation project led by Honeywell, aiming for TRL 5 in 2026 with a full-scale ground demonstrator at Fraunhofer. Conflux joined in 2025 to make printed exchangers, evaporators and condensers, and presented the printed air-cycle heat exchangers with Honeywell UK at Formnext 2025. The partner list (Liebherr, Collins, Calyos, DLR, NLR, plus UK partners Conflux UK, Honeywell UK and Element Digital Engineering) is a map of who matters in aircraft environmental control heat exchangers. NLR's earlier Clean Sky 2 project TOPMOST (2017-19) built pumped two-phase cooling loops with 3D-printed parts for Thales power electronics. Testing at this scale is scarce: SwRI in the US now markets heat exchanger tests up to several megawatts. TheMa4HERA now has a successor: OSYRYS, a €40m Clean Aviation project (2026-2030) led by Safran Electrical & Power, aims for a TRL 6 integrated demonstration of megawatt-level power, thermal and energy management for hybrid-electric regional aircraft, with Airbus, Liebherr, Thales, Collins, ATR and the UK's Goodrich Controls among 24 partners.",
       "applicability": {
         "type": "stated",
         "reason": "The project targets aircraft thermal management."
       },
       "trl": {
-        "level": "4-5",
-        "reason": "TRL 5 target for 2026; flight tests planned from 2027."
+        "level": "4-6",
+        "reason": "TheMa4HERA aims at TRL 5 in 2026; its successor OSYRYS targets TRL 6 by 2030."
       },
       "barriers": "Hybrid-electric regional aircraft entry into service is uncertain.",
       "next_step": "Watch for TheMa4HERA results at the end of 2026. Calyos, a small Belgian two-phase company in the consortium, may be worth a call.",
@@ -1849,6 +1952,24 @@
           "type": "RTO",
           "country": "USA",
           "role": "partner"
+        },
+        {
+          "name": "Safran Electrical & Power",
+          "type": "Commercial",
+          "country": "France",
+          "role": "developer"
+        },
+        {
+          "name": "Airbus",
+          "type": "Commercial",
+          "country": "France",
+          "role": "user"
+        },
+        {
+          "name": "Goodrich Controls",
+          "type": "Commercial",
+          "country": "UK",
+          "role": "partner"
         }
       ],
       "sources": [
@@ -1869,6 +1990,9 @@
         },
         {
           "item": "swri-mw-hx-testing"
+        },
+        {
+          "item": "cordis-osyrys-on-board-systems-relevant-for-hybr"
         }
       ],
       "scores": {
@@ -1881,7 +2005,7 @@
       },
       "added": "2026-10-20",
       "score": 74,
-      "rank": 21,
+      "rank": 22,
       "area_rank": 10
     },
     {
@@ -1945,7 +2069,7 @@
       },
       "added": "2026-10-20",
       "score": 74,
-      "rank": 22,
+      "rank": 23,
       "area_rank": 3
     },
     {
@@ -2042,7 +2166,7 @@
       },
       "added": "2026-10-20",
       "score": 73,
-      "rank": 23,
+      "rank": 24,
       "area_rank": 11
     },
     {
@@ -2141,7 +2265,7 @@
       },
       "added": "2026-10-20",
       "score": 72,
-      "rank": 24,
+      "rank": 25,
       "area_rank": 4
     },
     {
@@ -2210,7 +2334,7 @@
       },
       "added": "2026-10-22",
       "score": 72,
-      "rank": 25,
+      "rank": 26,
       "area_rank": 12
     },
     {
@@ -2258,8 +2382,8 @@
       },
       "added": "2026-10-21",
       "score": 71,
-      "rank": 26,
-      "area_rank": 6
+      "rank": 27,
+      "area_rank": 7
     },
     {
       "id": "ae-gyroid-fcoc",
@@ -2347,7 +2471,7 @@
       },
       "added": "2026-10-20",
       "score": 69,
-      "rank": 27,
+      "rank": 28,
       "area_rank": 13,
       "next_step": "Conflux's UK hub is the nearest supplier with flight-qualified printed fuel-oil exchangers; ask what test evidence qualification needed."
     },
@@ -2468,7 +2592,7 @@
       },
       "added": "2026-10-20",
       "score": 69,
-      "rank": 28,
+      "rank": 29,
       "area_rank": 5,
       "next_step": "Check whether any UK group is working on two-phase evaporator surfaces; the Ljubljana and Oak Ridge laser-texturing results suggest a test MTC could run."
     },
@@ -2545,7 +2669,7 @@
       },
       "added": "2026-10-20",
       "score": 67,
-      "rank": 29,
+      "rank": 30,
       "area_rank": 5
     },
     {
@@ -2632,7 +2756,7 @@
       },
       "added": "2026-10-20",
       "score": 66,
-      "rank": 30,
+      "rank": 31,
       "area_rank": 6
     },
     {
@@ -2713,7 +2837,7 @@
       },
       "added": "2026-10-20",
       "score": 66,
-      "rank": 31,
+      "rank": 32,
       "area_rank": 14
     },
     {
@@ -2822,7 +2946,7 @@
       },
       "added": "2026-10-20",
       "score": 66,
-      "rank": 32,
+      "rank": 33,
       "area_rank": 7
     },
     {
@@ -2836,7 +2960,7 @@
         "metrology and inspection",
         "modelling and simulation"
       ],
-      "why": "Seoultech and the University of Akron tested a metal-printed gyroid heat exchanger against a commercial brazed plate unit: heat transfer at most 4.4% better, friction up to 30.5% lower, overall merit about 7% higher. Waseda University and AGC then showed that grading the lattice matters more than the lattice itself: varying wall position to balance hot and cold flow gave 28.7% more measured heat transfer than a uniform printed lattice. A US simulation study suggests other surface shapes can beat gyroids in turbulent air. Together they are a reality check on TPMS claims, and independent like-for-like testing of graded lattices is a service an RTO can offer. NYU Abu Dhabi and Toronto Metropolitan have since tested printed gyroid heat sinks at three porosities and split one gyroid into two separate fluid domains at different flow rates, matching COMSOL models.",
+      "why": "Seoultech and the University of Akron tested a metal-printed gyroid heat exchanger against a commercial brazed plate unit: heat transfer at most 4.4% better, friction up to 30.5% lower, overall merit about 7% higher. Waseda University and AGC then showed that grading the lattice matters more than the lattice itself: varying wall position to balance hot and cold flow gave 28.7% more measured heat transfer than a uniform printed lattice. A US simulation study suggests other surface shapes can beat gyroids in turbulent air. Together they are a reality check on TPMS claims, and independent like-for-like testing of graded lattices is a service an RTO can offer. NYU Abu Dhabi and Toronto Metropolitan have since tested printed gyroid heat sinks at three porosities and split one gyroid into two separate fluid domains at different flow rates, matching COMSOL models. Boiling changes the picture: Seoul National University of Science and Technology measured printed aluminium gyroid and diamond channels with R-1234yf and found the gyroid gave up to 165% higher boiling heat transfer for up to 17.4% more pressure drop, while the diamond did better in single-phase flow. So the best lattice depends on whether the fluid boils, which matters for two-phase cold plates and evaporators. Beihang's simulations show the gyroid shape itself can be tuned, cutting pressure drop by 13% for slightly more heat transfer, but nothing was built.",
       "applicability": {
         "type": "inferred",
         "reason": "The tests are generic; their bearing on the aerospace and data-centre TPMS cards is ours."
@@ -2889,6 +3013,12 @@
           "type": "Uni",
           "country": "UAE",
           "role": "researcher"
+        },
+        {
+          "name": "Beihang University",
+          "type": "Uni",
+          "country": "China",
+          "role": "researcher"
         }
       ],
       "sources": [
@@ -2909,6 +3039,12 @@
         },
         {
           "item": "ijhff-hybrid-periodicity-gyroid"
+        },
+        {
+          "item": "seoultech-gyroid-diamond-flow-boiling"
+        },
+        {
+          "item": "buaa-gyroid-exponential-modulation"
         }
       ],
       "scores": {
@@ -2921,8 +3057,8 @@
       },
       "added": "2026-10-20",
       "score": 64,
-      "rank": 33,
-      "area_rank": 7
+      "rank": 34,
+      "area_rank": 8
     },
     {
       "id": "ms-am-brake-ducts",
@@ -2935,7 +3071,7 @@
         "modelling and simulation",
         "metrology and inspection"
       ],
-      "why": "Cadillac F1 prints brake-duct prototypes to check its simulations, and Visa Cash App RB prints race ducts in carbon-fibre PEEK on Roboze machines, cutting lead time by 66%. The FIA ban moves the job back to duct geometry. Polymer AM is mature here, so novelty is modest.",
+      "why": "Cadillac F1 prints brake-duct prototypes to check its simulations, and Visa Cash App RB prints race ducts in carbon-fibre PEEK on Roboze machines, cutting lead time by 66%. The FIA ban moves the job back to duct geometry. Siemens has shown adjoint topology optimisation in Simcenter STAR-CCM+ that shapes a duct to maximise heat transfer to the rotor within volume and pressure-drop limits, with printing as the way to make it, though it published no gains. Polymer AM is mature here, so novelty is modest; the open question is whether optimised duct shapes are worth it under the new limits.",
       "applicability": {
         "type": "stated",
         "reason": "All sources are about F1 brake cooling."
@@ -2969,6 +3105,12 @@
           "type": "Other",
           "country": "France",
           "role": "regulator"
+        },
+        {
+          "name": "Siemens",
+          "type": "Commercial",
+          "country": "Germany",
+          "role": "supplier"
         }
       ],
       "sources": [
@@ -2983,6 +3125,12 @@
         },
         {
           "item": "amfg-f1-am-2025"
+        },
+        {
+          "item": "roboze-vcarb-brake-duct-whitepaper"
+        },
+        {
+          "item": "nafems-siemens-brake-duct-adjoint"
         }
       ],
       "scores": {
@@ -2995,7 +3143,7 @@
       },
       "added": "2026-10-20",
       "score": 63,
-      "rank": 34,
+      "rank": 35,
       "area_rank": 6
     },
     {
@@ -3070,7 +3218,7 @@
       },
       "added": "2026-10-20",
       "score": 62,
-      "rank": 35,
+      "rank": 36,
       "area_rank": 8
     },
     {
@@ -3148,7 +3296,7 @@
       },
       "added": "2026-10-20",
       "score": 61,
-      "rank": 36,
+      "rank": 37,
       "area_rank": 15
     },
     {
@@ -3223,7 +3371,7 @@
       },
       "added": "2026-10-20",
       "score": 61,
-      "rank": 37,
+      "rank": 38,
       "area_rank": 7
     },
     {
@@ -3357,7 +3505,7 @@
       },
       "added": "2026-10-20",
       "score": 60,
-      "rank": 38,
+      "rank": 39,
       "area_rank": 9
     },
     {
@@ -3414,8 +3562,8 @@
       },
       "added": "2026-10-20",
       "score": 60,
-      "rank": 39,
-      "area_rank": 8
+      "rank": 40,
+      "area_rank": 9
     },
     {
       "id": "dc-immersion-heat-pump-coupling",
@@ -3485,7 +3633,7 @@
       },
       "added": "2026-10-20",
       "score": 56,
-      "rank": 40,
+      "rank": 41,
       "area_rank": 10
     },
     {
@@ -3530,7 +3678,7 @@
       },
       "added": "2026-10-20",
       "score": 40,
-      "rank": 41,
+      "rank": 42,
       "area_rank": 11
     }
   ]

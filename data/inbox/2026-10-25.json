@@ -1,0 +1,889 @@
+[
+  {
+    "id": "umd-slm-sco2-microchannel-hx",
+    "url": "https://ceee.umd.edu/news/story/umd-team-develops-one-of-the-most-compact-heat-exchangers-for-extreme-environments",
+    "title": "UMD Team Develops One of the Most Compact Heat Exchangers for Extreme Environments",
+    "publisher": "University of Maryland CEEE",
+    "date": "2025-09-15",
+    "area": "other",
+    "story": "umd-slm-sco2-hx",
+    "summary": "A University of Maryland CEEE team built a multi-pass microchannel heat exchanger for supercritical CO2 by selective laser melting, rated for above 800 °C and 80 bar. In tests it reached a power density of 45.4 MW/m³ with 11.75 W of pumping power and a surface area density of 989 m²/m³. The team says its literature survey makes this the most compact such exchanger reported. Design and test results were published in International Communications in Heat and Mass Transfer in May and November 2025.",
+    "orgs": [
+      {
+        "name": "University of Maryland",
+        "type": "Uni",
+        "country": "US"
+      }
+    ],
+    "thermal": "Compact sCO2 microchannel heat exchanger for high-temperature, high-pressure duty.",
+    "manufacturing": "Selective laser melting of the whole multi-pass core, then hydraulic and thermal testing.",
+    "evidence": "measured",
+    "gate": "pass"
+  },
+  {
+    "id": "sco2-step-roadmap-ukifs",
+    "url": "https://sco2symposium.com/proceedings2026/sCO2-023-Jack-Acres-2026-Paper.pdf",
+    "title": "Developing a technology roadmap for STEP's sCO2 technology",
+    "publisher": "9th International sCO2 Energy Technologies Symposium",
+    "date": "2026-03",
+    "area": "other",
+    "story": "step-sco2-roadmap",
+    "summary": "UK Industrial Fusion Solutions and UKAEA describe the power cycle chosen for the STEP fusion prototype (100 MWe net, operating in the 2040s): a transcritical CO2 cycle called SHOCC, with supercritical CO2 also planned for some in-vessel component cooling. The paper says compact printed circuit heat exchangers (PCHEs) are preferred for the primary-to-power-cycle exchanger and recuperators because of their maturity. It says no significant heat-exchanger scale-up programme is planned, since modules will stay near today's 50 MWth state of the art, but exchangers still need testing under rapid changes in operating conditions. A proof-of-concept rig is part of the roadmap.",
+    "orgs": [
+      {
+        "name": "UK Industrial Fusion Solutions",
+        "type": "Gov",
+        "country": "UK"
+      },
+      {
+        "name": "UK Atomic Energy Authority",
+        "type": "Gov",
+        "country": "UK"
+      }
+    ],
+    "thermal": "Heat exchange from a tokamak to an sCO2 power cycle, and sCO2 cooling of in-vessel parts.",
+    "manufacturing": "PCHEs (diffusion-bonded etched plates) are the preferred construction; no printing discussed.",
+    "evidence": "plan",
+    "gate": "pass"
+  },
+  {
+    "id": "sco2-uw-pche-microreactor",
+    "url": "https://sco2symposium.com/proceedings2026/sCO2-028-Curtis-Foster-2026-Paper.pdf",
+    "title": "Thermohydraulic performance of a supercritical CO2 PCHE for heat pipe microreactors",
+    "publisher": "9th International sCO2 Energy Technologies Symposium",
+    "date": "2026-03",
+    "area": "other",
+    "story": "uw-pche-microreactor",
+    "summary": "University of Wisconsin-Madison and UNICAMP designed, built and tested a sub-sized printed circuit heat exchanger to couple a 5 MWth heat-pipe microreactor to a recompression sCO2 Brayton cycle. The diffusion-bonded stainless-steel test piece was heated by cartridge heaters and mapped with fibre-optic temperature sensors in the WisCO2 facility, at up to 325 °C, 10 MPa and 0.16 kg/s. The authors report efficient heat transfer and predictable pressure drop and offer the data as a benchmark for CFD.",
+    "orgs": [
+      {
+        "name": "University of Wisconsin-Madison",
+        "type": "Uni",
+        "country": "US"
+      },
+      {
+        "name": "University of Campinas",
+        "type": "Uni",
+        "country": "Brazil"
+      }
+    ],
+    "thermal": "Heat-pipe-to-sCO2 primary heat exchanger for a microreactor.",
+    "manufacturing": "Etched and diffusion-bonded stainless plates; fibre-optic solid temperature mapping in test.",
+    "evidence": "measured",
+    "gate": "pass"
+  },
+  {
+    "id": "roboze-vcarb-brake-duct-whitepaper",
+    "url": "https://roboze.com/en/resources/white-paper/how-the-visa-cash-app-rb-formula-one-team-reduced-costs-and-times-for-brake-ducts-with-roboze-advanced-manufacturing",
+    "title": "How the VISA Cash APP RB Formula One team reduced costs and times for brake ducts with Roboze advanced manufacturing",
+    "publisher": "Roboze",
+    "date": null,
+    "area": "motorsport",
+    "story": "roboze-vcarb-brake-ducts",
+    "summary": "Roboze's white paper page says Visa Cash App RB cut production cost and lead time for brake cooling ducts by printing them in Carbon PEEK on Roboze machines. The page gives no figures; it is a vendor claim.",
+    "orgs": [
+      {
+        "name": "Roboze",
+        "type": "Commercial",
+        "country": "Italy"
+      },
+      {
+        "name": "Visa Cash App RB",
+        "type": "Commercial",
+        "country": null
+      }
+    ],
+    "thermal": "Brake cooling ducts; no thermal data.",
+    "manufacturing": "Carbon PEEK material extrusion.",
+    "evidence": "claim",
+    "gate": "pass"
+  },
+  {
+    "id": "nafems-siemens-brake-duct-adjoint",
+    "url": "https://www.nafems.org/publications/resource_center/nwc21-241-b/",
+    "title": "Adjoint-based Topology Optimization - Maximizing Heat Transfer of a Brake Cooling Duct",
+    "publisher": "NAFEMS",
+    "date": "2021-10-28",
+    "area": "motorsport",
+    "story": "siemens-brake-duct-topopt",
+    "summary": "A Siemens Digital Industries Software presentation shows level-set adjoint topology optimisation in Simcenter STAR-CCM+ of a brake cooling duct, maximising heat transfer on the front rotor under volume and pressure-drop limits. The optimised duct is put back into the car model to check the real gain, and a further adjoint shape step can improve it. It says additive manufacturing makes the shape producible. No numbers or tests are given.",
+    "orgs": [
+      {
+        "name": "Siemens Digital Industries Software",
+        "type": "Commercial",
+        "country": null
+      }
+    ],
+    "thermal": "Brake rotor cooling by duct airflow.",
+    "manufacturing": "Topology optimisation for printing; no build.",
+    "evidence": "simulation",
+    "gate": "pass"
+  },
+  {
+    "id": "seoultech-gyroid-diamond-flow-boiling",
+    "url": "https://pure.seoultech.ac.kr/en/publications/flow-boiling-heat-transfer-and-pressure-drop-in-gyroid-and-diamon/",
+    "title": "Flow boiling heat transfer and pressure drop in gyroid and diamond TPMS channels",
+    "publisher": "Applied Thermal Engineering",
+    "date": "2026-06",
+    "area": "other",
+    "story": "seoultech-tpms-boiling",
+    "summary": "Seoul National University of Science and Technology measured flow boiling of R-1234yf in printed monolithic aluminium gyroid and diamond TPMS channels (seven cells each; 20-80 kg/m²s, 5-30 kW/m², vapour quality 0.08-0.91). In boiling, the gyroid gave up to 165% higher heat transfer coefficient for up to 17.4% more pressure drop than the diamond, while the diamond was better in single-phase flow. The authors conclude the gyroid is the better choice for evaporators.",
+    "orgs": [
+      {
+        "name": "Seoul National University of Science and Technology",
+        "type": "Uni",
+        "country": "South Korea"
+      }
+    ],
+    "thermal": "Two-phase (boiling) heat transfer in TPMS channels.",
+    "manufacturing": "3D-printed monolithic aluminium test sections.",
+    "evidence": "measured",
+    "gate": "pass"
+  },
+  {
+    "id": "buaa-gyroid-exponential-modulation",
+    "url": "https://research.buaa.edu.cn/en/publications/modulation-of-thermo-hydraulic-performance-in-gyroid-tpms-structu/",
+    "title": "Modulation of thermo-hydraulic performance in gyroid TPMS structures using a periodic exponential function",
+    "publisher": "International Journal of Heat and Mass Transfer",
+    "date": "2026-06-15",
+    "area": "other",
+    "story": "buaa-gyroid-modulation",
+    "summary": "Beihang University proposes a way to reshape gyroid-like TPMS cells continuously with one exponential parameter. In simulation, one variant cut pressure drop by 13.21% and raised heat transfer by 3.84% against the classic gyroid, with overall merit almost unchanged (+1.48%). No parts were built or tested.",
+    "orgs": [
+      {
+        "name": "Beihang University",
+        "type": "Uni",
+        "country": "China"
+      }
+    ],
+    "thermal": "Single-phase TPMS heat-exchanger channels.",
+    "manufacturing": "none (simulation; AM named as the route)",
+    "evidence": "simulation",
+    "gate": "pass"
+  },
+  {
+    "id": "hew-conflux-evtol-cold-plates",
+    "url": "https://heat-exchanger-world.com/additive-manufactured-cold-plates/",
+    "title": "Additive manufactured cold plates: How Conflux Technology is improving thermal performance for Advanced Air Mobility",
+    "publisher": "Heat Exchanger World",
+    "date": "2024-01-22",
+    "area": "aerospace",
+    "story": "conflux-evtol-cold-plates",
+    "summary": "A feature written with Conflux Technology staff argues for laser powder-bed fused aluminium cold plates for eVTOL batteries, motors and inverters, with no welded or brazed joints. It says printed walls are now close to machined or skived plate thicknesses. No measured data is given; it is a company claim.",
+    "orgs": [
+      {
+        "name": "Conflux Technology",
+        "type": "Commercial",
+        "country": "Australia"
+      }
+    ],
+    "thermal": "Cold plates for eVTOL batteries and drives.",
+    "manufacturing": "Aluminium LPBF.",
+    "evidence": "claim",
+    "gate": "pass"
+  },
+  {
+    "id": "ufi-motorsport-video",
+    "url": "https://www.ufifilters.com/en/video-en/from-the-track-to-the-road-and-back-ufi-technologies-for-motorsport/",
+    "title": "From the track to the road, and back - UFI technologies for Motorsport",
+    "publisher": "UFI Filters",
+    "date": null,
+    "area": "motorsport",
+    "story": "ufi-motorsport",
+    "summary": "UFI Filters says it supplies all 11 F1 teams in 2026 and develops thermal management and filtration parts with them. The page has no technical content.",
+    "orgs": [
+      {
+        "name": "UFI Filters",
+        "type": "Commercial",
+        "country": "Italy"
+      }
+    ],
+    "thermal": "Unspecified.",
+    "manufacturing": "none",
+    "evidence": "claim",
+    "gate": "fail",
+    "gate_reason": "Promotional page with no technical content."
+  },
+  {
+    "url": "https://doi.org/10.33619/2414-2948/121/20",
+    "title": "Development of an Experimental Ethanol Thermosiphon Installation",
+    "publisher": "Bulletin of Science and Practice",
+    "date": "2025-12-15",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [
+      {
+        "name": "Ogarev Mordovia State University",
+        "type": "Uni",
+        "country": null,
+        "role": "researcher"
+      },
+      {
+        "name": "iangsu University of Science and Technology",
+        "type": "Uni",
+        "country": null,
+        "role": "researcher"
+      }
+    ],
+    "funding": null,
+    "id": "crossref-development-of-an-experimental-ethanol",
+    "story": "crossref-development-of-an-experimental-ethanol",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "This study conducted simulation and experimental analyses on an ethanol thermosiphon device integrated with a novel pulsed capacitor heat pump system, investigating its heat transfer and phase-change characteristics. The device heats ethanol liquid in a container, causing it to vaporize. The resulti",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.51173/jt.v7i2.2666",
+    "title": "Numerical Investigation of the Thermosiphon-Thermoelectric Generator by Different Parameters",
+    "publisher": "Journal of Techniques",
+    "date": "2025-06-30",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [],
+    "funding": null,
+    "id": "crossref-numerical-investigation-of-the-thermosi",
+    "story": "crossref-numerical-investigation-of-the-thermosi",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "This paper aims to enhance the performance of thermoelectric generators (TEGs) in converting waste heat into electrical energy by employing nanofluids. The research addresses the limitations of traditional working fluids like water, which have low thermal conductivity, and explores the use of nanofl",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.21776/ub.igtj.2025.014.02.03",
+    "title": "Thermosiphon Monitoring Reel for the Fair-Trade Sustainable Hatcheries",
+    "publisher": "Indonesian Green Technology Journal",
+    "date": "2025-11-30",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [],
+    "funding": null,
+    "id": "crossref-thermosiphon-monitoring-reel-for-the-fa",
+    "story": "crossref-thermosiphon-monitoring-reel-for-the-fa",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Hatcheries designed to be fair-trade, sustainable, well adapted to sunny countries and operating mainly through thermosiphon flows generated by solar radiation or radiative emission at night, were recently the subject of a theoretical study. The dimensionings of their incubator, solar collector, nig",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.22541/au.175273574.48908715/v1",
+    "title": "Experimental investigation on thermal performance of vapour chamber for cooling of electronic applications",
+    "publisher": "OpenAlex",
+    "date": "2025-07-17",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [],
+    "funding": null,
+    "id": "openalex-experimental-investigation-on-thermal-p",
+    "story": "openalex-experimental-investigation-on-thermal-p",
+    "gate": "pass",
+    "summary": "A 3 mm vapour chamber with sintered-wick pillars and a wickless condenser had 60% less thermal resistance than a copper plate spreader in tests (preprint).",
+    "thermal": "Vapour chamber heat spreader for electronics.",
+    "manufacturing": "Sintered powder wick pillars; tested against a copper plate.",
+    "evidence": "measured"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.tsep.2026.104616",
+    "title": "Effect of the wick ratio on the layered structure ultra-thin vapour chamber with copper mesh wick",
+    "publisher": "Thermal Science and Engineering Progress",
+    "date": "2026-03-01",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "East China Jiaotong University",
+        "type": "Uni",
+        "country": "China",
+        "role": "researcher"
+      },
+      {
+        "name": "University of Nottingham",
+        "type": "Uni",
+        "country": "UK",
+        "role": "researcher"
+      },
+      {
+        "name": "South China University of Technology",
+        "type": "Uni",
+        "country": "China",
+        "role": "researcher"
+      }
+    ],
+    "funding": {
+      "funders": [
+        "National Natural Science Foundation of China",
+        "National Youth Science Foundation",
+        "Natural Science Foundation of Jiangxi Province"
+      ]
+    },
+    "id": "openalex-effect-of-the-wick-ratio-on-the-layered",
+    "story": "openalex-effect-of-the-wick-ratio-on-the-layered",
+    "gate": "pass",
+    "summary": "East China Jiaotong, Nottingham and SCUT measured how the number of copper mesh layers sets the capacity of a 0.5 mm layered ultra-thin vapour chamber; capacity rises then falls as layers are added, and they give a model for the best wick ratio.",
+    "thermal": "Ultra-thin vapour chamber for electronics heat spreading.",
+    "manufacturing": "Layered copper mesh wick; capacity measured against layer count.",
+    "evidence": "measured"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.petsci.2026.06.039",
+    "title": "A critical review of analytical oil flow rate models for vapour extraction and its non-condensable gas-based hybrids",
+    "publisher": "Petroleum Science",
+    "date": "2026-06-30",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "China University of Petroleum, Beijing",
+        "type": "Uni",
+        "country": "China",
+        "role": "researcher"
+      },
+      {
+        "name": "China University of Geosciences",
+        "type": "Uni",
+        "country": "China",
+        "role": "researcher"
+      },
+      {
+        "name": "University of Dar es Salaam",
+        "type": "Uni",
+        "country": "TZ",
+        "role": "researcher"
+      }
+    ],
+    "funding": {
+      "funders": [
+        "China National Offshore Oil Corporation"
+      ]
+    },
+    "id": "openalex-a-critical-review-of-analytical-oil-flo",
+    "story": "openalex-a-critical-review-of-analytical-oil-flo",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Analytical models are the preliminary reservoir engineering processes performance prediction tools that are quick and less costly compared with experiments and simulations when sufficiently modelled which motivates evaluation of oil drainage rate modelling in the mentioned subjects. The models were ",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://cordis.europa.eu/project/id/101255537",
+    "title": "OSYRYS: On-board SYstems Relevant for hYbridization of Regional aircraftS",
+    "publisher": "CORDIS",
+    "date": "2026-01",
+    "area": "aerospace",
+    "kind": "grant",
+    "source_api": "cordis",
+    "orgs": [
+      {
+        "name": "Safran Electrical & Power",
+        "type": "Commercial",
+        "country": "France",
+        "role": "lead",
+        "eu_eur": 7706523.13
+      },
+      {
+        "name": "Airbus Operations SAS",
+        "type": "Commercial",
+        "country": "France",
+        "role": "partner",
+        "eu_eur": 6350000.13
+      },
+      {
+        "name": "Liebherr Aerospace Toulouse SAS",
+        "type": "Commercial",
+        "country": "France",
+        "role": "partner",
+        "eu_eur": 6005248.9
+      },
+      {
+        "name": "Thales AVS France SAS",
+        "type": "Commercial",
+        "country": "France",
+        "role": "partner",
+        "eu_eur": 5141747.63
+      },
+      {
+        "name": "Goodrich Controls Holding Limited",
+        "type": "Commercial",
+        "country": "UK",
+        "role": "partner",
+        "eu_eur": 3662425.38
+      },
+      {
+        "name": "Collins Aerospace Ireland, Limited",
+        "type": "Commercial",
+        "country": "Ireland",
+        "role": "partner",
+        "eu_eur": 1745610.13
+      },
+      {
+        "name": "Avions DE Transport Regional GIE",
+        "type": "Commercial",
+        "country": "France",
+        "role": "partner",
+        "eu_eur": 1406300.88
+      },
+      {
+        "name": "Diehl Aerospace Gmbh",
+        "type": "Commercial",
+        "country": "Germany",
+        "role": "partner",
+        "eu_eur": 1279250.0
+      },
+      {
+        "name": "Aeromechs SRL",
+        "type": "Commercial",
+        "country": "Italy",
+        "role": "partner",
+        "eu_eur": 1023400.0
+      },
+      {
+        "name": "HS Elektronik Systeme Gmbh",
+        "type": "Commercial",
+        "country": "Germany",
+        "role": "partner",
+        "eu_eur": 987498.75
+      },
+      {
+        "name": "Technische Universitaet Ilmenau",
+        "type": "Uni",
+        "country": "Germany",
+        "role": "partner",
+        "eu_eur": 606652.5
+      },
+      {
+        "name": "Universitaet ULM",
+        "type": "Uni",
+        "country": "Germany",
+        "role": "partner",
+        "eu_eur": 600050.0
+      }
+    ],
+    "funding": {
+      "funder": "European Commission",
+      "amount": 39999998.93,
+      "currency": "EUR",
+      "start": "2026-01",
+      "end": "2030-12",
+      "status": "SIGNED",
+      "ref": "101255537",
+      "partners": 24
+    },
+    "id": "cordis-osyrys-on-board-systems-relevant-for-hybr",
+    "story": "cordis-osyrys-on-board-systems-relevant-for-hybr",
+    "gate": "pass",
+    "summary": "OSYRYS is a €40m Clean Aviation project (2026-2030) led by Safran Electrical & Power, continuing HECATE and TheMa4HERA, to mature megawatt-level electrical power, thermal management and energy management systems for hybrid-electric regional aircraft to a TRL 6 integrated demonstration. Partners include Airbus, Liebherr Aerospace Toulouse, Thales, Collins Aerospace, ATR, Diehl and the UK's Goodrich Controls (Collins), across 24 partners.",
+    "thermal": "Megawatt-level thermal management for hybrid-electric regional aircraft.",
+    "manufacturing": "none",
+    "evidence": "plan"
+  },
+  {
+    "url": "https://doi.org/10.3390/aerospace12090797",
+    "title": "Startup Characteristics and Thermal Instability of a Visual Loop Heat Pipe Under Acceleration Force",
+    "publisher": "Aerospace",
+    "date": "2025-09-04",
+    "area": "aerospace",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "Beihang University",
+        "type": "Uni",
+        "country": "China",
+        "role": "researcher",
+        "on_cards": true
+      },
+      {
+        "name": "North China Institute of Aerospace Engineering",
+        "type": "Uni",
+        "country": "China",
+        "role": "researcher"
+      },
+      {
+        "name": "University of Hertfordshire",
+        "type": "Uni",
+        "country": "UK",
+        "role": "researcher"
+      }
+    ],
+    "funding": {
+      "funders": [
+        "National Natural Science Foundation of China"
+      ]
+    },
+    "id": "openalex-startup-characteristics-and-thermal-ins",
+    "story": "openalex-startup-characteristics-and-thermal-ins",
+    "gate": "pass",
+    "summary": "Beihang, North China Institute of Aerospace Engineering and the University of Hertfordshire tested a loop heat pipe with see-through compensation chambers and condenser at 30-150 W and 1-15 g in four directions, for aircraft thermal management. Start-up and stability depend strongly on the direction of acceleration.",
+    "thermal": "Loop heat pipe for aircraft thermal management under high g.",
+    "manufacturing": "Visual test rig on a centrifuge-style acceleration set-up.",
+    "evidence": "measured"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.applthermaleng.2025.127571",
+    "title": "Heat generation analysis of aeroengine fuel system integrated with aircraft thermal management evaluation",
+    "publisher": "Applied Thermal Engineering",
+    "date": "2025-11",
+    "area": "aerospace",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [],
+    "funding": {
+      "funders": [
+        "National Major Science and Technology Projects of China",
+        "Tsinghua Initiative Scientific Research Program"
+      ]
+    },
+    "id": "crossref-heat-generation-analysis-of-aeroengine",
+    "story": "crossref-heat-generation-analysis-of-aeroengine",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Heat generation analysis of aeroengine fuel system integrated with aircraft thermal management evaluation",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1088/1742-6596/3231/1/012071",
+    "title": "Energy optimization control method for aircraft thermal management system",
+    "publisher": "Journal of Physics: Conference Series",
+    "date": "2026-05-01",
+    "area": "aerospace",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [
+      {
+        "name": "North China University of Technology",
+        "type": "Uni",
+        "country": null,
+        "role": "researcher"
+      },
+      {
+        "name": "Northeast Electric Power University",
+        "type": "Uni",
+        "country": null,
+        "role": "researcher"
+      }
+    ],
+    "funding": null,
+    "id": "crossref-energy-optimization-control-method-for",
+    "story": "crossref-energy-optimization-control-method-for",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Abstract With the increasing thermal loads in modern aircraft, thermal management and control have become increasingly challenging. Conventional model predictive control (MPC) with fixed parameters often struggles to balance dynamic response, steady-state accuracy, and control input smoothness under",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.5281/zenodo.22929213",
+    "title": "Possibilities of Sustainable Materials in the Formula 1 Domain",
+    "publisher": "Zenodo (CERN European Organization for Nuclear Research)",
+    "date": "2026-09-24",
+    "area": "motorsport",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [],
+    "funding": null,
+    "id": "openalex-possibilities-of-sustainable-materials",
+    "story": "openalex-possibilities-of-sustainable-materials",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Formula 1 demands materials that withstand extreme mechanical, thermal, aerodynamic, and safety requirements while remaining lightweight, creating significant sustainability challenges in material sourcing, manufacturing, and disposal. This paper reviews the potential of sustainable materials in F1 ",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.3390/en18226013",
+    "title": "The Pro-Ecological Evolution of Powertrains and Fuels in Formula 1",
+    "publisher": "Energies",
+    "date": "2025-11-17",
+    "area": "motorsport",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "Oil and Gas Institute - National Research Institute",
+        "type": "RTO",
+        "country": "Poland",
+        "role": "researcher"
+      }
+    ],
+    "funding": null,
+    "id": "openalex-the-pro-ecological-evolution-of-powertr",
+    "story": "openalex-the-pro-ecological-evolution-of-powertr",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "This article describes the environmentally friendly evolution of Formula 1 powertrains and fuels since the start of the season. It is the only study of its kind to encompass a comprehensive analysis of various solutions designed to make Formula 1 powertrains more environmentally friendly. Despite th",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.13140/rg.2.2.36282.76480",
+    "title": "A HEAT TRANSFER ANALYSIS ON FORMULA 1 BRAKE DISCS",
+    "publisher": "OpenAlex",
+    "date": "2026-09-12",
+    "area": "motorsport",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [],
+    "funding": null,
+    "id": "openalex-a-heat-transfer-analysis-on-formula-1-b",
+    "story": "openalex-a-heat-transfer-analysis-on-formula-1-b",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "A HEAT TRANSFER ANALYSIS ON FORMULA 1 BRAKE DISCS",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://arxiv.org/abs/2607.02722",
+    "title": "Weighted Conformal Prediction for Lab-to-Track Thermal Transfer in EV Motorsport Powertrains",
+    "publisher": "arXiv",
+    "date": "2026-07-02",
+    "area": "motorsport",
+    "kind": "preprint",
+    "source_api": "arxiv",
+    "orgs": [],
+    "id": "arxiv-weighted-conformal-prediction-for-lab-to-t",
+    "story": "arxiv-weighted-conformal-prediction-for-lab-to-t",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Predicting thermal volatility in high-performance EV powertrains is difficult as internal temperatures are rarely observable outside the lab, and models calibrated on lab drive cycles fail when deployed against real-world loads. We study this lab-to-track transfer problem using conformal prediction,",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1007/s10973-025-14994-z",
+    "title": "A comprehensive review on the use of nanofluids to increase the efficiency of pulsating heat pipe",
+    "publisher": "Journal of Thermal Analysis and Calorimetry",
+    "date": "2025-11-11",
+    "area": "other",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "University of Kerbala",
+        "type": "Uni",
+        "country": "IQ",
+        "role": "researcher"
+      },
+      {
+        "name": "University of Warith Al-Anbiyaa",
+        "type": "Uni",
+        "country": null,
+        "role": "researcher"
+      },
+      {
+        "name": "Imam Ja’afar Al-Sadiq University",
+        "type": "Uni",
+        "country": null,
+        "role": "researcher"
+      },
+      {
+        "name": "University of Birmingham",
+        "type": "Uni",
+        "country": "UK",
+        "role": "researcher",
+        "on_cards": true
+      },
+      {
+        "name": "Thi Qar University",
+        "type": "Uni",
+        "country": "IQ",
+        "role": "researcher"
+      },
+      {
+        "name": "University of Technology - Iraq",
+        "type": "Uni",
+        "country": "IQ",
+        "role": "researcher"
+      },
+      {
+        "name": "Research Center in Industrial Technologies",
+        "type": "RTO",
+        "country": "DZ",
+        "role": "researcher"
+      },
+      {
+        "name": "Universidade Federal do Rio Grande",
+        "type": "Uni",
+        "country": "BR",
+        "role": "researcher"
+      },
+      {
+        "name": "China University of Geosciences",
+        "type": "Uni",
+        "country": "China",
+        "role": "researcher"
+      },
+      {
+        "name": "University of Skikda",
+        "type": "Uni",
+        "country": "DZ",
+        "role": "researcher"
+      }
+    ],
+    "funding": null,
+    "id": "openalex-a-comprehensive-review-on-the-use-of-na",
+    "story": "openalex-a-comprehensive-review-on-the-use-of-na",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "A comprehensive review on the use of nanofluids to increase the efficiency of pulsating heat pipe",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.applthermaleng.2026.132034",
+    "title": "Autonomous multi-object tracking coupled with infrared thermography for two-phase flow analysis in pulsating heat pipes under variable gravity",
+    "publisher": "Applied Thermal Engineering",
+    "date": "2026-06-26",
+    "area": "other",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "University of Brighton",
+        "type": "Uni",
+        "country": "UK",
+        "role": "researcher",
+        "on_cards": true
+      },
+      {
+        "name": "University of Parma",
+        "type": "Uni",
+        "country": "Italy",
+        "role": "researcher"
+      },
+      {
+        "name": "University of Liverpool",
+        "type": "Uni",
+        "country": "UK",
+        "role": "researcher"
+      },
+      {
+        "name": "King Khalid University",
+        "type": "Uni",
+        "country": "SA",
+        "role": "researcher"
+      },
+      {
+        "name": "University of Florence",
+        "type": "Uni",
+        "country": "Italy",
+        "role": "researcher"
+      },
+      {
+        "name": "Liverpool John Moores University",
+        "type": "Uni",
+        "country": "UK",
+        "role": "researcher"
+      },
+      {
+        "name": "University of Pavia",
+        "type": "Uni",
+        "country": "Italy",
+        "role": "researcher"
+      }
+    ],
+    "funding": {
+      "funders": [
+        "European Space Agency"
+      ]
+    },
+    "id": "openalex-autonomous-multi-object-tracking-couple",
+    "story": "openalex-autonomous-multi-object-tracking-couple",
+    "gate": "pass",
+    "summary": "An ESA-funded team including the University of Brighton, Liverpool and LJMU used infrared thermography with automatic tracking of liquid slugs to analyse flow in pulsating heat pipes under varying gravity. No abstract was available, so details are from the title.",
+    "thermal": "Pulsating heat pipe flow under variable gravity.",
+    "manufacturing": "Infrared thermography with automated image tracking.",
+    "evidence": "measured"
+  },
+  {
+    "url": "https://doi.org/10.1007/s00231-025-03573-5",
+    "title": "Parametric study of a geometric modified common header tubular pulsating heat pipe",
+    "publisher": "Heat and Mass Transfer",
+    "date": "2025-05-27",
+    "area": "other",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [],
+    "funding": {
+      "funders": [
+        "Science and Engineering Research Board"
+      ]
+    },
+    "id": "crossref-parametric-study-of-a-geometric-modifie",
+    "story": "crossref-parametric-study-of-a-geometric-modifie",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Parametric study of a geometric modified common header tubular pulsating heat pipe",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.icheatmasstransfer.2026.111649",
+    "title": "Numerical study of a cryogenic pulsating heat pipe for space applications",
+    "publisher": "International Communications in Heat and Mass Transfer",
+    "date": "2026-09",
+    "area": "other",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [],
+    "funding": {
+      "funders": [
+        "Department of Science and Technology, Ministry of Science and Technology, India",
+        "Ministry of Electronics and Information technology"
+      ]
+    },
+    "id": "crossref-numerical-study-of-a-cryogenic-pulsatin",
+    "story": "crossref-numerical-study-of-a-cryogenic-pulsatin",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Numerical study of a cryogenic pulsating heat pipe for space applications",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.ijheatfluidflow.2025.109831",
+    "title": "Visual experimental study on flat-plate pulsating heat pipe with double condensers",
+    "publisher": "International Journal of Heat and Fluid Flow",
+    "date": "2025-08",
+    "area": "other",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [],
+    "funding": {
+      "funders": [
+        "National Natural Science Foundation of China"
+      ]
+    },
+    "id": "crossref-visual-experimental-study-on-flat-plate",
+    "story": "crossref-visual-experimental-study-on-flat-plate",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Visual experimental study on flat-plate pulsating heat pipe with double condensers",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  }
+]
