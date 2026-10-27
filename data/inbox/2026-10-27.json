@@ -1,0 +1,1318 @@
+[
+  {
+    "id": "mtc-meggitt-drama-depowder-2",
+    "url": "https://www.the-mtc.org/meggitt-plc-drama",
+    "title": "DRAMA helps Meggitt to investigate Heat Exchange Drainage",
+    "publisher": "Manufacturing Technology Centre",
+    "date": "2019-02-08",
+    "area": "aerospace",
+    "story": "mtc-meggitt-depowder",
+    "summary": "Another copy of the MTC case study on Meggitt and MTC validating powder removal from a 70 kg printed AlSi10Mg heat exchanger with sub-millimetre channels on a Solukon machine at NCAM. Up to 99% of internal powder could be drained; the last 1% needs further work.",
+    "orgs": [
+      {
+        "name": "Meggitt",
+        "type": "Commercial",
+        "country": "UK"
+      },
+      {
+        "name": "Manufacturing Technology Centre",
+        "type": "RTO",
+        "country": "UK"
+      },
+      {
+        "name": "Solukon",
+        "type": "Commercial",
+        "country": "Germany"
+      }
+    ],
+    "thermal": "Indirect: de-powdering a heat exchanger.",
+    "manufacturing": "Two-stage de-powdering on a Solukon SFM-AT800S; drainage experiments.",
+    "evidence": "measured",
+    "gate": "pass"
+  },
+  {
+    "id": "afrl-mamls-am-fohe-test",
+    "url": "https://afresearchlab.com/?p=3601",
+    "title": "AFRL collaboration yields testing capability for additive manufactured heat exchangers",
+    "publisher": "Air Force Research Laboratory",
+    "date": "2019-11-13",
+    "area": "aerospace",
+    "story": "afrl-mamls-fohe",
+    "summary": "AFRL opened a test rig for printed fuel-oil coolers under its MAMLS low-cost sustainment programme, run through America Makes. The University of Dayton Research Institute leads the cooler project with DRT Aerospace and GE and had received three printed coolers, tested for pressure drop, flow, inlet and outlet temperatures and particulates. No results are given. The rig is to be open to government and industry after MAMLS.",
+    "orgs": [
+      {
+        "name": "Air Force Research Laboratory",
+        "type": "Gov",
+        "country": "USA"
+      },
+      {
+        "name": "University of Dayton Research Institute",
+        "type": "RTO",
+        "country": "USA"
+      },
+      {
+        "name": "DRT Aerospace",
+        "type": "Commercial",
+        "country": "USA"
+      },
+      {
+        "name": "General Electric",
+        "type": "Commercial",
+        "country": "USA"
+      },
+      {
+        "name": "America Makes",
+        "type": "RTO",
+        "country": "USA"
+      }
+    ],
+    "thermal": "Fuel-oil coolers for legacy aircraft.",
+    "manufacturing": "Printed coolers tested on a new rig, including particulate checks.",
+    "evidence": "prototype",
+    "gate": "pass"
+  },
+  {
+    "id": "cordis-shefae2-rr",
+    "url": "https://cordis.europa.eu/project/id/690808",
+    "title": "Surface Heat Exchangers For Aero Engines 2 (SHEFAE 2)",
+    "publisher": "CORDIS",
+    "date": "2022-08-23",
+    "area": "aerospace",
+    "story": "shefae2",
+    "summary": "SHEFAE 2 (H2020, 2016-2021, €1.34m) was coordinated by Rolls-Royce with Paulstra and BTU Cottbus-Senftenberg. It aimed to develop lighter integrated heat exchanger systems for turbofans: long, shallow surface air-cooled oil coolers, a fuel-oil heat exchanger with a built-in modulating bypass valve, and mountings that handle thermal and vibration loads, tested on rig and Rolls-Royce demonstrator engines. The fact sheet gives aims only.",
+    "orgs": [
+      {
+        "name": "Rolls-Royce",
+        "type": "Commercial",
+        "country": "UK"
+      },
+      {
+        "name": "Paulstra",
+        "type": "Commercial",
+        "country": "France"
+      },
+      {
+        "name": "BTU Cottbus-Senftenberg",
+        "type": "Uni",
+        "country": "Germany"
+      }
+    ],
+    "thermal": "Surface air-cooled oil coolers and a fuel-oil heat exchanger for turbofans.",
+    "manufacturing": "Manufacturing of high length-to-depth coolers planned; rig and engine tests.",
+    "evidence": "plan",
+    "gate": "pass"
+  },
+  {
+    "id": "castrol-pangbourne-immersion-lab",
+    "url": "https://www.fuelsandlubes.com/castrol-to-build-immersion-cooling-development-and-test-facilities/",
+    "title": "Castrol to build immersion cooling development and test facilities",
+    "publisher": "F&L Asia",
+    "date": "2022-10-17",
+    "area": "datacentre",
+    "story": "castrol-immersion-lab",
+    "summary": "Castrol planned immersion cooling development and test facilities for data centres at its Pangbourne, UK headquarters, part of bp's up to £50m investment there. It will use Submer SmartPod and MicroPod tanks adapted to test new fluids and servers, and develop ways to capture and reuse the heat. Benefits quoted are company claims.",
+    "orgs": [
+      {
+        "name": "Castrol",
+        "type": "Commercial",
+        "country": "UK"
+      },
+      {
+        "name": "bp",
+        "type": "Commercial",
+        "country": "UK"
+      },
+      {
+        "name": "Submer",
+        "type": "Commercial",
+        "country": "Spain"
+      }
+    ],
+    "thermal": "Immersion cooling of IT hardware and heat reuse.",
+    "manufacturing": "Test facility with adapted immersion tanks.",
+    "evidence": "plan",
+    "gate": "pass"
+  },
+  {
+    "id": "ornl-ti64-oscillating-heat-pipe",
+    "url": "https://impact.ornl.gov/en/publications/an-investigation-of-a-multi-layered-oscillating-heat-pipe-additiv/",
+    "title": "An investigation of a multi-layered oscillating heat pipe additively manufactured from Ti-6Al-4V powder",
+    "publisher": "International Journal of Heat and Mass Transfer",
+    "date": "2017",
+    "area": "other",
+    "story": "ornl-ti-ohp",
+    "summary": "A team including ORNL printed a four-layer Ti-6Al-4V oscillating heat pipe (50.8 × 38.1 × 15.75 mm) with an integrated fill port by laser powder bed fusion. It worked at up to 50 W with water, acetone, Novec 7200 and n-pentane in all three orientations tested. Neutron radiography and microscopy showed sintered powder on the channel walls acting as a secondary wick.",
+    "orgs": [
+      {
+        "name": "Oak Ridge National Laboratory",
+        "type": "RTO",
+        "country": "USA"
+      }
+    ],
+    "thermal": "Oscillating heat pipe heat spreader up to 50 W.",
+    "manufacturing": "Single L-PBF build; neutron radiography and surface metrology.",
+    "evidence": "measured",
+    "gate": "pass"
+  },
+  {
+    "id": "epfl-server-thermosyphon-map",
+    "url": "https://infoscience.epfl.ch/record/298673",
+    "title": "Operational Map And Thermal Performance Of A Thermosyphon Cooling System For Compact Servers",
+    "publisher": "ASME InterPACK 2021 (EPFL Infoscience)",
+    "date": "2021-10",
+    "area": "datacentre",
+    "story": "epfl-thermosyphon-map",
+    "summary": "EPFL and Nokia Bell Labs tested a passive two-phase thermosyphon 7 cm tall that fits in a 2U server, using R1234ze(E) and a water secondary loop. It cooled a pseudo-chip at up to 240 W (about 20 W/cm²), and the results were mapped into operating regimes. The abstract gives no further figures.",
+    "orgs": [
+      {
+        "name": "EPFL",
+        "type": "Uni",
+        "country": "Switzerland"
+      },
+      {
+        "name": "Nokia Bell Labs",
+        "type": "Commercial",
+        "country": null
+      }
+    ],
+    "thermal": "Pump-free server-level thermosyphon.",
+    "manufacturing": "none",
+    "evidence": "measured",
+    "gate": "pass"
+  },
+  {
+    "id": "servnet-ai-cooling-guide-2026",
+    "url": "https://www.servnetuk.com/insights/ai-server-cooling-air-vs-liquid-2026",
+    "title": "AI server cooling 2026: air vs liquid vs immersion",
+    "publisher": "Servnet",
+    "date": "2026-05-20",
+    "area": "datacentre",
+    "story": "servnet-cooling-guide",
+    "summary": "A UK reseller's guide compares air (25 kW per rack), direct-to-chip (80 kW) and immersion (200 kW+) cooling and gives UK colocation densities of 4-120 kW per rack. Figures are unsourced claims.",
+    "orgs": [
+      {
+        "name": "Servnet",
+        "type": "Commercial",
+        "country": "UK"
+      }
+    ],
+    "thermal": "Rack-level cooling choices.",
+    "manufacturing": "none",
+    "evidence": "claim",
+    "gate": "pass"
+  },
+  {
+    "id": "dlr-fpt-hx-validation",
+    "url": "https://www.dlr.de/en/at/research-transfer/research-infrastructure/future-propulsion-test-facility/validation-of-heat-exchangers",
+    "title": "Validation of Heat Exchangers",
+    "publisher": "DLR Institute of Propulsion Technology",
+    "date": null,
+    "area": "aerospace",
+    "story": "dlr-fpt-hx",
+    "summary": "DLR's Future Propulsion Test Facility validates aircraft heat exchangers under engine-like conditions, including exhaust heat exchangers that turn liquid into gaseous hydrogen. Cryogenic nitrogen stands in for hydrogen for now. The rig handles hydrogen gas at up to 250 bar and 500 g/s, nitrogen from -196 °C to +150 °C and heated air to 700 °C, for TRL 3-6 tests. No test results are given.",
+    "orgs": [
+      {
+        "name": "DLR",
+        "type": "RTO",
+        "country": "Germany"
+      }
+    ],
+    "thermal": "Exhaust-heated hydrogen evaporators for aircraft engines.",
+    "manufacturing": "Test rig only.",
+    "evidence": "claim",
+    "gate": "pass"
+  },
+  {
+    "id": "ulj-laser-textured-zr-foil-boiling",
+    "url": "https://repozitorij.uni-lj.si/IzpisGradiva.php?id=105896",
+    "title": "Boiling process enhancement on thin zirconium alloy foils",
+    "publisher": "University of Ljubljana",
+    "date": "2018-12",
+    "area": "other",
+    "story": "ulj-zr-boiling",
+    "summary": "A University of Ljubljana master's thesis laser-textured four surface types on thin zirconium alloy foils and tested pool boiling of water with high-speed infrared thermography. Critical heat flux reached 598-1590 kW/m², 19-217% above the untextured surface, and heat transfer coefficients 34-55 kW/m²K, 30-113% higher. Repeat runs varied little.",
+    "orgs": [
+      {
+        "name": "University of Ljubljana",
+        "type": "Uni",
+        "country": "Slovenia"
+      }
+    ],
+    "thermal": "Pool boiling on laser-textured surfaces.",
+    "manufacturing": "Laser texturing; IR thermography in test.",
+    "evidence": "measured",
+    "gate": "pass"
+  },
+  {
+    "id": "pmw-conflux-multimatic",
+    "url": "https://www.pmw-magazine.com/news/transmissions/conflux-3d-printed-transmission-oil-cooler-completes-endurance-race-in-multimatic-car.html",
+    "title": "https://www.pmw-magazine.com/news/transmissions/conflux-3d-printed-transmission-oil-cooler-completes-endurance-race-in-multimatic-car.html",
+    "publisher": null,
+    "date": null,
+    "area": "motorsport",
+    "story": "pmw-conflux-multimatic",
+    "summary": "",
+    "orgs": [],
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion",
+    "gate": "fail",
+    "gate_reason": "Could not be read (HTTP 403); the story is already on file from another source."
+  },
+  {
+    "id": "bizdesk-deep-green-bradford",
+    "url": "https://www.thebusinessdesk.com/yorkshire/news/2154442-data-centre-which-will-reuse-the-heat-it-generates-wins-planning-consent",
+    "title": "https://www.thebusinessdesk.com/yorkshire/news/2154442-data-centre-which-will-reuse-the-heat-it-generates-wins-planning-consent",
+    "publisher": null,
+    "date": null,
+    "area": "datacentre",
+    "story": "bizdesk-deep-green-bradford",
+    "summary": "",
+    "orgs": [],
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion",
+    "gate": "fail",
+    "gate_reason": "Could not be read (empty response)."
+  },
+  {
+    "id": "qmul-dc-heat-campus",
+    "url": "https://www.qmul.ac.uk/media/news/2024/se/queen-mary-university-of-london-data-centre-waste-heat-to-provide-hot-water-and-heating-for-campus.html",
+    "title": "https://www.qmul.ac.uk/media/news/2024/se/queen-mary-university-of-london-data-centre-waste-heat-to-provide-hot-water-and-heating-for-campus.html",
+    "publisher": null,
+    "date": null,
+    "area": "datacentre",
+    "story": "qmul-dc-heat-campus",
+    "summary": "",
+    "orgs": [],
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion",
+    "gate": "fail",
+    "gate_reason": "Could not be read (HTTP 404)."
+  },
+  {
+    "id": "iium-laser-polished-copper-boiling",
+    "url": "https://irep.iium.edu.my/129277/",
+    "title": "https://irep.iium.edu.my/129277/",
+    "publisher": null,
+    "date": null,
+    "area": "other",
+    "story": "iium-laser-polished-copper-boiling",
+    "summary": "",
+    "orgs": [],
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion",
+    "gate": "fail",
+    "gate_reason": "Could not be read (HTTP 503)."
+  },
+  {
+    "id": "metalpowder-aheadd-cp1-f1",
+    "url": "https://www.metal-powder.tech/?p=276215",
+    "title": "https://www.metal-powder.tech/?p=276215",
+    "publisher": null,
+    "date": null,
+    "area": "motorsport",
+    "story": "metalpowder-aheadd-cp1-f1",
+    "summary": "",
+    "orgs": [],
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion",
+    "gate": "fail",
+    "gate_reason": "Could not be read (HTTP 403)."
+  },
+  {
+    "url": "https://cordis.europa.eu/project/id/101283662",
+    "title": "BEAM-STPV: Novel Beam-Down Concentrator with Advanced Thermal Storage and Management for High-Performance Outdoor Thermophotovoltaic Systems",
+    "publisher": "CORDIS",
+    "date": "2026-11",
+    "area": "datacentre",
+    "kind": "grant",
+    "source_api": "cordis",
+    "orgs": [
+      {
+        "name": "Centre National DE LA Recherche Scientifique Cnrs",
+        "type": "RTO",
+        "country": "France",
+        "role": "lead",
+        "eu_eur": 242260.56
+      }
+    ],
+    "funding": {
+      "funder": "European Commission",
+      "amount": 242260.56,
+      "currency": "EUR",
+      "start": "2026-11",
+      "end": "2028-10",
+      "status": "SIGNED",
+      "ref": "101283662",
+      "partners": 1
+    },
+    "id": "cordis-beam-stpv-novel-beam-down-concentrator-wi",
+    "story": "cordis-beam-stpv-novel-beam-down-concentrator-wi",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Europe's transition to net-zero energy requires dispatchable renewable technologies. The EU mandates 32% renewable energy by 2030, yet current solar systems face fundamental limitations preventing simultaneous modularity and dispatchability. Conventional photovoltaics offer modularity but lack dispa",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1109/tpel.2025.3578146",
+    "title": "Single-Phase and Evaporating Two-Phase Flow Microchannel Cooling of Power Modules for Temporary Overcurrent Operation",
+    "publisher": "IEEE Transactions on Power Electronics",
+    "date": "2025-06-09",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "University of Warwick",
+        "type": "Uni",
+        "country": "UK",
+        "role": "researcher"
+      },
+      {
+        "name": "Offshore Renewable Energy Catapult",
+        "type": "Other",
+        "country": "UK",
+        "role": "researcher"
+      },
+      {
+        "name": "Chongqing University",
+        "type": "Uni",
+        "country": "China",
+        "role": "researcher"
+      }
+    ],
+    "funding": null,
+    "id": "openalex-single-phase-and-evaporating-two-phase",
+    "story": "openalex-single-phase-and-evaporating-two-phase",
+    "gate": "pass",
+    "summary": "A University of Warwick, ORE Catapult and Chongqing team cooled a silicon IGBT power module with a microchannel array under the ceramic substrate and let the water boil only during short overcurrents. Evaporation cut junction-to-case thermal resistance and raised temporary overcurrent capability compared with single-phase flow.",
+    "thermal": "Two-phase microchannel cooling for power modules.",
+    "manufacturing": "Microchannels integrated under the DBC substrate; thermal resistance measured.",
+    "evidence": "measured"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.engappai.2026.115892",
+    "title": "Dynamic weighted mixture-of-experts physics-informed learning for real-time microchannel cooling field reconstruction",
+    "publisher": "Engineering Applications of Artificial Intelligence",
+    "date": "2026-08-08",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "Xi’an Jiaotong-Liverpool University",
+        "type": "Uni",
+        "country": "China",
+        "role": "researcher"
+      },
+      {
+        "name": "Shenyang Institute of Automation",
+        "type": "RTO",
+        "country": "China",
+        "role": "researcher"
+      },
+      {
+        "name": "Chinese Academy of Sciences",
+        "type": "Gov",
+        "country": "China",
+        "role": "researcher"
+      },
+      {
+        "name": "University of Liverpool",
+        "type": "Uni",
+        "country": "UK",
+        "role": "researcher",
+        "on_cards": true
+      }
+    ],
+    "funding": {
+      "funders": [
+        "National Natural Science Foundation of China",
+        "National Science and Technology Major Project",
+        "Science and Technology Support Program of Jiangsu Province"
+      ]
+    },
+    "id": "openalex-dynamic-weighted-mixture-of-experts-phy",
+    "story": "openalex-dynamic-weighted-mixture-of-experts-phy",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Dynamic weighted mixture-of-experts physics-informed learning for real-time microchannel cooling field reconstruction",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1002/fld.70093",
+    "title": "Effect of Microchannel Geometry on Nanoparticle Deposition in Nanofluid Flow",
+    "publisher": "International Journal for Numerical Methods in Fluids",
+    "date": "2026-08-11",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "University of Glasgow",
+        "type": "Uni",
+        "country": "UK",
+        "role": "researcher"
+      },
+      {
+        "name": "Tsinghua University",
+        "type": "Uni",
+        "country": "China",
+        "role": "researcher"
+      },
+      {
+        "name": "Auckland University of Technology",
+        "type": "Uni",
+        "country": "NZ",
+        "role": "researcher"
+      }
+    ],
+    "funding": null,
+    "id": "openalex-effect-of-microchannel-geometry-on-nano",
+    "story": "openalex-effect-of-microchannel-geometry-on-nano",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "ABSTRACT Particle deposition poses a significant challenge in the application of nanofluids within microchannels. This study provides an angle‐ and radius‐resolved numerical analysis of nanoparticle deposition in bent microchannels and clarifies how microchannel geometry regulates deposition through",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.rineng.2026.112161",
+    "title": "Bionic microchannel cooling of photovoltaic panels using capillary-driven evaporation",
+    "publisher": "Results in Engineering",
+    "date": "2026-12",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [],
+    "funding": null,
+    "id": "crossref-bionic-microchannel-cooling-of-photovol",
+    "story": "crossref-bionic-microchannel-cooling-of-photovol",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Bionic microchannel cooling of photovoltaic panels using capillary-driven evaporation",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.3390/technologies14100663",
+    "title": "Thermally Coupled CPV–DCMD System with Co-Designed Finned Microchannel Cooling and Baffled DCMD Channels",
+    "publisher": "Technologies",
+    "date": "2026-10-13",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [
+      {
+        "name": "Interdisciplinary Research Center for Sustainable Energy Systems (IRC-SES), King Fahd University of Petroleum and Minera",
+        "type": "Uni",
+        "country": null,
+        "role": "researcher"
+      },
+      {
+        "name": "Mechanical Engineering Department, King Fahd University of Petroleum and Minerals, Dhahran 31261, Saudi Arabia",
+        "type": "Uni",
+        "country": null,
+        "role": "researcher"
+      }
+    ],
+    "funding": {
+      "funders": [
+        "King Fahd University of Petroleum and Minerals"
+      ]
+    },
+    "id": "crossref-thermally-coupled-cpv-dcmd-system-with",
+    "story": "crossref-thermally-coupled-cpv-dcmd-system-with",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Concentrated photovoltaic cooling and membrane distillation channel enhancement are commonly investigated as separate design problems, without considering the quality of the recovered heat available to the desalination unit. This study presents a thermally coupled CPV–DCMD system in which the coolin",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.solener.2026.114795",
+    "title": "Performance enhancement of a hybrid CPV/DCMD system using convergent microchannel cooling and finned DCMD feed channel",
+    "publisher": "Solar Energy",
+    "date": "2026-09",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [],
+    "funding": {
+      "funders": [
+        "Center for Sustainable Energy",
+        "King Fahd University of Petroleum and Minerals"
+      ]
+    },
+    "id": "crossref-performance-enhancement-of-a-hybrid-cpv",
+    "story": "crossref-performance-enhancement-of-a-hybrid-cpv",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Performance enhancement of a hybrid CPV/DCMD system using convergent microchannel cooling and finned DCMD feed channel",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.5281/zenodo.21385582",
+    "title": "Beyond Waste Heat: A Regenerative Data Centre Framework for Food, Water, Energy, and Nutrient Recovery",
+    "publisher": "Zenodo (CERN European Organization for Nuclear Research)",
+    "date": "2026-07-15",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [],
+    "funding": null,
+    "id": "openalex-beyond-waste-heat-a-regenerative-data-c",
+    "story": "openalex-beyond-waste-heat-a-regenerative-data-c",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "This paper expands the concept of data centre waste-heat recovery into a broader regenerative infrastructure framework. It examines how selected data centres could be connected with controlled-environment agriculture, water recovery, nutrient recycling, organic residue processing, renewable energy, ",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.52152/4179",
+    "title": "Research on Constant Temperature and Humidity Energy Saving and Coupling of Double-loop Surface Cooler in Converged High Quality Power System",
+    "publisher": "Renewable Energy and Power Quality Journal",
+    "date": "2025-07-25",
+    "area": "aerospace",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "Jiangsu Vocational Institute of Commerce",
+        "type": "Other",
+        "country": "China",
+        "role": "researcher"
+      }
+    ],
+    "funding": null,
+    "id": "openalex-research-on-constant-temperature-and-hu",
+    "story": "openalex-research-on-constant-temperature-and-hu",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Through theoretical construction, model establishment and performance analysis, it is found that compared with traditional cooling and environmental control technologies, the coupling strategy achieves a 15% reduction in energy consumption, a 20% increase in thermal efficiency, and a return on inves",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.30564/jasr.v8i4.12145",
+    "title": "Experimental Evidence of Plant Thermoregulation and Its Implications for Climate Stability",
+    "publisher": "Journal of Atmospheric Science Research",
+    "date": "2025-09-27",
+    "area": "aerospace",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [],
+    "funding": null,
+    "id": "openalex-experimental-evidence-of-plant-thermore",
+    "story": "openalex-experimental-evidence-of-plant-thermore",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Ongoing experiments reveal that plants of different species actively regulate their surface temperature by means of varying their rate of evapotranspiration. The overall cooling under hot weather conditions and bright sunlight may amount to as much as 20 ℃. That degree of cooling is vital in order t",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.14744/thermal.0001092",
+    "title": "Performance analysis of solar still with separate evaporatively cooled condenser",
+    "publisher": "Journal of Thermal Engineering",
+    "date": "2026-01-01",
+    "area": "aerospace",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [],
+    "funding": null,
+    "id": "openalex-performance-analysis-of-solar-still-wit",
+    "story": "openalex-performance-analysis-of-solar-still-wit",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Potable water scarcity is a serious global issue, and solar stills provide an eco-friendly way to produce clean water using sunlight. Their efficiency mainly depends on the temperature difference between the basin water and the glass cover. Adding an external condenser helps to boost this difference",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1115/1.4072044",
+    "title": "Multi-Objective Technoeconomic Optimisation of Closed Loop CO2 Power Cycle for Spherical Tokamak Fusion Reactor",
+    "publisher": "Journal of Engineering for Gas Turbines and Power",
+    "date": "2025-06-16",
+    "area": "aerospace",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "Culham Science Centre",
+        "type": "RTO",
+        "country": "UK",
+        "role": "researcher"
+      },
+      {
+        "name": "United Kingdom Atomic Energy Authority",
+        "type": "Gov",
+        "country": "UK",
+        "role": "researcher"
+      }
+    ],
+    "funding": null,
+    "id": "openalex-multi-objective-technoeconomic-optimisa",
+    "story": "openalex-multi-objective-technoeconomic-optimisa",
+    "gate": "pass",
+    "summary": "UKIFS and UKAEA authors optimise a closed-loop CO2 power cycle for STEP for cost and performance, balancing high efficiency against integrating several grades of tokamak heat and pulsed operation.",
+    "thermal": "sCO2 power cycle and heat integration for fusion.",
+    "manufacturing": "none (cycle modelling)",
+    "evidence": "simulation"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.icheatmasstransfer.2026.112103",
+    "title": "Investigation of surfactant-induced absorption enhancements for an aqueous sodium hydroxide based thermochemical storage system",
+    "publisher": "International Communications in Heat and Mass Transfer",
+    "date": "2026-07-24",
+    "area": "aerospace",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "University of Warwick",
+        "type": "Uni",
+        "country": "UK",
+        "role": "researcher"
+      }
+    ],
+    "funding": {
+      "funders": [
+        "Engineering and Physical Sciences Research Council"
+      ]
+    },
+    "id": "openalex-investigation-of-surfactant-induced-abs",
+    "story": "openalex-investigation-of-surfactant-induced-abs",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "With the increasing global demand for sustainable energy solutions, absorption-based thermochemical storage systems have emerged as promising candidates for long-term energy storage due to their high energy density. This study investigates the enhancement of absorption performance in an aqueous sodi",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1080/01457632.2025.2607782",
+    "title": "Experimental Investigation on Three-Fluid Compact Heat Exchanger Under Uniform and Non-Uniform Flow",
+    "publisher": "Heat Transfer Engineering",
+    "date": "2026-01-08",
+    "area": "aerospace",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [
+      {
+        "name": "Department of Mechanical Engineering, Indian Institute of Technology Bombay",
+        "type": "Uni",
+        "country": null,
+        "role": "researcher"
+      },
+      {
+        "name": "Department of Mechanical and Industrial Engineering, Indian Institute of Technology Roorkee",
+        "type": "Uni",
+        "country": null,
+        "role": "researcher"
+      }
+    ],
+    "funding": null,
+    "id": "crossref-experimental-investigation-on-three-flu",
+    "story": "crossref-experimental-investigation-on-three-flu",
+    "gate": "pass",
+    "summary": "IIT Bombay and IIT Roorkee tested a three-fluid compact heat exchanger under uniform and non-uniform inlet flow. No abstract was available.",
+    "thermal": "Three-fluid compact heat exchanger.",
+    "manufacturing": "Experimental test.",
+    "evidence": "measured"
+  },
+  {
+    "url": "https://doi.org/10.1002/htj.70061",
+    "title": "Numerical and Experimental Investigation of Fin Angle Influence on Compact Heat Exchanger Efficiency",
+    "publisher": "Heat Transfer",
+    "date": "2025-09-02",
+    "area": "aerospace",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [
+      {
+        "name": "Mechanical Department, College of Engineering Mustansiriyah University Baghdad Iraq",
+        "type": "Uni",
+        "country": null,
+        "role": "researcher"
+      }
+    ],
+    "funding": null,
+    "id": "crossref-numerical-and-experimental-investigatio",
+    "story": "crossref-numerical-and-experimental-investigatio",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "ABSTRACT Compact heat exchangers are critical components in various industries, including cooling air conditioning devices, automotive, aerospace, enabling efficient heat transfer between fluids or between fluids and solids. This study investigates the influence of fin angles (0°, 30°, 60°, and 90°)",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.3390/en18154030",
+    "title": "The Heat Transfer Coefficient During Pool Boiling of Refrigerants in a Compact Heat Exchanger",
+    "publisher": "Energies",
+    "date": "2025-07-29",
+    "area": "aerospace",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [
+      {
+        "name": "CERED Centre of Excellence, Warsaw University of Technology, 09-400 Płock, Poland",
+        "type": "Uni",
+        "country": null,
+        "role": "researcher"
+      },
+      {
+        "name": "Department of Power Engineering, Koszalin University of Technology, 75-453 Koszalin, Poland",
+        "type": "Uni",
+        "country": null,
+        "role": "researcher"
+      }
+    ],
+    "funding": null,
+    "id": "crossref-the-heat-transfer-coefficient-during-po",
+    "story": "crossref-the-heat-transfer-coefficient-during-po",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "The results of experimental data on the heat transfer coefficient during the boiling of pro-ecological refrigerants in a compact tube-shell heat exchanger are presented. The boiling process occurred in the micro-space of the exchanger shell on the surface of horizontal tubes, which were heated from ",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://cordis.europa.eu/project/id/101273808",
+    "title": "Micro-PINN: Physics-Informed Neural Networks for Boiling Flow Reconstruction: Resolving Microlayer Dynamics",
+    "publisher": "CORDIS",
+    "date": "2026-11",
+    "area": "datacentre",
+    "kind": "grant",
+    "source_api": "cordis",
+    "orgs": [
+      {
+        "name": "Imperial College of Science Technology and Medicine",
+        "type": "Uni",
+        "country": "UK",
+        "role": "lead",
+        "eu_eur": 276187.92
+      }
+    ],
+    "funding": {
+      "funder": "European Commission",
+      "amount": 276187.92,
+      "currency": "EUR",
+      "start": "2026-11",
+      "end": "2028-10",
+      "status": "SIGNED",
+      "ref": "101273808",
+      "partners": 1
+    },
+    "id": "cordis-micro-pinn-physics-informed-neural-networ",
+    "story": "cordis-micro-pinn-physics-informed-neural-networ",
+    "gate": "pass",
+    "summary": "Micro-PINN is an EU fellowship (€276k, Nov 2026 to Oct 2028) at Imperial College London using physics-informed neural networks to reconstruct boiling flow and measure microlayer evaporation under bubbles in two-phase immersion cooling, aimed at AI hardware above 1 kW/cm².",
+    "thermal": "Boiling physics for two-phase immersion cooling.",
+    "manufacturing": "Experiments plus physics-informed machine learning.",
+    "evidence": "plan"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.ijheatmasstransfer.2026.128765",
+    "title": "Comparative evaluation of dielectric liquids for single-phase immersion cooling of electronics",
+    "publisher": "International Journal of Heat and Mass Transfer",
+    "date": "2026-04-13",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "University of Illinois Urbana-Champaign",
+        "type": "Uni",
+        "country": "USA",
+        "role": "researcher",
+        "on_cards": true
+      },
+      {
+        "name": "Imperial College London",
+        "type": "Uni",
+        "country": "UK",
+        "role": "researcher",
+        "on_cards": true
+      },
+      {
+        "name": "Castrol (United Kingdom)",
+        "type": "Commercial",
+        "country": "UK",
+        "role": "researcher"
+      }
+    ],
+    "funding": {
+      "funders": [
+        "Air Conditioning and Refrigeration Center",
+        "Anti-Corruption and Civil Rights Commission",
+        "BP Global",
+        "International Institute for Carbon-Neutral Energy Research, Kyushu University",
+        "Ministry of Education, Culture, Sports, Science and Technology",
+        "University of Illinois at Urbana-Champaign"
+      ]
+    },
+    "id": "openalex-comparative-evaluation-of-dielectric-li",
+    "story": "openalex-comparative-evaluation-of-dielectric-li",
+    "gate": "pass",
+    "summary": "UIUC, Imperial College London and Castrol built a figure of merit for dielectric liquids in single-phase immersion cooling and checked it on a natural-convection test rig with a commercial MOSFET, giving a property-based way to choose coolants.",
+    "thermal": "Single-phase immersion coolant selection.",
+    "manufacturing": "Buoyancy-driven test rig with a power MOSFET.",
+    "evidence": "measured"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.icheatmasstransfer.2026.112229",
+    "title": "Design and development of liquid immersion cooling system of high-performance light electric vehicles",
+    "publisher": "International Communications in Heat and Mass Transfer",
+    "date": "2026-07-31",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "Symbiosis International University",
+        "type": "Uni",
+        "country": "India",
+        "role": "researcher"
+      },
+      {
+        "name": "University of Nottingham",
+        "type": "Uni",
+        "country": "UK",
+        "role": "researcher"
+      }
+    ],
+    "funding": {
+      "funders": [
+        "Dassault Systèmes La Fondation"
+      ]
+    },
+    "id": "openalex-design-and-development-of-liquid-immers",
+    "story": "openalex-design-and-development-of-liquid-immers",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "The reliance on fossil fuels in the automotive industry has driven the need for efficient and sustainable solutions, particularly in electric vehicles (EVs). Lithium-ion batteries, preferred for their high energy density, require effective Battery Thermal Management Systems (BTMS) to ensure safety a",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.enconman.2025.120780",
+    "title": "Comprehensive evaluation of battery cooling mechanisms including two-phase immersion with 3 M™ NOVEC™-7000 and 7100",
+    "publisher": "Energy Conversion and Management",
+    "date": "2025-11-20",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "Sabancı Üniversitesi",
+        "type": "Uni",
+        "country": "Turkey",
+        "role": "researcher"
+      },
+      {
+        "name": "North Carolina State University",
+        "type": "Uni",
+        "country": "USA",
+        "role": "researcher"
+      },
+      {
+        "name": "University of Birmingham",
+        "type": "Uni",
+        "country": "UK",
+        "role": "researcher",
+        "on_cards": true
+      }
+    ],
+    "funding": {
+      "funders": [
+        "Sabancı Üniversitesi",
+        "Türkiye Bilimsel ve Teknolojik Araştırma Kurumu"
+      ]
+    },
+    "id": "openalex-comprehensive-evaluation-of-battery-coo",
+    "story": "openalex-comprehensive-evaluation-of-battery-coo",
+    "gate": "pass",
+    "summary": "Sabancı, NC State and Birmingham compared battery cooling methods; single- and two-phase immersion in Novec 7000 and 7100 cut peak cell temperature by 28% and 42%.",
+    "thermal": "Battery immersion cooling.",
+    "manufacturing": "Experimental comparison.",
+    "evidence": "measured"
+  },
+  {
+    "url": "https://arxiv.org/abs/2605.27722",
+    "title": "NUCLEUS-MoE: Unified Model of Pool Boiling for Liquid Cooling",
+    "publisher": "arXiv",
+    "date": "2026-05-26",
+    "area": "datacentre",
+    "kind": "preprint",
+    "source_api": "arxiv",
+    "orgs": [],
+    "id": "arxiv-nucleus-moe-unified-model-of-pool-boiling",
+    "story": "arxiv-nucleus-moe-unified-model-of-pool-boiling",
+    "gate": "pass",
+    "summary": "NUCLEUS-MoE is a machine-learning model of pool boiling meant to generalise across fluids for liquid cooling design.",
+    "thermal": "Pool boiling model.",
+    "manufacturing": "none",
+    "evidence": "simulation"
+  },
+  {
+    "url": "https://arxiv.org/abs/2605.23037",
+    "title": "Open datasets and machine learning for two-phase heat transfer: a review following a spatial-temporal taxonomy",
+    "publisher": "arXiv",
+    "date": "2026-05-21",
+    "area": "datacentre",
+    "kind": "preprint",
+    "source_api": "arxiv",
+    "orgs": [],
+    "id": "arxiv-open-datasets-and-machine-learning-for-two",
+    "story": "arxiv-open-datasets-and-machine-learning-for-two",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Two-phase heat transfer underpins boiling, condensation, immersion cooling, flow boiling, energy conversion, and electronics thermal management, but its coupled interfacial physics make data reuse and model comparison difficult. This narrative review synthesizes open datasets, machine-learning metho",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://arxiv.org/abs/2601.04070",
+    "title": "1.1 kW, 100 Hz room-temperature diode-pumped nanosecond laser by water immersion cooling",
+    "publisher": "arXiv",
+    "date": "2026-01-07",
+    "area": "datacentre",
+    "kind": "preprint",
+    "source_api": "arxiv",
+    "orgs": [],
+    "id": "arxiv-1-1-kw-100-hz-room-temperature-diode-pumpe",
+    "story": "arxiv-1-1-kw-100-hz-room-temperature-diode-pumpe",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "We report a room-temperature diode-pumped solid-state laser by water immersion cooling, which delivers a pulse energy of 11 J at the repetition rate of 100 Hz and the pulse duration of 7 ns, while the beam quality factor is 2.6 times the diffraction limit. To the best of our knowledge, this represen",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.est.2026.120696",
+    "title": "A composite immersion cooling system integrating flow guide, bottom liquid cooling and fin shell: A study on its cooling performance",
+    "publisher": "Journal of Energy Storage",
+    "date": "2026-03",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [],
+    "funding": {
+      "funders": [
+        "Jiangxi Provincial Natural Science Foundation",
+        "Key Research and Development Program of Jiangxi Province",
+        "Natural Science Foundation of Shanghai Municipality"
+      ]
+    },
+    "id": "crossref-a-composite-immersion-cooling-system-in",
+    "story": "crossref-a-composite-immersion-cooling-system-in",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "A composite immersion cooling system integrating flow guide, bottom liquid cooling and fin shell: A study on its cooling performance",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.applthermaleng.2025.128873",
+    "title": "A novel spray-based immersion cooling for Li-ion batteries: An experimental comparison with flow immersion",
+    "publisher": "Applied Thermal Engineering",
+    "date": "2026-01",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [],
+    "funding": {
+      "funders": [
+        "Korea Institute of Energy Technology Evaluation and Planning",
+        "Ministry of Trade, Industry and Energy"
+      ]
+    },
+    "id": "crossref-a-novel-spray-based-immersion-cooling-f",
+    "story": "crossref-a-novel-spray-based-immersion-cooling-f",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "A novel spray-based immersion cooling for Li-ion batteries: An experimental comparison with flow immersion",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.tsep.2025.104342",
+    "title": "Cooling effectiveness of the immersion cooling on the overcharging lithium-ion batteries",
+    "publisher": "Thermal Science and Engineering Progress",
+    "date": "2025-12",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [],
+    "funding": {
+      "funders": [
+        "National Natural Science Foundation of China"
+      ]
+    },
+    "id": "crossref-cooling-effectiveness-of-the-immersion",
+    "story": "crossref-cooling-effectiveness-of-the-immersion",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Cooling effectiveness of the immersion cooling on the overcharging lithium-ion batteries",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1109/tcpmt.2025.3587326",
+    "title": "A Cavitied Cold Plate for Enhanced Thermal Uniformity and Cooling",
+    "publisher": "IEEE Transactions on Components Packaging and Manufacturing Technology",
+    "date": "2025-07-09",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "Nanjing University of Aeronautics and Astronautics",
+        "type": "Uni",
+        "country": "China",
+        "role": "researcher"
+      },
+      {
+        "name": "University of the Witwatersrand",
+        "type": "Uni",
+        "country": "ZA",
+        "role": "researcher"
+      }
+    ],
+    "funding": {
+      "funders": [
+        "Basic Research Program of Jiangsu Province",
+        "National Natural Science Foundation of China"
+      ]
+    },
+    "id": "openalex-a-cavitied-cold-plate-for-enhanced-ther",
+    "story": "openalex-a-cavitied-cold-plate-for-enhanced-ther",
+    "gate": "pass",
+    "summary": "NUAA and Witwatersrand propose a cold plate with cavities along its microchannels to improve temperature uniformity for chips and batteries.",
+    "thermal": "Cold plate uniformity.",
+    "manufacturing": "Simulation and test (details not given).",
+    "evidence": "simulation"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.apenergy.2025.126745",
+    "title": "Numerical and experimental investigation of TPMS-structured cold plates for electronic device cooling",
+    "publisher": "Applied Energy",
+    "date": "2025-09-17",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "Xi'an Jiaotong University",
+        "type": "Uni",
+        "country": "China",
+        "role": "researcher"
+      }
+    ],
+    "funding": {
+      "funders": [
+        "Innovative Research Group Project of the National Natural Science Foundation of China",
+        "National Natural Science Foundation of China",
+        "Xi'an Municipal Bureau of Science and Technology"
+      ]
+    },
+    "id": "openalex-numerical-and-experimental-investigatio",
+    "story": "openalex-numerical-and-experimental-investigatio",
+    "gate": "pass",
+    "summary": "Xi'an Jiaotong University modelled and tested TPMS-structured cold plates for electronics cooling. No abstract was available.",
+    "thermal": "TPMS lattice cold plates.",
+    "manufacturing": "Built and tested (method not stated in the record).",
+    "evidence": "measured"
+  },
+  {
+    "url": "https://doi.org/10.46855/energy-proceedings-11863",
+    "title": "Integrated topology optimization and microchannel cold plate for chip cooling",
+    "publisher": "OpenAlex",
+    "date": "2025-11-05",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "Huazhong University of Science and Technology",
+        "type": "Uni",
+        "country": "China",
+        "role": "researcher"
+      },
+      {
+        "name": "Inspur (China)",
+        "type": "Commercial",
+        "country": "China",
+        "role": "researcher"
+      }
+    ],
+    "funding": null,
+    "id": "openalex-integrated-topology-optimization-and-mi",
+    "story": "openalex-integrated-topology-optimization-and-mi",
+    "gate": "pass",
+    "summary": "Huazhong University of Science and Technology and Inspur combined 2D topology optimisation with straight microchannels in a chip cold plate, balancing temperature against pumping power, and validated a 3D model against the design.",
+    "thermal": "Topology-optimised microchannel cold plate.",
+    "manufacturing": "Simulation-led design.",
+    "evidence": "simulation"
+  },
+  {
+    "url": "https://arxiv.org/abs/2610.27223",
+    "title": "Comparative Optical Spectroscopy of Er$^{3+}$, Tm$^{3+}$, and Eu$^{3+}$ Molecular Complexes at Cryogenic Temperature",
+    "publisher": "arXiv",
+    "date": "2026-10-19",
+    "area": "datacentre",
+    "kind": "preprint",
+    "source_api": "arxiv",
+    "orgs": [],
+    "id": "arxiv-comparative-optical-spectroscopy-of-er-3-t",
+    "story": "arxiv-comparative-optical-spectroscopy-of-er-3-t",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Rare-earth molecular complexes are attracting increasing interest for quantum information applications because of their structural flexibility and chemical tunability. Here, we compare the cryogenic optical properties of Er$^{3+}$, Tm$^{3+}$, and Eu$^{3+}$ complexes in the same ligand environment. O",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://arxiv.org/abs/2605.27725",
+    "title": "CFDTwin: An open-source GUI and Python toolkit for POD-NN surrogate modeling of ANSYS Fluent simulations",
+    "publisher": "arXiv",
+    "date": "2026-05-26",
+    "area": "datacentre",
+    "kind": "preprint",
+    "source_api": "arxiv",
+    "orgs": [],
+    "id": "arxiv-cfdtwin-an-open-source-gui-and-python-tool",
+    "story": "arxiv-cfdtwin-an-open-source-gui-and-python-tool",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "High-fidelity computational fluid dynamics (CFD) is widely used for thermal-fluid design, but repeated CFD solves remain expensive for design optimization, uncertainty analysis, and digital-twin workflows. Recently, our team has demonstrated that a proper orthogonal decomposition and neural-network ",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://arxiv.org/abs/2604.10941",
+    "title": "Generative Design for Direct-to-Chip Liquid Cooling for Data Centers",
+    "publisher": "arXiv",
+    "date": "2026-04-13",
+    "area": "datacentre",
+    "kind": "preprint",
+    "source_api": "arxiv",
+    "orgs": [],
+    "id": "arxiv-generative-design-for-direct-to-chip-liqui",
+    "story": "arxiv-generative-design-for-direct-to-chip-liqui",
+    "gate": "pass",
+    "summary": "An arXiv preprint presents a generative design loop for cold-plate channels on NVIDIA's GB200 superchip: a fast finite-difference thermal model steers a reaction-diffusion process that grows channel layouts around the package's hot spots and inlet and outlet constraints.",
+    "thermal": "Chip-specific cold-plate channel layouts.",
+    "manufacturing": "Simulation only.",
+    "evidence": "simulation"
+  },
+  {
+    "url": "https://doi.org/10.36948/ijfmr.2025.v07i05.55334",
+    "title": "Flow path optimization of cold plate used in high voltage battery packs",
+    "publisher": "International Journal For Multidisciplinary Research",
+    "date": "2025-09-05",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [],
+    "funding": null,
+    "id": "crossref-flow-path-optimization-of-cold-plate-us",
+    "story": "crossref-flow-path-optimization-of-cold-plate-us",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "With the increasing penetration of electric vehicles (EVs), robust battery thermal management has become essential for ensuring operational safety, performance consistency, and battery longevity. This study numerically investigates and optimizes the geometry of liquid cooling plates used in high-vol",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1016/j.energy.2025.139523",
+    "title": "Performance of a hybrid cold plate system with waste heat recovery in data center",
+    "publisher": "Energy",
+    "date": "2026-01",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [],
+    "funding": {
+      "funders": [
+        "Jiangxi Provincial Natural Science Foundation",
+        "National Key Research and Development Program of China",
+        "National Natural Science Foundation of China"
+      ]
+    },
+    "id": "crossref-performance-of-a-hybrid-cold-plate-syst",
+    "story": "crossref-performance-of-a-hybrid-cold-plate-syst",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Performance of a hybrid cold plate system with waste heat recovery in data center",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1063/5.0289805",
+    "title": "Numerical analysis of split-type cold-plate for enhanced heat transfer in missiles",
+    "publisher": "AIP Advances",
+    "date": "2025-11-01",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [
+      {
+        "name": "College of Mechanical and Energy Engineering, Beijing University of Technology 2 , Beijing 100124,",
+        "type": "Uni",
+        "country": null,
+        "role": "researcher"
+      },
+      {
+        "name": "School of Mechatronic Engineering, Beijing Polytechnic College 1 , Beijing 100042,",
+        "type": "Uni",
+        "country": null,
+        "role": "researcher"
+      }
+    ],
+    "funding": {
+      "funders": [
+        "Key Research Project of Beijing Polytechnic College"
+      ]
+    },
+    "id": "crossref-numerical-analysis-of-split-type-cold-p",
+    "story": "crossref-numerical-analysis-of-split-type-cold-p",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Addressing the challenge of sharply increasing heat flux density due to spatial constraints in missile launch platforms and high-power integrated packaging modules, this paper proposes a novel split-type cold-plate (ST-CP) to achieve efficient thermal management via liquid cooling technology. Utiliz",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  }
+]

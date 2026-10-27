@@ -1,0 +1,5531 @@
+{
+ "orgs": {
+  "1Energy": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "error": "HTTPError: HTTP Error 404: "
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "3T Additive Manufacturing": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "10141268",
+      "title": "STRATA – State-of-the-art Technologies Revolutionising Additive manufacturing Through artificial intelligence for greener Aerospace applications",
+      "funder": "Innovate UK",
+      "start": "2025-05",
+      "end": "2028-05",
+      "amount": 8445630,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10141268"
+     },
+     {
+      "source": "gtr",
+      "ref": "10036095",
+      "title": "ORSAM – Optical Reference Systems via Additive Manufacturing",
+      "funder": "Innovate UK",
+      "start": "2022-09",
+      "end": "2024-06",
+      "amount": 607759,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10036095"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "AFRC": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "AMRC": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Aerospace Technology Institute": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "EP/Z536295/1",
+      "title": "Sustainable, Multi-sector Electrification using Advanced Integrated Motor Drive Technologies",
+      "funder": "EPSRC",
+      "start": "2025-06",
+      "end": "2030-06",
+      "amount": 7022706,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/Z536295/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/Z533221/1",
+      "title": "TransiT - Digital Twinning Research Hub for Decarbonising Transport",
+      "funder": "EPSRC",
+      "start": "2024-06",
+      "end": "2029-06",
+      "amount": 20332443,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/Z533221/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/W033941/1",
+      "title": "Towards Zero Emissions Electric Aircraft through Superconducting DC Distribution Network",
+      "funder": "EPSRC",
+      "start": "2023-08",
+      "end": "2028-08",
+      "amount": 1381562,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/W033941/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/W022508/1",
+      "title": "Vera: A new paradigm to enable efficient design of VERy large Aircraft structures - the key for innovative aircraft design concepts",
+      "funder": "EPSRC",
+      "start": "2023-01",
+      "end": "2027-12",
+      "amount": 1825217,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/W022508/1"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Alpine": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "190118992",
+      "title": "QCDC: Quantum Computers for Data Centers",
+      "funder": "European Commission",
+      "start": "2023-04",
+      "end": "2025-03",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/190118992"
+     },
+     {
+      "source": "cordis",
+      "ref": "101288915",
+      "title": "CHAMP-ION SGA1: CHAMPIONING A EUROPEAN ADVANCED MANUFACTURING PILOT LINE OF ION-TRAPS, SPECIFIC GRANT AGREEMENT 1",
+      "funder": "European Commission",
+      "start": "2026-03",
+      "end": "2029-02",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101288915"
+     },
+     {
+      "source": "cordis",
+      "ref": "101113690",
+      "title": "PASQuanS2.1: Programmable Atomic Large-scale Quantum Simulation 2 - SGA1",
+      "funder": "European Commission",
+      "start": "2023-04",
+      "end": "2027-03",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101113690"
+     },
+     {
+      "source": "cordis",
+      "ref": "101297083",
+      "title": "EuroQSS: Universal European Quantum Software Stack",
+      "funder": "European Commission",
+      "start": "2026-10",
+      "end": "2029-09",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101297083"
+     },
+     {
+      "source": "cordis",
+      "ref": "101213371",
+      "title": "2dQC: 2d-ion crystals for quantum computing and near-term quantum applications",
+      "funder": "European Commission",
+      "start": "2025-06",
+      "end": "2026-11",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101213371"
+     },
+     {
+      "source": "cordis",
+      "ref": "101291189",
+      "title": "P4Q: Photonics for Quantum Pilot Line",
+      "funder": "European Commission",
+      "start": "2026-04",
+      "end": "2029-03",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101291189"
+     },
+     {
+      "source": "cordis",
+      "ref": "101102140",
+      "title": "QIA-Phase1: Quantum Internet Alliance - Phase1",
+      "funder": "European Commission",
+      "start": "2022-10",
+      "end": "2026-03",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101102140"
+     },
+     {
+      "source": "cordis",
+      "ref": "101114305",
+      "title": "Millenion-SGA1: Modular Industrial Large-scaLE quaNtum computing with trapped IONs, phase 1",
+      "funder": "European Commission",
+      "start": "2023-03",
+      "end": "2026-08",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101114305"
+     },
+     {
+      "source": "cordis",
+      "ref": "101297140",
+      "title": "QIA-Phase2: Quantum Internet Alliance - Phase2",
+      "funder": "European Commission",
+      "start": "2026-04",
+      "end": "2029-09",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101297140"
+     },
+     {
+      "source": "cordis",
+      "ref": "101069796",
+      "title": "MultiRELOAD: Port solutions for efficient, effective and sustainable multimodality",
+      "funder": "European Commission",
+      "start": "2022-09",
+      "end": "2026-02",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101069796"
+     }
+    ]
+   }
+  },
+  "Aston Martin F1": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "BAE Systems": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "126 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101073795",
+      "title": "POLIIICE: Powerful Lawful Interception, Investigation, and Intelligence",
+      "funder": "European Commission",
+      "start": "2022-10",
+      "end": "2025-09",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101073795"
+     }
+    ]
+   }
+  },
+  "Barclays Climate Ventures": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "BeyondMath": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "10141268",
+      "title": "STRATA – State-of-the-art Technologies Revolutionising Additive manufacturing Through artificial intelligence for greener Aerospace applications",
+      "funder": "Innovate UK",
+      "start": "2025-05",
+      "end": "2028-05",
+      "amount": 8445630,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10141268"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "British Business Bank": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "British Patient Capital": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Brunel University of London": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Connected Places Catapult": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "83 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Cranfield Aerospace Solutions": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "10022148",
+      "title": "Sustainable Aviation Test Environment 2",
+      "funder": "ISCF",
+      "start": "2022-06",
+      "end": "2025-03",
+      "amount": 10237349,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10022148"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Cranfield University": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "1016 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101126655",
+      "title": "ECOSPHERE: Circular Economy for the Sustainable Earth Spheres- Geosphere, Biosphere, Hydrosphere & Atmosphere",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2028-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101126655"
+     },
+     {
+      "source": "cordis",
+      "ref": "101167187",
+      "title": "U-AGREE: U-space Air and Ground Risk modEls Enhancement",
+      "funder": "European Commission",
+      "start": "2024-09",
+      "end": "2027-02",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101167187"
+     },
+     {
+      "source": "cordis",
+      "ref": "101181300",
+      "title": "AMBROSIA: Bridging Knowledge, Communication, and Action for Food Safety in a Changing Climate",
+      "funder": "European Commission",
+      "start": "2024-11",
+      "end": "2027-10",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101181300"
+     },
+     {
+      "source": "cordis",
+      "ref": "101181208",
+      "title": "MYMATCH: MYcotoxin MAnagement (AI)platform To face CC impact on food safety and Human Health",
+      "funder": "European Commission",
+      "start": "2024-12",
+      "end": "2028-11",
+      "role": "partner",
+      "amount": 411728.98,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101181208"
+     },
+     {
+      "source": "cordis",
+      "ref": "101223360",
+      "title": "DEXTER: Debris EXtraction Tools for Extra-terrestrial Recycling",
+      "funder": "European Commission",
+      "start": "2025-10",
+      "end": "2029-09",
+      "role": "lead",
+      "amount": 1163224.81,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101223360"
+     },
+     {
+      "source": "cordis",
+      "ref": "101271906",
+      "title": "HEATMaP: Heat Evolution Analysis via Thermography for Mapping of Plasticity",
+      "funder": "European Commission",
+      "start": "2026-09",
+      "end": "2028-09",
+      "role": "lead",
+      "amount": 260347.92,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101271906"
+     },
+     {
+      "source": "cordis",
+      "ref": "101282892",
+      "title": "AflaBiocontrol: BIOCONTROL AGENTS TO PROTECT EUROPEAN NUTS AND DRIED FIGS FROM AFLATOXINS CONTAMINATION",
+      "funder": "European Commission",
+      "start": "2027-04",
+      "end": "2029-03",
+      "role": "lead",
+      "amount": 260347.92,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101282892"
+     },
+     {
+      "source": "cordis",
+      "ref": "101299877",
+      "title": "DETROID: Dependable Software-Defined Vehicles with Resilient Powertrain and Chassis Dynamics",
+      "funder": "European Commission",
+      "start": "2026-10",
+      "end": "2030-09",
+      "role": "partner",
+      "amount": 30060.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101299877"
+     },
+     {
+      "source": "cordis",
+      "ref": "101311859",
+      "title": "RESCUE: Remediation Enhanced by Subsurface Characterisation & monitoring Using geophysical Evaluation",
+      "funder": "European Commission",
+      "start": "2026-09",
+      "end": "2030-08",
+      "role": "partner",
+      "amount": 348738.12,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101311859"
+     },
+     {
+      "source": "cordis",
+      "ref": "101326710",
+      "title": "AdMar: Novel Adsorbent Systems for Maritime Carbon Capture Application",
+      "funder": "European Commission",
+      "start": "2027-01",
+      "end": "2030-12",
+      "role": "partner",
+      "amount": 558414.48,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101326710"
+     },
+     {
+      "source": "cordis",
+      "ref": "101325849",
+      "title": "WINDOM: Wind Integrity aNd Durability through Offshore Monitoring",
+      "funder": "European Commission",
+      "start": "2027-01",
+      "end": "2030-06",
+      "role": "lead",
+      "amount": 1090647.88,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101325849"
+     },
+     {
+      "source": "cordis",
+      "ref": "101114855",
+      "title": "SAFIR-Ready: Obtain flight mission readiness, enabling rapid intervention for healthcare and critical infrastructure, leveraging all value chain actors and U-Space services.",
+      "funder": "European Commission",
+      "start": "2023-06",
+      "end": "2026-11",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101114855"
+     },
+     {
+      "source": "cordis",
+      "ref": "101145592",
+      "title": "SOILL-Startup: Startup of the SOILL support structure for SOIL Living Labs",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2025-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101145592"
+     },
+     {
+      "source": "cordis",
+      "ref": "101184151",
+      "title": "WaterWise Hub: THE WATERWISE HUB: AN EXCELLENCE HUB ON WATER IN THE CIRCULAR ECONOMY",
+      "funder": "European Commission",
+      "start": "2025-01",
+      "end": "2028-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101184151"
+     },
+     {
+      "source": "cordis",
+      "ref": "101181402",
+      "title": "OLinWASTE: OLINWASTE – SMART SUSTAINABLE BIOREFINING OF OLIVE MILL WASTE INTO BIOCOMPOUNDS FOR PLANT AND SOIL HEALTH, BIOPLASTICS, AND BIOENERGY",
+      "funder": "European Commission",
+      "start": "2025-05",
+      "end": "2029-04",
+      "role": "partner",
+      "amount": 486840.0,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101181402"
+     },
+     {
+      "source": "cordis",
+      "ref": "101262100",
+      "title": "SOILL-Stepup: A step up in SOILL support for Soil Living Labs",
+      "funder": "European Commission",
+      "start": "2026-01",
+      "end": "2027-12",
+      "role": "partner",
+      "amount": 567386.25,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101262100"
+     },
+     {
+      "source": "cordis",
+      "ref": "101300044",
+      "title": "Mycobiomics 2.0 II: Joining forces to exploit the mycobiota of the world for beneficial metabolites and potential biocontrol agents, using -OMICS techniques",
+      "funder": "European Commission",
+      "start": "2026-08",
+      "end": "2030-07",
+      "role": "partner",
+      "amount": 245490.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101300044"
+     },
+     {
+      "source": "cordis",
+      "ref": "101058589",
+      "title": "AI-PRISM: AI Powered human-centred Robot Interactions for Smart Manufacturing",
+      "funder": "European Commission",
+      "start": "2022-10",
+      "end": "2025-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101058589"
+     },
+     {
+      "source": "cordis",
+      "ref": "101079173",
+      "title": "FunShield4Med: Shielding food safety and security by enabling the foresight of fungal spoilage and mycotoxins threats in the Mediterranean region under climate change conditions",
+      "funder": "European Commission",
+      "start": "2022-12",
+      "end": "2025-11",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101079173"
+     },
+     {
+      "source": "cordis",
+      "ref": "101058521",
+      "title": "CONVERGING: Social industrial collaborative environments integrating AI, Big Data and Robotics for smart manufacturing",
+      "funder": "European Commission",
+      "start": "2022-09",
+      "end": "2026-08",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101058521"
+     }
+    ]
+   }
+  },
+  "Deep Green": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Department for Energy Security and Net Zero": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Durham University": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "2542 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "EPSRC": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "2936860",
+      "title": "Probing the electrical and thermal performance of sodium-ion batteries for electric vehicles and energy storage",
+      "funder": "EPSRC",
+      "start": "2024-09",
+      "end": "2028-09",
+      "amount": null,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=2936860"
+     },
+     {
+      "source": "gtr",
+      "ref": "2931736",
+      "title": "High-resolution gamma detectors using superconducting materials and technologies",
+      "funder": "EPSRC",
+      "start": "2024-01",
+      "end": "2027-12",
+      "amount": null,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=2931736"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Element Digital Engineering": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "10162916",
+      "title": "Nene - Digital Design Transformation",
+      "funder": "Innovate UK",
+      "start": "2025-09",
+      "end": "2029-03",
+      "amount": 19933141,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10162916"
+     },
+     {
+      "source": "gtr",
+      "ref": "10064252",
+      "title": "Thermal Management for the Hybrid Electric Regional Aircraft",
+      "funder": "Horizon Europe Guarantee",
+      "start": "2023-01",
+      "end": "2026-12",
+      "amount": 2453423,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10064252"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101102008",
+      "title": "TheMa4HERA: Thermal Management for the Hybrid Electric Regional Aircraft",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101102008"
+     }
+    ]
+   }
+  },
+  "Element Materials Technology": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "MR/Y020235/1",
+      "title": "Risk Assuring Future Structure Critical Systems: Combining 21st Century Science with Engineering Intuition - Renewal",
+      "funder": "UKRI FLF",
+      "start": "2025-02",
+      "end": "2028-01",
+      "amount": 595255,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=MR/Y020235/1"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "EnergiRaven": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "error": "HTTPError: HTTP Error 404: "
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "GKN Aerospace": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "UKRI1496",
+      "title": "DYNamic Analysis of composite liquid Hydrogen fuel tanks (DYNAH)",
+      "funder": "EPSRC",
+      "start": "2026-01",
+      "end": "2029-01",
+      "amount": 527541,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=UKRI1496"
+     },
+     {
+      "source": "gtr",
+      "ref": "UKRI1890",
+      "title": "Co-AIMS: Research Hub on Collaborative AI for Manufacturing Sustainability",
+      "funder": "EPSRC",
+      "start": "2025-10",
+      "end": "2032-10",
+      "amount": 12073176,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=UKRI1890"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/Z536295/1",
+      "title": "Sustainable, Multi-sector Electrification using Advanced Integrated Motor Drive Technologies",
+      "funder": "EPSRC",
+      "start": "2025-06",
+      "end": "2030-06",
+      "amount": 7022706,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/Z536295/1"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101312790",
+      "title": "LEGEND: Leading-Edge evaluation and GENeration of Defect-tolerance in composite structures",
+      "funder": "European Commission",
+      "start": "2026-09",
+      "end": "2030-08",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101312790"
+     },
+     {
+      "source": "cordis",
+      "ref": "101081419",
+      "title": "PRISMAS: PhD Research and Innovation in Synchrotron Methods and Applications in Sweden",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2027-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101081419"
+     },
+     {
+      "source": "cordis",
+      "ref": "101091780",
+      "title": "DaCapo: Digital assets and tools for Circular value chains and manufacturing products",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-06",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101091780"
+     },
+     {
+      "source": "cordis",
+      "ref": "101102006",
+      "title": "SWITCH: Sustainable Water-Injecting Turbofan Comprising Hybrid-electrics",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2027-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101102006"
+     },
+     {
+      "source": "cordis",
+      "ref": "101102011",
+      "title": "OFELIA: Open Fan for Environmental Low Impact of Aviation",
+      "funder": "European Commission",
+      "start": "2022-11",
+      "end": "2027-06",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101102011"
+     },
+     {
+      "source": "cordis",
+      "ref": "101138718",
+      "title": "WISE: Multi-scale multi-process machine for high value-added products with disruptive functionalities",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101138718"
+     },
+     {
+      "source": "cordis",
+      "ref": "101138209",
+      "title": "eVTOLUTION: EVTOL MULTI-FIDELITY HYBRID DESIGN AND OPTIMIZATION FOR LOW NOISE AND HIGH AERODYNAMIC PERFORMANCE",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2027-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101138209"
+     },
+     {
+      "source": "cordis",
+      "ref": "101138842",
+      "title": "ALABAMA: Adaptive Laser Beam for additive manufacturing",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2027-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101138842"
+     },
+     {
+      "source": "cordis",
+      "ref": "101147799",
+      "title": "UPBEAT: Uncertainty Prediction & Bias Elimination in Aviation Technology for Safety",
+      "funder": "European Commission",
+      "start": "2024-05",
+      "end": "2027-10",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101147799"
+     },
+     {
+      "source": "cordis",
+      "ref": "101177704",
+      "title": "REPTiS: REPTiS: Responsible Extraction and Processing of Titanium and other Primary Raw Materials for Sourcing EU Industrial Value Chains and Strategic Sectors",
+      "funder": "European Commission",
+      "start": "2024-09",
+      "end": "2028-08",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101177704"
+     },
+     {
+      "source": "cordis",
+      "ref": "101256962",
+      "title": "TAKE OFF: Technology And Knowledge for European Open Fan Flight",
+      "funder": "European Commission",
+      "start": "2026-01",
+      "end": "2029-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101256962"
+     },
+     {
+      "source": "cordis",
+      "ref": "101056863",
+      "title": "MINIMAL: Minimum environmental impact ultra-efficient cores for aircraft propulsion.",
+      "funder": "European Commission",
+      "start": "2022-09",
+      "end": "2027-02",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101056863"
+     },
+     {
+      "source": "cordis",
+      "ref": "101056886",
+      "title": "CAELESTIS: Hyperconnected simulation ecosystem supporting probabilistic design and predictive manufacturing of next generation aircraft structures",
+      "funder": "European Commission",
+      "start": "2022-05",
+      "end": "2025-10",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101056886"
+     }
+    ]
+   }
+  },
+  "Goodrich Controls": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101255065",
+      "title": "LEIA: Large scalE Integration demonstrator of hybrid electrical Architecture",
+      "funder": "European Commission",
+      "start": "2025-12",
+      "end": "2027-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101255065"
+     },
+     {
+      "source": "cordis",
+      "ref": "101255537",
+      "title": "OSYRYS: On-board SYstems Relevant for hYbridization of Regional aircraftS",
+      "funder": "European Commission",
+      "start": "2026-01",
+      "end": "2030-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101255537"
+     },
+     {
+      "source": "cordis",
+      "ref": "101256972",
+      "title": "PHARES: Powerplant Hybrid Application for REegional Segment",
+      "funder": "European Commission",
+      "start": "2026-01",
+      "end": "2030-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101256972"
+     },
+     {
+      "source": "cordis",
+      "ref": "101256949",
+      "title": "HERACLES: Hybrid Electric Regional Aircraft Concept for Low EmissionS",
+      "funder": "European Commission",
+      "start": "2026-01",
+      "end": "2030-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101256949"
+     },
+     {
+      "source": "cordis",
+      "ref": "101101961",
+      "title": "HECATE: Hybrid ElectriC regional Aircraft distribution TEchnologies",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-02",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101101961"
+     },
+     {
+      "source": "cordis",
+      "ref": "101256955",
+      "title": "DEMETRA: Demonstrator of an Electrified Modern Efficient Transport Regional Aircraft",
+      "funder": "European Commission",
+      "start": "2026-01",
+      "end": "2030-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101256955"
+     }
+    ]
+   }
+  },
+  "HS Marston (Collins Aerospace)": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Hemiko": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "error": "HTTPError: HTTP Error 404: "
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "HiETA Technologies": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "10039822",
+      "title": "ISHISUKI",
+      "funder": "Innovate UK",
+      "start": "2022-11",
+      "end": "2023-05",
+      "amount": 15711,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10039822"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Iceotope": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "10061399",
+      "title": "AHP (Analysis of Heat Pipes)",
+      "funder": "Innovate UK",
+      "start": "2023-04",
+      "end": "2023-07",
+      "amount": 10946,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10061399"
+     },
+     {
+      "source": "gtr",
+      "ref": "10017512",
+      "title": "MoatE (Morello at the Edge)",
+      "funder": "ISCF",
+      "start": "2022-03",
+      "end": "2025-02",
+      "amount": 2090431,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10017512"
+     },
+     {
+      "source": "gtr",
+      "ref": "10005554",
+      "title": "Enhanced Liquid Immersion Power Systems",
+      "funder": "ISCF",
+      "start": "2022-02",
+      "end": "2024-03",
+      "amount": 2520837,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10005554"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Imperial College London": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "7165 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Infiniflux": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "error": "HTTPError: HTTP Error 404: "
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Loughborough University": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "1428 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101072993",
+      "title": "LABDA: Learning network for Advanced Behavioural Data Analysis",
+      "funder": "European Commission",
+      "start": "2023-02",
+      "end": "2027-01",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101072993"
+     },
+     {
+      "source": "cordis",
+      "ref": "101073089",
+      "title": "GreenDigiPharma: Green and digital continuous-flow pharmaceutical manufacturing",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2027-03",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101073089"
+     },
+     {
+      "source": "cordis",
+      "ref": "101106831",
+      "title": "JANUSHOPE: Two-Faced Hopes: Football, Migration, and Religion Between West Africa and Europe",
+      "funder": "European Commission",
+      "start": "2023-10",
+      "end": "2025-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101106831"
+     },
+     {
+      "source": "cordis",
+      "ref": "101152284",
+      "title": "StanDUP: Static and Dynamic aproaches: A Unified Framework for Predicting Quantum Yields of Excited State Processes",
+      "funder": "European Commission",
+      "start": "2024-08",
+      "end": "2026-07",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101152284"
+     },
+     {
+      "source": "cordis",
+      "ref": "101150504",
+      "title": "STEADYDOME: Shaking table tests for assessment of the dynamic response of domes and masonry structures to earthquake actions",
+      "funder": "European Commission",
+      "start": "2025-06",
+      "end": "2027-05",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101150504"
+     },
+     {
+      "source": "cordis",
+      "ref": "101169330",
+      "title": "AIGreenBots: Artificial Intelligence and sensor-fusion systems in sustainable (Green) robotics for precision agriculture",
+      "funder": "European Commission",
+      "start": "2024-10",
+      "end": "2028-09",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101169330"
+     },
+     {
+      "source": "cordis",
+      "ref": "101141644",
+      "title": "JuvenTwin: Multiscale mechanobiological synergies  in vascular homeostasis, ageing and rejuvenation",
+      "funder": "European Commission",
+      "start": "2024-10",
+      "end": "2029-09",
+      "role": "partner",
+      "amount": 359750.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101141644"
+     },
+     {
+      "source": "cordis",
+      "ref": "101221862",
+      "title": "SPARK-e: Solid-state PCMs for Advanced energy Recovery and Key thermal control in electronics",
+      "funder": "European Commission",
+      "start": "2025-11",
+      "end": "2029-10",
+      "role": "partner",
+      "amount": 1752.58,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101221862"
+     },
+     {
+      "source": "cordis",
+      "ref": "101129663",
+      "title": "QRC-4-ESP: Quantum reservoir computing for efficient signal processing",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2027-06",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101129663"
+     },
+     {
+      "source": "cordis",
+      "ref": "101130241",
+      "title": "PERAMEDIC: Personalised Adaptive Medicine",
+      "funder": "European Commission",
+      "start": "2024-02",
+      "end": "2027-01",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101130241"
+     },
+     {
+      "source": "cordis",
+      "ref": "101131220",
+      "title": "ClearClimate: Engaging approaches and services for meaningful climate actions",
+      "funder": "European Commission",
+      "start": "2023-11",
+      "end": "2027-10",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101131220"
+     },
+     {
+      "source": "cordis",
+      "ref": "101156088",
+      "title": "QUEST: Twinning to develop ELTE's research and innovation capacity in quantum reservoir computing",
+      "funder": "European Commission",
+      "start": "2024-09",
+      "end": "2027-08",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101156088"
+     },
+     {
+      "source": "cordis",
+      "ref": "101168955",
+      "title": "UPLIFT: UPright radiotherapy: Learning, Innovation, Fellowship and Training",
+      "funder": "European Commission",
+      "start": "2024-10",
+      "end": "2028-09",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101168955"
+     },
+     {
+      "source": "cordis",
+      "ref": "101212366",
+      "title": "I-CARE: Integrated Low-carbon and Resilient Hierarchical Microgrids Framework for Energy-flexible Buildings",
+      "funder": "European Commission",
+      "start": "2026-09",
+      "end": "2028-08",
+      "role": "lead",
+      "amount": 260347.92,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101212366"
+     },
+     {
+      "source": "cordis",
+      "ref": "101201941",
+      "title": "ModIX: Modernism and Illness Experience: Embodied Strategies of Textual Production",
+      "funder": "European Commission",
+      "start": "2026-04",
+      "end": "2028-03",
+      "role": "lead",
+      "amount": 260347.92,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101201941"
+     },
+     {
+      "source": "cordis",
+      "ref": "101207544",
+      "title": "TrailSense: Sensory Emplacement on Trails: An Anthropological Study of Environmental Engagement in Outdoor Endurance Sports",
+      "funder": "European Commission",
+      "start": "2025-06",
+      "end": "2027-05",
+      "role": "lead",
+      "amount": 260347.92,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101207544"
+     },
+     {
+      "source": "cordis",
+      "ref": "101216965",
+      "title": "SECURE2: SUSTAINABLE CAREERS FOR RESEARCH EMPOWERMENT 2",
+      "funder": "European Commission",
+      "start": "2025-06",
+      "end": "2029-05",
+      "role": "partner",
+      "amount": 112775.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101216965"
+     },
+     {
+      "source": "cordis",
+      "ref": "101227338",
+      "title": "DIAMOND: Decentralized critical Infrastructure Asset Monitoring and coNDition assessment (DIAMOND)",
+      "funder": "European Commission",
+      "start": "2026-01",
+      "end": "2029-12",
+      "role": "partner",
+      "amount": 348738.12,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101227338"
+     },
+     {
+      "source": "cordis",
+      "ref": "101201604",
+      "title": "REACT: Re-imagining Activism, Communication and Trajectories of Participation in the Global South",
+      "funder": "European Commission",
+      "start": "2026-02",
+      "end": "2031-01",
+      "role": "lead",
+      "amount": 1813114.19,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101201604"
+     },
+     {
+      "source": "cordis",
+      "ref": "101278478",
+      "title": "METAPlastic: Deciphering Micro- and Nanoplastic-Mediated Biotransformation and Biodistribution of Heavy Metals in Fish",
+      "funder": "European Commission",
+      "start": "2026-12",
+      "end": "2028-11",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101278478"
+     }
+    ]
+   }
+  },
+  "Manufacturing Technology Centre": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "192 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101319063",
+      "title": "MAXIMA: Modular manufacturing architecture for extruded solid-state lithium-metal batteries for high-performance mobility",
+      "funder": "European Commission",
+      "start": "2026-10",
+      "end": "2030-03",
+      "role": "partner",
+      "amount": 781847.5,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101319063"
+     },
+     {
+      "source": "cordis",
+      "ref": "101091514",
+      "title": "SYNTECS: SustainablY aNd digiTally driven hiErarchical laser texturing for Complex Surfaces",
+      "funder": "European Commission",
+      "start": "2022-12",
+      "end": "2026-01",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101091514"
+     },
+     {
+      "source": "cordis",
+      "ref": "101178321",
+      "title": "BUTTERFLIES: Advanced hyBridised manufactUring Technique for nexT genERation oF bio-intelLIgent componEntS",
+      "funder": "European Commission",
+      "start": "2025-05",
+      "end": "2028-04",
+      "role": "lead",
+      "amount": 878247.37,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101178321"
+     },
+     {
+      "source": "cordis",
+      "ref": "101096425",
+      "title": "EoLO-HUBs: Wind turbine blades End of Life through Open HUBs for circular materials in sustainable business models",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101096425"
+     },
+     {
+      "source": "cordis",
+      "ref": "101138380",
+      "title": "FLASH: Flexible Laser-based manufacturing through precision photon distribution",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2027-07",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101138380"
+     }
+    ]
+   }
+  },
+  "Mercedes AMG High Performance Powertrains": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "10158943",
+      "title": "IGNITED — Intelligent Grip for Next-gen Integrated Twin Electric Drive",
+      "funder": "Innovate UK",
+      "start": "2025-07",
+      "end": "2028-01",
+      "amount": 11635229,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10158943"
+     },
+     {
+      "source": "gtr",
+      "ref": "10086688",
+      "title": "HPP Solid State Battery Concept",
+      "funder": "DBT",
+      "start": "2023-08",
+      "end": "2024-08",
+      "amount": 1093225,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10086688"
+     },
+     {
+      "source": "gtr",
+      "ref": "10062788",
+      "title": "EESM: Externally Excited Synchronous Motor",
+      "funder": "Innovate UK",
+      "start": "2023-06",
+      "end": "2024-06",
+      "amount": 236877,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10062788"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "National Composites Centre": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "EP/Y016297/2",
+      "title": "Supergen ORE Impact Hub 2023",
+      "funder": "EPSRC",
+      "start": "2026-02",
+      "end": "2027-05",
+      "amount": 3971153,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/Y016297/2"
+     },
+     {
+      "source": "gtr",
+      "ref": "UKRI1496",
+      "title": "DYNamic Analysis of composite liquid Hydrogen fuel tanks (DYNAH)",
+      "funder": "EPSRC",
+      "start": "2026-01",
+      "end": "2029-01",
+      "amount": 527541,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=UKRI1496"
+     },
+     {
+      "source": "gtr",
+      "ref": "UKRI2341",
+      "title": "Gradient Shells: Tailoring Geometric and Material Anisotropy for Structural Efficiency, Adaptivity and Sustainability",
+      "funder": "UKRI FLF",
+      "start": "2025-12",
+      "end": "2029-12",
+      "amount": 1717576,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=UKRI2341"
+     },
+     {
+      "source": "gtr",
+      "ref": "UKRI3067",
+      "title": "National Research Facility in Lab X-ray CT (NXCT II)",
+      "funder": "EPSRC",
+      "start": "2025-11",
+      "end": "2030-11",
+      "amount": 6995827,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=UKRI3067"
+     },
+     {
+      "source": "gtr",
+      "ref": "UKRI1890",
+      "title": "Co-AIMS: Research Hub on Collaborative AI for Manufacturing Sustainability",
+      "funder": "EPSRC",
+      "start": "2025-10",
+      "end": "2032-10",
+      "amount": 12073176,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=UKRI1890"
+     },
+     {
+      "source": "gtr",
+      "ref": "UKRI2073",
+      "title": "The Electrical Machine Works",
+      "funder": "UKRI FLF",
+      "start": "2025-09",
+      "end": "2028-09",
+      "amount": 594935,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=UKRI2073"
+     },
+     {
+      "source": "gtr",
+      "ref": "UKRI1667",
+      "title": "Frontiers in Electromagnetic Non Destructive Evaluation Research (FENDER)",
+      "funder": "EPSRC",
+      "start": "2025-09",
+      "end": "2029-09",
+      "amount": 5314217,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=UKRI1667"
+     },
+     {
+      "source": "gtr",
+      "ref": "UKRI142",
+      "title": "The VIVO Hub for Enhanced Independent Living",
+      "funder": "EPSRC",
+      "start": "2024-12",
+      "end": "2030-12",
+      "amount": 10863312,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=UKRI142"
+     },
+     {
+      "source": "gtr",
+      "ref": "2944241",
+      "title": "Compression Moulding of CMCs",
+      "funder": "EPSRC",
+      "start": "2024-09",
+      "end": "2028-09",
+      "amount": null,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=2944241"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/X041719/1",
+      "title": "Dealing with Evolving Constraints In Design Systems for Net Zero (DECIDE for Net Zero)",
+      "funder": "EPSRC",
+      "start": "2024-09",
+      "end": "2029-09",
+      "amount": 1965518,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/X041719/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "2944234",
+      "title": "Cryogenic Composites for Hydrogen Storage",
+      "funder": "EPSRC",
+      "start": "2024-09",
+      "end": "2028-09",
+      "amount": null,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=2944234"
+     },
+     {
+      "source": "gtr",
+      "ref": "2944230",
+      "title": "Automated fibre deposition (AFP) of non-oxide CMCs",
+      "funder": "EPSRC",
+      "start": "2024-09",
+      "end": "2028-09",
+      "amount": null,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=2944230"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/Z532782/1",
+      "title": "The Sustainable Chemicals and Materials Manufacturing Hub SCHEMA",
+      "funder": "EPSRC",
+      "start": "2024-08",
+      "end": "2031-08",
+      "amount": 12084831,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=EP/Z532782/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "BB/Z515735/1",
+      "title": "A versatile focused ion beam milling microscope for in situ structural biology",
+      "funder": "BBSRC",
+      "start": "2024-07",
+      "end": "2025-07",
+      "amount": 1500000,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=BB/Z515735/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/Y011457/1",
+      "title": "Integrated Material-Modelling-Manufacturing paradigm for Mechanical Meta-regulators (I5M)",
+      "funder": "EPSRC",
+      "start": "2024-05",
+      "end": "2027-05",
+      "amount": 330760,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/Y011457/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "UKRI056",
+      "title": "X-CITED: X-disciplinary Challenges from Industry for Technical Expert Development",
+      "funder": "EPSRC",
+      "start": "2024-04",
+      "end": "2027-03",
+      "amount": null,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=UKRI056"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/X036804/1",
+      "title": "Novel 3D+ Multi-axial Preforms for Complex Loaded Composite Applications",
+      "funder": "EPSRC",
+      "start": "2024-03",
+      "end": "2027-02",
+      "amount": 403794,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/X036804/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/Z531091/1",
+      "title": "Transforming Net Zero with Ultrawide Bandgap Semiconductor Device Technology (REWIRE)",
+      "funder": "EPSRC",
+      "start": "2024-03",
+      "end": "2029-03",
+      "amount": 11748844,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/Z531091/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/X041360/1",
+      "title": "OVERCOMP: Interface Formation and Bond Strength Prediction in Composite Injection Overmoulding",
+      "funder": "EPSRC",
+      "start": "2024-03",
+      "end": "2026-07",
+      "amount": 270842,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=EP/X041360/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/Y023994/1",
+      "title": "GW-SHIFT: Great Western Supercluster of Hydrogen Impact for Future Technologies",
+      "funder": "EPSRC",
+      "start": "2024-01",
+      "end": "2028-01",
+      "amount": 2707041,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=EP/Y023994/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/Y015061/1",
+      "title": "Fibre Reinforced Thermoplastic Tape Development Cell",
+      "funder": "EPSRC",
+      "start": "2023-09",
+      "end": "2027-03",
+      "amount": 1786360,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=EP/Y015061/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/Y016297/1",
+      "title": "Supergen ORE Impact Hub 2023",
+      "funder": "EPSRC",
+      "start": "2023-06",
+      "end": "2026-02",
+      "amount": 8315316,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/Y016297/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/X024059/1",
+      "title": "Robodome imaging for high performance manufactured aerostructures",
+      "funder": "EPSRC",
+      "start": "2023-03",
+      "end": "2026-09",
+      "amount": 538246,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/X024059/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/W022508/1",
+      "title": "Vera: A new paradigm to enable efficient design of VERy large Aircraft structures - the key for innovative aircraft design concepts",
+      "funder": "EPSRC",
+      "start": "2023-01",
+      "end": "2027-12",
+      "amount": 1825217,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/W022508/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/W031019/1",
+      "title": "Bio-derived and Bio-inspired Advanced Materials for Sustainable Industries (VALUED)",
+      "funder": "EPSRC",
+      "start": "2023-01",
+      "end": "2027-12",
+      "amount": 6139080,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/W031019/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/W020564/1",
+      "title": "Pro2 Network+: From Prototyping to Production of Digital Devices",
+      "funder": "EPSRC",
+      "start": "2023-01",
+      "end": "2027-12",
+      "amount": 2659015,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/W020564/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/W003333/1",
+      "title": "Manufacturing by Design",
+      "funder": "EPSRC",
+      "start": "2022-03",
+      "end": "2027-03",
+      "amount": 1612580,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=EP/W003333/1"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Oxford Brookes University": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "269 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101094428",
+      "title": "CULTURATI: CUSTOMIZED GAMES AND ROUTES FOR CULTURAL HERITAGE AND ARTS",
+      "funder": "European Commission",
+      "start": "2023-02",
+      "end": "2026-01",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101094428"
+     },
+     {
+      "source": "cordis",
+      "ref": "101122288",
+      "title": "SolMates: Scaleable High-Power Output and Low Cost Made-to-Measure Tandem Solar Modules Enabling Specialised PV Applications",
+      "funder": "European Commission",
+      "start": "2023-12",
+      "end": "2026-11",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101122288"
+     },
+     {
+      "source": "cordis",
+      "ref": "101177819",
+      "title": "ALPHABETICA: Activating Learning Paths: Holistic Arts-Based Education and Training for Inclusion and Cultural Awareness",
+      "funder": "European Commission",
+      "start": "2025-01",
+      "end": "2028-06",
+      "role": "partner",
+      "amount": 391603.75,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101177819"
+     },
+     {
+      "source": "cordis",
+      "ref": "101109854",
+      "title": "ECICH: The role of European cultural institutions in the circulation of European cinema and the development of Chilean film culture (1955-1989)",
+      "funder": "European Commission",
+      "start": "2024-03",
+      "end": "2026-02",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101109854"
+     },
+     {
+      "source": "cordis",
+      "ref": "101188467",
+      "title": "SEE-ERA: Transforming R&I organisations and advancing the ERA through gender equality and inclusiveness in SEE",
+      "funder": "European Commission",
+      "start": "2025-02",
+      "end": "2028-01",
+      "role": "partner",
+      "amount": 186887.5,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101188467"
+     },
+     {
+      "source": "cordis",
+      "ref": "101209999",
+      "title": "INCLUDE: Cultivating Inclusivity in Urban Community Gardens",
+      "funder": "European Commission",
+      "start": "2026-01",
+      "end": "2029-01",
+      "role": "lead",
+      "amount": 375035.4,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101209999"
+     },
+     {
+      "source": "cordis",
+      "ref": "101226536",
+      "title": "AGILE: Advanced Training for Next Generation Scientists in Spatio-Temporal Imaging of Plant Cells",
+      "funder": "European Commission",
+      "start": "2026-03",
+      "end": "2030-02",
+      "role": "partner",
+      "amount": 348738.12,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101226536"
+     },
+     {
+      "source": "cordis",
+      "ref": "101334691",
+      "title": "EQUI-RISE: EQUI-RISE: Advancing inclusive gender equity for transformation in R and D intensive innovation",
+      "funder": "European Commission",
+      "start": "2027-01",
+      "end": "2029-12",
+      "role": "partner",
+      "amount": 406246.75,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101334691"
+     },
+     {
+      "source": "cordis",
+      "ref": "101334592",
+      "title": "GENDER-ENGINES: Transforming Engineering and Business Schools into Engines for Inclusive Gender Equality and Innovation",
+      "funder": "European Commission",
+      "start": "2027-02",
+      "end": "2030-01",
+      "role": "partner",
+      "amount": 298602.37,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101334592"
+     },
+     {
+      "source": "cordis",
+      "ref": "101148066",
+      "title": "ECORES WIND: NOVEL CIRCULAR RESIN DEVELOPMENT FOR COMPOSITE STRUCTURES IN WIND ENERGY APPLICATIONS",
+      "funder": "European Commission",
+      "start": "2024-09",
+      "end": "2028-02",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101148066"
+     },
+     {
+      "source": "cordis",
+      "ref": "101147547",
+      "title": "PERSEUS: Printed Perovskite Solar Cells for Large Area User Applications",
+      "funder": "European Commission",
+      "start": "2025-01",
+      "end": "2027-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101147547"
+     }
+    ]
+   }
+  },
+  "Oxford Thermofluids Institute": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Parker Meggitt": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Power On": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Qdot Technology": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "10141268",
+      "title": "STRATA – State-of-the-art Technologies Revolutionising Additive manufacturing Through artificial intelligence for greener Aerospace applications",
+      "funder": "Innovate UK",
+      "start": "2025-05",
+      "end": "2028-05",
+      "amount": 8445630,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10141268"
+     },
+     {
+      "source": "gtr",
+      "ref": "10141066",
+      "title": "Metal binder-jetted heat exchangers for aviation fuel cells (MB-HeX FC)",
+      "funder": "ATI",
+      "start": "2025-03",
+      "end": "2026-09",
+      "amount": 642971,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10141066"
+     },
+     {
+      "source": "gtr",
+      "ref": "10064086",
+      "title": "ADditive End PlaTes for Fuel Cells (ADEPT FC)",
+      "funder": "ATI",
+      "start": "2023-06",
+      "end": "2024-12",
+      "amount": 237000,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10064086"
+     },
+     {
+      "source": "gtr",
+      "ref": "10062025",
+      "title": "Clean Hybrid Powertrain for Aviation (CHyPA)",
+      "funder": "Innovate UK",
+      "start": "2023-05",
+      "end": "2025-03",
+      "amount": 1139999,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10062025"
+     },
+     {
+      "source": "gtr",
+      "ref": "10006953",
+      "title": "Binder-jetted heat exchangers for eVTOL aircraft",
+      "funder": "ATI",
+      "start": "2022-03",
+      "end": "2024-01",
+      "amount": 184000,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10006953"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Reaction Engines": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "EP/W034700/1",
+      "title": "Understanding Turbulent Hydrogen Flames and Instability via Measurements and Simulations",
+      "funder": "EPSRC",
+      "start": "2023-03",
+      "end": "2028-08",
+      "amount": 465816,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/W034700/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "10064249",
+      "title": "NExt generation high poWer fuel cells for airBORNe applications",
+      "funder": "Horizon Europe Guarantee",
+      "start": "2023-01",
+      "end": "2026-06",
+      "amount": 3252230,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10064249"
+     },
+     {
+      "source": "gtr",
+      "ref": "10064252",
+      "title": "Thermal Management for the Hybrid Electric Regional Aircraft",
+      "funder": "Horizon Europe Guarantee",
+      "start": "2023-01",
+      "end": "2026-12",
+      "amount": 2453423,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10064252"
+     },
+     {
+      "source": "gtr",
+      "ref": "10039810",
+      "title": "RACHEL (Robustly Achievable Combustion of Hydrogen Engine Layout",
+      "funder": "ATI",
+      "start": "2022-09",
+      "end": "2027-03",
+      "amount": 20248825,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10039810"
+     },
+     {
+      "source": "gtr",
+      "ref": "10039770",
+      "title": "LH2GT",
+      "funder": "ATI",
+      "start": "2022-09",
+      "end": "2026-09",
+      "amount": 20551765,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10039770"
+     },
+     {
+      "source": "gtr",
+      "ref": "10036624",
+      "title": "Hx LIFE Foils manufacturing scale up for next generation automotive EV batteries",
+      "funder": "APC",
+      "start": "2022-08",
+      "end": "2023-05",
+      "amount": 392290,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10036624"
+     },
+     {
+      "source": "gtr",
+      "ref": "10053292",
+      "title": "Minimum environmental impact ultra-efficient cores for aircraft propulsion",
+      "funder": "Horizon Europe Guarantee",
+      "start": "2022-08",
+      "end": "2026-08",
+      "amount": 362820,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10053292"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101056863",
+      "title": "MINIMAL: Minimum environmental impact ultra-efficient cores for aircraft propulsion.",
+      "funder": "European Commission",
+      "start": "2022-09",
+      "end": "2027-02",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101056863"
+     },
+     {
+      "source": "cordis",
+      "ref": "101101967",
+      "title": "NEWBORN: NExt generation high poWer fuel cells for airBORNe applications",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2027-03",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101101967"
+     },
+     {
+      "source": "cordis",
+      "ref": "101102008",
+      "title": "TheMa4HERA: Thermal Management for the Hybrid Electric Regional Aircraft",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101102008"
+     }
+    ]
+   }
+  },
+  "Red Bull Powertrains": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Red Bull Racing": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Ricardo": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "163 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101096253",
+      "title": "STREnGth_M: Stimulating road Transport Research in Europe and around the Globe for sustainable Mobility",
+      "funder": "European Commission",
+      "start": "2023-02",
+      "end": "2026-01",
+      "role": "partner",
+      "amount": 173875.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101096253"
+     },
+     {
+      "source": "cordis",
+      "ref": "101137477",
+      "title": "LeMesurier: Measuring the value of the Key Performance Indicators (KPI) of the 2Zero Partnership",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2025-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101137477"
+     },
+     {
+      "source": "cordis",
+      "ref": "101251484",
+      "title": "H2ROAM: Hydrogen for Robust Off-road Application Modules",
+      "funder": "European Commission",
+      "start": "2026-01",
+      "end": "2029-12",
+      "role": "partner",
+      "amount": 896146.05,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101251484"
+     },
+     {
+      "source": "cordis",
+      "ref": "101270569",
+      "title": "PULSE: Pioneering User-centric wireless, smart and bi-directionaL charging Solutions for Electric light-duty vehicles",
+      "funder": "European Commission",
+      "start": "2026-05",
+      "end": "2029-10",
+      "role": "partner",
+      "amount": 669724.13,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101270569"
+     },
+     {
+      "source": "cordis",
+      "ref": "101095856",
+      "title": "ZEFES: Zero Emission flexible vehicle platforms with modular powertrains serving the long-haul Freight Eco System",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101095856"
+     },
+     {
+      "source": "cordis",
+      "ref": "101192657",
+      "title": "FLEXMCS: Flexible Megawatt Charging Systems, open software architectures, and planning modules creating multi-charger hubs for the European electric mobility system",
+      "funder": "European Commission",
+      "start": "2025-01",
+      "end": "2028-06",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101192657"
+     },
+     {
+      "source": "cordis",
+      "ref": "101295906",
+      "title": "GWPathFinder: GWPathFinder: Projecting Fluorinated Gas Emission Pathways with GWP Insights for a Sustainable Future",
+      "funder": "European Commission",
+      "start": "2026-09",
+      "end": "2029-08",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101295906"
+     },
+     {
+      "source": "cordis",
+      "ref": "101295771",
+      "title": "Adapt4EU: Accelerating Climate Resilience Pathways & Implementation of Adaptation Actions through Co-Creation & Next-Generation Services for Europe’s Regions & Cities",
+      "funder": "European Commission",
+      "start": "2026-10",
+      "end": "2031-09",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101295771"
+     },
+     {
+      "source": "cordis",
+      "ref": "101056715",
+      "title": "TranSensus LCA: Towards a European-wide harmonised, transport specific LCA Approach",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2025-06",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101056715"
+     },
+     {
+      "source": "cordis",
+      "ref": "101056756",
+      "title": "XL-Connect: Large scale system approach for advanced charging solutions",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101056756"
+     },
+     {
+      "source": "cordis",
+      "ref": "101146908",
+      "title": "CLEVER: Creating Legitimate Emission Factors for Verified GHG Emission Reductions in Transport",
+      "funder": "European Commission",
+      "start": "2024-06",
+      "end": "2027-05",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101146908"
+     },
+     {
+      "source": "cordis",
+      "ref": "101056940",
+      "title": "sHYpS: sustainable HYdrogen powered Shipping",
+      "funder": "European Commission",
+      "start": "2022-06",
+      "end": "2027-05",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101056940"
+     },
+     {
+      "source": "cordis",
+      "ref": "101056893",
+      "title": "VERA: Vehicle Emission Retrofit Activities",
+      "funder": "European Commission",
+      "start": "2022-12",
+      "end": "2026-05",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101056893"
+     },
+     {
+      "source": "cordis",
+      "ref": "101314020",
+      "title": "EITWATER: Start-up Plan proposal for EIT Water",
+      "funder": "European Commission",
+      "start": "2026-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101314020"
+     },
+     {
+      "source": "cordis",
+      "ref": "101099283",
+      "title": "MOBVEC: Mobile Bio-Lab to support first response in Arbovirus outbreaks",
+      "funder": "European Commission",
+      "start": "2023-07",
+      "end": "2027-06",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101099283"
+     },
+     {
+      "source": "cordis",
+      "ref": "101145790",
+      "title": "CT-Luso: Ethics and Regulatory Capacity Building Partnership for Clinical Trials in Portuguese-speaking African Countries",
+      "funder": "European Commission",
+      "start": "2024-09",
+      "end": "2027-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101145790"
+     },
+     {
+      "source": "cordis",
+      "ref": "101293306",
+      "title": "ISIDORe II: INTEGRATED SERVICES FOR INFECTIOUS DISEASE OUTBREAK RESEARCH II",
+      "funder": "European Commission",
+      "start": "2026-06",
+      "end": "2029-05",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101293306"
+     },
+     {
+      "source": "cordis",
+      "ref": "101057795",
+      "title": "BE READY: Building a European strategic Research and Innovation Area in Direct Synergy with EU and International Initiatives for Pandemic Preparedness",
+      "funder": "European Commission",
+      "start": "2022-06",
+      "end": "2025-05",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101057795"
+     },
+     {
+      "source": "cordis",
+      "ref": "101046133",
+      "title": "ISIDORe: Integrated Services for Infectious Disease Outbreak Research",
+      "funder": "European Commission",
+      "start": "2022-02",
+      "end": "2025-07",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101046133"
+     },
+     {
+      "source": "cordis",
+      "ref": "101095619",
+      "title": "ESCAPE: Efficient and rapidly SCAlable EU-wide evidence-driven Pandemic response plans through dynamic Epidemic data assimilation",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101095619"
+     }
+    ]
+   }
+  },
+  "Rolls-Royce": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "1015 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101102000",
+      "title": "CAVENDISH: Consortium for the AdVent of aero-Engine Demonstration and aircraft Integration Strategy with Hydrogen",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101102000"
+     },
+     {
+      "source": "cordis",
+      "ref": "101119988",
+      "title": "RE-MAKE: REFURBISHMENT AND ADDITIVE MANUFACTURING ACCOMPLISHED BY KINETIC DEPOSITION",
+      "funder": "European Commission",
+      "start": "2023-10",
+      "end": "2027-09",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101119988"
+     },
+     {
+      "source": "cordis",
+      "ref": "101120366",
+      "title": "Training42Phase: Next generation turbomachinery with two-phase flow",
+      "funder": "European Commission",
+      "start": "2023-12",
+      "end": "2027-11",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101120366"
+     },
+     {
+      "source": "cordis",
+      "ref": "101168425",
+      "title": "Dust-DN: Doctoral Network on Atmospheric Dust",
+      "funder": "European Commission",
+      "start": "2024-11",
+      "end": "2028-10",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101168425"
+     },
+     {
+      "source": "cordis",
+      "ref": "101101955",
+      "title": "SMR ACAP: SMR aircraft architecture and technology integration project",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101101955"
+     },
+     {
+      "source": "cordis",
+      "ref": "101101999",
+      "title": "CONCERTO: Construction Of Novel CERTification methOds and means of compliance for disruptive technologies",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101101999"
+     },
+     {
+      "source": "cordis",
+      "ref": "101147454",
+      "title": "DEMOQUAS: DEsigning, Manufacturing and Operating Quantification of Uncertainties to increase Aviation Safety",
+      "funder": "European Commission",
+      "start": "2024-05",
+      "end": "2027-04",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101147454"
+     },
+     {
+      "source": "cordis",
+      "ref": "101056732",
+      "title": "NEXTAIR: NEXTAIR - multi-disciplinary digital - enablers for NEXT-generation AIRcraft design and operations",
+      "funder": "European Commission",
+      "start": "2022-09",
+      "end": "2025-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101056732"
+     },
+     {
+      "source": "cordis",
+      "ref": "101072851",
+      "title": "MFLOPS: Multiphase Flow Optimisation Strategies with Industrial Applications",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2027-04",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101072851"
+     },
+     {
+      "source": "cordis",
+      "ref": "101114701",
+      "title": "KAIROS: unlocKing the potential of AI-based weatheR forecasts for Operational benefitS",
+      "funder": "European Commission",
+      "start": "2023-06",
+      "end": "2026-11",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101114701"
+     },
+     {
+      "source": "cordis",
+      "ref": "101255025",
+      "title": "ACIandI: Short Medium Range - Aircraft Configuration Integration and Impact",
+      "funder": "European Commission",
+      "start": "2026-07",
+      "end": "2030-12",
+      "role": "partner",
+      "amount": 199999.63,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101255025"
+     },
+     {
+      "source": "cordis",
+      "ref": "101056863",
+      "title": "MINIMAL: Minimum environmental impact ultra-efficient cores for aircraft propulsion.",
+      "funder": "European Commission",
+      "start": "2022-09",
+      "end": "2027-02",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101056863"
+     },
+     {
+      "source": "cordis",
+      "ref": "101138319",
+      "title": "ROSAS: RObust simulation Systems exploiting AI based turbulence models and hight-fidelity algorithmS",
+      "funder": "European Commission",
+      "start": "2025-01",
+      "end": "2028-06",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101138319"
+     },
+     {
+      "source": "cordis",
+      "ref": "101165375",
+      "title": "CONNECT-NM: Coordination of the European Research Community on Nuclear Materials for Energy Innovation",
+      "funder": "European Commission",
+      "start": "2024-10",
+      "end": "2029-09",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101165375"
+     },
+     {
+      "source": "cordis",
+      "ref": "101102004",
+      "title": "HEAVEN: Hydrogen Engine Architecture Virtually Engineered Novelly",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101102004"
+     },
+     {
+      "source": "cordis",
+      "ref": "101102013",
+      "title": "HE-ART: Hybrid Electric propulsion system for regional AiRcrafT",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101102013"
+     },
+     {
+      "source": "cordis",
+      "ref": "101056865",
+      "title": "HESTIA: HydrogEn combuSTion In Aero engines",
+      "funder": "European Commission",
+      "start": "2022-09",
+      "end": "2027-01",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101056865"
+     },
+     {
+      "source": "cordis",
+      "ref": "101095395",
+      "title": "PULSAR: Propelling eUropean Leadership through Synergizing Aviation Research",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101095395"
+     },
+     {
+      "source": "cordis",
+      "ref": "101192334",
+      "title": "PACIFIC: Particle emissions, Air Quality and Climate Impact related to Fuel Composition and Engine Cycle",
+      "funder": "European Commission",
+      "start": "2025-01",
+      "end": "2028-06",
+      "role": "partner",
+      "amount": 192500.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101192334"
+     },
+     {
+      "source": "cordis",
+      "ref": "101256789",
+      "title": "UNIFIED: Ultra Novel and Innovative Fully Integrated Engine Demonstrations",
+      "funder": "European Commission",
+      "start": "2026-01",
+      "end": "2029-12",
+      "role": "lead",
+      "amount": 15654062.06,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101256789"
+     }
+    ]
+   }
+  },
+  "Royal Observatory Edinburgh": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "ST/X000982/1",
+      "title": "Astronomy and Astrophysics at the University of Nottingham - 2023 to 2026",
+      "funder": "STFC",
+      "start": "2023-03",
+      "end": "2026-09",
+      "amount": 2066736,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=ST/X000982/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "ST/X001792/1",
+      "title": "Curiosity In Action",
+      "funder": "STFC",
+      "start": "2022-11",
+      "end": "2025-12",
+      "amount": 114930,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=ST/X001792/1"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "S&C Thermal Fluids": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Scottish Enterprise": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "640260",
+      "title": "SCOTTISH ENTERPRISE",
+      "funder": "Innovate UK",
+      "start": "2025-03",
+      "end": "2026-03",
+      "amount": 1332820,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=640260"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/Z533208/1",
+      "title": "INTEGRATED QUANTUM NETWORKS (IQN) RESEARCH HUB",
+      "funder": "EPSRC",
+      "start": "2024-12",
+      "end": "2029-11",
+      "amount": 21872249,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/Z533208/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "BB/Z516119/1",
+      "title": "NAPIC: National Alternative Protein Innovation Centre",
+      "funder": "BBSRC",
+      "start": "2024-08",
+      "end": "2029-08",
+      "amount": 16001352,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=BB/Z516119/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/Z531066/1",
+      "title": "CORNERSTONE Photonics Innovation Centre (C-PIC)",
+      "funder": "EPSRC",
+      "start": "2024-05",
+      "end": "2029-05",
+      "amount": 11782397,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/Z531066/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/Y024109/1",
+      "title": "STREAM 2: A placed-based IAA in Photonic Technologies in Scotland's Central Belt",
+      "funder": "EPSRC",
+      "start": "2024-02",
+      "end": "2028-01",
+      "amount": 5091522,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/Y024109/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/Y023978/1",
+      "title": "STREAM 1: Accelerating Impact of Community healthCarE in Tayside (AICCET)",
+      "funder": "EPSRC",
+      "start": "2024-01",
+      "end": "2027-12",
+      "amount": 2704770,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/Y023978/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "ES/Y502364/1",
+      "title": "Stirling Local Policy Innovation Partnership",
+      "funder": "ESRC",
+      "start": "2024-01",
+      "end": "2027-12",
+      "amount": 4037134,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=ES/Y502364/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/X038823/2",
+      "title": "Hydrogen Integration for Accelerated Energy Transitions Hub (HI-ACT)",
+      "funder": "EPSRC",
+      "start": "2024-01",
+      "end": "2028-05",
+      "amount": 10364256,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/X038823/2"
+     },
+     {
+      "source": "gtr",
+      "ref": "640229",
+      "title": "Unlocking Potentials (Begin)",
+      "funder": "Innovate UK",
+      "start": "2023-12",
+      "end": "2024-11",
+      "amount": 95706,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=640229"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/X038823/1",
+      "title": "Hydrogen Integration for Accelerated Energy Transitions Hub (HI-ACT)",
+      "funder": "EPSRC",
+      "start": "2023-05",
+      "end": "2024-01",
+      "amount": 10675389,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/X038823/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "640184",
+      "title": "Innovation Champion Support for Young Innovators",
+      "funder": "Innovate UK",
+      "start": "2022-12",
+      "end": "2023-11",
+      "amount": 39891,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=640184"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/V011863/2",
+      "title": "UKRI Interdisciplinary Centre for Circular Chemical Economy",
+      "funder": "SPF",
+      "start": "2022-08",
+      "end": "2025-03",
+      "amount": 2766104,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/V011863/2"
+     },
+     {
+      "source": "gtr",
+      "ref": "10061055",
+      "title": "Connecting Health Ecosystems: Connecting the dots within digital health innovation ecosystems",
+      "funder": "Horizon Europe Guarantee",
+      "start": "2022-06",
+      "end": "2024-06",
+      "amount": 77724,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10061055"
+     },
+     {
+      "source": "gtr",
+      "ref": "10043889",
+      "title": "Clean Energy Transition Partnership",
+      "funder": "Horizon Europe Guarantee",
+      "start": "2022-04",
+      "end": "2028-12",
+      "amount": 3259079,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10043889"
+     },
+     {
+      "source": "gtr",
+      "ref": "640154",
+      "title": "Innovate UK EDGE (2022-2025)",
+      "funder": "Innovate UK",
+      "start": "2022-03",
+      "end": "2025-03",
+      "amount": 2735519,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=640154"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101251080",
+      "title": "TH2ISTLE: RePowering North-East Scotland's Future",
+      "funder": "European Commission",
+      "start": "2026-05",
+      "end": "2031-04",
+      "role": "partner",
+      "amount": 371000.45,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101251080"
+     },
+     {
+      "source": "cordis",
+      "ref": "101070756",
+      "title": "CONNECTINGHEALTH: CONNECTing the dots withIN diGItal HEALTH Innovation Ecosystems",
+      "funder": "European Commission",
+      "start": "2022-06",
+      "end": "2024-06",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101070756"
+     },
+     {
+      "source": "cordis",
+      "ref": "101161155",
+      "title": "ECIV: European Circular Economy Innovation Valley: the European “dance floor” for circular regions",
+      "funder": "European Commission",
+      "start": "2024-09",
+      "end": "2029-08",
+      "role": "partner",
+      "amount": 1416000.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101161155"
+     },
+     {
+      "source": "cordis",
+      "ref": "101161108",
+      "title": "UNITE: UNITE European Digital Health Valleys",
+      "funder": "European Commission",
+      "start": "2024-09",
+      "end": "2029-08",
+      "role": "partner",
+      "amount": 1000000.12,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101161108"
+     },
+     {
+      "source": "cordis",
+      "ref": "101069750",
+      "title": "CETP: Clean Energy Transition Partnership",
+      "funder": "European Commission",
+      "start": "2022-05",
+      "end": "2030-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101069750"
+     }
+    ]
+   }
+  },
+  "TWI": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "229 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101111972",
+      "title": "LH2CRAFT: Safe and Efficient Marine Transportation of Liquid Hydrogen",
+      "funder": "European Commission",
+      "start": "2023-06",
+      "end": "2027-05",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101111972"
+     },
+     {
+      "source": "cordis",
+      "ref": "101058574",
+      "title": "MAST3RBoost: Maturing the production standards of ultraporous structures for high density hydrogen storage bank operating on swinging tem-peratures and low compression",
+      "funder": "European Commission",
+      "start": "2022-06",
+      "end": "2026-08",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101058574"
+     },
+     {
+      "source": "cordis",
+      "ref": "101070666",
+      "title": "Up-Skill: Up-Skilling for Industry 5.0 Roll-Out",
+      "funder": "European Commission",
+      "start": "2022-09",
+      "end": "2026-02",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101070666"
+     },
+     {
+      "source": "cordis",
+      "ref": "101084623",
+      "title": "COMPASS: Sustainable and cost-efficient Concepts enabling green power production frOM suPercriticAl/Superhot geothermal wellS (COMPASS)",
+      "funder": "European Commission",
+      "start": "2022-11",
+      "end": "2025-10",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101084623"
+     },
+     {
+      "source": "cordis",
+      "ref": "101119988",
+      "title": "RE-MAKE: REFURBISHMENT AND ADDITIVE MANUFACTURING ACCOMPLISHED BY KINETIC DEPOSITION",
+      "funder": "European Commission",
+      "start": "2023-10",
+      "end": "2027-09",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101119988"
+     },
+     {
+      "source": "cordis",
+      "ref": "101056831",
+      "title": "NH3CRAFT: Safe and efficient storage of ammonia within ships",
+      "funder": "European Commission",
+      "start": "2022-06",
+      "end": "2025-05",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101056831"
+     },
+     {
+      "source": "cordis",
+      "ref": "101295332",
+      "title": "GENMAT: Generative Foundation Model for Multi-Scale Materials Discovery, Design and Deployment",
+      "funder": "European Commission",
+      "start": "2026-06",
+      "end": "2029-05",
+      "role": "partner",
+      "amount": 499260.28,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101295332"
+     },
+     {
+      "source": "cordis",
+      "ref": "101056911",
+      "title": "CoPropel: Composite material technology for next-generation Marine Vessel Propellers.",
+      "funder": "European Commission",
+      "start": "2022-06",
+      "end": "2025-05",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101056911"
+     },
+     {
+      "source": "cordis",
+      "ref": "101192721",
+      "title": "PLEIADES: ADVANCING AEROSPACE COMPOSITES THROUGH INDUCTION WELDING AND NEW VITRIMERIC FORMULATIONS ENHANCED BY INTEGRATED PHOTONIC SENSORS, PROVIDING DATA TO DIGITAL SUPPLY CHAIN, SHM, MAINTENANCE",
+      "funder": "European Commission",
+      "start": "2025-01",
+      "end": "2027-12",
+      "role": "lead",
+      "amount": 707583.97,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101192721"
+     }
+    ]
+   }
+  },
+  "UK Astronomy Technology Centre": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "68 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "UK Atomic Energy Authority": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "UKRI872",
+      "title": "The Space Nanomaterials Atom Probe (SNAP): Atom by atom resolution of Material and Space Science Challenges",
+      "funder": "EPSRC",
+      "start": "2025-05",
+      "end": "2028-05",
+      "amount": 5305551,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=UKRI872"
+     },
+     {
+      "source": "gtr",
+      "ref": "UKRI1362",
+      "title": "NetworkPlus in Terahertz Systems",
+      "funder": "EPSRC",
+      "start": "2025-05",
+      "end": "2028-05",
+      "amount": 1050425,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=UKRI1362"
+     },
+     {
+      "source": "gtr",
+      "ref": "UKRI1049",
+      "title": "UK Knowledge Exchange Hub for mathematical Sciences",
+      "funder": "EPSRC",
+      "start": "2025-03",
+      "end": "2029-03",
+      "amount": 2130396,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=UKRI1049"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/Z534493/1",
+      "title": "UKRI National Federated Compute Services NetworkPlus",
+      "funder": "DRI",
+      "start": "2024-09",
+      "end": "2026-09",
+      "amount": 3395202,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/Z534493/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/Z53285X/1",
+      "title": "The Future Advanced Metrology Hub for Sustainable Manufacturing",
+      "funder": "EPSRC",
+      "start": "2024-09",
+      "end": "2031-08",
+      "amount": 12057557,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/Z53285X/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "10074354",
+      "title": "Inside Fusion",
+      "funder": "Innovate UK",
+      "start": "2023-12",
+      "end": "2025-11",
+      "amount": 314434,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10074354"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/W006774/1",
+      "title": "Performance-driven design of aluminium alloys for additive manufacturing (PAAM)",
+      "funder": "EPSRC",
+      "start": "2023-04",
+      "end": "2026-04",
+      "amount": 335213,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/W006774/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/W026899/2",
+      "title": "Mathematical Theory of Radiation Transport: Nuclear Technology Frontiers (MaThRad)",
+      "funder": "EPSRC",
+      "start": "2023-01",
+      "end": "2027-08",
+      "amount": 5761842,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/W026899/2"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/W032147/1",
+      "title": "Tailored Microstructures via Thermoelectric-Magnetohydrodynamics for Additive Manufacturing (TEAM)",
+      "funder": "EPSRC",
+      "start": "2023-01",
+      "end": "2026-07",
+      "amount": 451915,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=EP/W032147/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/W031167/1",
+      "title": "Tailored Microstructures via Thermoelectric-Magnetohydrodynamics for Additive Manufacturing (TEAM)",
+      "funder": "EPSRC",
+      "start": "2023-01",
+      "end": "2026-07",
+      "amount": 331295,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/W031167/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/W00593X/1",
+      "title": "Performance-driven design of aluminium alloys for additive manufacturing (PAAM)",
+      "funder": "EPSRC",
+      "start": "2023-01",
+      "end": "2026-01",
+      "amount": 477459,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=EP/W00593X/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/W037483/1",
+      "title": "Data-driven, Reliable, and Effective Additive Manufacturing using multi-BEAM technologies (DREAM BEAM)",
+      "funder": "EPSRC",
+      "start": "2022-11",
+      "end": "2026-04",
+      "amount": 399163,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=EP/W037483/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/W024764/1",
+      "title": "Diode area melting - a novel re-configurable multi-laser approach for efficient additive manufacturing with enhanced thermal process control",
+      "funder": "EPSRC",
+      "start": "2022-08",
+      "end": "2025-07",
+      "amount": 639830,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=EP/W024764/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "ST/W001837/1",
+      "title": "LBNF/DUNE Target Phase 2",
+      "funder": "STFC",
+      "start": "2022-03",
+      "end": "2027-03",
+      "amount": 179772,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=ST/W001837/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/W003333/1",
+      "title": "Manufacturing by Design",
+      "funder": "EPSRC",
+      "start": "2022-03",
+      "end": "2027-03",
+      "amount": 1612580,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=EP/W003333/1"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "UK Industrial Fusion Solutions": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "UK Power Networks": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "EP/Z536106/1",
+      "title": "Behavioural data-driven coalitional control for buildings",
+      "funder": "EPSRC",
+      "start": "2025-08",
+      "end": "2028-08",
+      "amount": 985547,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=EP/Z536106/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "ES/Z504671/1",
+      "title": "SENSE: Smart ENergy data ServicE",
+      "funder": "ESRC",
+      "start": "2025-03",
+      "end": "2027-11",
+      "amount": 3424592,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=ES/Z504671/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "10105065",
+      "title": "CarbonFlex",
+      "funder": "Innovate UK",
+      "start": "2024-03",
+      "end": "2024-05",
+      "amount": null,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10105065"
+     },
+     {
+      "source": "gtr",
+      "ref": "10102960",
+      "title": "SYSMET - SYstemStrength Measurement and EvaluaTion",
+      "funder": "Innovate UK",
+      "start": "2024-03",
+      "end": "2024-05",
+      "amount": null,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10102960"
+     },
+     {
+      "source": "gtr",
+      "ref": "10105063",
+      "title": "Balancer",
+      "funder": "Innovate UK",
+      "start": "2024-03",
+      "end": "2024-05",
+      "amount": null,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10105063"
+     },
+     {
+      "source": "gtr",
+      "ref": "10105067",
+      "title": "Flex Direct",
+      "funder": "Innovate UK",
+      "start": "2024-03",
+      "end": "2024-05",
+      "amount": null,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10105067"
+     },
+     {
+      "source": "gtr",
+      "ref": "10105050",
+      "title": "OptiHeat",
+      "funder": "Innovate UK",
+      "start": "2024-03",
+      "end": "2024-05",
+      "amount": null,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10105050"
+     },
+     {
+      "source": "gtr",
+      "ref": "10105062",
+      "title": "SizeWise",
+      "funder": "Innovate UK",
+      "start": "2024-03",
+      "end": "2024-05",
+      "amount": null,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10105062"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/W028905/1",
+      "title": "Aviation-to-Grid: Grid flexibility through multiscale modelling and integration of power systems with electrified air transport",
+      "funder": "EPSRC",
+      "start": "2023-08",
+      "end": "2026-09",
+      "amount": 402860,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=EP/W028905/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "EP/X025322/1",
+      "title": "ENSIGN: ENergy System dIGital twiN",
+      "funder": "EPSRC",
+      "start": "2023-08",
+      "end": "2027-08",
+      "amount": 4340128,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=EP/X025322/1"
+     },
+     {
+      "source": "gtr",
+      "ref": "MR/W011360/2",
+      "title": "Digitalisation of Electrical Power and Energy Systems Operation (DEEPS)",
+      "funder": "UKRI FLF",
+      "start": "2023-03",
+      "end": "2027-07",
+      "amount": 1397509,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=MR/W011360/2"
+     },
+     {
+      "source": "gtr",
+      "ref": "MR/W011360/1",
+      "title": "Digitalisation of Electrical Power and Energy Systems Operation (DEEPS)",
+      "funder": "UKRI FLF",
+      "start": "2022-07",
+      "end": "2023-03",
+      "amount": 1490121,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=MR/W011360/1"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "UK Research and Innovation": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "University of Bath": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "2176 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101214165",
+      "title": "CResPulse: Pacing with Digital Twins of Brainstem Neuronal Circuits as an Effective Therapy for Chronic Cardiac Disease",
+      "funder": "European Commission",
+      "start": "2025-06",
+      "end": "2028-05",
+      "role": "lead",
+      "amount": 1280577.42,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101214165"
+     },
+     {
+      "source": "cordis",
+      "ref": "101131557",
+      "title": "REMODEL: Research Exchanges in the Mathematics of Deep Learning with Applications",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2027-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101131557"
+     },
+     {
+      "source": "cordis",
+      "ref": "101160215",
+      "title": "TWIN-IT-ROMANS: Twinning IZTECH in Robotics Manufacturing Systems",
+      "funder": "European Commission",
+      "start": "2024-10",
+      "end": "2027-09",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101160215"
+     },
+     {
+      "source": "cordis",
+      "ref": "101168714",
+      "title": "IDEoPOP: International Dimensions and Effects of Populism",
+      "funder": "European Commission",
+      "start": "2024-10",
+      "end": "2028-09",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101168714"
+     },
+     {
+      "source": "cordis",
+      "ref": "101167139",
+      "title": "PSINumScat: Phase-space-inspired numerical methods for high-frequency wave scattering: from semiclassical analysis through numerical analysis to open-source software",
+      "funder": "European Commission",
+      "start": "2025-05",
+      "end": "2031-04",
+      "role": "lead",
+      "amount": 3060223.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101167139"
+     },
+     {
+      "source": "cordis",
+      "ref": "101204098",
+      "title": "SAFE: Sustainable Algal Fucoxanthin Extraction, Encapsulation and Valorisation Using Hydrodynamic Cavitation (SAFE)",
+      "funder": "European Commission",
+      "start": "2025-06",
+      "end": "2027-06",
+      "role": "lead",
+      "amount": 260347.92,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101204098"
+     },
+     {
+      "source": "cordis",
+      "ref": "101220926",
+      "title": "X-SeeO2: Real-time X-ray diffraction and microstructure imaging: accelerating the transformation of cementitious materials into CO2 sinks",
+      "funder": "European Commission",
+      "start": "2025-10",
+      "end": "2029-09",
+      "role": "partner",
+      "amount": 895242.48,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101220926"
+     },
+     {
+      "source": "cordis",
+      "ref": "101225248",
+      "title": "BioTransform: Mapping the Uncharted Human Metabolism for Novel Food Bioactives",
+      "funder": "European Commission",
+      "start": "2025-11",
+      "end": "2029-10",
+      "role": "partner",
+      "amount": 348738.12,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101225248"
+     },
+     {
+      "source": "cordis",
+      "ref": "101257536",
+      "title": "CEREBRIS: Multi AI-Agents to Revolutionise the Management of Neurological Diseases",
+      "funder": "European Commission",
+      "start": "2026-05",
+      "end": "2030-04",
+      "role": "lead",
+      "amount": 2889342.2,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101257536"
+     },
+     {
+      "source": "cordis",
+      "ref": "101270180",
+      "title": "DeTAI: Data-efficient model training for sustainable artificial intelligence",
+      "funder": "European Commission",
+      "start": "2026-12",
+      "end": "2028-11",
+      "role": "lead",
+      "amount": 260347.92,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101270180"
+     },
+     {
+      "source": "cordis",
+      "ref": "101298900",
+      "title": "AQUA VIVA: Water as Living Heritage: From Traditional Knowledge to Community Action for Climate Resilience and Wellbeing",
+      "funder": "European Commission",
+      "start": "2027-01",
+      "end": "2030-12",
+      "role": "lead",
+      "amount": 210420.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101298900"
+     },
+     {
+      "source": "cordis",
+      "ref": "101299793",
+      "title": "LUMIN: Light Utilised Molecular Interaction Nanoscopy",
+      "funder": "European Commission",
+      "start": "2027-01",
+      "end": "2031-12",
+      "role": "lead",
+      "amount": 2494042.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101299793"
+     },
+     {
+      "source": "cordis",
+      "ref": "101058680",
+      "title": "Fluently: Fluently - the essence of human-robot interaction",
+      "funder": "European Commission",
+      "start": "2022-06",
+      "end": "2025-05",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101058680"
+     },
+     {
+      "source": "cordis",
+      "ref": "101070533",
+      "title": "EMIL: European Media and Immersion Lab",
+      "funder": "European Commission",
+      "start": "2022-09",
+      "end": "2025-06",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101070533"
+     },
+     {
+      "source": "cordis",
+      "ref": "101057014",
+      "title": "PARC: Partnership for the Assessment of Risks from Chemicals",
+      "funder": "European Commission",
+      "start": "2022-05",
+      "end": "2029-04",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101057014"
+     },
+     {
+      "source": "cordis",
+      "ref": "101103681",
+      "title": "TEMPEST: nexT gEneration MultiPle architEcture battery Systems for indusTry",
+      "funder": "European Commission",
+      "start": "2023-05",
+      "end": "2026-04",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101103681"
+     },
+     {
+      "source": "cordis",
+      "ref": "101103667",
+      "title": "ENERGETIC: NEXT GENERATION BATTERY MANAGEMENT SYSTEM BASED ON DATA RICH DIGITAL TWIN",
+      "funder": "European Commission",
+      "start": "2023-06",
+      "end": "2026-08",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101103667"
+     },
+     {
+      "source": "cordis",
+      "ref": "101126733",
+      "title": "FutureData4EU: Training Future Big Data Experts for Europe",
+      "funder": "European Commission",
+      "start": "2023-11",
+      "end": "2028-10",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101126733"
+     },
+     {
+      "source": "cordis",
+      "ref": "101165441",
+      "title": "PolFam: The Everyday Politics of Famine",
+      "funder": "European Commission",
+      "start": "2025-01",
+      "end": "2029-12",
+      "role": "lead",
+      "amount": 1481283.75,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101165441"
+     },
+     {
+      "source": "cordis",
+      "ref": "101206047",
+      "title": "EcoCemXplore: Exploring Eco-efficient blended cements: Innovations in performance and sustainability",
+      "funder": "European Commission",
+      "start": "2025-09",
+      "end": "2027-08",
+      "role": "lead",
+      "amount": 260347.92,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101206047"
+     }
+    ]
+   }
+  },
+  "University of Birmingham": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "4461 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101062040",
+      "title": "MangC: The impact of global warming on the soil organic matter decay of world mangroves.",
+      "funder": "European Commission",
+      "start": "2022-09",
+      "end": "2025-03",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101062040"
+     },
+     {
+      "source": "cordis",
+      "ref": "101068507",
+      "title": "REDTHERM: Development of a medium-high temperature waste heat recovery hybrid thermal energy storage layout, based on red mud, a disregarded and potentially hazardous solid waste of the aluminium industry.",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2025-02",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101068507"
+     },
+     {
+      "source": "cordis",
+      "ref": "101094373",
+      "title": "I-CLAIM: Improving the living and labour conditions of irregularised migrant households in Europe",
+      "funder": "European Commission",
+      "start": "2023-04",
+      "end": "2026-03",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101094373"
+     },
+     {
+      "source": "cordis",
+      "ref": "101093939",
+      "title": "RISKADAPT: Asset Level Modelling of RISKs In the Face of Climate Induced Extreme Events and ADAPTtation",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2025-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101093939"
+     },
+     {
+      "source": "cordis",
+      "ref": "101086935",
+      "title": "DISACT: Disappearing Act: Reconstructing the Crime of Disappearances in Times of Political Violence",
+      "funder": "European Commission",
+      "start": "2023-07",
+      "end": "2028-06",
+      "role": "partner",
+      "amount": 30955.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101086935"
+     },
+     {
+      "source": "cordis",
+      "ref": "101119486",
+      "title": "TALENTS: The doctoral rift science network for the energy transition",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2027-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101119486"
+     },
+     {
+      "source": "cordis",
+      "ref": "101119830",
+      "title": "EDUCADO: Exploring the Deep Universe by Computational Analysis of Data from Observations",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2027-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101119830"
+     },
+     {
+      "source": "cordis",
+      "ref": "101131344",
+      "title": "DOC-BOX: Development of a multimodal toolbox to ensure a fast and reliable diagnosis of consciousness disorders",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2027-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101131344"
+     },
+     {
+      "source": "cordis",
+      "ref": "101139155",
+      "title": "6G-REFERENCE: 6G haRdware Enablers For cEll fRee cohEreNt Communications & sEnsing",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101139155"
+     },
+     {
+      "source": "cordis",
+      "ref": "101157493",
+      "title": "Sun-Bio: SUSTAINABLE AND NATURE INCLUSIVE OFFSHORE ENERGY WITH THE PARALLEL BIODIVERSITY FLOURISHING, PROTECTION AND MONITORING",
+      "funder": "European Commission",
+      "start": "2024-06",
+      "end": "2027-05",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101157493"
+     },
+     {
+      "source": "cordis",
+      "ref": "101167421",
+      "title": "UNION: UnderstandiNg fraIlty tOwards a future of healthy ageiNg",
+      "funder": "European Commission",
+      "start": "2025-01",
+      "end": "2028-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101167421"
+     },
+     {
+      "source": "cordis",
+      "ref": "101179145",
+      "title": "NOVEL: Novel brain health solutions across four focus areas: Prevention and care, Methods and data, Innovation and society, and Ethics and well-being",
+      "funder": "European Commission",
+      "start": "2024-12",
+      "end": "2029-11",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101179145"
+     },
+     {
+      "source": "cordis",
+      "ref": "101141553",
+      "title": "JUST PEN: Which Moral Influences on European penal and prison policies?",
+      "funder": "European Commission",
+      "start": "2025-01",
+      "end": "2029-12",
+      "role": "partner",
+      "amount": 125875.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101141553"
+     },
+     {
+      "source": "cordis",
+      "ref": "101165395",
+      "title": "eBioNetAniMat: Electrochemically Programmable Biochemical Networks for Animate Materials",
+      "funder": "European Commission",
+      "start": "2024-12",
+      "end": "2029-11",
+      "role": "lead",
+      "amount": 1776727.5,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101165395"
+     },
+     {
+      "source": "cordis",
+      "ref": "101191768",
+      "title": "CAIPIRINH3A: Combustion of liquid ammonia, assisted by plasma discharges, as a novel and clean energy conversion method",
+      "funder": "European Commission",
+      "start": "2024-11",
+      "end": "2028-10",
+      "role": "partner",
+      "amount": 125250.0,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101191768"
+     },
+     {
+      "source": "cordis",
+      "ref": "101164610",
+      "title": "SolWator: Fundamental Understanding of Solar Driven Interfacial Evaporation using 3D hierarchical hybrid structures",
+      "funder": "European Commission",
+      "start": "2025-01",
+      "end": "2029-12",
+      "role": "lead",
+      "amount": 1495250.0,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101164610"
+     },
+     {
+      "source": "cordis",
+      "ref": "101205667",
+      "title": "M-Twin4US: Maintenance-oriented Digital Twin for Underground Infrastructure with Sensing, Machine Learning, BIM and Simulation",
+      "funder": "European Commission",
+      "start": "2025-06",
+      "end": "2027-05",
+      "role": "partner",
+      "amount": 43391.32,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101205667"
+     },
+     {
+      "source": "cordis",
+      "ref": "101205368",
+      "title": "TwinsRail: AI-enhanced digital twins for real-time assessment of wheel-rail contact conditions exposed to climate change impacts",
+      "funder": "European Commission",
+      "start": "2026-04",
+      "end": "2028-03",
+      "role": "lead",
+      "amount": 276187.92,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101205368"
+     },
+     {
+      "source": "cordis",
+      "ref": "101217295",
+      "title": "INNOCHEMBIO: Innovative Chemistry and Biotechnology for a Sustainable Future",
+      "funder": "European Commission",
+      "start": "2025-07",
+      "end": "2030-06",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101217295"
+     },
+     {
+      "source": "cordis",
+      "ref": "101206922",
+      "title": "MPBNF: Untangling MicroPlastic impacts on Biological Nitrogen Fixation (MPBNF)",
+      "funder": "European Commission",
+      "start": "2025-09",
+      "end": "2027-08",
+      "role": "lead",
+      "amount": 276187.92,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101206922"
+     }
+    ]
+   }
+  },
+  "University of Brighton": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "496 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101177924",
+      "title": "INJECTHEAL: MULTIFUNCTIONAL SELF-HEALING INJECTABLE HYDROGEL FOR CHRONIC WOUND HEALING AND TISSUE REGENERATION",
+      "funder": "European Commission",
+      "start": "2025-05",
+      "end": "2028-04",
+      "role": "partner",
+      "amount": 1101135.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101177924"
+     },
+     {
+      "source": "cordis",
+      "ref": "101201281",
+      "title": "OCHRE: Optimisation and Control strategy of Hydrogen Recirculation in PEMFC systems considering phase changes (OCHRE)",
+      "funder": "European Commission",
+      "start": "2025-07",
+      "end": "2028-07",
+      "role": "lead",
+      "amount": 276187.92,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101201281"
+     },
+     {
+      "source": "cordis",
+      "ref": "101094658",
+      "title": "CAPONEU: The Cartography of the Political Novel in Europe",
+      "funder": "European Commission",
+      "start": "2023-02",
+      "end": "2027-01",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101094658"
+     },
+     {
+      "source": "cordis",
+      "ref": "101177912",
+      "title": "ALFIE: Assessment of Learning technologies and Frameworks for Intelligent and Ethical AI",
+      "funder": "European Commission",
+      "start": "2024-10",
+      "end": "2027-09",
+      "role": "partner",
+      "amount": 336292.5,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101177912"
+     }
+    ]
+   }
+  },
+  "University of Cambridge": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "8307 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101126733",
+      "title": "FutureData4EU: Training Future Big Data Experts for Europe",
+      "funder": "European Commission",
+      "start": "2023-11",
+      "end": "2028-10",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101126733"
+     },
+     {
+      "source": "cordis",
+      "ref": "101067269",
+      "title": "ChirLog: Chirality based all-optical logic gates",
+      "funder": "European Commission",
+      "start": "2022-07",
+      "end": "2024-06",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101067269"
+     },
+     {
+      "source": "cordis",
+      "ref": "101058004",
+      "title": "CHARM: Chemometric histopathology via coherent Raman imaging for precision medicine",
+      "funder": "European Commission",
+      "start": "2022-05",
+      "end": "2025-10",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101058004"
+     },
+     {
+      "source": "cordis",
+      "ref": "101058229",
+      "title": "MITI: Non-ionizing Metabolic Imaging for predicting the effect of and guiding Therapeutic Interventions",
+      "funder": "European Commission",
+      "start": "2022-04",
+      "end": "2025-09",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101058229"
+     },
+     {
+      "source": "cordis",
+      "ref": "101066474",
+      "title": "ElectroCool: Toward efficient and environmentally-friendly cooling using active electrocaloric regeneration",
+      "funder": "European Commission",
+      "start": "2023-09",
+      "end": "2025-08",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101066474"
+     },
+     {
+      "source": "cordis",
+      "ref": "101072818",
+      "title": "DYNAMO: DYnamic control in hybrid plasmonic NAnopores: road to next generation multiplexed single MOlecule detection",
+      "funder": "European Commission",
+      "start": "2022-09",
+      "end": "2026-08",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101072818"
+     },
+     {
+      "source": "cordis",
+      "ref": "101059605",
+      "title": "WHALEBONE: The Early Exploitation of Cetacean in Western Europe during the Late Upper Palaeolithic",
+      "funder": "European Commission",
+      "start": "2023-09",
+      "end": "2025-08",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101059605"
+     },
+     {
+      "source": "cordis",
+      "ref": "101068328",
+      "title": "SCHELLEC: Schelling’s philosophy of nature and the environmental challenge",
+      "funder": "European Commission",
+      "start": "2022-10",
+      "end": "2024-09",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101068328"
+     },
+     {
+      "source": "cordis",
+      "ref": "101072735",
+      "title": "FANTOM: Future of ALCL: Novel Therapies, Origins, Bio-Markers and Mechanism of resistance",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101072735"
+     },
+     {
+      "source": "cordis",
+      "ref": "101072454",
+      "title": "MWGaiaDN: MWGaiaDN: Revealing the Milky Way with Gaia",
+      "funder": "European Commission",
+      "start": "2023-02",
+      "end": "2027-01",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101072454"
+     },
+     {
+      "source": "cordis",
+      "ref": "101081478",
+      "title": "SENSE: Search for new physics and technological advancements from neutrino experiments at the high intensity frontier. A cooperative Europe - United States - Brazil effort.",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101081478"
+     },
+     {
+      "source": "cordis",
+      "ref": "101096405",
+      "title": "UP2030: Urban Planning and design ready for 2030",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2025-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101096405"
+     },
+     {
+      "source": "cordis",
+      "ref": "101120256",
+      "title": "MMM: Medicine Made to Measure.",
+      "funder": "European Commission",
+      "start": "2023-10",
+      "end": "2027-09",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101120256"
+     },
+     {
+      "source": "cordis",
+      "ref": "101114978",
+      "title": "HEISINGBERG: Spatial Quantum Optical Annealer for Spin Hamiltonians",
+      "funder": "European Commission",
+      "start": "2023-11",
+      "end": "2027-10",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101114978"
+     },
+     {
+      "source": "cordis",
+      "ref": "101119504",
+      "title": "SurfEx: Epithelial Exchange Surfaces – From organizing principles to novel culture models of the gatekeepers of the body",
+      "funder": "European Commission",
+      "start": "2023-12",
+      "end": "2027-11",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101119504"
+     },
+     {
+      "source": "cordis",
+      "ref": "101082172",
+      "title": "CelloSparx: Sustainable pigments and glitter from renewable cellulose",
+      "funder": "European Commission",
+      "start": "2023-08",
+      "end": "2025-01",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101082172"
+     },
+     {
+      "source": "cordis",
+      "ref": "101108978",
+      "title": "DualCatAmine: Dual Mn/Ni-catalysed functionalization of unreactive sites of amines",
+      "funder": "European Commission",
+      "start": "2024-03",
+      "end": "2026-02",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101108978"
+     },
+     {
+      "source": "cordis",
+      "ref": "101109743",
+      "title": "Quivers: AdS(2)/CFT(1) holography via quiver quantum mechanics",
+      "funder": "European Commission",
+      "start": "2023-04",
+      "end": "2025-04",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101109743"
+     },
+     {
+      "source": "cordis",
+      "ref": "101131557",
+      "title": "REMODEL: Research Exchanges in the Mathematics of Deep Learning with Applications",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2027-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101131557"
+     },
+     {
+      "source": "cordis",
+      "ref": "101129613",
+      "title": "HYPERSONIC: High mobilitY Printed nEtwoRks of 2D Semiconductors for advanced electrONICs",
+      "funder": "European Commission",
+      "start": "2024-04",
+      "end": "2028-03",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101129613"
+     }
+    ]
+   }
+  },
+  "University of Hertfordshire": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "250 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101208677",
+      "title": "TEnergy: Developing of an solid-state double-layer thermoelectric battery for efficiently powering micro-aerial vehicle",
+      "funder": "European Commission",
+      "start": "2025-09",
+      "end": "2027-08",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101208677"
+     },
+     {
+      "source": "cordis",
+      "ref": "101236007",
+      "title": "NExGliO: Nanoparticle-Assisted liquid biopsy based on Extracellular for Early Diagnosis of Glioblastoma",
+      "funder": "European Commission",
+      "start": "2025-11",
+      "end": "2029-10",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101236007"
+     },
+     {
+      "source": "cordis",
+      "ref": "101248882",
+      "title": "ASAQ-PAC: Advancing child-friendly artesunate-amodiaquine taste mask coated micro pellets to combat the threat of artemisinin resistant malaria in Africa",
+      "funder": "European Commission",
+      "start": "2026-06",
+      "end": "2029-05",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101248882"
+     },
+     {
+      "source": "cordis",
+      "ref": "101056783",
+      "title": "FOCI: Non-CO2 Forcers and their Climate, Weather, Air Quality and Health Impacts",
+      "funder": "European Commission",
+      "start": "2022-09",
+      "end": "2026-08",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101056783"
+     },
+     {
+      "source": "cordis",
+      "ref": "101094052",
+      "title": "AECED: Transforming Education for Democracy through Aesthetic and Embodied Learning, Responsive Pedagogies and Democracy-as-becoming",
+      "funder": "European Commission",
+      "start": "2023-04",
+      "end": "2026-03",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101094052"
+     },
+     {
+      "source": "cordis",
+      "ref": "101120408",
+      "title": "SWAG: SOFT WEARABLE ASSISTIVE GARMENTS FOR HUMAN EMPOWERMENT",
+      "funder": "European Commission",
+      "start": "2023-11",
+      "end": "2027-10",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101120408"
+     },
+     {
+      "source": "cordis",
+      "ref": "101289005",
+      "title": "THRIVE: Towards a Harmonised landscape that expands the Role of citizen science in biodIVersity & Ecosystem services monitoring",
+      "funder": "European Commission",
+      "start": "2026-09",
+      "end": "2029-08",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101289005"
+     },
+     {
+      "source": "cordis",
+      "ref": "101082394",
+      "title": "Micro-FloTec: Microscale enabled advanced flow and heat transfer technologies featuring high performance and low power consumption",
+      "funder": "European Commission",
+      "start": "2023-03",
+      "end": "2027-02",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101082394"
+     },
+     {
+      "source": "cordis",
+      "ref": "101097101",
+      "title": "TERRAMETA: TERahertz ReconfigurAble METAsurfaces for ultra-high rate wireless communications",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-06",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101097101"
+     },
+     {
+      "source": "cordis",
+      "ref": "101120014",
+      "title": "SCALE: Industry empowerment to Multiphase fluid dynamics simulations using Artificial intelligence and Statistical methods on modern hardware architectures at Scale",
+      "funder": "European Commission",
+      "start": "2023-10",
+      "end": "2028-03",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101120014"
+     },
+     {
+      "source": "cordis",
+      "ref": "101103345",
+      "title": "SpontaneousPAST: Using déjà vu to better understand spontaneous retrieval in human memory",
+      "funder": "European Commission",
+      "start": "2024-09",
+      "end": "2026-08",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101103345"
+     },
+     {
+      "source": "cordis",
+      "ref": "101080238",
+      "title": "Bootstrap: Boosting Societal Adaptation and Mental Health in a Rapidly Digitalizing, Post-Pandemic Europe",
+      "funder": "European Commission",
+      "start": "2023-07",
+      "end": "2028-06",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101080238"
+     },
+     {
+      "source": "cordis",
+      "ref": "101138330",
+      "title": "CIRCULess: UpCycling mIneral and timbeR-based waste from Construction & manUfacturing process industries through eco-design, advanced logistics, quality control and digital solutions",
+      "funder": "European Commission",
+      "start": "2024-07",
+      "end": "2027-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101138330"
+     }
+    ]
+   }
+  },
+  "University of Leeds": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "4743 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101072637",
+      "title": "QSI: Quantum-Safe-Internet",
+      "funder": "European Commission",
+      "start": "2022-10",
+      "end": "2027-04",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101072637"
+     },
+     {
+      "source": "cordis",
+      "ref": "101119786",
+      "title": "ReBond: A Universal platform for recycling plastic waste using dynamic covalent bonds",
+      "funder": "European Commission",
+      "start": "2023-10",
+      "end": "2027-09",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101119786"
+     },
+     {
+      "source": "cordis",
+      "ref": "101119738",
+      "title": "MetacMed: Acoustic and mechanical metamaterials for biomedical and energy harvesting applications",
+      "funder": "European Commission",
+      "start": "2024-03",
+      "end": "2028-02",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101119738"
+     },
+     {
+      "source": "cordis",
+      "ref": "101097240",
+      "title": "MIGMOBS: The Orders and Borders of Global Inequality: Migration and Mobilities in Late Capitalism",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2028-12",
+      "role": "partner",
+      "amount": 278497.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101097240"
+     },
+     {
+      "source": "cordis",
+      "ref": "101131117",
+      "title": "HarmonicAI: Human-guided collaborative multi-objective design of explainable, fair and privacy-preserving AI for digital health",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2027-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101131117"
+     },
+     {
+      "source": "cordis",
+      "ref": "101137028",
+      "title": "MONALISA: A SIOPEN pragmatic clinical trial to MOnitor NeuroblastomA relapse with LIquid biopsy Sensitive Analysis",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2028-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101137028"
+     },
+     {
+      "source": "cordis",
+      "ref": "101182689",
+      "title": "GRID: Geotechnical Resilience through Intelligent Design",
+      "funder": "European Commission",
+      "start": "2024-11",
+      "end": "2028-10",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101182689"
+     },
+     {
+      "source": "cordis",
+      "ref": "101186774",
+      "title": "IMProGlyco: Inhibitor-Mediated Programming of Glycoforms",
+      "funder": "European Commission",
+      "start": "2025-02",
+      "end": "2028-01",
+      "role": "lead",
+      "amount": 1127462.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101186774"
+     },
+     {
+      "source": "cordis",
+      "ref": "101200671",
+      "title": "REDI: Rethinking EDI Practice and Policy through Evolutionary Psychology",
+      "funder": "European Commission",
+      "start": "2026-01",
+      "end": "2027-01",
+      "role": "lead",
+      "amount": 138093.96,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101200671"
+     },
+     {
+      "source": "cordis",
+      "ref": "101205380",
+      "title": "CRRS: Climate-Resilient Railway Sleepers to Mitigate Track Buckling Risk",
+      "funder": "European Commission",
+      "start": "2025-09",
+      "end": "2027-09",
+      "role": "lead",
+      "amount": 260347.92,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101205380"
+     },
+     {
+      "source": "cordis",
+      "ref": "101209533",
+      "title": "DigitalBI: Digital Twin-Empowered Intelligent Maintenance of Buried Infrastructure through Investigating Their Deterioration and Resilience Mechanisms",
+      "funder": "European Commission",
+      "start": "2025-09",
+      "end": "2027-09",
+      "role": "lead",
+      "amount": 276187.92,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101209533"
+     },
+     {
+      "source": "cordis",
+      "ref": "101211246",
+      "title": "DiShape: Displaced brokers: How displaced people shape humanitarianism in an era of fragmented protection",
+      "funder": "European Commission",
+      "start": "2025-05",
+      "end": "2027-04",
+      "role": "lead",
+      "amount": 276187.92,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101211246"
+     },
+     {
+      "source": "cordis",
+      "ref": "101210387",
+      "title": "DesMEMO: Designing multiferroic double perovskites Bi2BB'O6 for next-generation MagnetoElectric meMOries",
+      "funder": "European Commission",
+      "start": "2025-11",
+      "end": "2027-11",
+      "role": "lead",
+      "amount": 272799.92,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101210387"
+     },
+     {
+      "source": "cordis",
+      "ref": "101202913",
+      "title": "FESSA: Fabrication and Evaluation of SpinFET for Spintronics Applications",
+      "funder": "European Commission",
+      "start": "2026-03",
+      "end": "2028-03",
+      "role": "lead",
+      "amount": 276187.92,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101202913"
+     },
+     {
+      "source": "cordis",
+      "ref": "101203618",
+      "title": "WIMECS: Wave-based imaging of Earth’s liquid core from space",
+      "funder": "European Commission",
+      "start": "2025-09",
+      "end": "2027-09",
+      "role": "lead",
+      "amount": 276187.92,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101203618"
+     },
+     {
+      "source": "cordis",
+      "ref": "101214879",
+      "title": "PredictAYA: Prediction and prevention of late effects in AYA cancer survivors – An effort to understand, predict and prevent late effects in AYAs 15-39 years of age, with a focus on fertility and gonadal toxicity",
+      "funder": "European Commission",
+      "start": "2025-06",
+      "end": "2030-05",
+      "role": "partner",
+      "amount": 348626.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101214879"
+     },
+     {
+      "source": "cordis",
+      "ref": "101216573",
+      "title": "CSR: ClimateSmartResearch",
+      "funder": "European Commission",
+      "start": "2025-06",
+      "end": "2030-05",
+      "role": "partner",
+      "amount": 1160156.25,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101216573"
+     },
+     {
+      "source": "cordis",
+      "ref": "101181624",
+      "title": "AUTOLOOP: Next generation automated sorting, tracing and closed-loop recycling technologies for non-rewearable textiles",
+      "funder": "European Commission",
+      "start": "2025-09",
+      "end": "2029-08",
+      "role": "partner",
+      "amount": 438294.5,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101181624"
+     },
+     {
+      "source": "cordis",
+      "ref": "101213107",
+      "title": "PanCare4AYA: Patient-centred, evidence-based late effect screening and follow-up care of survivors of adolescent and young adult cancer",
+      "funder": "European Commission",
+      "start": "2025-04",
+      "end": "2030-03",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101213107"
+     },
+     {
+      "source": "cordis",
+      "ref": "101227592",
+      "title": "SLICE: Space Launch Impact on Climate and Environment",
+      "funder": "European Commission",
+      "start": "2026-01",
+      "end": "2029-12",
+      "role": "partner",
+      "amount": 348738.12,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101227592"
+     }
+    ]
+   }
+  },
+  "University of Liverpool": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "skipped": "3440 projects in GtR, too many to list"
+   },
+   "cordis": {
+    "projects": [
+     {
+      "source": "cordis",
+      "ref": "101081478",
+      "title": "SENSE: Search for new physics and technological advancements from neutrino experiments at the high intensity frontier. A cooperative Europe - United States - Brazil effort.",
+      "funder": "European Commission",
+      "start": "2023-01",
+      "end": "2026-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101081478"
+     },
+     {
+      "source": "cordis",
+      "ref": "101077310",
+      "title": "INEQNEWS: Understanding and Alleviating Inequalities in Digital News Consumption",
+      "funder": "European Commission",
+      "start": "2023-10",
+      "end": "2028-09",
+      "role": "partner",
+      "amount": 41943.24,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101077310"
+     },
+     {
+      "source": "cordis",
+      "ref": "101130406",
+      "title": "ice-Link: Integration of Advanced Experiments, Computation and Data for Innovation in Freeze Casting and Advanced Porous Structures",
+      "funder": "European Commission",
+      "start": "2024-01",
+      "end": "2027-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101130406"
+     },
+     {
+      "source": "cordis",
+      "ref": "101145724",
+      "title": "PROTECT: PReparing for Optimal Phase III/IV maTErnal Group B StreptococCal vaccine Trials in Africa (PROTECT)",
+      "funder": "European Commission",
+      "start": "2024-03",
+      "end": "2027-02",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101145724"
+     },
+     {
+      "source": "cordis",
+      "ref": "101167768",
+      "title": "VIVACE: Management of avian influenza in a vaccination context",
+      "funder": "European Commission",
+      "start": "2024-12",
+      "end": "2028-11",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101167768"
+     },
+     {
+      "source": "cordis",
+      "ref": "101169117",
+      "title": "EPACE: European compact accelerators, their applications, and entrepreneurship",
+      "funder": "European Commission",
+      "start": "2025-01",
+      "end": "2028-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101169117"
+     },
+     {
+      "source": "cordis",
+      "ref": "101182847",
+      "title": "SeaDream: Sustainable Marine Energy and Ecosystem Resilience Advancement through Digital Technologies and Real-Time Crisis Management",
+      "funder": "European Commission",
+      "start": "2025-01",
+      "end": "2028-12",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101182847"
+     },
+     {
+      "source": "cordis",
+      "ref": "101183049",
+      "title": "SOLIS: Solar Cells-Inspired Inorganic Semiconductor Synaptic Systems for Low Energy Edge Computing and Visual Learning",
+      "funder": "European Commission",
+      "start": "2025-04",
+      "end": "2029-03",
+      "role": "partner",
+      "amount": null,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101183049"
+     },
+     {
+      "source": "cordis",
+      "ref": "101211309",
+      "title": "SDL-MFHYD: Accelerated quantification of photolytic hydrogen using multi-fidelity Bayesian optimization and automation",
+      "funder": "European Commission",
+      "start": "2026-09",
+      "end": "2028-08",
+      "role": "lead",
+      "amount": 260347.92,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101211309"
+     },
+     {
+      "source": "cordis",
+      "ref": "101202256",
+      "title": "FRIES: Fluid-Rock Interactions for Environmental Sustainability",
+      "funder": "European Commission",
+      "start": "2025-06",
+      "end": "2027-05",
+      "role": "lead",
+      "amount": 276187.92,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101202256"
+     },
+     {
+      "source": "cordis",
+      "ref": "101226517",
+      "title": "FADOS: Fundamentals and Applications of Doped Organic Semiconductors",
+      "funder": "European Commission",
+      "start": "2025-09",
+      "end": "2029-08",
+      "role": "partner",
+      "amount": 348738.12,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101226517"
+     },
+     {
+      "source": "cordis",
+      "ref": "101236710",
+      "title": "eRISIKO: AI-Driven Dynamic Fire Risk Assessment for Electric Vehicles in Buildings",
+      "funder": "European Commission",
+      "start": "2026-01",
+      "end": "2029-12",
+      "role": "partner",
+      "amount": 245490.0,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101236710"
+     },
+     {
+      "source": "cordis",
+      "ref": "101234557",
+      "title": "NEMESIS: Neutron Experiments join Muon Experiments for Synergy in Investigation and Search for new physics",
+      "funder": "European Commission",
+      "start": "2026-01",
+      "end": "2029-12",
+      "role": "partner",
+      "amount": 100200.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101234557"
+     },
+     {
+      "source": "cordis",
+      "ref": "101236682",
+      "title": "SHIELD: Safety and Multi Hazard Identification for resilient European Hydrogen Infrastructure and Logistics Development",
+      "funder": "European Commission",
+      "start": "2026-01",
+      "end": "2029-12",
+      "role": "partner",
+      "amount": 235470.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101236682"
+     },
+     {
+      "source": "cordis",
+      "ref": "101235182",
+      "title": "SAFARI: Solid and Fluid Regime Transition of Granular Materials",
+      "funder": "European Commission",
+      "start": "2025-12",
+      "end": "2029-11",
+      "role": "partner",
+      "amount": 265530.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101235182"
+     },
+     {
+      "source": "cordis",
+      "ref": "101190884",
+      "title": "POA: Pragmatic use of long-acting Oral Antiretrovirals in Africa",
+      "funder": "European Commission",
+      "start": "2026-02",
+      "end": "2031-01",
+      "role": "partner",
+      "amount": 108413.75,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101190884"
+     },
+     {
+      "source": "cordis",
+      "ref": "101229657",
+      "title": "TRICKY: Transforming the study of radicals in chemical kinetics and beyond",
+      "funder": "European Commission",
+      "start": "2026-06",
+      "end": "2031-05",
+      "role": "lead",
+      "amount": 2807248.0,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101229657"
+     },
+     {
+      "source": "cordis",
+      "ref": "101277192",
+      "title": "MIGHTER: Mechanism Identification and High-Throughput Screening of Molecules for the Hydrogen Evolution Reaction",
+      "funder": "European Commission",
+      "start": "2026-12",
+      "end": "2028-11",
+      "role": "lead",
+      "amount": 260347.92,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101277192"
+     },
+     {
+      "source": "cordis",
+      "ref": "101280888",
+      "title": "AOGCNR: Autonomous optimisation of general conditions for novel reaction",
+      "funder": "European Commission",
+      "start": "2026-04",
+      "end": "2028-03",
+      "role": "lead",
+      "amount": 260347.92,
+      "currency": "EUR",
+      "thermal": true,
+      "url": "https://cordis.europa.eu/project/id/101280888"
+     },
+     {
+      "source": "cordis",
+      "ref": "101272890",
+      "title": "SAFE-WIND: Seismically-induced submarine landslide Assessment and probabilistic Framework for risk-informed siting and damage Evaluation of Offshore Wind turbines",
+      "funder": "European Commission",
+      "start": "2026-09",
+      "end": "2028-08",
+      "role": "lead",
+      "amount": 260347.92,
+      "currency": "EUR",
+      "thermal": false,
+      "url": "https://cordis.europa.eu/project/id/101272890"
+     }
+    ]
+   }
+  },
+  "Vespertec": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "error": "HTTPError: HTTP Error 404: "
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Viritech": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": [
+     {
+      "source": "gtr",
+      "ref": "10116391",
+      "title": "PULSE - Power electronics Upscale for Localisation and Sustainable Electrification",
+      "funder": "APC",
+      "start": "2024-09",
+      "end": "2027-03",
+      "amount": 5478018,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10116391"
+     },
+     {
+      "source": "gtr",
+      "ref": "10100738",
+      "title": "DC-Cert",
+      "funder": "Innovate UK",
+      "start": "2024-03",
+      "end": "2024-09",
+      "amount": 21243,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10100738"
+     },
+     {
+      "source": "gtr",
+      "ref": "10082581",
+      "title": "Project ICEBreaker",
+      "funder": "DBT",
+      "start": "2023-09",
+      "end": "2024-09",
+      "amount": 1495701,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": true,
+      "url": "https://gtr.ukri.org/projects?ref=10082581"
+     },
+     {
+      "source": "gtr",
+      "ref": "10061826",
+      "title": "Project FCDC",
+      "funder": "ISCF",
+      "start": "2023-05",
+      "end": "2024-11",
+      "amount": 521578,
+      "currency": "GBP",
+      "role": "lead",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10061826"
+     },
+     {
+      "source": "gtr",
+      "ref": "10044937",
+      "title": "Fuel-cell Commercial Vehicle Generation 2.0 (FCVGen2.0)",
+      "funder": "APC",
+      "start": "2023-03",
+      "end": "2026-08",
+      "amount": 8039872,
+      "currency": "GBP",
+      "role": "partner",
+      "thermal": false,
+      "url": "https://gtr.ukri.org/projects?ref=10044937"
+     }
+    ]
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Visa Cash App RB": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  },
+  "Xtrac": {
+   "checked": "2026-10-27",
+   "since": "2022-01-01",
+   "gtr": {
+    "projects": []
+   },
+   "cordis": {
+    "projects": []
+   }
+  }
+ },
+ "updated": "2026-10-27"
+}
