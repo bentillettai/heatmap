@@ -1,0 +1,432 @@
+[
+  {
+    "id": "nikonslm-dc-metal-am-blog",
+    "url": "https://nikon-slm-solutions.com/addictive-additive/why-data-centers-are-turning-to-metal-am-for-thermal-management/",
+    "title": "Why Data Centers Are Turning to Metal AM for Thermal Management",
+    "publisher": "Nikon SLM Solutions",
+    "date": "2026-07-27",
+    "area": "datacentre",
+    "story": "am2pc",
+    "summary": "Nikon SLM Solutions' blog retells the Danish Technological Institute and Heatflow passive two-phase evaporator, printed in one aluminium piece on an SLM280, which it says reached 600 W in tests against a 400 W target. It argues metal powder-bed printing suits joint-free evaporators with built-in wicks. Figures are company-reported.",
+    "orgs": [
+      {
+        "name": "Nikon SLM Solutions",
+        "type": "Commercial",
+        "country": "Germany"
+      },
+      {
+        "name": "Danish Technological Institute",
+        "type": "RTO",
+        "country": "Denmark"
+      },
+      {
+        "name": "Heatflow",
+        "type": "Commercial",
+        "country": "Denmark"
+      }
+    ],
+    "thermal": "Passive two-phase GPU evaporator.",
+    "manufacturing": "Single-piece aluminium L-PBF on an SLM280.",
+    "evidence": "claim",
+    "gate": "pass"
+  },
+  {
+    "id": "f1chronicle-2026-cooling",
+    "url": "https://f1chronicle.com/2026-f1-cooling-system",
+    "title": "2026 F1 Cooling: Why Bigger Radiators Are Needed",
+    "publisher": "F1 Chronicle",
+    "date": "2026-03-05",
+    "area": "motorsport",
+    "story": "f1chronicle-2026-cooling",
+    "summary": "An explainer says the 2026 MGU-K rises from 120 kW to 350 kW and, at 95% efficiency, sheds about 17 kW of heat, while 20% more heat needs roughly 20% more radiator core area. It says the energy store and power electronics run dielectric cooling loops at about 50 °C. No data or named sources.",
+    "orgs": [],
+    "thermal": "2026 F1 power-unit heat loads and radiator sizing.",
+    "manufacturing": "none",
+    "evidence": "opinion",
+    "gate": "pass"
+  },
+  {
+    "id": "reaction-engines-precooler-mach5-2019",
+    "url": "https://iconnect007.com//article/120174/test-programme-fully-validates-precooler-at-hypersonic-heat-conditions/120177/ein",
+    "title": "Test Programme Fully Validates Precooler at Hypersonic Heat Conditions",
+    "publisher": "I-Connect007 (Reaction Engines release)",
+    "date": "2019-10-22",
+    "area": "aerospace",
+    "story": "re-precooler-mach5",
+    "summary": "Reaction Engines tested its UK-built precooler in Colorado at Mach 5 airflow conditions, quenching air above 1,000 °C in under 1/20th of a second, after an earlier 420 °C (Mach 3.3) test. The programme was backed by DARPA, the UK Space Agency and ESA, with BAE Systems as investor.",
+    "orgs": [
+      {
+        "name": "Reaction Engines",
+        "type": "Commercial",
+        "country": "UK"
+      },
+      {
+        "name": "BAE Systems",
+        "type": "Commercial",
+        "country": "UK"
+      },
+      {
+        "name": "DARPA",
+        "type": "Gov",
+        "country": "USA"
+      },
+      {
+        "name": "UK Space Agency",
+        "type": "Gov",
+        "country": "UK"
+      }
+    ],
+    "thermal": "Microtube precooler quenching 1,000 °C air.",
+    "manufacturing": "Built at Reaction Engines' UK headquarters; hot-flow tested.",
+    "evidence": "measured",
+    "gate": "pass"
+  },
+  {
+    "id": "liebherr-100000th-hx",
+    "url": "https://www.liebherr.com/en-ae/n/liebherr-aerospace-delivers-100000th-heat-exchanger-22484-4788229",
+    "title": "Liebherr-Aerospace delivers 100,000th heat exchanger",
+    "publisher": "Liebherr",
+    "date": "2023-05-30",
+    "area": "aerospace",
+    "story": "liebherr-100k-hx",
+    "summary": "Liebherr-Aerospace Toulouse delivered its 100,000th heat exchanger in April 2023, up from 37 in 2002, and now makes nearly 12,000 a year for aircraft air-conditioning systems, with repair and re-coring centres in the US, Singapore and China.",
+    "orgs": [
+      {
+        "name": "Liebherr Aerospace",
+        "type": "Commercial",
+        "country": "France"
+      }
+    ],
+    "thermal": "Aircraft air-conditioning heat exchangers.",
+    "manufacturing": "In-house production and re-coring; no process detail.",
+    "evidence": "claim",
+    "gate": "pass"
+  },
+  {
+    "id": "cordis-topmost-results-brief",
+    "url": "https://cordis.europa.eu/article/id/410187-cooling-solution-reduces-thermal-constraints-weight-and-size-of-commercial-plane-components",
+    "title": "Cooling solution reduces thermal constraints, weight and size of commercial plane components",
+    "publisher": "CORDIS",
+    "date": "2019-10-11",
+    "area": "aerospace",
+    "story": "topmost",
+    "summary": "NLR's TOPMOST project (H2020, 2017-2019, €712k) built two pumped two-phase cooling demonstrators for aircraft power electronics, with most parts 3D-printed in aluminium. The system weighed 2.5 kg, was 42% smaller than required, removed 2,400 W (twice the requirement) and kept hot spots within 2 °C, and passed vibration and salt-spray tests.",
+    "orgs": [
+      {
+        "name": "NLR",
+        "type": "RTO",
+        "country": "Netherlands"
+      }
+    ],
+    "thermal": "Pumped two-phase loop for power electronics.",
+    "manufacturing": "Mostly printed aluminium parts; vibration and salt-spray tested.",
+    "evidence": "measured",
+    "gate": "pass"
+  },
+  {
+    "id": "kelvion-kbond-dbhe",
+    "url": "https://refindustry.com/news/new-items/kelvion-k-bond-is-the-cutting-edge-heat-exchange-solution/",
+    "title": "Kelvion K°Bond Is The Cutting-Edge Heat Exchange Solution",
+    "publisher": "Refindustry",
+    "date": "2019-04-06",
+    "area": "other",
+    "story": "kelvion-kbond",
+    "summary": "Kelvion's K°Bond diffusion-bonded heat exchanger is claimed to be up to six times smaller than shell-and-tube units and rated to 1,000 bar and -200 °C to 600 °C, with hydrogen and supercritical CO2 named among its uses. Etched stainless plates are diffusion-bonded into a solid core. All figures are company claims.",
+    "orgs": [
+      {
+        "name": "Kelvion",
+        "type": "Commercial",
+        "country": "Germany"
+      }
+    ],
+    "thermal": "High-pressure compact heat exchange.",
+    "manufacturing": "Chemically etched plates, diffusion bonded.",
+    "evidence": "claim",
+    "gate": "pass"
+  },
+  {
+    "id": "inl-dbche-advancing",
+    "url": "https://inl.elsevierpure.com/en/publications/advancing-diffusion-bonded-compact-heat-exchangers-for-high-tempe/",
+    "title": "Advancing diffusion bonded compact heat exchangers for high temperature applications",
+    "publisher": "Advanced Materials and Processes (ASM)",
+    "date": "2023-05",
+    "area": "other",
+    "story": "inl-dbche",
+    "summary": "A short INL-led article on improving diffusion bonding for compact heat exchangers in advanced nuclear reactors, from a DOE NEUP integrated research project. No data on the page.",
+    "orgs": [
+      {
+        "name": "Idaho National Laboratory",
+        "type": "Gov",
+        "country": "USA"
+      }
+    ],
+    "thermal": "High-temperature compact heat exchangers.",
+    "manufacturing": "Diffusion bonding.",
+    "evidence": "opinion",
+    "gate": "pass"
+  },
+  {
+    "id": "dlr-vdm780-porous-transpiration",
+    "url": "https://elib.dlr.de/215494/",
+    "title": "Development and Characterization of Additively Manufactured Metallic Porous Structures for Transpiration Cooling Applications",
+    "publisher": "EUCASS 2025 (DLR elib)",
+    "date": "2025-06",
+    "area": "other",
+    "story": "dlr-vdm780-porous",
+    "summary": "DLR made porous structures from the superalloy VDM780 by laser powder bed fusion, setting porosity through process parameters, and measured through-flow pressure loss and how evenly coolant flowed out. The abstract gives no figures.",
+    "orgs": [
+      {
+        "name": "DLR",
+        "type": "RTO",
+        "country": "Germany"
+      }
+    ],
+    "thermal": "Transpiration cooling walls.",
+    "manufacturing": "L-PBF porous superalloy, porosity set by parameters; flow tests.",
+    "evidence": "prototype",
+    "gate": "pass"
+  },
+  {
+    "id": "hit-transpiration-review-2026",
+    "url": "https://www.mater-rep.com/EN/Y2026/V40/I9/25040288",
+    "title": "Research Progress on Transpiration Cooling Porous Materials and Their Thermal Protection Performance",
+    "publisher": "Materials Reports",
+    "date": "2026-05-10",
+    "area": "other",
+    "story": "hit-transpiration-review",
+    "summary": "A Harbin Institute of Technology (Shenzhen) review of porous materials for transpiration cooling of hypersonic vehicles, covering materials, preparation routes and how pore structure affects protection.",
+    "orgs": [
+      {
+        "name": "Harbin Institute of Technology",
+        "type": "Uni",
+        "country": "China"
+      }
+    ],
+    "thermal": "Transpiration cooling.",
+    "manufacturing": "Reviewed, no detail.",
+    "evidence": "opinion",
+    "gate": "pass"
+  },
+  {
+    "id": "all3dp-ai-dc-copper",
+    "url": "https://all3dp.com/4/ai-data-center-cooling-the-breakout-market-for-3d-printed-copper/",
+    "title": "https://all3dp.com/4/ai-data-center-cooling-the-breakout-market-for-3d-printed-copper/",
+    "publisher": null,
+    "date": null,
+    "area": "datacentre",
+    "story": "all3dp-ai-dc-copper",
+    "summary": "",
+    "orgs": [],
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion",
+    "gate": "fail",
+    "gate_reason": "Could not be read (HTTP 403)."
+  },
+  {
+    "id": "uw-diffusion-welding-thesis",
+    "url": "https://minds.wisconsin.edu/handle/1793/97501",
+    "title": "https://minds.wisconsin.edu/handle/1793/97501",
+    "publisher": null,
+    "date": null,
+    "area": "other",
+    "story": "uw-diffusion-welding-thesis",
+    "summary": "",
+    "orgs": [],
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion",
+    "gate": "fail",
+    "gate_reason": "Could not be read (HTTP 503)."
+  },
+  {
+    "id": "tudelft-am-transpiration",
+    "url": "https://repository.tudelft.nl/record/uuid:65117bb9-2939-4810-a4ed-df59f32f663b",
+    "title": "https://repository.tudelft.nl/record/uuid:65117bb9-2939-4810-a4ed-df59f32f663b",
+    "publisher": null,
+    "date": null,
+    "area": "other",
+    "story": "tudelft-am-transpiration",
+    "summary": "",
+    "orgs": [],
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion",
+    "gate": "fail",
+    "gate_reason": "Could not be read (HTTP 503)."
+  },
+  {
+    "url": "https://doi.org/10.5281/zenodo.23602874",
+    "title": "Data center cooling: move object-storage racks to direct-to-chip cooling above 30 kW",
+    "publisher": "Zenodo (CERN European Organization for Nuclear Research)",
+    "date": "2026-10-23",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [],
+    "funding": null,
+    "id": "openalex-data-center-cooling-move-object-storage",
+    "story": "openalex-data-center-cooling-move-object-storage",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "Move object-storage racks to direct-to-chip cooling above 30 kW, then verify contact, flow, and per-chip load before relying on the rack's new thermal margin. Independent technical note mirroring the canonical version: https://x-oss.com/blog/data-center-cooling-move-object-storage-racks-to-direct-to",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.21474/jncs01/146",
+    "title": "ZERO-WATER CLOSED-LOOP DIRECT-TO-CHIP COOLING ARCHITECTURES FOR HIGH-DENSITY AI DATA CENTERS USING ELEVATED COOLANT TEMPERATURES",
+    "publisher": "Jana Nexus: Journal of Computer Science",
+    "date": "2026-10-31",
+    "area": "datacentre",
+    "kind": "paper",
+    "source_api": "crossref",
+    "orgs": [
+      {
+        "name": "1. Independent Researcher, Phoenix, Arizona, United States.",
+        "type": "Other",
+        "country": null,
+        "role": "researcher"
+      },
+      {
+        "name": "2. Arizona State University, Phoenix, Arizona, United States.",
+        "type": "Uni",
+        "country": null,
+        "role": "researcher"
+      }
+    ],
+    "funding": null,
+    "id": "crossref-zero-water-closed-loop-direct-to-chip-c",
+    "story": "crossref-zero-water-closed-loop-direct-to-chip-c",
+    "gate": "fail",
+    "gate_reason": "API candidate not kept today (off-topic or no thermal hardware angle).",
+    "summary": "High-density AI data centers generate large heat loads while facing growing pressure to limit water use. Traditional evaporative cooling commonly requires 1.5-2.6 million gallons of water per megawatt each year. This paper presents the Multi-Stage Elevated Temperature Closed-Loop Architecture (MET-C",
+    "thermal": "none",
+    "manufacturing": "none",
+    "evidence": "opinion"
+  },
+  {
+    "url": "https://doi.org/10.1115/1.4072134",
+    "title": "Shell-Side Flow Field in a Doughnut and Disk Baffle Shell Tube Heat Exchanger",
+    "publisher": "ASME Journal of Heat and Mass Transfer",
+    "date": "2026-06-26",
+    "area": "aerospace",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "University of Oxford",
+        "type": "Uni",
+        "country": "UK",
+        "role": "researcher"
+      }
+    ],
+    "funding": null,
+    "id": "openalex-shell-side-flow-field-in-a-doughnut-and",
+    "story": "openalex-shell-side-flow-field-in-a-doughnut-and",
+    "gate": "pass",
+    "summary": "University of Oxford measured the shell-side flow field of a doughnut-and-disk baffle shell-and-tube heat exchanger, a layout used for oil coolers with a better heat-transfer-to-pressure-drop ratio than segmental baffles.",
+    "thermal": "Shell-and-tube oil cooler flow.",
+    "manufacturing": "Flow-field measurement.",
+    "evidence": "measured"
+  },
+  {
+    "url": "https://doi.org/10.1177/09544100261473117",
+    "title": "Flow and heat transfer characteristics of microchannel air-oil heat exchangers for aero-engine cooled cooling air system",
+    "publisher": "Proceedings of the Institution of Mechanical Engineers Part G Journal of Aerospace Engineering",
+    "date": "2026-07-28",
+    "area": "aerospace",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "Shenyang Aerospace University",
+        "type": "Uni",
+        "country": "China",
+        "role": "researcher"
+      }
+    ],
+    "funding": null,
+    "id": "openalex-flow-and-heat-transfer-characteristics",
+    "story": "openalex-flow-and-heat-transfer-characteristics",
+    "gate": "pass",
+    "summary": "Shenyang Aerospace University simulated microchannel air-oil heat exchangers for cooled cooling air in aero-engines and found airfoil-shaped pin fins gave more heat transfer for less pressure loss than other pin shapes.",
+    "thermal": "Air-oil heat exchanger for cooled cooling air.",
+    "manufacturing": "Simulation of pin-fin microchannel cores.",
+    "evidence": "simulation"
+  },
+  {
+    "url": "https://doi.org/10.1007/s11630-026-2333-4",
+    "title": "Influence of the Surface Roughness on the IWP-Type TPMS Heat Exchangers",
+    "publisher": "Journal of Thermal Science",
+    "date": "2026-08-26",
+    "area": "other",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "Dalian University of Technology",
+        "type": "Uni",
+        "country": "China",
+        "role": "researcher"
+      },
+      {
+        "name": "Beijing Institute of Power Machinery (China)",
+        "type": "Commercial",
+        "country": "China",
+        "role": "researcher"
+      }
+    ],
+    "funding": null,
+    "id": "openalex-influence-of-the-surface-roughness-on-t",
+    "story": "openalex-influence-of-the-surface-roughness-on-t",
+    "gate": "pass",
+    "summary": "Dalian University of Technology and the Beijing Institute of Power Machinery studied how surface roughness changes the performance of IWP-type TPMS heat exchangers. No abstract was available.",
+    "thermal": "Roughness effects in printed TPMS heat exchangers.",
+    "manufacturing": "Study of as-built roughness (method not stated).",
+    "evidence": "simulation"
+  },
+  {
+    "url": "https://doi.org/10.1007/s00231-026-03720-6",
+    "title": "Design and performance analysis of TPMS heat exchanger for thermoelectric cooling modules",
+    "publisher": "Heat and Mass Transfer",
+    "date": "2026-06-26",
+    "area": "other",
+    "kind": "paper",
+    "source_api": "openalex",
+    "orgs": [
+      {
+        "name": "Wuhan University of Technology",
+        "type": "Uni",
+        "country": "China",
+        "role": "researcher"
+      },
+      {
+        "name": "State Key Laboratory of Advanced Technology For Materials Synthesis and Processing",
+        "type": "RTO",
+        "country": "China",
+        "role": "researcher"
+      },
+      {
+        "name": "Wuhan Ship Development & Design Institute",
+        "type": "RTO",
+        "country": "China",
+        "role": "researcher"
+      }
+    ],
+    "funding": {
+      "funders": [
+        "National Key Research and Development Program of China",
+        "National Natural Science Foundation of China"
+      ]
+    },
+    "id": "openalex-design-and-performance-analysis-of-tpms",
+    "story": "openalex-design-and-performance-analysis-of-tpms",
+    "gate": "pass",
+    "summary": "Wuhan University of Technology and partners designed and analysed a TPMS heat exchanger for thermoelectric cooling modules. No abstract was available.",
+    "thermal": "TPMS heat sink for thermoelectric coolers.",
+    "manufacturing": "Design and analysis.",
+    "evidence": "simulation"
+  }
+]

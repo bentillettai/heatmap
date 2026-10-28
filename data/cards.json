@@ -2,21 +2,21 @@
   "meta": {
     "title": "Heatmap",
     "started": "2026-10-20",
-    "updated": "2026-10-27",
+    "updated": "2026-10-28",
     "areas": {
       "datacentre": "Data centres",
       "aerospace": "Aerospace",
       "motorsport": "Motorsport",
       "other": "Other"
     },
-    "run_summary": "No new cards; 13 cards updated, covering two days because Monday's run stopped before publishing. Highlights: Rolls-Royce's SHEFAE 2 surface-cooler project, Castrol's UK immersion work, DLR's hydrogen heat exchanger test rig, a generative cold-plate design for NVIDIA's GB200, and the weekly grant check (Goodrich Controls is in five EU hybrid-electric aircraft projects). The website got today's report, but votes and comments left there were not read back this run (that step was blocked by a permission check).",
+    "run_summary": "No new cards; 9 cards updated: NLR's TOPMOST printed two-phase loop figures (2.4 kW, 2.5 kg), Reaction Engines' 2019 Mach 5 precooler test, Liebherr's 12,000-a-year heat exchanger volume, DLR's printed porous transpiration walls, Kelvion as the diffusion-bonded incumbent for STEP, and 2026 F1 heat-load estimates. Gateway to Research was down today. The website got today's report, but votes and comments left there were not read back this run (that step was blocked by a permission check).",
     "coverage": {
       "datacentre": "Good coverage of cold plates, jet impingement and heat reuse. One UK chip-level start-up found so far (Infiniflux).",
       "aerospace": "Strong on oil coolers and hydrogen. Cabin-air systems are now covered through Honeywell's STRATA project, and a measured printed pre-cooler core (Maryland) now gives one data point, but precooler-specific news is still rare. Defence aircraft electronics cooling now appears through BAE Systems' work with Leeds.",
       "motorsport": "Teams publish little, so most evidence comes from suppliers (Conflux, PWR) and student teams. Henry's steer here will help most.",
       "other": "Found by searching from the technology first: heat pipes, laser texturing, modelling, TPMS tests, fusion and transpiration cooling. Links to the three areas are mostly inferred."
     },
-    "run_id": "2026-10-27-1"
+    "run_id": "2026-10-28-1"
   },
   "cards": [
     {
@@ -191,7 +191,7 @@
         "metrology and inspection",
         "modelling and simulation"
       ],
-      "why": "This is the oil-cooler brief exactly, and the UK is strong in it. Meggitt (now Parker Meggitt) and TWI ran C-ALM AOHE to build an 80 kW, under-10 kg printed air-oil cooler for geared UHBR engines, aiming at TRL 6 and MRL 6, and published a review of L-PBF aluminium heat exchangers with Birmingham. Safran's HIPEX shows the payoff: a printed curved cooler, claimed to halve drag and save up to 1% fuel, already ground-tested on an engine. The one published like-for-like test is a caution: Penn State's printed AlSi10Mg copy of an aircraft oil cooler moved about 10-14% more heat but doubled the air-side pressure drop, and showed rough surfaces and edge cracks at fin joints.",
+      "why": "This is the oil-cooler brief exactly, and the UK is strong in it. Meggitt (now Parker Meggitt) and TWI ran C-ALM AOHE to build an 80 kW, under-10 kg printed air-oil cooler for geared UHBR engines, aiming at TRL 6 and MRL 6, and published a review of L-PBF aluminium heat exchangers with Birmingham. Safran's HIPEX shows the payoff: a printed curved cooler, claimed to halve drag and save up to 1% fuel, already ground-tested on an engine. The one published like-for-like test is a caution: Penn State's printed AlSi10Mg copy of an aircraft oil cooler moved about 10-14% more heat but doubled the air-side pressure drop, and showed rough surfaces and edge cracks at fin joints. A 2026 Shenyang Aerospace University simulation extends the idea to cooled cooling air, where airfoil-shaped pin fins in a microchannel air-oil exchanger gave the best heat transfer for the least pressure loss.",
       "applicability": {
         "type": "stated",
         "reason": "Both projects target turbofan oil cooling."
@@ -261,6 +261,9 @@
         },
         {
           "item": "psu-am-aircraft-oil-cooler"
+        },
+        {
+          "item": "openalex-flow-and-heat-transfer-characteristics"
         }
       ],
       "scores": {
@@ -288,7 +291,7 @@
         "metrology and inspection",
         "modelling and simulation"
       ],
-      "why": "DTI and Heatflow printed the evaporator in one piece by laser powder bed fusion, which removes joints and leak paths, and tested it at 600 W, 50% above target, with no pumps or fans. Heat leaves at 60-80 C, warm enough for district heating, which ties it to the UK heat-network push. A Villanova University rack-scale thermosyphon gives a measured benchmark for the passive approach: stable from 2 to 7.5 kW per rack with no pump. It is still the clearest Venn centre found: the advance exists because of how the part is made. At server scale, EPFL and Nokia Bell Labs ran a 7 cm thermosyphon inside a 2U server at up to 240 W, so the pump-free route fits standard hardware.",
+      "why": "DTI and Heatflow printed the evaporator in one piece by laser powder bed fusion, which removes joints and leak paths, and tested it at 600 W, 50% above target, with no pumps or fans. Heat leaves at 60-80 C, warm enough for district heating, which ties it to the UK heat-network push. A Villanova University rack-scale thermosyphon gives a measured benchmark for the passive approach: stable from 2 to 7.5 kW per rack with no pump. It is still the clearest Venn centre found: the advance exists because of how the part is made. At server scale, EPFL and Nokia Bell Labs ran a 7 cm thermosyphon inside a 2U server at up to 240 W, so the pump-free route fits standard hardware. The machine maker Nikon SLM Solutions is now using this part (printed on its SLM280) to sell metal printing to data centres, a sign suppliers see a market.",
       "applicability": {
         "type": "stated",
         "reason": "The project itself targets data-centre and HPC cooling."
@@ -341,6 +344,12 @@
           "type": "Uni",
           "country": "Switzerland",
           "role": "researcher"
+        },
+        {
+          "name": "Nikon SLM Solutions",
+          "type": "Commercial",
+          "country": "Germany",
+          "role": "supplier"
         }
       ],
       "sources": [
@@ -355,6 +364,9 @@
         },
         {
           "item": "epfl-server-thermosyphon-map"
+        },
+        {
+          "item": "nikonslm-dc-metal-am-blog"
         }
       ],
       "scores": {
@@ -1085,7 +1097,7 @@
         "metrology and inspection",
         "design for manufacture"
       ],
-      "why": "The University of Bath and Politecnico di Torino built a cheap thermo-hydraulic model of printed compact heat exchangers and checked it against published experiments. Temperature change was within 3.7%, but standard models underestimated pressure drop by up to 26.4%; correcting channel diameter for melt dross cut that to 11.4%, and a calibrated penalty factor to 4.3%. It applies to every printed heat exchanger on this page, and MTC could supply what the model needs most: measured channel geometry and roughness from CT. Related work on design rules is growing: an August 2026 Applied Thermal Engineering paper proposes quasi-fractal headers to share flow evenly in parameterised printed heat exchangers.",
+      "why": "The University of Bath and Politecnico di Torino built a cheap thermo-hydraulic model of printed compact heat exchangers and checked it against published experiments. Temperature change was within 3.7%, but standard models underestimated pressure drop by up to 26.4%; correcting channel diameter for melt dross cut that to 11.4%, and a calibrated penalty factor to 4.3%. It applies to every printed heat exchanger on this page, and MTC could supply what the model needs most: measured channel geometry and roughness from CT. Related work on design rules is growing: an August 2026 Applied Thermal Engineering paper proposes quasi-fractal headers to share flow evenly in parameterised printed heat exchangers. Roughness is now being studied for lattice cores too: Dalian University of Technology and the Beijing Institute of Power Machinery published in 2026 on how surface roughness changes IWP-type TPMS heat exchangers.",
       "applicability": {
         "type": "inferred",
         "reason": "The paper names fuel-cell and battery cooling in transport; its use for aero and data-centre parts is ours."
@@ -1108,6 +1120,12 @@
           "type": "Uni",
           "country": "Italy",
           "role": "researcher"
+        },
+        {
+          "name": "Dalian University of Technology",
+          "type": "Uni",
+          "country": "China",
+          "role": "researcher"
         }
       ],
       "sources": [
@@ -1116,6 +1134,9 @@
         },
         {
           "item": "ate-quasi-fractal-distributor-am-hx"
+        },
+        {
+          "item": "openalex-influence-of-the-surface-roughness-on-t"
         }
       ],
       "scores": {
@@ -1848,7 +1869,7 @@
         "metrology and inspection",
         "design for manufacture"
       ],
-      "why": "UK Industrial Fusion Solutions has chosen a transcritical CO2 cycle for STEP (100 MWe net, 2040s) and plans sCO2 cooling for some in-vessel parts, and its team has published a cost-and-performance optimisation of the cycle; its 2026 roadmap prefers PCHEs for their maturity and plans no big scale-up, but says exchangers still need testing under rapid load changes. Printing is starting to compete: a University of Maryland team laser-melted an sCO2 microchannel exchanger rated above 800 °C and 80 bar and measured 45.4 MW/m³, which it says is the most compact reported. Wisconsin's test of a PCHE for a 5 MWth microreactor shows what benchmark data looks like (325 °C, 10 MPa, fibre-optic temperature maps). For MTC the openings are dynamic testing and modelling, and making the case for printed cores against PCHEs.",
+      "why": "UK Industrial Fusion Solutions has chosen a transcritical CO2 cycle for STEP (100 MWe net, 2040s) and plans sCO2 cooling for some in-vessel parts, and its team has published a cost-and-performance optimisation of the cycle; its 2026 roadmap prefers PCHEs for their maturity and plans no big scale-up, but says exchangers still need testing under rapid load changes. Printing is starting to compete: a University of Maryland team laser-melted an sCO2 microchannel exchanger rated above 800 °C and 80 bar and measured 45.4 MW/m³, which it says is the most compact reported. Wisconsin's test of a PCHE for a 5 MWth microreactor shows what benchmark data looks like (325 °C, 10 MPa, fibre-optic temperature maps). For MTC the openings are dynamic testing and modelling, and making the case for printed cores against PCHEs. The incumbent is strong: Kelvion, for one, sells diffusion-bonded units it rates to 1,000 bar and 600 °C for hydrogen and sCO2 duty (company figures).",
       "applicability": {
         "type": "inferred",
         "reason": "STEP's paper names compact sCO2 heat exchangers and their dynamic testing as needs; the link to printed cores is ours, from the Maryland result."
@@ -1883,6 +1904,12 @@
           "type": "Uni",
           "country": "US",
           "role": "researcher"
+        },
+        {
+          "name": "Kelvion",
+          "type": "Commercial",
+          "country": "Germany",
+          "role": "supplier"
         }
       ],
       "sources": [
@@ -1897,6 +1924,9 @@
         },
         {
           "item": "openalex-multi-objective-technoeconomic-optimisa"
+        },
+        {
+          "item": "kelvion-kbond-dbhe"
         }
       ],
       "scores": {
@@ -1923,7 +1953,7 @@
         "modelling and simulation",
         "design for manufacture"
       ],
-      "why": "TheMa4HERA is a €33.5m Clean Aviation project led by Honeywell, aiming for TRL 5 in 2026 with a full-scale ground demonstrator at Fraunhofer. Conflux joined in 2025 to make printed exchangers, evaporators and condensers, and presented the printed air-cycle heat exchangers with Honeywell UK at Formnext 2025. The partner list (Liebherr, Collins, Calyos, DLR, NLR, plus UK partners Conflux UK, Honeywell UK and Element Digital Engineering) is a map of who matters in aircraft environmental control heat exchangers. NLR's earlier Clean Sky 2 project TOPMOST (2017-19) built pumped two-phase cooling loops with 3D-printed parts for Thales power electronics. Testing at this scale is scarce: SwRI in the US now markets heat exchanger tests up to several megawatts. TheMa4HERA now has a successor: OSYRYS, a €40m Clean Aviation project (2026-2030) led by Safran Electrical & Power, aims for a TRL 6 integrated demonstration of megawatt-level power, thermal and energy management for hybrid-electric regional aircraft, with Airbus, Liebherr, Thales, Collins, ATR and the UK's Goodrich Controls among 24 partners.",
+      "why": "TheMa4HERA is a €33.5m Clean Aviation project led by Honeywell, aiming for TRL 5 in 2026 with a full-scale ground demonstrator at Fraunhofer. Conflux joined in 2025 to make printed exchangers, evaporators and condensers, and presented the printed air-cycle heat exchangers with Honeywell UK at Formnext 2025. The partner list (Liebherr, Collins, Calyos, DLR, NLR, plus UK partners Conflux UK, Honeywell UK and Element Digital Engineering) is a map of who matters in aircraft environmental control heat exchangers. NLR's earlier Clean Sky 2 project TOPMOST (2017-19) built pumped two-phase cooling loops with mostly printed aluminium parts for Thales power electronics: 2.5 kg, 2,400 W removed (twice the requirement) with hot spots within 2 °C, and vibration and salt-spray tests passed. Testing at this scale is scarce: SwRI in the US now markets heat exchanger tests up to several megawatts. TheMa4HERA now has a successor: OSYRYS, a €40m Clean Aviation project (2026-2030) led by Safran Electrical & Power, aims for a TRL 6 integrated demonstration of megawatt-level power, thermal and energy management for hybrid-electric regional aircraft, with Airbus, Liebherr, Thales, Collins, ATR and the UK's Goodrich Controls among 24 partners.",
       "applicability": {
         "type": "stated",
         "reason": "The project targets aircraft thermal management."
@@ -2047,6 +2077,9 @@
         },
         {
           "item": "cordis-osyrys-on-board-systems-relevant-for-hybr"
+        },
+        {
+          "item": "cordis-topmost-results-brief"
         }
       ],
       "scores": {
@@ -2138,7 +2171,7 @@
         "modelling and simulation",
         "metrology and inspection"
       ],
-      "why": "Liebherr Aerospace, Europe's leading air-systems supplier, set the topic for NATHENA, a Clean Sky 2 project that built a scale-one printed aircraft heat exchanger with fewer welded and brazed parts and a shape fitted to the aircraft. LEAP 71 and Farsoon have since printed a 1.5 m precooler in one piece with software-generated surfaces, though it is a hypersonic concept with no data. Measured data exist too: a University of Maryland printed manifold-microchannel pre-cooler core with 165 µm fins handled 2.78 kW at 600 C, close to 10 kW/kg and up to 25% denser than plate-fin units (2018, small scale). This is the closest match yet to the precooler brief, and also the main coverage gap.",
+      "why": "Liebherr Aerospace, Europe's leading air-systems supplier, set the topic for NATHENA, a Clean Sky 2 project that built a scale-one printed aircraft heat exchanger with fewer welded and brazed parts and a shape fitted to the aircraft. LEAP 71 and Farsoon have since printed a 1.5 m precooler in one piece with software-generated surfaces, though it is a hypersonic concept with no data. Measured data exist too: a University of Maryland printed manifold-microchannel pre-cooler core with 165 µm fins handled 2.78 kW at 600 C, close to 10 kW/kg and up to 25% denser than plate-fin units (2018, small scale). This is the closest match yet to the precooler brief, and also the main coverage gap. The prize is volume: Liebherr alone makes nearly 12,000 air-conditioning heat exchangers a year and passed 100,000 in 2023, so a printed design that wins here needs a production route, not just a prototype.",
       "applicability": {
         "type": "stated",
         "reason": "NATHENA targets civil aircraft heat exchangers; LEAP 71's precooler is for hypersonic, not turbofan, use."
@@ -2208,6 +2241,9 @@
         },
         {
           "item": "umd-am-precooler-hx"
+        },
+        {
+          "item": "liebherr-100000th-hx"
         }
       ],
       "scores": {
@@ -2234,7 +2270,7 @@
         "additive manufacture",
         "design for manufacture"
       ],
-      "why": "Mercedes HPP says cooling must be designed into the aero concept from the start, and Modelon describes the shift from steady to transient thermal design as active aero changes duct flow. Oxford Brookes is modelling MGU-K heat losses under the new rules, and team sidepods show the result: tight wraps around heat exchangers and swappable cooling panels. The problem is clear; non-rectangular printed cores and transient models are where MTC fits.",
+      "why": "Mercedes HPP says cooling must be designed into the aero concept from the start, and Modelon describes the shift from steady to transient thermal design as active aero changes duct flow. Oxford Brookes is modelling MGU-K heat losses under the new rules, and team sidepods show the result: tight wraps around heat exchangers and swappable cooling panels. The problem is clear; non-rectangular printed cores and transient models are where MTC fits. A rough sum shows the scale: a 350 kW MGU-K at 95% efficiency sheds about 17 kW, and the battery and inverters run on separate dielectric loops at about 50 °C, close enough to ambient that the radiators must grow (an F1 Chronicle estimate, not team data).",
       "applicability": {
         "type": "stated",
         "reason": "All sources are about F1's 2026 cooling."
@@ -2307,6 +2343,9 @@
         },
         {
           "item": "sae-brookes-mguk-2026"
+        },
+        {
+          "item": "f1chronicle-2026-cooling"
         }
       ],
       "scores": {
@@ -3343,7 +3382,7 @@
         "robotics and automation",
         "metrology and inspection"
       ],
-      "why": "Reaction Engines made very fine-tube heat exchangers that cooled hypersonic intake air, were used in F1 cooling and were chosen for the FRESSON fuel-cell radiator. Administrators were selling the IP in 2025 with a preferred bidder in exclusivity. FlyZero listed Reaction Engines as a UK strength, so where the IP and people went matters for UK capability. Joining and assembling thousands of microtubes is a joining and automation problem MTC knows. Others are still working the problems the SABRE precooler faced: Beihang published in 2026 on how frost forms in microtube precoolers and an anti-frost injection method.",
+      "why": "Reaction Engines made very fine-tube heat exchangers that cooled hypersonic intake air, were used in F1 cooling and were chosen for the FRESSON fuel-cell radiator. Administrators were selling the IP in 2025 with a preferred bidder in exclusivity. FlyZero listed Reaction Engines as a UK strength, so where the IP and people went matters for UK capability. Joining and assembling thousands of microtubes is a joining and automation problem MTC knows. Others are still working the problems the SABRE precooler faced: Beihang published in 2026 on how frost forms in microtube precoolers and an anti-frost injection method. The capability being sold was real: in 2019 the UK-built precooler quenched air above 1,000 °C in under 1/20th of a second at Mach 5 conditions in tests backed by DARPA, the UK Space Agency and ESA.",
       "applicability": {
         "type": "inferred",
         "reason": "The sources are business news; the link to MTC joining and automation is our inference."
@@ -3378,6 +3417,12 @@
           "type": "Uni",
           "country": "China",
           "role": "researcher"
+        },
+        {
+          "name": "BAE Systems",
+          "type": "Commercial",
+          "country": "UK",
+          "role": "partner"
         }
       ],
       "sources": [
@@ -3395,6 +3440,9 @@
         },
         {
           "item": "oa-beihang-microtube-precooler-frost"
+        },
+        {
+          "item": "reaction-engines-precooler-mach5-2019"
         }
       ],
       "scores": {
@@ -3630,7 +3678,7 @@
         "metrology and inspection",
         "modelling and simulation"
       ],
-      "why": "A 2025 Shanghai Jiao Tong University review collects the evidence: well-designed transpiration cooling reaches up to five times the cooling effectiveness of film cooling. But printing changes the part: perforated designs with 0.5-0.06 mm holes lost 4-77% of their porosity, defects cut permeability by 15% and strength by 10%. Transpiration cooling is on Henry's keyword list, and the gap between the designed and printed part is a metrology and process-control problem MTC knows well. A 2026 University of Central Florida thesis adds a design rule worth testing: in its model, thermal-stress yielding in transpiration walls falls as porosity rises, while local deformation becomes the risk.",
+      "why": "A 2025 Shanghai Jiao Tong University review collects the evidence: well-designed transpiration cooling reaches up to five times the cooling effectiveness of film cooling. But printing changes the part: perforated designs with 0.5-0.06 mm holes lost 4-77% of their porosity, defects cut permeability by 15% and strength by 10%. Transpiration cooling is on Henry's keyword list, and the gap between the designed and printed part is a metrology and process-control problem MTC knows well. A 2026 University of Central Florida thesis adds a design rule worth testing: in its model, thermal-stress yielding in transpiration walls falls as porosity rises, while local deformation becomes the risk. DLR is doing the process side: it printed VDM780 superalloy porous walls, setting porosity through laser parameters, and measured pressure loss and how evenly coolant comes out (EUCASS 2025, no figures published).",
       "applicability": {
         "type": "stated",
         "reason": "The review is about gas-turbine cooling."
@@ -3653,6 +3701,12 @@
           "type": "Uni",
           "country": "USA",
           "role": "researcher"
+        },
+        {
+          "name": "DLR",
+          "type": "RTO",
+          "country": "Germany",
+          "role": "researcher"
         }
       ],
       "sources": [
@@ -3661,6 +3715,9 @@
         },
         {
           "item": "ucf-transpiration-thermomech-thesis"
+        },
+        {
+          "item": "dlr-vdm780-porous-transpiration"
         }
       ],
       "scores": {
