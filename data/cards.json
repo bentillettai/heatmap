@@ -2,21 +2,21 @@
   "meta": {
     "title": "Heatmap",
     "started": "2026-10-20",
-    "updated": "2026-10-30",
+    "updated": "2026-10-31",
     "areas": {
       "datacentre": "Data centres",
       "aerospace": "Aerospace",
       "motorsport": "Motorsport",
       "other": "Other"
     },
-    "run_summary": "No new cards; 4 cards updated. The most useful finding is DLR's measured printed gyroid radiator for fuel-cell aircraft: about 1.6 kW/kg against a 10 kW/kg target, and beaten overall by a louvered-fin core on pressure drop. Also added: Thales Alenia Space's modular printed gyroid exchanger for crewed space modules, printed heat pipes designed for powder removal, and the NATHENA project. Several publisher pages were blocked and Gateway to Research returned nothing. The website got today's report, but votes and comments left there were not read back this run (that step was blocked by a permission check).",
+    "run_summary": "No new cards; 6 updated. HS Marston's Clean Sky ACOC report shows a printed oil cooler losing to a machined laminate design because it couldn't be qualified in time, LUX Industries joins Qdot on printed airport hydrogen-liquefier heat exchangers, and MT Aerospace's AdHyBau slides add a printed titanium cryogenic heat exchanger. Gateway to Research again returned nothing. The website got today's report, but votes and comments left there were not read back this run (that step was blocked by a permission check).",
     "coverage": {
       "datacentre": "Good coverage of cold plates, jet impingement and heat reuse. One UK chip-level start-up found so far (Infiniflux).",
       "aerospace": "Strong on oil coolers and hydrogen. Cabin-air systems are now covered through Honeywell's STRATA project, and a measured printed pre-cooler core (Maryland) now gives one data point, but precooler-specific news is still rare. Defence aircraft electronics cooling now appears through BAE Systems' work with Leeds.",
       "motorsport": "Teams publish little, so most evidence comes from suppliers (Conflux, PWR) and student teams. Henry's steer here will help most.",
       "other": "Found by searching from the technology first: heat pipes, laser texturing, modelling, TPMS tests, fusion and transpiration cooling, and now laser-textured surfaces for radiating heat in space. Links to the three areas are mostly inferred."
     },
-    "run_id": "2026-10-30-1"
+    "run_id": "2026-10-31-1"
   },
   "cards": [
     {
@@ -194,7 +194,7 @@
         "metrology and inspection",
         "modelling and simulation"
       ],
-      "why": "This is the oil-cooler brief exactly, and the UK is strong in it. Meggitt (now Parker Meggitt) and TWI ran C-ALM AOHE to build an 80 kW, under-10 kg printed air-oil cooler for geared UHBR engines, aiming at TRL 6 and MRL 6, and published a review of L-PBF aluminium heat exchangers with Birmingham. Safran's HIPEX shows the payoff: a printed curved cooler, claimed to halve drag and save up to 1% fuel, already ground-tested on an engine. The one published like-for-like test is a caution: Penn State's printed AlSi10Mg copy of an aircraft oil cooler moved about 10-14% more heat but doubled the air-side pressure drop, and showed rough surfaces and edge cracks at fin joints. A 2026 Shenyang Aerospace University simulation extends the idea to cooled cooling air, where airfoil-shaped pin fins in a microchannel air-oil exchanger gave the best heat transfer for the least pressure loss.",
+      "why": "This is the oil-cooler brief exactly, and the UK is strong in it. Meggitt (now Parker Meggitt) and TWI ran C-ALM AOHE to build an 80 kW, under-10 kg printed air-oil cooler for geared UHBR engines, aiming at TRL 6 and MRL 6, and published a review of L-PBF aluminium heat exchangers with Birmingham. Safran's HIPEX shows the payoff: a printed curved cooler, claimed to halve drag and save up to 1% fuel, already ground-tested on an engine. The one published like-for-like test is a caution: Penn State's printed AlSi10Mg copy of an aircraft oil cooler moved about 10-14% more heat but doubled the air-side pressure drop, and showed rough surfaces and edge cracks at fin joints. A 2026 Shenyang Aerospace University simulation extends the idea to cooled cooling air, where airfoil-shaped pin fins in a microchannel air-oil exchanger gave the best heat transfer for the least pressure loss. Two older projects show the route. In Clean Sky's ACOC (2017-20, about €0.95m), HS Marston compared plate-fin, machined-laminate and printed oil coolers for a Safran Helicopter Engines turboprop demonstrator and chose the laminate, because the printed one couldn't finish design and qualification in time. In Wallonia, Safran Aero Boosters leads INHEX (€4.5m, with Sirris, UCLouvain and ULB) to laser-melt air-oil and air-gas exchangers in aluminium and Inconel; its page gives no dates or results.",
       "applicability": {
         "type": "stated",
         "reason": "Both projects target turbofan oil cooling."
@@ -247,6 +247,24 @@
           "type": "Uni",
           "country": "USA",
           "role": "researcher"
+        },
+        {
+          "name": "HS Marston (Collins Aerospace)",
+          "type": "Commercial",
+          "country": "United Kingdom",
+          "role": "developer"
+        },
+        {
+          "name": "Safran Helicopter Engines",
+          "type": "Commercial",
+          "country": "France",
+          "role": "user"
+        },
+        {
+          "name": "Sirris",
+          "type": "RTO",
+          "country": "Belgium",
+          "role": "partner"
         }
       ],
       "sources": [
@@ -267,6 +285,12 @@
         },
         {
           "item": "openalex-flow-and-heat-transfer-characteristics"
+        },
+        {
+          "item": "cordis-hsm-acoc"
+        },
+        {
+          "item": "skywin-inhex"
         }
       ],
       "scores": {
@@ -481,7 +505,7 @@
         "robotics and automation",
         "modelling and simulation"
       ],
-      "why": "FlyZero's roadmap lists the enablers for hydrogen heat exchangers and most are manufacturing problems: no thin-wall property data, bespoke assembly tooling, a need for automated NDT and repeatable joints, and qualification of AM materials from -253 C to 500 C. Its capability report says lifing printed heat exchangers is still a challenge, with HVM Catapult (MTC) and TWI studying AM and automated laser welding. The same gaps hold back printed oil coolers for today's engines, so the work pays off before hydrogen arrives. Clean internal passages are part of the same gap: MTC and Meggitt showed up to 99% of powder could be drained from sub-millimetre AlSi10Mg channels, with the last 1% still unsolved, and Birmingham found ultrasonic and vacuum-boiling methods clear deep L-PBF channels that grit-blasting can't. Birmingham's 2023 review adds that today's L-PBF systems aren't yet ready for the thin, leak-proof walls these parts need.",
+      "why": "FlyZero's roadmap lists the enablers for hydrogen heat exchangers and most are manufacturing problems: no thin-wall property data, bespoke assembly tooling, a need for automated NDT and repeatable joints, and qualification of AM materials from -253 C to 500 C. Its capability report says lifing printed heat exchangers is still a challenge, with HVM Catapult (MTC) and TWI studying AM and automated laser welding. The same gaps hold back printed oil coolers for today's engines, so the work pays off before hydrogen arrives. Clean internal passages are part of the same gap: MTC and Meggitt showed up to 99% of powder could be drained from sub-millimetre AlSi10Mg channels, with the last 1% still unsolved, and Birmingham found ultrasonic and vacuum-boiling methods clear deep L-PBF channels that grit-blasting can't. Birmingham's 2023 review adds that today's L-PBF systems aren't yet ready for the thin, leak-proof walls these parts need. The gap has already cost printed parts a place: in HS Marston's ACOC project the printed oil cooler lost to a machined laminate design because it couldn't be qualified in the time available, while six laminate units passed qualification first time (the company's account, no data).",
       "applicability": {
         "type": "stated",
         "reason": "FlyZero states these gaps for hydrogen aircraft; that they also apply to today's oil coolers is our inference."
@@ -545,6 +569,9 @@
         },
         {
           "item": "bham-am-hx-aero-review"
+        },
+        {
+          "item": "cordis-hsm-acoc"
         }
       ],
       "scores": {
@@ -657,7 +684,7 @@
         "modelling and simulation",
         "metrology and inspection"
       ],
-      "why": "Three start-ups reach the same goal by different routes. Fabric8Labs prints copper electrochemically at 33 microns, Corintis designs microchannels about 70 µm wide in software and has made over 10,000 copper cold plates, aiming for a million by the end of 2026 (in a Microsoft test, three times better heat removal), and Alloy Enterprises laser-cuts copper sheets and diffusion bonds them. MTC covers both the additive and the laser routes, so it could benchmark them fairly. Green-laser printers for pure copper are also scaling: China's Addireen says it can now build 50 machines a month, aimed at cold plates (its figures). Independent numbers are starting to appear: Microsoft's test of Corintis plates, and a University of Illinois study in which a topology-optimised plate printed by Fabric8Labs gave up to 32% better cooling, or 68% lower pressure drop, than rectangular fins.",
+      "why": "Three start-ups reach the same goal by different routes. Fabric8Labs prints copper electrochemically at 33 microns, Corintis designs microchannels about 70 µm wide in software and has made over 10,000 copper cold plates, aiming for a million by the end of 2026 (in a Microsoft test, three times better heat removal), and Alloy Enterprises laser-cuts copper sheets and diffusion bonds them. MTC covers both the additive and the laser routes, so it could benchmark them fairly. Green-laser printers for pure copper are also scaling: China's Addireen says it can now build 50 machines a month, aimed at cold plates (its figures). Independent numbers are starting to appear: Microsoft's test of Corintis plates, and a University of Illinois study in which a topology-optimised plate printed by Fabric8Labs gave up to 32% better cooling, or 68% lower pressure drop, than rectangular fins. Alloy says its one-piece plates, with gyroid and 180 µm channels inside, have up to ten times lower pressure drop and run on water at about 44 °C (its figures, with no test data).",
       "applicability": {
         "type": "stated",
         "reason": "All three companies sell into AI data-centre cooling."
@@ -733,6 +760,12 @@
         },
         {
           "item": "uiuc-topopt-ecam-cold-plate"
+        },
+        {
+          "item": "3dprint-alloy-copper-dlc"
+        },
+        {
+          "item": "3dnatives-addireen-green-laser"
         }
       ],
       "scores": {
@@ -1574,7 +1607,7 @@
         "modelling and simulation",
         "design for manufacture"
       ],
-      "why": "Qdot Technology, a UK SME, used a £45k Connected Places Catapult TRIG grant (2023) to design and make a TPMS cryogenic hydrogen heat exchanger by metal binder jetting. It sized the unit with end users, modelled TPMS unit cells and made test pieces, reaching TRL 2 to 3, and says early small-scale tests suggest 10-20% better performance, with no data published. Most printed heat exchangers use laser powder bed fusion, so a binder-jet route needs its own work on sintering shrinkage and porosity, which is MTC territory. Qdot is also a STRATA partner, which makes it a UK company to know. A Washington State printed liquefier heat exchanger is a warning: it delivered less than modelled because of the printed alloy's thermal properties and poor contact, which is exactly the data and joining work MTC could do.",
+      "why": "Qdot Technology, a UK SME, used a £45k Connected Places Catapult TRIG grant (2023) to design and make a TPMS cryogenic hydrogen heat exchanger by metal binder jetting. It sized the unit with end users, modelled TPMS unit cells and made test pieces, reaching TRL 2 to 3, and says early small-scale tests suggest 10-20% better performance, with no data published. Most printed heat exchangers use laser powder bed fusion, so a binder-jet route needs its own work on sintering shrinkage and porosity, which is MTC territory. Qdot is also a STRATA partner, which makes it a UK company to know. A Washington State printed liquefier heat exchanger is a warning: it delivered less than modelled because of the printed alloy's thermal properties and poor contact, which is exactly the data and joining work MTC could do. A second £45k TRIG grant (2023) went to LUX Industries, a South East SME, with additive firm APEX, to print a full-scale 316L heat exchanger for its hydrogen liquefier for airport ground vehicles. It says it moved from TRL 3 to 4 after solving powder removal and porosity problems, with cryogenic and leak tests next (no data published).",
       "applicability": {
         "type": "stated",
         "reason": "The project targets liquid-hydrogen production at airports."
@@ -1603,6 +1636,18 @@
           "type": "Uni",
           "country": "USA",
           "role": "researcher"
+        },
+        {
+          "name": "LUX Industries",
+          "type": "Commercial",
+          "country": "United Kingdom",
+          "role": "developer"
+        },
+        {
+          "name": "APEX",
+          "type": "Commercial",
+          "country": null,
+          "role": "supplier"
         }
       ],
       "sources": [
@@ -1611,6 +1656,9 @@
         },
         {
           "item": "wsu-am-lh2-liquefier-hx"
+        },
+        {
+          "item": "cpc-lux-hlhx"
         }
       ],
       "scores": {
@@ -2411,14 +2459,14 @@
         "metrology and inspection",
         "modelling and simulation"
       ],
-      "why": "KIT measured printed copper, Scalmalloy, Ti-6Al-4V and Inconel 718 from about 4 K to 300 K for AdHyBau, a German project on liquid-hydrogen-cooled electric aircraft drives with MT Aerospace and Siemens. Optimised laser-melted copper reached a residual resistance ratio of about 170, double the as-received powder's, and Scalmalloy conducts about ten times better than Inconel or titanium; the data feed a digital twin. FlyZero lists 'no thin-wall property data from -253 C' as a hydrogen enabler, and a US printed liquefier fell short partly for this reason. UK testing of the alloys MTC prints, in thin-wall form, would fill a named gap.",
+      "why": "KIT measured printed copper, Scalmalloy, Ti-6Al-4V and Inconel 718 from about 4 K to 300 K for AdHyBau, a German project on liquid-hydrogen-cooled electric aircraft drives with MT Aerospace and Siemens. Optimised laser-melted copper reached a residual resistance ratio of about 170, double the as-received powder's, and Scalmalloy conducts about ten times better than Inconel or titanium; the data feed a digital twin. FlyZero lists 'no thin-wall property data from -253 C' as a hydrogen enabler, and a US printed liquefier fell short partly for this reason. UK testing of the alloys MTC prints, in thin-wall form, would fill a named gap. MT Aerospace's 2023 slides show where the data goes: a printed Ti-6Al-4V pin-fin exchanger that warms the hydrogen with water-glycol, sized by an analytical tool that matched a 126-million-cell CFD model within 3%, with pin limits set by print trials. The part had been made and nitrogen cryogenic tests were being prepared; no results are given.",
       "applicability": {
         "type": "stated",
         "reason": "The project targets LH2-cooled aircraft propulsion components."
       },
       "trl": {
         "level": "3-4",
-        "reason": "Material data measured; no component yet."
+        "reason": "Material data measured; MT Aerospace has made a printed heat exchanger, cryogenic tests not yet reported."
       },
       "barriers": "Cryogenic test capacity is scarce; properties depend on each machine's parameters and heat treatment.",
       "next_step": "Check whether UK cryogenic test labs (for example at the STFC or university hydrogen centres) could measure MTC-printed thin-wall coupons.",
@@ -2454,6 +2502,9 @@
         },
         {
           "item": "wsu-am-lh2-liquefier-hx"
+        },
+        {
+          "item": "mta-adhybau-cryo-hx"
         }
       ],
       "scores": {
@@ -2745,6 +2796,9 @@
         },
         {
           "item": "marketscale-two-phase-desert"
+        },
+        {
+          "item": "siliconangle-zutacore-series-c"
         }
       ],
       "scores": {
